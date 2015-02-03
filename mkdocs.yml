@@ -1,2 +1,10 @@
 site_name: Illig Media Center
+site_author: Travis Illig
 theme: readthedocs
+
+pages:
+- ['index.md', 'Home']
+- ['dvr/index.md', 'DVR', 'Overview']
+- ['disclaimer.md', 'Disclaimer']
+
+copyright: Copyright &copy; 2015, <a href="http://www.paraesthesia.com">Travis Illig</a>.

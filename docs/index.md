@@ -1,17 +1,7 @@
-# Welcome to MkDocs
+# Illig Media Center
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+This documentation provides an overview of my media center solution including how I set it up, what choices I made and how I made them, and how it all comes together.
 
-## Commands
+I had been [blogging](http://www.paraesthesia.com) this information, but given the rate with which it changes, I switched to documentation on [ReadTheDocs](https://readthedocs.org/) so I could more easily keep things up to date.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+**[Please read the disclaimer.](disclaimer.md)** You may find things in here that appear "wrong" or that don't work for you. I've addressed that [in my over-arching, all-encompassing disclaimer](disclaimer.md).
