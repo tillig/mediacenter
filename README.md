@@ -4,8 +4,13 @@ This repo houses documentation, diagrams, and info on my media center setup. I h
 
 **[Read the docs!](http://illigmediacenter.readthedocs.org/)**
 
-## MkDocs
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+## ReStructured Text References
 
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
+* http://docutils.sourceforge.net/docs/user/rst/quickstart.html
+* http://docutils.sourceforge.net/docs/user/rst/quickref.html
+* http://docutils.sourceforge.net/docs/user/rst/cheatsheet.txt
+* http://sphinx-doc.org/rest.html
+
+## Sphinx Markup Constructs
+
+* http://sphinx-doc.org/markup/index.html
