@@ -1,3 +1,4 @@
+==================
 Illig Media Center
 ==================
 
@@ -12,6 +13,12 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   requirements.rst
+   network/index.rst
+   hardware/index.rst
+   software/index.rst
+   formats/index.rst
+   roadmap/index.rst
    disclaimer.rst
 
 Indices and tables
