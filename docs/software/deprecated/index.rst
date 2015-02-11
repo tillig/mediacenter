@@ -7,3 +7,4 @@ As I transition away from using certain software packages, I don't want to lose 
 .. toctree::
 
     xbmc.rst
+    windowsmediacenter.rst
