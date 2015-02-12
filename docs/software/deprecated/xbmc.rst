@@ -19,6 +19,67 @@ In order to have a shared database and proper scanning of ``VIDEO_TS`` folders, 
 
 Advanced config settings are stored in `the userdata folder <http://kodi.wiki/view/Userdata_folder>`_ in a file called `advancedsettings.xml <http://kodi.wiki/view/Advancedsettings.xml>`_
 
+Here's what I used for my ``advancedsettings.xml`` file:
+
+.. sourcecode:: xml
+
+    <advancedsettings>
+      <sorttokens>
+        <token>the</token>
+        <token>a</token>
+        <token>an</token>
+      </sorttokens>
+
+      <!-- Regular expressions to match VIDEO_TS folders. -->
+      <tvshowmatching append="no">
+        <regexp>\[[Ss]([0-9]+)\]_\[[Ee]([0-9]+)\]?([^\\/]*)(?:(?:[\\/]video_ts)[\\/]video_ts.ifo)?</regexp>
+        <regexp>[\._ \[\-\\/]([0-9]+)x([0-9]+)([^\\/]*)(?:(?:[\\/]video_ts)[\\/]video_ts.ifo)?</regexp>
+        <regexp>[Ss]([0-9]+)[\.\-]?[Ee]([0-9]+)([^\\/]*)(?:(?:[\\/]video_ts)[\\/]video_ts.ifo)?</regexp>
+        <regexp>[\._ \-\\/]([0-9]+)([0-9][0-9])([\._ \-][^\\/]*)(?:(?:[\\/]video_ts)[\\/]video_ts.ifo)?</regexp>
+      </tvshowmatching>
+
+      <!-- Don't show "unwatched" flags. -->
+      <video>
+        <playcountminimumpercent>101</playcountminimumpercent>
+      </video>
+
+      <!-- Don't recognize disc images as videos. -->
+      <videoextensions>
+        <!-- add>.ex1|.ex2</add -->
+        <remove>.dat|.bin</remove>
+      </videoextensions>
+
+      <!-- Database sharing/synchronization. -->
+      <videodatabase>
+        <type>mysql</type>
+        <host>192.168.XXX.XXX</host>
+        <port>3306</port>
+        <user>XXXXXXXX</user>
+        <pass>XXXXXXXX</pass>
+        <name>xbmc_video</name>
+      </videodatabase>
+      <musicdatabase>
+        <type>mysql</type>
+        <host>192.168.XXX.XXX</host>
+        <port>3306</port>
+        <user>XXXXXXXX</user>
+        <pass>XXXXXXXX</pass>
+        <name>xbmc_music</name>
+      </musicdatabase>
+
+      <!-- Central cache for thumbnails. -->
+      <pathsubstitution>
+        <substitute>
+          <from>special://masterprofile/Thumbnails</from>
+          <to>smb://illighomeserver/Public/XBMC/userdata/Thumbnails</to>
+        </substitute>
+        <substitute>
+          <from>special://profile/Thumbnails</from>
+          <to>smb://illighomeserver/Public/XBMC/userdata/Thumbnails</to>
+        </substitute>
+      </pathsubstitution>
+    </advancedsettings>
+
 Troubleshooting
 ===============
 I ran into various challenges getting XBMC to properly work on my somewhat-underpowered front-end machine. I also ran into challenges getting it to start up automatically after a reboot. These notes helped get me past that.
