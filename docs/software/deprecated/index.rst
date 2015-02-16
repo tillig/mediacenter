@@ -8,3 +8,4 @@ As I transition away from using certain software packages, I don't want to lose 
 
     xbmc.rst
     windowsmediacenter.rst
+    dtdcalculator.rst
