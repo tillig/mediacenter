@@ -5,6 +5,7 @@ Hardware / Devices
 .. toctree::
     powerline.rst
     accesspoint-dap1522.rst
+    synologyds1010.rst
     dellstudiohybrid.rst
     xbox360.rst
     ps3.rst
