@@ -6,6 +6,7 @@ Hardware / Devices
     powerline.rst
     accesspoint-dap1522.rst
     synologyds1010.rst
+    hpex475.rst
     dellstudiohybrid.rst
     xbox360.rst
     ps3.rst
