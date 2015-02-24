@@ -1,6 +1,6 @@
-==================
-Dell Studio Hybrid
-==================
+==========================
+Server: Dell Studio Hybrid
+==========================
 
 The Dell Studio Hybrid is a small form factor PC that I use as a media center front end. It's pretty under-powered and is one of those models that came and went quickly. It's hard to find updated drivers for it and has odd HDMI issues occasionally.
 

@@ -12,3 +12,4 @@ Hardware / Devices
     ps3.rst
     samsungln52a750.rst
     sharpaquoslc37d7u.rst
+    yamaharxv777bt.rst

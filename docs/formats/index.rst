@@ -17,7 +17,10 @@ Some containers have limits on what sort of stuff you can put in them. That's al
 
 `Wikipedia has a great comparison of containers and what can go in them. <http://en.wikipedia.org/wiki/Comparison_of_container_formats>`_
 
+`MediaInfo <https://mediaarea.net/en/MediaInfo>`_ is a great piece of software to help you look at media files and figure out what's actually in them.
+
 .. toctree::
 
     video.rst
     audio.rst
+    videocompare.rst
