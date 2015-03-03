@@ -1,20 +1,20 @@
 ==========================
-Server: Dell Studio Hybrid
+Dell Studio Hybrid
 ==========================
 
 The Dell Studio Hybrid is a small form factor PC that I use as a media center front end. It's pretty under-powered and is one of those models that came and went quickly. It's hard to find updated drivers for it and has odd HDMI issues occasionally.
 
-Now that there's a :doc:`Plex <../software/plex>` app for :doc:`Xbox 360 <xbox360>` and :doc:`Playstation 3 <ps3>` I don't really use this anymore. I will probably repurpose it.
+Now that there's a :doc:`Plex <../../software/plex>` app for :doc:`Xbox 360 <xbox360>` and :doc:`Playstation 3 <ps3>` I don't really use this anymore. I will probably repurpose it.
 
 Display Resolution
 ==================
 
-I used to have a display resolution issue when the Dell Studio Hybrid was hooked up to the :doc:`Sharp Aquos TV <sharpaquoslc37d7u>`. It ran at 1280 x 768, which left a letterbox on each side since the Sharp Aquos TV we have runs at 1366 x 768 natively. This problem went away when I connected it via HDMI to the :doc:`Samsung LN52A750 TV <samsungln52a750>` we got - now it runs at full 1080p.
+I used to have a display resolution issue when the Dell Studio Hybrid was hooked up to the :doc:`Sharp Aquos TV <../tv/sharpaquoslc37d7u>`. It ran at 1280 x 768, which left a letterbox on each side since the Sharp Aquos TV we have runs at 1366 x 768 natively. This problem went away when I connected it via HDMI to the :doc:`Samsung LN52A750 TV <../tv/samsungln52a750>` we got - now it runs at full 1080p.
 
 * Most TVs don't accept more than 720p through VGA/DVI, which we found while figuring out how to hook up the :doc:`Xbox 360 <xbox360>` (though that may have changed with newer TVs).
 * Different resolutions become available when you hook the computer up to the TV using the HDMI connection. I tried this with the Sharp Aquos and found that 1080i became available (though it didn't display nicely - that could have been due to the TV not understanding the input right). That wasn't available through the DVI hookup.
 * The Dell Studio Hybrid uses an `Intel X3100 graphics processor on GM965 chipset <http://www.intel.com/products/notebook/chipsets/GM965/GM965-overview.htm>`_. `I tried asking a question on The Green Button <http://thegreenbutton.com/forums/3/297610/ShowThread.aspx>`_ about whether the HD resolution was unavailable because I was using DVI but didn't get any response.
-* A tool called :doc:`DTD Calculator <../software/deprecated/dtdcalculator>` enables easier manipulation of DTD values and doesn't require all the work that is mentioned in the article.
+* A tool called :doc:`DTD Calculator <../../software/deprecated/dtdcalculator>` enables easier manipulation of DTD values and doesn't require all the work that is mentioned in the article.
 
 Problem: DVD Causing AppCrash
 =============================
@@ -28,7 +28,7 @@ I fixed it by turning the amount of time until the machine goes to sleep down to
 
 Problem: HDMI Handshake/Signal Loss
 ===================================
-I had been using VGA video, but a new problem appeared once I started HDMI - if the display turns off (or the machine goes to sleep) while the TV is off, the TV will never get the signal again once you wake the computer up. As it turns out, the signal only seems to be lost if :doc:`Windows Media Center <../software/deprecated/windowsmediacenter>` is running full screen; if it's minimized, I don't see the issue. Some people report this as an "EDID handshake" problem but I'm not thinking it's what I'm seeing.
+I had been using VGA video, but a new problem appeared once I started HDMI - if the display turns off (or the machine goes to sleep) while the TV is off, the TV will never get the signal again once you wake the computer up. As it turns out, the signal only seems to be lost if :doc:`Windows Media Center <../../software/deprecated/windowsmediacenter>` is running full screen; if it's minimized, I don't see the issue. Some people report this as an "EDID handshake" problem but I'm not thinking it's what I'm seeing.
 
 I tried fixing it by not letting the machine ever sleep, but that doesn't seem to be 100%.
 
@@ -84,4 +84,4 @@ Original settings here - I'll make changed settings **bold**.
 
 Problem: One Pixel Overscan Line
 ================================
-In a continued weirdness with the video driver, every once in a while I see a one pixel "line" along the right side of the TV when watching video. It's not a showstopper, but it sure is distracting. I've started `a forum post on the Green Button <http://thegreenbutton.com/forums/p/81192/403439.aspx#403439>`_ for this. There is `another thread <http://thegreenbutton.com/forums/p/80771/401486.aspx#401486>`_ that talks about `a hotfix for this <http://support.microsoft.com/default.aspx/kb/974324>`_. I didn't try it because, after switching away from :doc:`Windows Media Center <../software/deprecated/windowsmediacenter>`, the issue went away.
+In a continued weirdness with the video driver, every once in a while I see a one pixel "line" along the right side of the TV when watching video. It's not a showstopper, but it sure is distracting. I've started `a forum post on the Green Button <http://thegreenbutton.com/forums/p/81192/403439.aspx#403439>`_ for this. There is `another thread <http://thegreenbutton.com/forums/p/80771/401486.aspx#401486>`_ that talks about `a hotfix for this <http://support.microsoft.com/default.aspx/kb/974324>`_. I didn't try it because, after switching away from :doc:`Windows Media Center <../../software/deprecated/windowsmediacenter>`, the issue went away.

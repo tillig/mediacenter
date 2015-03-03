@@ -17,6 +17,7 @@ Contents:
    network/index.rst
    hardware/index.rst
    software/index.rst
+   services/index.rst
    formats/index.rst
    roadmap/index.rst
    disclaimer.rst
