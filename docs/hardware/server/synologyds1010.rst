@@ -2,6 +2,8 @@
 Synology DS1010+ NAS
 ====================
 
+:doc:`Diskstation Manager (DSM) <../../software/system/dsm>` is the operating system that runs Synology NAS devices.
+
 Storage
 =======
 

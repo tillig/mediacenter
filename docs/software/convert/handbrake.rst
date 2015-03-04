@@ -2,7 +2,7 @@
 Handbrake
 =========
 
-I use Handbrake to convert my videos into :doc:`MP4 (M4V) format <../formats/mp4>`.
+I use Handbrake to convert my videos into :doc:`MP4 (M4V) format <../../formats/video>`.
 
 Lip Sync Issues
 ===============

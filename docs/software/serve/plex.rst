@@ -1,7 +1,7 @@
 ====
 Plex
 ====
-`Plex is a media server and associated set of client apps. <https://plex.tv>`_ I switched to use Plex for things due to the ability to access my media in more places. That means no more storage of full DVD image rips, but that's OK because :doc:`the Synology DS1010+ <../hardware/synologyds1010>` was running out of space and we didn't watch the extra features anyway. The added flexibility of the media is awesome.
+`Plex is a media server and associated set of client apps. <https://plex.tv>`_ I switched to use Plex for things due to the ability to access my media in more places. That means no more storage of full DVD image rips, but that's OK because :doc:`the Synology DS1010+ <../../hardware/server/synologyds1010>` was running out of space and we didn't watch the extra features anyway. The added flexibility of the media is awesome.
 
 The Synology DiskStation Manager has a Plex server package but **the physical machine is not powerful enough to transcode HD video**. Trying to watch home movies proved difficult because they're all HD.
 
