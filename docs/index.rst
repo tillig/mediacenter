@@ -19,7 +19,7 @@ Contents:
    software/index.rst
    services/index.rst
    formats/index.rst
-   roadmap/index.rst
+   plans/index.rst
    disclaimer.rst
 
 Indices and tables

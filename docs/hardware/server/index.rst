@@ -5,6 +5,7 @@ Servers
 .. toctree::
     synologyds1010.rst
     hpex475.rst
+    megaplex.rst
 
 Network Attached Storage Research
 =================================
