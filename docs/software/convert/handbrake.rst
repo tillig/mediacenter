@@ -22,3 +22,5 @@ I discovered after the first round of scanning movies that there were issues wit
 - Maverick (1994) - Possible naturally bad sync. Some scenes are right on, some are off by a couple of frames.
 
 I stopped tracking the complete list. It kind of sucks, but it is what it is.
+
+Part of the way I fixed this was to start using **constant frame rate** in all my conversions rather than variable frame rate. I noticed that, as a general rule, this reduced or removed many of the lip sync problems I saw.
