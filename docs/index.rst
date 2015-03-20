@@ -2,30 +2,33 @@
 Illig Media Center
 ==================
 
-This documentation provides an overview of my media center solution including how I set it up, what choices I made and how I made them, and how it all comes together.
+I love my media. *Love it.* Movies, TV shows, music... it's amazing.
 
-I had been `blogging <http://www.paraesthesia.com>`_ this information, but given the rate with which it changes, I switched to documentation on `ReadTheDocs <https://readthedocs.org/>`_ so I could more easily keep things up to date.
+I've amassed quite a collection, and I want to be able to enjoy it without a lot of hassle. I thought about it and came up with some general :doc:`requirements for what I want in a media center <requirements>`, then put the plan in motion.
+
+**My current system works like this:**
+
+- I have :doc:`a central server machine <hardware/server/megaplex>` that runs :doc:`Plex <software/serve/plex>` and serves content that is stored on :doc:`a network-attached-storage device <hardware/server/synologyds1010>`. That's how I get the media off disks and onto :doc:`front-end devices <hardware/frontend/index>`.
+- I have a :doc:`Tablo <hardware/server/tablo>` DVR for handling recording over-the-air TV programs and serving them.
+- I subscribe to :doc:`Netflix <services/netflix>`, :doc:`Amazon Prime <services/amazon>`, and :doc:`Pandora <services/pandora>` for content.
+- At each TV in my house, I have an :doc:`Xbox 360 <hardware/frontend/xbox360>` or a :doc:`Roku <hardware/frontend/roku>` to access the content served by Plex and the various services.
+
+That, of course, is pretty high-level. You can dive into individual areas to read about the more detailed sections of the system.
+
+I started out `blogging <http://www.paraesthesia.com>`_ this information, but as time goes on, the blog entry updates upon updates get confusing... so I switched to documentation on `ReadTheDocs <https://readthedocs.org/>`_.
 
 :doc:`Please read the disclaimer. <disclaimer>` You may find things in here that appear "wrong" or that don't work for you. I've addressed that :doc:`in my over-arching, all-encompassing disclaimer <disclaimer>`.
 
-Contents:
+And now...
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
-   requirements.rst
-   network/index.rst
-   hardware/index.rst
-   software/index.rst
-   services/index.rst
-   formats/index.rst
-   plans/index.rst
-   disclaimer.rst
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+    requirements.rst
+    network/index.rst
+    hardware/index.rst
+    software/index.rst
+    services/index.rst
+    formats/index.rst
+    plans/index.rst
+    disclaimer.rst
