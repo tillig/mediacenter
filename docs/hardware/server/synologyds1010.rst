@@ -7,7 +7,7 @@ Synology DS1010+ NAS
 Storage
 =======
 
-    - I have a bunch of WD Green drives I pulled out of my :doc:`Windows Home Server <hpex475>`. Synology forums have some posts about this. `This one says that some of the drives work fine while others don't <http://forum.synology.com/enu/viewtopic.php?f=151&t=19131>`_; `this one is about someone who is trying to avoid issues by switching away from WD Green <http://forum.synology.com/enu/viewtopic.php?f=124&t=23719>`_. I should check and see which model numbers I have - I may have some bum drives that are known to be slow.
+    - I have a bunch of WD Green drives I pulled out of my :doc:`Windows Home Server <hpex475>`. Synology forums have some posts about this. `This one says that some of the drives work fine while others don't <http://forum.synology.com/enu/viewtopic.php?f=151&t=19131>`_; `this one is about someone who is trying to avoid issues by switching away from WD Green <http://forum.synology.com/enu/viewtopic.php?f=124&t=23719>`_. I decided not to use these and instead go with some other drives.
     - `I should get the latest firmware off the website <http://www.synology.com/support/download.php?lang=enu>`_ for initial install. This will make sure everything is compatible with newer disks.
     - `There is a hardware compatibility list for supported drives <http://www.synology.com/support/faq_show.php?q_id=130>`_ on Synology devices.
 

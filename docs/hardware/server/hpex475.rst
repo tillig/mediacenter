@@ -22,3 +22,107 @@ There is a defect in WHS where the serial number of the drives inside the EX475 
 - Real serial number: 12345678
 - Reported serial number: 21436587
 
+WD Green Drives
+---------------
+I stumbled upon WD Green hard drives and they appeared to not only be affordable but also provide power saving benefits.
+
+**Bad, bad news. In general, I've found these drives to be horrible performers.**
+
+I added a bunch of `WD Green 1TB drives <http://www.newegg.com/Product/Product.aspx?Item=N82E16822136317>`_ and `one WD Green 2TB drive <http://www.newegg.com/Product/Product.aspx?Item=N82E16822136344>`_. However, doing so I ran into problems with PerfectDisk and defragmentation where the system would hang or blue screen, leaving errors in the event log around the storage or Marvell drivers causing issues. Further research found that *there are only two good WD Green model numbers*:
+
+- WD10EADS-00L5B1
+- WD20EADS-00R6B0
+
+Unfortunately, about half of the drives I bought, including the 2TB drive, were not the right models. After moving data off the home server, I removed the drives with the incorrect model numbers and enabled PerfectDisk. The performance problems and I/O errors went away.
+
+There are several drives that are known to be problematic with Windows Home Server. The WD drives that use "advanced formatting" are problematic and have an "EARS" product code like "WD20EARS." I lucked out and got the original/older format with an "EADS" code like "WD20EADS." The problem is that it requires a special utility to "align" the drives on older systems like the WHS operating system `but the utility isn't compatible with WHS <http://forum.wegotserved.com/index.php?/topic/11681-wd-green-2tb-drives-should-we-use-wd-align/?s=8d3464c66fdadf5643f991d5ef385c92>`_. I also tried a 2TB Samsung SpinPoint drive but `it turns out those are also known to have issues with WHS <http://h10025.www1.hp.com/ewfrf/wc/document?docname=c01368548&lc=en&cc=us&dlc=en&product=3548165>`_.
+
+eSATA Port Multiplier
+---------------------
+I have a Rosewill RSV-S5 5-bay eSATA port multiplier. While it can support RAID configurations, I use it as JBOD ("Just a Bunch Of Disks"). There is `a review of a Sans Digital port multiplier similar to what I have here <http://www.mediasmartserver.net/2009/01/15/review-sans-digital-towerraid-tr5m-esata-storage-enclosure/>`_ and it says the EX475 will only recognize four of the five drives in a five-drive multiplier while the EX495 will see all five. I never put more than four drives in it so I can't say.
+
+After moving the big storage to the :doc:`Synology DS1010+ <synologyds1010>` I disconnected the port multiplier because it wasn't needed anymore, it was a tad noisy, and it ate power.
+
+Defragmenting
+-------------
+You can't just use any standard defrag program because it won't understand the WHS filesystem.
+
+- `PerfectDisk 10 <http://www.perfectdisk.com/products/home-perfectdisk10-windows-home-server/learn-more>`_ is what I use because it's comparable to other solutions, has a nice interface in the WHS console, and costs half of Diskeeper.
+- `Diskeeper 2009 <http://www.diskeeper.com/Diskeeper/home/homeserver.aspx>`_ is another option that is fairly popular but is expensive and doesn't have anything compelling over PerfectDisk.
+
+I noticed after running PerfectDisk for a month or so that I was getting health warnings on my system drive roughly once or twice a week. I disabled defragmentation of the system drive and these warnings stopped. (The drive works really well, not sure what this was about.)
+
+In December 2009 my trouble with the aforementioned WD Green drives started. It was discovered when I introduced PerfectDisk into the system (though it was a drive problem, not a PerfectDisk problem).
+
+- December 2009: Started getting file conflict errors. I disabled PerfectDisk and the errors stopped.
+- January 26, 2010: Contacted PerfectDisk support. PerfectDisk support says they think it's a hardware issue. I also contacted Rosewill support, who passed me on to Sans Digital support because my port multiplier is made and supported by them. Sans Digital support said I need to upgrade the drivers for my Marvell controller. They haven't seen this exact issue, but most of their customers have all their problems go away with a driver update.
+- February 3, 2010: Re-enabled PerfectDisk to verify problems still happen.
+- February 4, 2010: Disabled PerfectDisk after system lockup.
+- April 28, 2010: Updated Marvell drivers to 1.2.0.57 and re-enabled PerfectDisk.
+- April 29, 2010: Disabled PerfectDisk after a blue screen and errors indicating "disk not ready for access."
+
+After purging the system of some potentially problematic WD drives, I re-enabled PerfectDisk and haven't seen any issues. Definitely the WD Green drives at fault.
+
+Checking for Drive Issues
+-------------------------
+You can run a special batch file (``checkall.cmd``) to run ``CHKDSK`` on all drives. Don't bother waiting to see them all pass; you should see errors in the event log if there are issues. That said, wait until the system drive is done because you may be prompted to answer a question before all the other drives start running.
+
+.. sourcecode:: batch
+
+    net stop pdl
+    net stop whsbackup
+    chkdsk D: /x /r
+    chkdsk C: /x /r
+    for /d %%1 in (C:\fs\*) do start chkdsk /x /r %%1
+
+Server Recovery
+===============
+If I need to recover the system disk on the WHS, it's not too bad. I'll document that process along with :doc:`Windows Home Server v1 <../../software/system/whs>`.
+
+CPU / RAM
+=========
+I upgraded the RAM and it's works great, no issues. I considered upgrading the CPU on it, but `according to these CPU upgrade instructions <http://www.homeserverhacks.com/2008/03/add-performance-to-your-hp-ex470-with.html>`_, that doesn't really help with file access time (which was my big bottleneck) so it wasn't really worth the risk. Several folks in comments report problems, though several others say it went off without a hitch.
+
+Drivers
+=======
+
+Marvell SATA Driver
+-------------------
+The stock Marvell SATA controller driver is 1.2.0.46. I tried upgrading the "Marvell Virtual Device" driver through Windows Update to 1.2.0.57 but the "Marvell 61xx Marvell RAID Controller" still read 1.2.0.46. I'm not sure how the two are related. Either way, it didn't fix the issue I saw with the WD Green drives.
+
+**I intentionally never updated to driver 1.2.0.60.** Alex Kuretz (from MediaSmartServer.net) has said the newer drivers can render a port mutliplier inoperable. On the other hand, ymboc (the guy behind lots of low-level hacks on WHS), `says the 1.2.0.68 drivers help a lot <http://www.mediasmartserver.net/forums/viewtopic.php?f=2&t=4675>`_.
+
+`This site says the EX470 (same internals as EX475, different drive configuration out of the box) has a Marvell 88SE6111 SATA controller <http://www.smallnetbuilder.com/content/view/30135/75/1/2/>`_, so I thought I'd be looking for drivers for that, but `this upgrade tutorial <http://www.homeserverhacks.com/2008/11/update-marvell-6121-esata-driver.html>`_ uses the 6121 drivers and even provides a link to 1.2.0.57. `This article also uses the 1.2.0.57 drivers <http://viztaview.wordpress.com/2009/03/05/drivers-for-hp-ex-47-mediasmart-servers/>`_. Most times we're looking at the WinXP 32-bit drivers for upgrade.
+
+I stopped fussing with the Marvell SATA drivers when I moved storage to the :doc:`Synology DS1010+ <synologyds1010>`.
+
+WNAS Driver
+-----------
+There appears to be a defect with the WNAS driver where it reports high heat on the VRM (voltage regulator module). It's been ongoing since I got the machine. All drives in the system seem to work fine and the system generally reports healthy. I verified it had nothing to do with eSATA or the port multiplier. I've read on forums where a couple of people have seen this and it always comes out that there is some sort of misreporting problem going on.
+
+HP Software Updates
+===================
+The machine came with a 2.x version of the HP home server software (some custom stuff on top of :doc:`Windows Home Server v1 <../../software/system/whs>`). A 3.0 update came out but I never installed it.
+
+To install the update, it's sort of a "server recovery model" - basically it keeps storage but wipes the system drive. If you have folder duplication running, any data that was stored on the system drive will be duplicated to another drive in the pool.
+
+- Make sure folder duplication is running.
+- Consider doing a file list dump to see if anything in storage is lost after the update.
+- Be prepared to lose the backup database. You may need to do the full reset on that after updating.
+- First thing after the update, run Windows Update to get WHS Power Pack 3. PP3 is not included on the disc.
+- Leave it for a night before installing additional add-ins. There will be churn as it re-discovers files in storage.
+- You will need to re-create all of the user accounts, but you won't have to re-create the user-specific folders.
+
+I ordered the update on 2/26/10 for $27.95 and received the discs in early April.
+
+`There is a blog entry from a guy who has done the 3.0 update <http://usingwindowshomeserver.com/2010/02/27/replacing-the-system-drive-on-the-hp-mediasmart-ex47x-series-and-performing-the-3-0-software-update/>`_ and swapped out the system drive at the same time. This apparently worked well. That said, `he had trouble running the update from Windows 7 <http://usingwindowshomeserver.com/2010/02/27/experiences-and-issues-upgrading-to-the-hp-mediasmart-server-3-0-software-release/>`_ so if I run into that I should try from an XP or Vista machine (VM?).
+
+The 3.0 update does not contain any updated drivers.
+
+Upgrade to Windows Server 2012 Essentials
+=========================================
+January 8, 2013 was the last day of support for :doc:`Windows Home Server v1 <../../software/system/whs>` so I will need to upgrade if I'm going to go too much further with this box. I'd like a newer Windows Server install with Storage Spaces enabled to deal with drive mirroring (replacement for Drive Extender). `Something like Windows Server 2012 Essentials, which folks have successfully installed <http://www.mediasmartserver.net/forums/viewtopic.php?p=92246>`_.
+
+- I would need to verify I have a 64-bit processor. (Some quick Googling makes it appear that it should be OK.) `The processor upgrade sounds painful <http://www.mediasmartserver.net/forums/viewtopic.php?f=2&t=1102>`_ because you need to modify the BIOS to support it.
+- `This article shows how to do Windows Server 2012 Essentials on an EX470 and is good. <http://www.wegotserved.com/2012/10/12/install-windows-server-2012-essentials-hp-mediasmart-server/>`_
+- For any operation, `I'm going to need to order a debug cable <http://www.mediasmartserver.net/forums/viewtopic.php?f=6&t=8066>`_. Otherwise I won't be able to see what's going on during installation.

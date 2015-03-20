@@ -28,3 +28,11 @@ Migrating Servers
 When I moved Plex from :doc:`my Synology <../../hardware/server/synologyds1010>` over to :doc:`Megaplex <../../hardware/server/megaplex>` I had to migrate the library from one machine to another.
 
 Luckily, `Plex has a help topic explaining how to migrate your library <https://support.plex.tv/hc/en-us/articles/201370363-Move-an-Install-to-Another-System>`_ so I followed those instructions.
+
+Getting Support
+===============
+`Plex has some great support and documentation. <https://support.plex.tv/hc/en-us>`_ The folks in `the Plex forums <https://forums.plex.tv/>`_ are cool and ready to help.
+
+However, when you post for help, particularly in crash situations, `you have to be aware of some stuff <https://forums.plex.tv/index.php/topic/23452-diagnosing-heap-corruption-on-windows/>`_ or you'll be asked to provide additional details before getting help.
+
+`This page on handling crashes in Plex Media Server is the place to start. <https://support.plex.tv/hc/en-us/articles/201455336-Crash-Logs-Plex-Media-Server>`_ It has instructions on how to set up your machine to handle crash dumps and explains where the logs are. Make sure you've read through this and have things set up.

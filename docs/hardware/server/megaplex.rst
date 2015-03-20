@@ -29,7 +29,12 @@ The parts I used to build the server (prices listed as of March 2015):
 - `5 Pack Monoprice 18-Inch SATA III 6.0 Gbps Cable with Locking Latch and 1 x 90-Degree Plug (108783) - $7.99 <http://www.amazon.com/dp/B00IOS6EAU?tag=mhsvortex>`_
 - `StarTech.com 12-Inch LP4 to 2x SATA Power Y Cable Adapter - $3.99 <http://www.amazon.com/dp/B0002GRUV4?tag=mhsvortex>`_
 - `JBtek Sleeved PWM Fan Splitter Cable 1 to 2 Converter - $5.99 <http://www.amazon.com/dp/B00OZ10FI2?tag=mhsvortex>`_
+- `WD Blue 1TB SATA 6Gb/s 7200rpm Internal Hard Drive - $54.99 (2 of these) <http://www.amazon.com/dp/B0088PUEPK?tag=mhsvortex>`_
 
-**Total price: $433.89**
+**Total price: $543.87**
 
-I used some hard drives I already had for base storage, so I didn't include that here.
+Storage
+=======
+I originally tried to use the WD Green drives I had tried in my :doc:`Windows Home Server <hpex475>`. **FAIL.** The poor performance on these drives caused any sort of heavy :doc:`Plex <../../software/serve/plex>` library indexing to fail with I/O errors. I ended up having to replace these with different, better-performing drives.
+
+I used a drive I already had for the system drive on the box and added the extra two higher-perf drives I bought as storage for the Plex library and scratch/temp space. They are configured using Windows Storage Spaces as a mirrored cluster for fault tolerance.
