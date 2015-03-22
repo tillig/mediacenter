@@ -4,7 +4,7 @@ Dell Studio Hybrid
 
 The Dell Studio Hybrid is a small form factor PC that I use as a media center front end. It's pretty under-powered and is one of those models that came and went quickly. It's hard to find updated drivers for it and has odd HDMI issues occasionally.
 
-Now that there's a :doc:`Plex <../../software/plex>` app for :doc:`Xbox 360 <xbox360>` and :doc:`Playstation 3 <ps3>` I don't really use this anymore. I will probably repurpose it.
+Now that there's a :doc:`Plex <../../software/serve/plex>` app for :doc:`Xbox 360 <xbox360>` and :doc:`Playstation 3 <ps3>` I don't really use this anymore. I will probably repurpose it.
 
 Display Resolution
 ==================

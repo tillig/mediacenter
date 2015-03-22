@@ -44,7 +44,7 @@ I picked these formats as the initial set to compare given my own personal famil
 
 You can see where I landed on the :doc:`video formats <video>` page: **MP4 container / H.264 video / AAC + AC3 Passthrough audio**.
 
-The :doc:`Handbrake <../software/handbrake>` page goes into more detail about my specific encoding settings.
+The :doc:`Handbrake <../software/convert/handbrake>` page goes into more detail about my specific encoding settings.
 
 Audio in the Video Files
 ========================
@@ -52,7 +52,7 @@ While technically the `MP4 spec only allows AAC sound <http://en.wikipedia.org/w
 
 AAC has a surround sound (multichannel) spec but it's not very well supported, so going with a stereo AAC track as primary is better for compatibility. `At 320kbps, AAC is considered transparent. <http://en.wikipedia.org/wiki/Advanced_Audio_Coding>`_
 
-:doc:`Handbrake <../software/handbrake>` has a `surround sound guide <https://trac.handbrake.fr/wiki/SurroundSoundGuide>`_ that explains in more detail how to properly handle multiple tracks.
+:doc:`Handbrake <../software/convert/handbrake>` has a `surround sound guide <https://trac.handbrake.fr/wiki/SurroundSoundGuide>`_ that explains in more detail how to properly handle multiple tracks.
 
 Full Disc Images - ISO vs. VIDEO_TS
 ===================================
