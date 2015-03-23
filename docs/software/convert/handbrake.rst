@@ -4,6 +4,113 @@ Handbrake
 
 I use Handbrake to convert my videos into :doc:`MP4 (M4V) format <../../formats/video>`.
 
+SD Settings
+===========
+My entire ``user_presets.xml`` file is pasted in below, but for readability, I have three SD presets that only differ by the "x264 Tune" setting for Film (most everything), 2D Animation, or Grain.
+
+- Picture
+
+  - Width/Height: nil (let it auto-correct)
+  - Anamorphic: Loose
+  - Modulus: 2
+  - Cropping: Automatic
+
+- Filters
+
+  - Detelecine: Off
+  - Decomb: Default
+  - Deinterlace: Off
+  - Denoise: Off
+  - Deblock: Off
+  - Grayscale: Unchecked
+
+- Video
+
+  - Video Codec: H.264 (x.264)
+  - Framerate FPS: Same as source
+  - **Constant Framerate**
+  - x264 Preset: Slower
+  - x264 Tune: **Film, Animation, or Grain** (depends on the source – I change this per item ripped)
+  - H.264 Profile: High
+  - H.264 Level: 4.1
+  - Fast Decode: Unchecked
+  - Extra Options: Empty
+  - Quality: **Constant Quality RF 18**
+
+- Audio
+
+  - Track 1:
+
+    - Source: The best AC3 sound track on there with the most channels. (It usually does a good job of auto-detecting.)
+    - Codec: **AAC (FDK)**
+    - Bitrate: **256**
+    - Samplerate: Auto
+    - Mixdown: Dolby Pro Logic II
+    - DRC: 0.0
+    - Gain: 0
+
+  - Track 2:
+
+    - Source: Same as Track 1.
+    - Codec: AC3 Passthru
+
+  - Track 3 (depending on source)
+
+    - Source: The DTS track, if there is one.
+    - Codec: DTS Passthru
+
+- Subtitles: Generally none, but there are some movies that need them, in which case I'll add one track. High Profile (and my settings) generally don't include this.
+
+  - Source: English (VobSub)
+  - Forced Only: Unchecked
+  - Burn In: Checked
+  - Default: Unchecked
+  - Everything else default.
+
+- Chapters: I do select "Create chapter markers" but I let the automatic detection do the naming and timing.
+
+The truly important bits there are **bold** - these are the settings that differ from the "High Profile" preset.
+
+HD Settings
+===========
+My entire ``user_presets.xml`` file is pasted in below, but for readability, I have three HD presets - one each for Film (most everything), 2D Animation, or Grain.
+
+The settings stem from my SD settings, above, so I'll just put the differences here:
+
+- Filters
+
+  - Decomb: Off
+
+- Video
+
+  - Variable Framerate
+  - x264 Tune: Film, Animation, or Grain (depends on the source – I change this per item ripped)
+  - Quality:
+
+    - For Film:
+    - For Grain: Constant Quality RF 21
+    - For Animation:
+
+In testing to find the right HD settings, I went through a few different movies. I found the output size was very different based on the movie type and the x264 Tune setting.
+
+=============  ==============  ==============================  ===================  ==========================
+Movie          300             Hunger Games, Mockingjay pt. 1  Across the Universe  Alice in Wonderland (2010)
+=============  ==============  ==============================  ===================  ==========================
+x264 Tune      Grain           Film                            Film                 Film
+Original Size  21,530,308,978
+RF 18          22,119,901,510
+RF 19          --
+RF 20          16,703,767,507
+RF 21          14,317,745,001
+RF 22          12,158,064,830
+=============  ==============  ==============================  ===================  ==========================
+
+In particular with *300*, the file was very hard to shrink much because of the details in the grainy appearance. Too much more and you start noticing unfortunate artifacting around edges. The "sweet spot" for me, for grainy movies, seems to be around RF 21 - that's a good balance between file size and quality.
+
+When I started looking at other films, using RF 21 created very, very small file sizes, which meant I could potentially turn up the quality (lower the RF number) and still have a reasonable file size. I do want to save on storage, but I also want to keep the quality as high as possible. That's how I ended up using a different RF number for film and 2D animation.
+
+And, of course, these end up being "guidelines" rather than "rules." I start here, and after the conversion if it still 
+
 Lip Sync Issues
 ===============
 
