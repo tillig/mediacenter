@@ -10,6 +10,8 @@ Netgear XAVB5101 500MBps
 ========================
 My primary link from downstairs to upstairs is via a `pair of Netgear Powerline 500 Nano XAVB5101 units <http://www.amazon.com/dp/B009WG6JF8?tag=mhsvortex>`_. These work at a peak speed of 500MBps, which is more than enough to satisfy some HD streaming and serve as the connection to the upstairs :doc:`wireless access point <dap1522>`.
 
+While these are supposed to work alongside the XAVB1201 adapters, after adding them into the mix the XAVB1201 adapters became unreliable, as though the signals were incompatible.
+
 .. image:: xavb5101.jpg
 
 Netgear XAVB1201 100MBps

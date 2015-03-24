@@ -38,3 +38,7 @@ Storage
 I originally tried to use the WD Green drives I had tried in my :doc:`Windows Home Server <hpex475>`. **FAIL.** The poor performance on these drives caused any sort of heavy :doc:`Plex <../../software/serve/plex>` library indexing to fail with I/O errors. I ended up having to replace these with different, better-performing drives.
 
 I used a drive I already had for the system drive on the box and added the extra two higher-perf drives I bought as storage for the Plex library and scratch/temp space. They are configured using Windows Storage Spaces as a mirrored cluster for fault tolerance.
+
+Performance
+===========
+After getting this built, I was very pleased with the performance. Transcoding a 1080p video barely raises the CPU usage to 10%, and a typical 2-hour 1080p movie can be converted with :doc:`Handbrake <../software/convert/handbrake>` in under three hours.

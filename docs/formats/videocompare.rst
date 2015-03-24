@@ -4,6 +4,8 @@ Video Format Comparison
 
 In determining which :doc:`format to use for my videos <video>` I evaluated the pros and cons of several formats to compare quality, compatibility, and file size.
 
+(If you want to see what settings I use to convert videos, check out the :doc:`Handbrake <../software/convert/handbrake>` page.)
+
 **More current information can be found on Wikipedia.**
 
 - `Comparison of container formats <http://en.wikipedia.org/wiki/Comparison_of_container_formats>`_

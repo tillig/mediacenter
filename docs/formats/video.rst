@@ -4,6 +4,8 @@ Video Formats
 
 In choosing a video format, I went through a :doc:`video format comparison and evaluation <videocompare>` process to figure out what was best for me.
 
+(If you want to see what settings I use to convert videos, check out the :doc:`Handbrake <../software/convert/handbrake>` page.)
+
 Below is the current video format information; if you're interested in why I chose them, :doc:`check out the video format comparison <videocompare>`.
 
 H.264 Video / AAC + AC3 Passthrough Audio / MP4 Container
