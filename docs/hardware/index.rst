@@ -3,6 +3,8 @@ Hardware / Devices
 ==================
 
 .. toctree::
+    :maxdepth: 2
+
     frontend/index.rst
     network/index.rst
     receiver/index.rst

@@ -1,7 +1,7 @@
 ==============
 DTD Calculator
 ==============
-This is a tool that allows you to set up custom resolutions for Intel graphics chipsets based on VESA timing information. This is key in trying to run the :doc:`Dell Studio Hybrid <../../hardware/frontend/dellstudiohybrid>` full screen for :doc:`Windows Media Center <windowsmediacenter>`. After switching away from WMC and changing the TV the Studio Hybrid was attached to, I didn't need to use this tool.
+This is a tool that allows you to set up custom resolutions for Intel graphics chipsets based on VESA timing information. This is key in trying to run the :doc:`Dell Studio Hybrid <../../hardware/deprecated/dellstudiohybrid>` full screen for :doc:`Windows Media Center <windowsmediacenter>`. After switching away from WMC and changing the TV the Studio Hybrid was attached to, I didn't need to use this tool.
 
 `DTD Calculator is maintained and discussed in AVSForum <http://www.avsforum.com/avs-vb/showthread.php?t=947830>`_. There is a lot of great information there and people will help out if things don't seem to work.
 

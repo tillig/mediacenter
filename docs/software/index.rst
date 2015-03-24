@@ -13,6 +13,7 @@ My digital music is in :doc:`iTunes <manage/itunes>` but I keep track of the com
 My backup solution is :doc:`CrashPlan <system/crashplan>`, which handles both internal and off-site backup. That, combined with the workstation image-based backup of :doc:`Windows Home Server <system/whs>`, has me covered.
 
 .. toctree::
+    :maxdepth: 2
 
     manage/index.rst
     rip/index.rst

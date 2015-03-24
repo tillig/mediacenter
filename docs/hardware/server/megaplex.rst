@@ -41,4 +41,4 @@ I used a drive I already had for the system drive on the box and added the extra
 
 Performance
 ===========
-After getting this built, I was very pleased with the performance. Transcoding a 1080p video barely raises the CPU usage to 10%, and a typical 2-hour 1080p movie can be converted with :doc:`Handbrake <../software/convert/handbrake>` in under three hours.
+After getting this built, I was very pleased with the performance. Transcoding a 1080p video barely raises the CPU usage to 10%, and a typical 2-hour 1080p movie can be converted with :doc:`Handbrake <../../software/convert/handbrake>` in under three hours.

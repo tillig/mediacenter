@@ -14,4 +14,3 @@ When looking for a front-end device, I generally want:
     ps3.rst
     roku.rst
     chromecast.rst
-    dellstudiohybrid.rst

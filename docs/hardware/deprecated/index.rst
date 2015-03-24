@@ -7,3 +7,4 @@ As my system grows and changes, I switch up the hardware driving the system. Onc
 .. toctree::
 
     onkyotxsr875.rst
+    dellstudiohybrid.rst

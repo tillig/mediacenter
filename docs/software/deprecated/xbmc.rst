@@ -4,11 +4,11 @@ XBMC
 
 I was using `XBMC (now "Kodi") <http://kodi.tv>`_ as my media center front-end along with a shared database to handle synchronizing the state of the media library. I had gone from :doc:`Windows Media Center <windowsmediacenter>` to XBMC in December 2011 because Windows Media Center couldn't handle the volume of content I had and the XBMC interface is much more friendly.
 
-While I liked the ease of use and the handling of ``VIDEO_TS`` folders, once I updated my :doc:`goals <../../requirements>` for more accessibility of media, :doc:`Plex <../plex>` seemed like a better fit for me, so I switched again.
+While I liked the ease of use and the handling of ``VIDEO_TS`` folders, once I updated my :doc:`goals <../../requirements>` for more accessibility of media, :doc:`Plex <../serve/plex>` seemed like a better fit for me, so I switched again.
 
 Media Organization
 ==================
-XBMC media organization is very similar to :doc:`Plex <../plex>` so moving wasn't too hard.
+XBMC media organization is very similar to :doc:`Plex <../serve/plex>` so moving wasn't too hard.
 
 - `Movies <http://kodi.wiki/view/Movies_(Video_Library)>`_ (including `set groups <http://kodi.wiki/view/Movie_Sets>`_)
 - `TV Shows <http://kodi.wiki/view/TV_Shows_(Video_Library)>`_
