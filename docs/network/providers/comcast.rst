@@ -1,6 +1,6 @@
-===============
-Comcast Xfinity
-===============
+=======
+Comcast
+=======
 
 We've had Comcast before, but we switched to :doc:`Verizon <verizon>` due to pricing and good internet speed. After :doc:`Frontier <frontier>` bought them, customer service went downhill, they constantly remotely reprogrammed our router (and denied it), and the pricing wasn't so optimal anymore.
 
