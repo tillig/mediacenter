@@ -1,0 +1,9 @@
+===============
+D-Link DGS-2208
+===============
+
+I have three of `these D-Link DGS-2208 8-port gigabit unmanaged switches <http://www.amazon.com/dp/B000FITKK8?tag=mhsvortex>`_ in my network.
+
+.. image:: dgs2208.jpg
+
+There are cheaper items today (this is an older model), but these have been totally solid since I bought them. If/when I need new switches, I'll be looking at getting the updated version of this switch.

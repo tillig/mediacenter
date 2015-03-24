@@ -2,7 +2,7 @@
 Cutting the Cable
 =================
 
-Starting around January 2015 I started looking at ways to save some money by cutting cable from the "triple-play" internet/phone/cable down to just internet service. I didn't want to lose features or content (if possible) so this is the plan I went through to try and replace those items.
+Starting around January 2015 I started looking at ways to save some money by cutting cable from the :doc:`Comcast <../network/comcast>` "triple-play" internet/phone/cable down to just internet service. I didn't want to lose features or content (if possible) so this is the plan I went through to try and replace those items.
 
 .. contents::
   :local:
@@ -42,7 +42,7 @@ These antennas are "omni-directional" so you don't have to point it in a given d
 
 Wiring the Antenna
 ~~~~~~~~~~~~~~~~~~
-The Comcast cable enters the house at one point from the outside. The coax on the inside of the house only carries Comcast signal. The cable modem is hooked to one of these coax outlets and converts that signal to internet. With cable boxes, the other TVs are hooked to other coax outlets and the cable box converts the same signal into TV.
+The :doc:`Comcast <../network/comcast>` cable enters the house at one point from the outside. The coax on the inside of the house only carries Comcast signal. The cable modem is hooked to one of these coax outlets and converts that signal to internet. With cable boxes, the other TVs are hooked to other coax outlets and the cable box converts the same signal into TV.
 
 There's a junction box on the side of the house where the Comcast cable feed connects to a splitter and makes it to the rest of the house. I ran a separate coax feed directly from that junction box into the office. When it's time to cut over to the antenna, the Comcast feed will tie directly into that dedicated office coax and the antenna will connect to the splitter.
 
@@ -211,7 +211,7 @@ We have a :doc:`Chromecast <../hardware/frontend/chromecast>` and I've found two
 
 Since I want a wired solution to ensure good connectivity, **Chromecast is out**. Most of our stuff is not in Apple format, so **Apple TV is out**.
 
-`Tablo is both on Amazon Fire TV and Roku 3 <https://www.tablotv.com/blog/sneak-peek-new-roku-channel-amazon-fire-android/>`_. Reading online reviews, while both devices seem reasonable, almost every comparison review (outside of the Amazon web site) points to Roku as a clear winner for having more available content and easier-to-use features. For example, when you search for a title on Amazon Fire TV, it only searches a single app - Netflix or Amazon Prime. When you search on Roku, you get searches across all the apps, so it'll find the title in Netflix, Amazon, and Hulu, then give you a choice which source to use.
+`Tablo is both on Amazon Fire TV and Roku 3 <https://www.tablotv.com/blog/sneak-peek-new-roku-channel-amazon-fire-android/>`_. Reading online reviews, while both devices seem reasonable, almost every comparison review (outside of the Amazon web site) points to Roku as a clear winner for having more available content and easier-to-use features. For example, when you search for a title on Amazon Fire TV, it only searches a single app - :doc:`Netflix <../services/netflix>` or :doc:`Amazon Prime <../services/amazon>`. When you search on Roku, you get searches across all the apps, so it'll find the title in Netflix, Amazon, and :doc:`Hulu Plus <../services/hulu>`, then give you a choice which source to use.
 
 Recommendation: Roku 3
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -223,13 +223,13 @@ The content we get through cable right now includes movies (mostly on demand thr
 
 Movies / On-Demand Shows
 ------------------------
-Movies are available on Netflix, Hulu Plus, Amazon Instant Video, and on our Plex server. I don't think we'll be at a shortage of movies to watch, however, most of these are not new releases.
+Movies are available on :doc:`Netflix <../services/netflix>`, :doc:`Hulu Plus <../services/hulu>`, :doc:`Amazon Prime <../services/amazon>`, and on our Plex server. I don't think we'll be at a shortage of movies to watch, however, most of these are not new releases.
 
 New releases may require us to use Redbox or rent/buy from Amazon Instant Video or Xbox Video.
 
 CBS has its own on-demand service called "CBS All Access." It only works on computers - there's no app and no integration with anything else.
 
-Channels like TNT, FX, and such (expanded basic channels) mostly do not have on-demand solutions. Hulu Plus has a few of these shows, but generally shows from these channels are limited to previous seasons.
+Channels like TNT, FX, and such (expanded basic channels) mostly do not have on-demand solutions. :doc:`Hulu Plus <../services/hulu>` has a few of these shows, but generally shows from these channels are limited to previous seasons.
 
 Live TV
 -------
@@ -298,9 +298,9 @@ Recommendations
 
 Based on our viewing habits and the presence of a DVR solution, we're looking at:
 
-- Netflix
-- Hulu Plus
-- Amazon Prime
+- :doc:`Netflix <../services/netflix>`
+- :doc:`Hulu Plus <../services/hulu>`
+- :doc:`Amazon Prime <../services/amazon>`
 
 Cost Breakdown
 ==============
@@ -308,7 +308,7 @@ Cost Breakdown
 Current Cost
 ------------
 
-Our cable package provides:
+Our :doc:`Comcast <../network/comcast>` cable package provides:
 
 - 105Mbps internet
 - TV (expanded basic + Starz/Encore)
@@ -362,7 +362,7 @@ Given some guesses at which equipment we'd want, here's an equipment + services 
 | **TOTAL FIRST YEAR COST**                            | $1387 |
 +--------------------+---------------------------------+-------+
 
-We already pay for Netflix and Amazon Prime, and we really wanted the Plex server anyway, so if you subtract those costs from the "startup" cost, **the first year is more like $648**
+We already pay for :doc:`Netflix <../services/netflix>` and :doc:`Amazon Prime <../services/amazon>`, and we really wanted the Plex server anyway, so if you subtract those costs from the "startup" cost, **the first year is more like $648**
 
 Notes:
 
