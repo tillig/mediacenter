@@ -8,3 +8,4 @@ Hardware / Devices
     receiver/index.rst
     server/index.rst
     tv/index.rst
+    deprecated/index.rst
