@@ -94,22 +94,22 @@ The settings stem from my SD settings, above, so I'll just put the differences h
 In testing to find the right HD settings, I went through a few different movies. I found the output size was very different based on the movie type and the x264 Tune setting.
 
 =============  ==============  ==============================  ===================  ==========================
-Movie          300             Hunger Games, Mockingjay pt. 1  Across the Universe  Alice in Wonderland (2010)
+Movie          300             Hunger Games: Mockingjay Pt. I  Across the Universe  Alice in Wonderland (2010)
 =============  ==============  ==============================  ===================  ==========================
 x264 Tune      Grain           Film                            Film                 Film
-Original Size  21,530,308,978
-RF 18          22,119,901,510
-RF 19          --
-RF 20          16,703,767,507
-RF 21          14,317,745,001
-RF 22          12,158,064,830
+Original Size  21,530,308,978  21,742,181,655                  26,831,992,958       24,308,963,706
+RF 18          22,119,901,510  --                              --                   --
+RF 19          --              3,595,175,689                   11,076,964,804
+RF 20          16,703,767,507  3,090,776,234                   8,913,678,948
+RF 21          14,317,745,001  2,727,727,566                   7,143,310,965
+RF 22          12,158,064,830  --                              --                   --
 =============  ==============  ==============================  ===================  ==========================
 
 In particular with *300*, the file was very hard to shrink much because of the details in the grainy appearance. Too much more and you start noticing unfortunate artifacting around edges. The "sweet spot" for me, for grainy movies, seems to be around RF 21 - that's a good balance between file size and quality.
 
-When I started looking at other films, using RF 21 created very, very small file sizes, which meant I could potentially turn up the quality (lower the RF number) and still have a reasonable file size. I do want to save on storage, but I also want to keep the quality as high as possible. That's how I ended up using a different RF number for film and 2D animation.
+*The Hunger Games: Mockingjay Part I* seemed to create an unusually small file regardless of the RF number. It made me curious why the original was so big. Compared to the other two test movies using the "Film" setting, it definitely seemed to be an outlier. Otherwise, RF 21 seemed to be pretty good in general.
 
-And, of course, these end up being "guidelines" rather than "rules." I start here, and after the conversion if it still 
+And, of course, these end up being "guidelines" rather than "rules." I start here, and after the conversion I'll see if I need to reconvert with different settings.
 
 Lip Sync Issues
 ===============
