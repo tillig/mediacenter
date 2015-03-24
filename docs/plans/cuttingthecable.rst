@@ -2,7 +2,7 @@
 Cutting the Cable
 =================
 
-Starting around January 2015 I started looking at ways to save some money by cutting cable from the :doc:`Comcast <../network/comcast>` "triple-play" internet/phone/cable down to just internet service. I didn't want to lose features or content (if possible) so this is the plan I went through to try and replace those items.
+Starting around January 2015 I started looking at ways to save some money by cutting cable from the :doc:`Comcast <../network/providers/comcast>` "triple-play" internet/phone/cable down to just internet service. I didn't want to lose features or content (if possible) so this is the plan I went through to try and replace those items.
 
 .. contents::
   :local:
@@ -42,7 +42,7 @@ These antennas are "omni-directional" so you don't have to point it in a given d
 
 Wiring the Antenna
 ~~~~~~~~~~~~~~~~~~
-The :doc:`Comcast <../network/comcast>` cable enters the house at one point from the outside. The coax on the inside of the house only carries Comcast signal. The cable modem is hooked to one of these coax outlets and converts that signal to internet. With cable boxes, the other TVs are hooked to other coax outlets and the cable box converts the same signal into TV.
+The :doc:`Comcast <../network/providers/comcast>` cable enters the house at one point from the outside. The coax on the inside of the house only carries Comcast signal. The cable modem is hooked to one of these coax outlets and converts that signal to internet. With cable boxes, the other TVs are hooked to other coax outlets and the cable box converts the same signal into TV.
 
 There's a junction box on the side of the house where the Comcast cable feed connects to a splitter and makes it to the rest of the house. I ran a separate coax feed directly from that junction box into the office. When it's time to cut over to the antenna, the Comcast feed will tie directly into that dedicated office coax and the antenna will connect to the splitter.
 
@@ -308,7 +308,7 @@ Cost Breakdown
 Current Cost
 ------------
 
-Our :doc:`Comcast <../network/comcast>` cable package provides:
+Our :doc:`Comcast <../network/providers/comcast>` cable package provides:
 
 - 105Mbps internet
 - TV (expanded basic + Starz/Encore)
