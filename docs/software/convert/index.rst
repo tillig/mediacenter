@@ -7,3 +7,4 @@ Media conversion software is used to take :doc:`ripped content <../rip/index>` a
 .. toctree::
 
     handbrake.rst
+    mediainfo.rst

@@ -93,23 +93,35 @@ The settings stem from my SD settings, above, so I'll just put the differences h
 
 In testing to find the right HD settings, I went through a few different movies. I found the output size was very different based on the movie type and the x264 Tune setting.
 
-=============  ==============  ==============================  ===================  ==========================
-Movie          300             Hunger Games: Mockingjay Pt. I  Across the Universe  Alice in Wonderland (2010)
-=============  ==============  ==============================  ===================  ==========================
-x264 Tune      Grain           Film                            Film                 Film
-Original Size  21,530,308,978  21,742,181,655                  26,831,992,958       24,308,963,706
-RF 18          22,119,901,510  --                              --                   --
-RF 19          --              3,595,175,689                   11,076,964,804
-RF 20          16,703,767,507  3,090,776,234                   8,913,678,948
-RF 21          14,317,745,001  2,727,727,566                   7,143,310,965
-RF 22          12,158,064,830  --                              --                   --
-=============  ==============  ==============================  ===================  ==========================
+=============  ==============  ==============================  ===================  ==========================  =================
+Movie          300             Hunger Games: Mockingjay Pt. I  Across the Universe  Alice in Wonderland (2010)  Cinderella (1950)
+=============  ==============  ==============================  ===================  ==========================  =================
+x264 Tune      Grain           Film                            Film                 Film                        Animation
+Original Size  21,530,308,978  21,742,181,655                  26,831,992,958       24,308,963,706              22,461,786,135
+RF 18          22,119,901,510  4,240,158,260                   --                   --                          --
+RF 19          --              3,595,175,689                   11,076,964,804       12,880,097,076              --
+RF 20          16,703,767,507  3,090,776,234                   8,913,678,948        11,083,481,088              3,957,488,389
+RF 21          14,317,745,001  2,727,727,566                   7,143,310,360        8,408,253,360               3,801,331,209
+RF 22          12,158,064,830  --                              5,741,888,616        7,254,867,569               --
+=============  ==============  ==============================  ===================  ==========================  =================
 
-In particular with *300*, the file was very hard to shrink much because of the details in the grainy appearance. Too much more and you start noticing unfortunate artifacting around edges. The "sweet spot" for me, for grainy movies, seems to be around RF 21 - that's a good balance between file size and quality.
+In all cases, just as with the SD presets, I had a stereo mixdown audio track and an original/surround passthrough track. I didn't keep extra tracks like commentary, etc. (For *Cinderella* I had two passthrough tracks - the 5.1 DTS-HD and the original mono DTS-HD.)
 
-*The Hunger Games: Mockingjay Part I* seemed to create an unusually small file regardless of the RF number. It made me curious why the original was so big. Compared to the other two test movies using the "Film" setting, it definitely seemed to be an outlier. Otherwise, RF 21 seemed to be pretty good in general.
+I've seen in some forum posts and videos that folks want to change the number of reference frames to 4 (``ref=4``) in advanced settings, but the intent is always to *increase* the number of reference frames used. Using :doc:`MediaInfo <mediainfo>` I could see that the default number of reference frames used was 5 (``ref=5``) so I stopped messing with it.
 
-And, of course, these end up being "guidelines" rather than "rules." I start here, and after the conversion I'll see if I need to reconvert with different settings.
+For *300*, the file was very hard to shrink much because of the details in the grainy appearance. Too much more and you start noticing unfortunate artifacting around edges. Only 7% of this file was audio; the rest is all video.
+
+*The Hunger Games: Mockingjay Part I* seemed to create an unusually small file regardless of the RF number. It made me curious why the original was so big. The same thing happened with *Alice in Wonderland*, though it's not as apparent: *Wonderland* has a DTS-HD MA soundtrack that I allowed to pass through (I like having the original audio) and *that track alone took 3GB* - 38% of the file size under RF21.
+
+*Across the Universe* had a larger video size than either *Mockingjay* or *Wonderland*. With only 427MB of the size coming from sound, the majority of that file size truly is video. I'm unclear if this is an anomaly.
+
+*Cinderella* is a pretty decent example of standard, full-frame (4:3) 2D animation, at least from the movies I have (Disney classics). The sound - a stereo mixdown track, a DTS-HD 5.1 track, and a DTS-HD mono track - was about 2.5GB of the file size. The video was closer to 30% with the rest being audio. Visually, honestly, I couldn't really tell the difference between the RF 21 and RF 20 and both looked amazingly clear, so I didn't bother going any further with it. I may have been able to squeeze it more, but given the majority of the file is sound, it would be diminishing returns.
+
+**The HD video "sweet spot" for Grain and Film seems to be RF 21; for 2D animation I like RF 20.** Those numbers seem a good balance between file size and quality and they follow the rough guideline I've seen for 22+/-1 for HD.
+
+HD video done with the Film setting at RF 21 seemed to take my :doc:`Megaplex server <../../hardware/server/megaplex>` around 3 - 4 hours to complete. *300*, on the grainy setting, took closer to 6 - 7 hours. 2D animation ran about 2 hours.
+
+Of course, these end up being "guidelines" rather than "rules." I start here, and after the conversion I'll see if I need to reconvert with different settings. I ended up keeping the RF 18 version of *Mockingjay*.
 
 Lip Sync Issues
 ===============
@@ -632,7 +644,7 @@ The following is my set of presets. If you put these in ``%AppData%\Roaming\Hand
           <VideoEncodeRateType>ConstantQuality</VideoEncodeRateType>
           <VideoEncoder>X264</VideoEncoder>
           <FramerateMode>VFR</FramerateMode>
-          <Quality>21</Quality>
+          <Quality>20</Quality>
           <VideoBitrate xsi:nil="true" />
           <TwoPass>false</TwoPass>
           <TurboFirstPass>false</TurboFirstPass>
