@@ -27,7 +27,7 @@ Migrating Servers
 =================
 When I moved Plex from :doc:`my Synology <../../hardware/server/synologyds1010>` over to :doc:`Megaplex <../../hardware/server/megaplex>` I had to migrate the library from one machine to another.
 
-Luckily, `Plex has a help topic explaining how to migrate your library <https://support.plex.tv/hc/en-us/articles/201370363-Move-an-Install-to-Another-System>`_ so I followed those instructions.
+Luckily, `Plex has a help topic explaining how to migrate your library <https://support.plex.tv/hc/en-us/articles/201370363-Move-an-Install-to-Another-System>`_ so I followed those instructions. *Be warned that this takes forever.* My library consisted of over 200,000 individual, tiny files (e.g., the posters and such for each title) and copying that from one place to another is super time-consuming. Be prepared to invest a couple of hours or more in moving from one server to another.
 
 Getting Support
 ===============

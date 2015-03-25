@@ -37,7 +37,9 @@ Storage
 =======
 I originally tried to use the WD Green drives I had tried in my :doc:`Windows Home Server <hpex475>`. **FAIL.** The poor performance on these drives caused any sort of heavy :doc:`Plex <../../software/serve/plex>` library indexing to fail with I/O errors. I ended up having to replace these with different, better-performing drives.
 
-I used a drive I already had for the system drive on the box and added the extra two higher-perf drives I bought as storage for the Plex library and scratch/temp space. They are configured using Windows Storage Spaces as a mirrored cluster for fault tolerance.
+I used a drive I already had for the system drive on the box and added two higher-perf drives I bought as storage for the Plex library and scratch/temp space.
+
+I originally wanted to configure them in Windows Storage Spaces for fault tolerance, but I ran into an issue where :doc:`Plex <../../software/serve/plex>` constantly `refreshed item metadata endlessly <https://forums.plex.tv/index.php/topic/102888-new-items-added-to-library-cause-refresh-loop/page-2#entry626475>`_ so I switched to standard drives and just made sure everything had a good backup running. This has better performance over mirroring anyway, and perf is key.
 
 Performance
 ===========
