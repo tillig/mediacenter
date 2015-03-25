@@ -91,6 +91,8 @@ The settings stem from my SD settings, above, so I'll just put the differences h
     - For Grain: Constant Quality RF 21
     - For Animation:
 
+I started my testing by checking out links like `the Rokoding guide to 1080p encoding <http://www.rokoding.com/settings/0_10_0/0100_1080p_blu-ray_film.html>`_. These give some great guidance and help you know where to begin.
+
 In testing to find the right HD settings, I went through a few different movies. I found the output size was very different based on the movie type and the x264 Tune setting.
 
 =============  ==============  ==============================  ===================  ==========================  =================
@@ -823,3 +825,9 @@ The following is my set of presets. If you put these in ``%AppData%\Roaming\Hand
         <UsePictureFilters>true</UsePictureFilters>
       </Preset>
     </ArrayOfPreset>
+
+Additional References
+=====================
+
+- `Rokoding <http://www.rokoding.com/>`_ has great information on encoding video with particular emphasis on :doc:`Roku <../../hardware/frontend/roku>` compatibility.
+- `The Matt Gadient best settings guide for Handbrake 0.9.9 <https://mattgadient.com/2013/06/12/a-best-settings-guide-for-handbrake-0-9-9/>`_ is indispensible. Great side-by-side comparisons for things so you can tell what settings actually do.
