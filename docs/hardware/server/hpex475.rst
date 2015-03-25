@@ -43,41 +43,6 @@ I have a Rosewill RSV-S5 5-bay eSATA port multiplier. While it can support RAID 
 
 After moving the big storage to the :doc:`Synology DS1010+ <synologyds1010>` I disconnected the port multiplier because it wasn't needed anymore, it was a tad noisy, and it ate power.
 
-Defragmenting
--------------
-You can't just use any standard defrag program because it won't understand the WHS filesystem.
-
-- `PerfectDisk 10 <http://www.perfectdisk.com/products/home-perfectdisk10-windows-home-server/learn-more>`_ is what I use because it's comparable to other solutions, has a nice interface in the WHS console, and costs half of Diskeeper.
-- `Diskeeper 2009 <http://www.diskeeper.com/Diskeeper/home/homeserver.aspx>`_ is another option that is fairly popular but is expensive and doesn't have anything compelling over PerfectDisk.
-
-I noticed after running PerfectDisk for a month or so that I was getting health warnings on my system drive roughly once or twice a week. I disabled defragmentation of the system drive and these warnings stopped. (The drive works really well, not sure what this was about.)
-
-In December 2009 my trouble with the aforementioned WD Green drives started. It was discovered when I introduced PerfectDisk into the system (though it was a drive problem, not a PerfectDisk problem).
-
-- December 2009: Started getting file conflict errors. I disabled PerfectDisk and the errors stopped.
-- January 26, 2010: Contacted PerfectDisk support. PerfectDisk support says they think it's a hardware issue. I also contacted Rosewill support, who passed me on to Sans Digital support because my port multiplier is made and supported by them. Sans Digital support said I need to upgrade the drivers for my Marvell controller. They haven't seen this exact issue, but most of their customers have all their problems go away with a driver update.
-- February 3, 2010: Re-enabled PerfectDisk to verify problems still happen.
-- February 4, 2010: Disabled PerfectDisk after system lockup.
-- April 28, 2010: Updated Marvell drivers to 1.2.0.57 and re-enabled PerfectDisk.
-- April 29, 2010: Disabled PerfectDisk after a blue screen and errors indicating "disk not ready for access."
-
-After purging the system of some potentially problematic WD drives, I re-enabled PerfectDisk and haven't seen any issues. Definitely the WD Green drives at fault.
-
-Checking for Drive Issues
--------------------------
-You can run a special batch file (``checkall.cmd``) to run ``CHKDSK`` on all drives. Don't bother waiting to see them all pass; you should see errors in the event log if there are issues. That said, wait until the system drive is done because you may be prompted to answer a question before all the other drives start running.
-
-.. sourcecode:: batch
-
-    net stop pdl
-    net stop whsbackup
-    chkdsk D: /x /r
-    chkdsk C: /x /r
-    for /d %%1 in (C:\fs\*) do start chkdsk /x /r %%1
-
-Server Recovery
-===============
-If I need to recover the system disk on the WHS, it's not too bad. I'll document that process along with :doc:`Windows Home Server v1 <../../software/system/whs>`.
 
 CPU / RAM
 =========
