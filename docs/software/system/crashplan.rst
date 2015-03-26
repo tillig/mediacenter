@@ -16,13 +16,20 @@ In 2012 I switched to `CrashPlan <http://www.crashplan.com/>`_. From a cost/bene
 
 Mounting Drives
 ===============
-CrashPlan supports backup of mounted network drives, but getting one mounted for the ``SYSTEM`` account is easier said than done. `This StackOverflow article <http://stackoverflow.com/questions/182750/map-a-network-drive-to-be-used-by-a-service>`_ shows how to use Sysinternals ``psexec`` to mount a network drive for the ``SYSTEM`` account; but it's better to use a script to mount things at Windows Startup Scripts via group policy instead.
+CrashPlan supports backup of mounted network drives, but getting one mounted for the ``SYSTEM`` account is easier said than done. `This StackOverflow article <http://stackoverflow.com/questions/182750/map-a-network-drive-to-be-used-by-a-service>`_ shows how to use Sysinternals ``psexec`` to mount a network drive for the ``SYSTEM`` account; but it's better to use a script to mount things using Windows Startup Scripts via group policy instead.
+
+First, create a batch file like this that creates a log (for troubleshooting) and mounts the drives via the ``net use`` command.
 
 .. sourcecode:: batch
 
     echo %date% %time% : "%cd%\mount_crashplan_shares.bat" >> C:\Windows\Temp\mount.log 2>&1
     net use V: "\\diskstation\video\Home Videos" /USER:DISKSTATION\admin password >> C:\Windows\Temp\mount.log 2>&1
 
+Now set up Local Computer Policy so the script runs at Windows startup:
+
+.. image:: startupscript.png
+
 CrashPlan is set up on the Windows Home Server to back up all shares on the home server. It also has mapped drives for:
 
-Home Videos - ``V:`` @ ``\\diskstation\video\Home Videos``
+- Home Videos - ``V:`` @ ``\\diskstation\video\Home Videos``
+- Plex Database - ``W:`` @ ``\\megaplex\Plex``
