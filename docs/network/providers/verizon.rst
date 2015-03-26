@@ -10,6 +10,7 @@ After upgrading to 35/35, on 2/25/2010 I ran a speed test to see what the result
 
 - `One person had to get the ONT on the side of the house replaced <http://forums.verizon.com/t5/FiOS-Internet/Fios-35-35-Internet-Upgrade/m-p/159333>`_ because the older hardware didn't support the speed.
 - `One person <http://forums.verizon.com/t5/FiOS-Internet/Switched-to-35-35-FIOS-plan-but-still-getting-only-25-15/td-p/149570>`_ was able to run the `Verizon Speed Optimizer <http://www.verizon.net/optimize>`_ on their machine and fix it. There was something in the network settings that needed to be changed, apparently. (That was specifically a Windows 7 thing, too.) The optimizer sets:
+
     - TCP 1323 Extensions - This parameter enables enhancements to the TCP/IP protocol that provide improved performance over high speed connections.
     - TCP Receive Window - This parameter specifies the number of bytes a sender (the source you are downloading from) may transmit without receiving an acknowledgment. Modifying it determines the maximum size offered by the system.
     - MTU (Maximum Transmission Units) - The MTU defines the largest single unit of data that can be transmitted over your connection. The FiOS network requires an MTU of 1492 bytes.
