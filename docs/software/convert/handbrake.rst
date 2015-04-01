@@ -146,10 +146,52 @@ I stopped tracking the complete list. It kind of sucks, but it is what it is.
 
 Part of the way I fixed this was to start using **constant frame rate** in all my conversions rather than variable frame rate. I noticed that, as a general rule, this reduced or removed many of the lip sync problems I saw.
 
+Remote Queue Monitoring
+=======================
+Handbrake has a command-line interface and good scripting abilities, but it doesn't have an official way to monitor the status of the queue.
+
+Not that it's super important, but I'm curious to see how things are progressing without having to remote all the way in. The way I solved that was with a PowerShell script and `OneDrive <onedrive.live.com>`_.
+
+Handbrake stores the queue XML in the ``%AppData%\Handbrake`` folder. The files are always named like ``hb_queue_recovery1234.xml``. I set up a scheduled task to generate a small text report of the most recently written queue XML file and dump it in a OneDrive folder. That way I can see the state of the queue from anywhere.
+
+Here's the script I used:
+
+.. sourcecode:: powershell
+
+    $reportFile = "C:\Users\Travis\OneDrive\QueueStatus.txt"
+    $handbrakeDir = Join-Path ([Environment]::GetFolderPath("ApplicationData")) -ChildPath "Handbrake"
+
+    [XML]$queue = Get-ChildItem -Path $handbrakeDir -Filter "hb_queue*.xml" |
+    Sort-Object -Property LastWriteTime -Descending |
+    Select-Object -First 1 |
+    Get-Content
+
+    $queue.ArrayOfQueueTask.QueueTask |
+    Select-Object -Property @{n='Status';e={$_.Status}},@{n='Source';e={$_.Task.Source}},@{n='Destination';e={$_.Task.Destination}} |
+    Format-Table -AutoSize |
+    Out-String -Width 4096 |
+    Out-File $reportFile -Force
+
+The report output looks like this::
+
+    Status     Source                                                    Destination
+    ------     ------                                                    -----------
+    InProgress E:\Rip\Enchanted (2007)\Enchanted_t01.mkv                 E:\Rip\Enchanted (2007).m4v
+    Waiting    E:\Rip\The Expendables (2010)\The_Expendables_t01.mkv     E:\Rip\The Expendables (2010).m4v
+    Waiting    E:\Rip\The Expendables 2 (2012)\The_Expendables_2_t55.mkv E:\Rip\The Expendables 2 (2012).m4v
+    Waiting    E:\Rip\Family Guy.s09e18\FAMILY_GUY_IT'S_A_TRAP!_t00.mkv  E:\Rip\Family Guy.s09e18.m4v
+    Waiting    E:\Rip\The Fifth Element (1997)\title00.mkv               E:\Rip\The Fifth Element (1997).m4v
+
+Additional References
+=====================
+
+- `Rokoding <http://www.rokoding.com/>`_ has great information on encoding video with particular emphasis on :doc:`Roku <../../hardware/frontend/roku>` compatibility.
+- `The Matt Gadient best settings guide for Handbrake 0.9.9 <https://mattgadient.com/2013/06/12/a-best-settings-guide-for-handbrake-0-9-9/>`_ is indispensible. Great side-by-side comparisons for things so you can tell what settings actually do.
+
 User Presets
 ============
 
-The following is my set of presets. If you put these in ``%AppData%\Roaming\Handbrake\user_presets.xml`` then you'll see the same settings as me.
+The following is my set of presets. If you put these in ``%AppData%\Handbrake\user_presets.xml`` then you'll see the same settings as me.
 
 .. sourcecode:: xml
 
@@ -825,9 +867,3 @@ The following is my set of presets. If you put these in ``%AppData%\Roaming\Hand
         <UsePictureFilters>true</UsePictureFilters>
       </Preset>
     </ArrayOfPreset>
-
-Additional References
-=====================
-
-- `Rokoding <http://www.rokoding.com/>`_ has great information on encoding video with particular emphasis on :doc:`Roku <../../hardware/frontend/roku>` compatibility.
-- `The Matt Gadient best settings guide for Handbrake 0.9.9 <https://mattgadient.com/2013/06/12/a-best-settings-guide-for-handbrake-0-9-9/>`_ is indispensible. Great side-by-side comparisons for things so you can tell what settings actually do.
