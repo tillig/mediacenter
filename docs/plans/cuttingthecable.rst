@@ -50,7 +50,7 @@ The initial plan doesn't include an amplifier at the antenna but may need to be 
 
 Recommendation: ChannelMaster CM 3000 SMARTenna
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The flat antennas look nice, like a small satellite. The `ChannelMaster CM 3000 SMARTenna <http://www.amazon.com/dp/B000BSKO84?tag=mhsvortex>`_ seems as good as any for the requirements we have. A good balance of cost and power.
+The flat antennas look nice, like a small satellite. :doc:`The ChannelMaster CM 3000 SMARTenna seems as good as any for the requirements we have. <../hardware/network/cm3000>` A good balance of cost and power.
 
 Home Network
 ------------

@@ -7,3 +7,4 @@ Network Infrastructure
     dap1522.rst
     dgs2208.rst
     netgearwndr3700v2.rst
+    cm3000.rst
