@@ -42,3 +42,11 @@ I used ``VIDEO_TS`` format originally in combination with :doc:`XBMC <../softwar
 However, MPEG-2 video is poor compression and eats up space. Also, you have to use a smarter media front-end like :doc:`XBMC <../software/deprecated/xbmc>` to play a disc image in ``VIDEO_TS`` format because it means the front-end must emulate a DVD player. Thus - it's far less portable than other formats.
 
 When my :doc:`media center goals <../requirements>` changed to go for more portability, I moved away from ``VIDEO_TS``.
+
+AVCHD / MTS / M2TS
+==================
+I first encountered this format when I bought an HD camcorder. At that point it was sort of difficult to deal with - not much would play it directly and I spent some time trying to figure out how best to store it as something more compatible.
+
+As it turns out, **this is the same format in which Blu-ray discs are stored**. More things play the format natively now, but I still end up converting these files (from my Blu-ray discs and my camera) into MP4 files. :doc:`Handbrake <../software/convert/handbrake>` is the way to go for conversion here.
+
+For home movie editing in this format, I use `Sony Vegas <http://www.sonycreativesoftware.com/vegassoftware>`_. I save my edited movies as MP4.

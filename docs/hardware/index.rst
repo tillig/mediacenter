@@ -11,4 +11,5 @@ Hardware / Devices
     tv/index.rst
     receiver/index.rst
     speakers/index.rst
+    power/index.rst
     deprecated/index.rst
