@@ -10,6 +10,7 @@ When looking for a front-end device, I generally want:
 - **Stable network connectivity**: I don't mind if it uses wireless, and I have a decent :doc:`network setup <../../network/index>`, but I want it to be stable/consistent. I prefer wired over wireless, though.
 
 .. toctree::
+    remotecontrol.rst
     xbox360.rst
     ps3.rst
     roku.rst
