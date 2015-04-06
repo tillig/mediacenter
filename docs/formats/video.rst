@@ -29,6 +29,8 @@ I use :doc:`Handbrake <../software/convert/handbrake>` to convert the ripped dis
 
 Something I did notice as I moved away from ``VIDEO_TS`` into a new, "standalone file" sort of format, is that audio/video sync sometimes got off somewhere so lip sync was visibly bad. Sometimes this is due to the source material being bad already; other times it had to do with frame rate issues. :doc:`I talk more about lip sync on the Handbrake page. <../software/convert/handbrake>`
 
+I will say that, from a container perspective, subtitles is an area where MKV definitely outshines MP4 - MKV allows multiple subtitle tracks, just like a regular disc; MP4 only gives you one, and whichever one you choose is "permanently turned on." :doc:`I talk more about how I handle subtitles on the Handbrake page. <../software/convert/handbrake>`
+
 VIDEO_TS Disc Image
 ===================
 ``VIDEO_TS`` isn't really a "format" in the classic sense.

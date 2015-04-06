@@ -56,6 +56,14 @@ AAC has a surround sound (multichannel) spec but it's not very well supported, s
 
 :doc:`Handbrake <../software/convert/handbrake>` has a `surround sound guide <https://trac.handbrake.fr/wiki/SurroundSoundGuide>`_ that explains in more detail how to properly handle multiple tracks.
 
+Subtitles
+=========
+Subtitles are an area where MKV as a container is far and away superior to MP4. In MKV, you can have multiple subtitle tracks (different languages) that can optionally be displayed by the player as needed, just like with a Blu-ray or DVD player. The challenge, of course, is finding a player on your various devices that will handle it.
+
+With MP4, you get one subtitle track and it gets permanently "turned on" by being "burned" into the video image directly. No special player needed, but far less flexibility.
+
+I talk about how I handle subtitles on the :doc:`Handbrake <../software/convert/handbrake>` page.
+
 Full Disc Images - ISO vs. VIDEO_TS
 ===================================
 My original :doc:`requirements <../requirements>` around media center stuff for discs was to try and keep the disc contents stock/unmodified so I could always burn a new copy if my disc went bad. I also wanted to keep the menus, extras, and so on when watching the movie.

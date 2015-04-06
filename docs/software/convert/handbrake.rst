@@ -125,6 +125,34 @@ HD video done with the Film setting at RF 21 seemed to take my :doc:`Megaplex se
 
 Of course, these end up being "guidelines" rather than "rules." I start here, and after the conversion I'll see if I need to reconvert with different settings. I ended up keeping the RF 18 version of *Mockingjay*.
 
+Subtitles
+=========
+I learned *a lot* about subtitles in doing video conversion. If you're like me, you never thought much about how they work - the text just comes up on the screen as needed.
+
+`Handbrake has a really good page explaining things from a technical perspective <https://trac.handbrake.fr/wiki/Subtitles>`_ but it breaks down in my world like this:
+
+- Handbrake can read all of the standard subtitle types you'll find on discs.
+- If you're using :doc:`the MP4 format <../../formats/video>` like me, you can either permanently "burn in" the subtitles to the video image or you don't get subtitles at all. This is because MP4 doesn't let you keep a separate subtitle track the way MKV does.
+
+Since I am fortunate enough to only need subtitles in non-English-speaking films or in parts during English-speaking films where they switch languages, this is less an issue, but it does require you "flip a switch" in Handbrake to tell it to include the subtitles.
+
+- General Subtitles: This is for a foreign language film where you always want the subtitles on through the whole movie. Think "English speaker watching a Kung Fu movie."
+- Forced Subtitles: This is for a native language film where you only need subtitles for the few foreign language parts. Think "Black Widow getting interrogated by the Russians in 'The Avengers'."
+
+Here's how to get subtitles in your movie:
+
+#. First, choose which, if any, kind of subtitles you want.
+#. Switch to the "Subtitles" tab in Handbrake.
+#. Click "Add Track" to add a subtitle track.
+#. For your chosen subtitle type...
+
+    #. For general subtitles, select the language of the subtitles you want and click the "Burn In" checkbox.
+    #. For forced subtitles, select "Foreign Audio Scan" as the language and click both the "Forced Only" and "Burn In" checkboxes.
+
+Even though I've added forced subtitles to my ``user_presets.xml`` (below), the default doesn't seem to keep - you need to re-add the forced subtitle track each time.
+
+**It's important to look at the output when you expect subtitles.** I found that sometimes there are multiple English tracks and sometimes you get the wrong one. There are tips for troubleshooting on the `Handbrake subtitle page <https://trac.handbrake.fr/wiki/Subtitles>`_.
+
 Lip Sync Issues
 ===============
 
@@ -289,7 +317,21 @@ The following is my set of presets. If you put these in ``%AppData%\Handbrake\us
             <AudioAllowMP3Pass>true</AudioAllowMP3Pass>
             <AudioEncoderFallback>Ac3</AudioEncoderFallback>
           </AllowedPassthruOptions>
-          <SubtitleTracks />
+          <SubtitleTracks>
+            <SubtitleTrack>
+              <Burned>true</Burned>
+              <Default>false</Default>
+              <Forced>true</Forced>
+              <SourceTrack>
+                <SourceId>0</SourceId>
+                <TrackNumber>0</TrackNumber>
+                <Language>Foreign Audio Search (Bitmap)</Language>
+                <SubtitleType>ForeignAudioSearch</SubtitleType>
+              </SourceTrack>
+              <SrtOffset>0</SrtOffset>
+              <SubtitleType>VobSub</SubtitleType>
+            </SubtitleTrack>
+          </SubtitleTracks>
           <IncludeChapterMarkers>true</IncludeChapterMarkers>
           <ChapterNames />
           <X264Preset>Slower</X264Preset>
@@ -401,7 +443,21 @@ The following is my set of presets. If you put these in ``%AppData%\Handbrake\us
             <AudioAllowMP3Pass>true</AudioAllowMP3Pass>
             <AudioEncoderFallback>Ac3</AudioEncoderFallback>
           </AllowedPassthruOptions>
-          <SubtitleTracks />
+          <SubtitleTracks>
+            <SubtitleTrack>
+              <Burned>true</Burned>
+              <Default>false</Default>
+              <Forced>true</Forced>
+              <SourceTrack>
+                <SourceId>0</SourceId>
+                <TrackNumber>0</TrackNumber>
+                <Language>Foreign Audio Search (Bitmap)</Language>
+                <SubtitleType>ForeignAudioSearch</SubtitleType>
+              </SourceTrack>
+              <SrtOffset>0</SrtOffset>
+              <SubtitleType>VobSub</SubtitleType>
+            </SubtitleTrack>
+          </SubtitleTracks>
           <IncludeChapterMarkers>true</IncludeChapterMarkers>
           <ChapterNames />
           <X264Preset>Slower</X264Preset>
@@ -513,7 +569,21 @@ The following is my set of presets. If you put these in ``%AppData%\Handbrake\us
             <AudioAllowMP3Pass>true</AudioAllowMP3Pass>
             <AudioEncoderFallback>Ac3</AudioEncoderFallback>
           </AllowedPassthruOptions>
-          <SubtitleTracks />
+          <SubtitleTracks>
+            <SubtitleTrack>
+              <Burned>true</Burned>
+              <Default>false</Default>
+              <Forced>true</Forced>
+              <SourceTrack>
+                <SourceId>0</SourceId>
+                <TrackNumber>0</TrackNumber>
+                <Language>Foreign Audio Search (Bitmap)</Language>
+                <SubtitleType>ForeignAudioSearch</SubtitleType>
+              </SourceTrack>
+              <SrtOffset>0</SrtOffset>
+              <SubtitleType>VobSub</SubtitleType>
+            </SubtitleTrack>
+          </SubtitleTracks>
           <IncludeChapterMarkers>true</IncludeChapterMarkers>
           <ChapterNames />
           <X264Preset>Slower</X264Preset>
@@ -624,7 +694,21 @@ The following is my set of presets. If you put these in ``%AppData%\Handbrake\us
             <AudioAllowMP3Pass>true</AudioAllowMP3Pass>
             <AudioEncoderFallback>Ac3</AudioEncoderFallback>
           </AllowedPassthruOptions>
-          <SubtitleTracks />
+          <SubtitleTracks>
+            <SubtitleTrack>
+              <Burned>true</Burned>
+              <Default>false</Default>
+              <Forced>true</Forced>
+              <SourceTrack>
+                <SourceId>0</SourceId>
+                <TrackNumber>0</TrackNumber>
+                <Language>Foreign Audio Search (Bitmap)</Language>
+                <SubtitleType>ForeignAudioSearch</SubtitleType>
+              </SourceTrack>
+              <SrtOffset>0</SrtOffset>
+              <SubtitleType>VobSub</SubtitleType>
+            </SubtitleTrack>
+          </SubtitleTracks>
           <IncludeChapterMarkers>true</IncludeChapterMarkers>
           <ChapterNames />
           <X264Preset>Slower</X264Preset>
@@ -735,7 +819,21 @@ The following is my set of presets. If you put these in ``%AppData%\Handbrake\us
             <AudioAllowMP3Pass>true</AudioAllowMP3Pass>
             <AudioEncoderFallback>Ac3</AudioEncoderFallback>
           </AllowedPassthruOptions>
-          <SubtitleTracks />
+          <SubtitleTracks>
+            <SubtitleTrack>
+              <Burned>true</Burned>
+              <Default>false</Default>
+              <Forced>true</Forced>
+              <SourceTrack>
+                <SourceId>0</SourceId>
+                <TrackNumber>0</TrackNumber>
+                <Language>Foreign Audio Search (Bitmap)</Language>
+                <SubtitleType>ForeignAudioSearch</SubtitleType>
+              </SourceTrack>
+              <SrtOffset>0</SrtOffset>
+              <SubtitleType>VobSub</SubtitleType>
+            </SubtitleTrack>
+          </SubtitleTracks>
           <IncludeChapterMarkers>true</IncludeChapterMarkers>
           <ChapterNames />
           <X264Preset>Slower</X264Preset>
@@ -846,7 +944,21 @@ The following is my set of presets. If you put these in ``%AppData%\Handbrake\us
             <AudioAllowMP3Pass>true</AudioAllowMP3Pass>
             <AudioEncoderFallback>Ac3</AudioEncoderFallback>
           </AllowedPassthruOptions>
-          <SubtitleTracks />
+          <SubtitleTracks>
+            <SubtitleTrack>
+              <Burned>true</Burned>
+              <Default>false</Default>
+              <Forced>true</Forced>
+              <SourceTrack>
+                <SourceId>0</SourceId>
+                <TrackNumber>0</TrackNumber>
+                <Language>Foreign Audio Search (Bitmap)</Language>
+                <SubtitleType>ForeignAudioSearch</SubtitleType>
+              </SourceTrack>
+              <SrtOffset>0</SrtOffset>
+              <SubtitleType>VobSub</SubtitleType>
+            </SubtitleTrack>
+          </SubtitleTracks>
           <IncludeChapterMarkers>true</IncludeChapterMarkers>
           <ChapterNames />
           <X264Preset>Slower</X264Preset>
