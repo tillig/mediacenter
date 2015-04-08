@@ -153,6 +153,11 @@ Even though I've added forced subtitles to my ``user_presets.xml`` (below), the 
 
 **It's important to look at the output when you expect subtitles.** I found that sometimes there are multiple English tracks and sometimes you get the wrong one. There are tips for troubleshooting on the `Handbrake subtitle page <https://trac.handbrake.fr/wiki/Subtitles>`_.
 
+Additional tips for subtitles:
+
+- `This forced subtitles Google Doc spreadsheet <https://docs.google.com/spreadsheet/ccc?key=0AkGO8UqErL6idDhYYjg1ZXlORnRaM3ZhTks4Z3FrYlE&usp=sharing#gid=20>`_ is an incomplete but ever-growing list of movies that have forced subtitles in them. It can help determine if you need to switch on forced subs.
+- `SubtitleEdit <http://www.nikse.dk/SubtitleEdit/>`_ is a tool for inspecting and editing subtitles. I use it to figure out where the subtitles start and end (looking at the source ripped content) so I can narrow down what I should look at in the end conversion.
+
 Lip Sync Issues
 ===============
 

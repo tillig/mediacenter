@@ -62,7 +62,7 @@ Subtitles are an area where MKV as a container is far and away superior to MP4. 
 
 With MP4, you get one subtitle track and it gets permanently "turned on" by being "burned" into the video image directly. No special player needed, but far less flexibility.
 
-I talk about how I handle subtitles on the :doc:`Handbrake <../software/convert/handbrake>` page.
+I talk about how I handle subtitles during conversion on the :doc:`Handbrake <../software/convert/handbrake>` page.
 
 Full Disc Images - ISO vs. VIDEO_TS
 ===================================
