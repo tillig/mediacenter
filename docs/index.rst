@@ -13,7 +13,12 @@ I've amassed quite a collection, and I want to be able to enjoy it without a lot
 - I subscribe to :doc:`Netflix <services/netflix>`, :doc:`Amazon Prime <services/amazon>`, and :doc:`Pandora <services/pandora>` for content.
 - At each TV in my house, I have an :doc:`Xbox 360 <hardware/frontend/xbox360>` or a :doc:`Roku <hardware/frontend/roku>` to access the content served by Plex and the various services.
 
-That, of course, is pretty high-level. You can dive into individual areas to read about the more detailed sections of the system.
+It looks like this:
+
+.. image:: network/diagram_small.png
+   :target: _downloads/diagram.png
+
+That, of course, is pretty high-level. You can dive into individual areas to read about the more detailed sections of the system. (If you want more on the diagram, :doc:`check out the network page <network/index>`.)
 
 I started out `blogging <http://www.paraesthesia.com>`_ this information, but as time goes on, the blog entry updates upon updates get confusing... so I switched to documentation on `ReadTheDocs <https://readthedocs.org/>`_.
 
