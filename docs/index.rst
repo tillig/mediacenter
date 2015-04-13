@@ -35,5 +35,6 @@ And now...
     software/index.rst
     services/index.rst
     formats/index.rst
+    processes/index.rst
     plans/index.rst
     disclaimer.rst

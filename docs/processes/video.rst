@@ -1,0 +1,15 @@
+==========================
+Video/Movie Intake Process
+==========================
+
+This is the process I go through when I get new movies or TV shows for my collection. Following this process helps me keep track of what I have (both for insurance purposes and so I don't buy duplicate stuff); and it makes sure I get everything into the system so it can be consumed by all of my devices.
+
+Note that currently I don't buy digital-only movies - I only buy discs. While some of those discs may come with DRM-laden digital copies (which I do claim), there isn't a process for bringing in digital-only video because I don't really have any.
+
+1. Add the disc/set to :doc:`DVD Profiler <../software/manage/dvdprofiler>` by UPC.
+2. Synchronize the DVD Profiler local database with `my online video database <http://www.invelos.com/dvdcollection.aspx/tillig>`_.
+3. Back up the local DVD Profiler database. This is a more thorough backup than the online collection and would be used in favor of the online sync backup if available.
+4. Claim any digital copy codes. If the disc comes with a "digital copy," I'll claim it. I prefer iTunes over Vudu because the primary use case for my digital copy movies is traveling with an iPad and it makes for a simpler sync. If I have an internet connection, I'll just use Plex.
+5. Rip the video. For DVDs, I'll usually use :doc:`DVDFab HD Decrypter <../software/rip/dvdfab>` to rip to ``VIDEO_TS`` format because it's a one-click operation I don't have to think much about. For Blu-rays, I use :doc:`MakeMKV <../software/rip/makemkv>` to rip just the main movie or TV episode(s). Technically I could use MakeMKV for both; I just like DVDFab for DVDs becausee it's fewer steps to get the video off the disc.
+6. Convert the video. I use :doc:`Handbrake <../software/convert/handbrake>` to convert the video from the ripped format into :doc:`MP4 format <../formats/video>`.
+7. Store the converted video. I put the movie or TV episodes into a shared folder on my :doc:`Synology DS1010+ <../hardware/server/synologyds1010>`. I use `the naming conventions and folder structures outlined by Plex <https://support.plex.tv/hc/en-us/categories/200028098-Media-Preparation>`_. Once on the DS1010+, my :doc:`MegaPlex server <../hardware/server/megaplex>` automatically finds it and adds it to :doc:`Plex <../software/serve/plex>` so it is available to all of my devices.
