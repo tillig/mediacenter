@@ -13,3 +13,23 @@ Note that currently I don't buy digital-only movies - I only buy discs. While so
 5. Rip the video. For DVDs, I'll usually use :doc:`DVDFab HD Decrypter <../software/rip/dvdfab>` to rip to ``VIDEO_TS`` format because it's a one-click operation I don't have to think much about. For Blu-rays, I use :doc:`MakeMKV <../software/rip/makemkv>` to rip just the main movie or TV episode(s). Technically I could use MakeMKV for both; I just like DVDFab for DVDs becausee it's fewer steps to get the video off the disc.
 6. Convert the video. I use :doc:`Handbrake <../software/convert/handbrake>` to convert the video from the ripped format into :doc:`MP4 format <../formats/video>`.
 7. Store the converted video. I put the movie or TV episodes into a shared folder on my :doc:`Synology DS1010+ <../hardware/server/synologyds1010>`. I use `the naming conventions and folder structures outlined by Plex <https://support.plex.tv/hc/en-us/categories/200028098-Media-Preparation>`_. Once on the DS1010+, my :doc:`MegaPlex server <../hardware/server/megaplex>` automatically finds it and adds it to :doc:`Plex <../software/serve/plex>` so it is available to all of my devices.
+8. File the discs.
+
+    1. If it's a TV series - DVD or Blu-ray - I put them upstairs on some shelves we have specifically for this purpose. It's kind of fun to see all the TV series in one place, though admittedly it's getting pretty cramped.
+    2. If it's a DVD, I use `Odyssey CD Storage Cases <http://www.sleevecityusa.com/Odyssey-CD-Storage-Case-for-65-Jewel-Cases-p/3strody65.htm>`_, each DVD in a `Diskeeper sleeve <http://www.sleevecityusa.com/diskeeper-anti-static-cd-dvd-sleeve-p/3cdrice.htm>`_. I store liner notes and any other paperwork in an expandable envelope.
+    3. If it's a Blu-ray, I use `DiscSox HiDef Pro sleeves <http://www.amazon.com/dp/B002LDBZM6?tag=mhsvortex>`_ in `a case specifically for those sleeves <http://mmdesign.com/products/decorative-case-gunny-dvd-pro.php>`_.
+
+The Odyssey box for DVDs looks like this:
+
+.. image:: odysseybox.jpg
+   :target: http://www.sleevecityusa.com/Odyssey-CD-Storage-Case-for-65-Jewel-Cases-p/3strody65.htm
+
+DiscSox HiDef Pro sleeves look like this:
+
+.. image:: discsox.jpg
+   :target: http://www.amazon.com/dp/B002LDBZM6?tag=mhsvortex
+
+The case for the DiscSox sleeves looks like this and sits nicely in my living room:
+
+.. image:: discsox_case.jpg
+   :target: http://mmdesign.com/products/decorative-case-gunny-dvd-pro.php
