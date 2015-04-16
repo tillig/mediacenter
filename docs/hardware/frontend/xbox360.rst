@@ -2,7 +2,10 @@
 Xbox 360
 ========
 
-I have two Xbox 360 units - one upstairs, one downstairs. I also have one of the HD-DVD players (yeah, I know) for the one upstairs.
+I have two `Xbox 360 units <http://www.amazon.com/dp/B00NNU07RU?tag=mhsvortex>`_ - one upstairs, one downstairs. I also have one of the HD-DVD players (yeah, I know) for the one upstairs.
+
+.. image:: xbox360.jpg
+   :target: http://www.amazon.com/dp/B00NNU07RU?tag=mhsvortex
 
 Video
 -----
