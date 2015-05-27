@@ -31,6 +31,18 @@ Something I did notice as I moved away from ``VIDEO_TS`` into a new, "standalone
 
 I will say that, from a container perspective, subtitles is an area where MKV definitely outshines MP4 - MKV allows multiple subtitle tracks, just like a regular disc; MP4 only gives you one, and whichever one you choose is "permanently turned on." :doc:`I talk more about how I handle subtitles on the Handbrake page. <../software/convert/handbrake>`
 
+I gathered some general statistics after I finished the mass conversion of all of my media using :doc:`Handbrake <../software/convert/handbrake>` that may help you gauge how much space you need. This is using the settings outlined on the :doc:`Handbrake <../software/convert/handbrake>` page.
+
+- Total number of files: 4998
+- Total content runtime: 134 days, 8 hours, 56 minutes, 47 seconds
+    - SD runtime: 115 days, 12 hours, 25 minutes, 17 seconds
+    - HD runtime: 18 days, 20 hours, 31 minutes, 30 seconds
+- Total file size: 5182.3GB
+    - SD file size: 3042.04GB
+    - HD file size: 2140.26GB
+- Average MB/minute for SD content: 18.73
+- Average MB/minute for HD content: 80.72
+
 VIDEO_TS Disc Image
 ===================
 ``VIDEO_TS`` isn't really a "format" in the classic sense.

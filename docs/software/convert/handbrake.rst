@@ -71,6 +71,8 @@ My entire ``user_presets.xml`` file is pasted in below, but for readability, I h
 
 The truly important bits there are **bold** - these are the settings that differ from the "High Profile" preset.
 
+**Using these settings, I calculated SD content for me uses an average of 18.73MB/minute.**
+
 HD Settings
 ===========
 My entire ``user_presets.xml`` file is pasted in below, but for readability, I have three HD presets - one each for Film (most everything), 2D Animation, or Grain.
@@ -124,6 +126,8 @@ For *300*, the file was very hard to shrink much because of the details in the g
 HD video done with the Film setting at RF 21 seemed to take my :doc:`Megaplex server <../../hardware/server/megaplex>` around 3 - 4 hours to complete. *300*, on the grainy setting, took closer to 6 - 7 hours. 2D animation ran about 2 hours.
 
 Of course, these end up being "guidelines" rather than "rules." I start here, and after the conversion I'll see if I need to reconvert with different settings. I ended up keeping the RF 18 version of *Mockingjay*.
+
+**Using these settings, I calculated HD content for me uses an average of 80.72MB/minute.**
 
 Subtitles
 =========
@@ -214,6 +218,71 @@ The report output looks like this::
     Waiting    E:\Rip\The Expendables 2 (2012)\The_Expendables_2_t55.mkv E:\Rip\The Expendables 2 (2012).m4v
     Waiting    E:\Rip\Family Guy.s09e18\FAMILY_GUY_IT'S_A_TRAP!_t00.mkv  E:\Rip\Family Guy.s09e18.m4v
     Waiting    E:\Rip\The Fifth Element (1997)\title00.mkv               E:\Rip\The Fifth Element (1997).m4v
+
+Reporting Media Info
+====================
+I used a script to calculate video media average sizes for my collection, the result of which I posted on the :doc:`video format page <../../formats/video>`. The script I used is here:
+
+.. sourcecode:: powershell
+
+    $mediaShare  = "\\DISKSTATION\video"
+
+    function Get-MediaInfo
+    {
+        param([Parameter(ValueFromPipeline=$true)] $path)
+
+        Begin
+        {
+            $shell = New-Object -COMObject Shell.Application
+            Write-Progress -Activity "Scanning media info" -Status "Starting scan"
+        }
+
+        Process
+        {
+            Write-Progress -Activity "Scanning media info" -Status $path
+            $fileSize = Get-Item $path | Select-Object -ExpandProperty Length
+
+            $folder = Split-Path $path
+            $file = Split-Path $path -Leaf
+            $shellfolder = $shell.Namespace($folder)
+            $shellfile = $shellfolder.ParseName($file)
+
+            # Good stuff! http://powershell.com/cs/blogs/tobias/archive/2011/01/07/organizing-videos-and-music.aspx
+            # 27  = Length in H:M:S format
+            # 299 = Frame height
+            # 301 = Frame width
+            [int]$frameWidth = $shellfolder.GetDetailsOf($shellfile, 301)
+            [int]$frameHeight = $shellfolder.GetDetailsOf($shellfile, 299)
+            $length = [System.TimeSpan]::Parse($shellfolder.GetDetailsOf($shellfile, 27))
+            New-Object -TypeName PSObject -Property (@{'Path'=$path;'Size'=$fileSize;'Width'=$frameWidth;'Height'=$frameHeight;'Length'=$length})
+        }
+
+        End
+        {
+            Write-Progress -Activity "Scanning media info" -Status "Done" -Completed
+        }
+    }
+
+    $allMediaInfo = Get-ChildItem $mediaShare -File -Recurse | Select-Object -ExpandProperty FullName | Get-MediaInfo
+    $sdMediaInfo = $allMediaInfo | Where-Object { $_.Width -le 720 }
+    $hdMediaInfo = $allMediaInfo | Where-Object { $_.Width -gt 720 }
+
+    $hdLength = [System.TimeSpan]::Zero
+    $sdLength = [System.TimeSpan]::Zero
+    $hdMediaInfo | ForEach-Object { $hdLength = $hdLength.Add($_.Length) }
+    $sdMediaInfo | ForEach-Object { $sdLength = $sdLength.Add($_.Length) }
+    $hdSize = $hdMediaInfo | Measure-Object -Sum -Property Size | Select-Object -ExpandProperty Sum
+    $sdSize = $sdMediaInfo | Measure-Object -Sum -Property Size | Select-Object -ExpandProperty Sum
+
+    Write-Host "Total files:      " $allMediaInfo.Count
+    Write-Host "SD Length:        " $sdLength
+    Write-Host "HD Length:        " $hdLength
+    Write-Host "Total Length:     " $hdLength.Add($sdLength)
+    Write-Host "SD Size:          " ($sdSize / 1GB) "GB"
+    Write-Host "HD Size:          " ($hdSize / 1GB) "GB"
+    Write-Host "Total Size:       " (($hdSize + $sdSize) / 1GB) "GB"
+    Write-Host "SD MB per Minute: " (($sdSize / $sdLength.TotalMinutes) / 1MB) "MB"
+    Write-Host "HD MB per Minute: " (($hdSize / $hdLength.TotalMinutes) / 1MB) "MB"
 
 Additional References
 =====================
