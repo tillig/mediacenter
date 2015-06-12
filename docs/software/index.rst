@@ -20,4 +20,5 @@ My backup solution is :doc:`CrashPlan <system/crashplan>`, which handles both in
     convert/index.rst
     serve/index.rst
     system/index.rst
+    scripts.rst
     deprecated/index.rst
