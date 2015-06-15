@@ -2,6 +2,23 @@
 iTunes
 ======
 
+I, like many, use iTunes to organize my music.
+
+What I like:
+
+* It's one place I can go to deal with my collection and sync up devices.
+* It keeps the music files organized on disk.
+* It has a passable metadata editing interface.
+* It has a programming interface that lets me write scripts to help automate tasks in music management.
+
+What I don't like:
+
+* It is slower than any other program I use. Startup/shutdown is ridiculous. Switching views, especially if it's to something requiring network activity (like the iTunes store) is laughable.
+* It locks up whenever it has to do a network I/O call. I keep all of my music on a shared network drive. If I copy a new file into the library, the UI literally locks up during the whole file copy operation. This gets really bad if it's downloading podcasts - every podcast it saves locks up the UI unexpectedly as it writes the file to the network share.
+* It tries to do too much. I don't need an integrated store and an app management system and and and and. I want it to manage my music. I want it to sync my music to my devices. That's it. Do your thing and do it well. Instead, it does 1000 things and it half-asses every one.
+
+I've considered alternatives like `MediaMonkey <http://www.mediamonkey.com/>`_ but I just haven't bitten the bullet yet. I have a few (very few) iTunes DRM-wrapped tracks and videos and without iTunes, I'm not sure if that'd work too well.
+
 Windows Media Center Integration
 --------------------------------
 
