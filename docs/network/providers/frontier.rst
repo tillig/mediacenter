@@ -8,7 +8,7 @@ Frontier hosed things up on my network constantly by remotely pushing policy and
 
 - Reset the router to defaults.
 - Set the admin password.
-- Disable wireless (at the time we were using the :doc:`DAP-1522 <../../hardware/network/dap1522>` for wireless).
+- Disable wireless (at the time we were using the :doc:`DAP-1522 <../../hardware/deprecated/dap1522>` for wireless).
 - On Advanced -> System Setttings, change the local domain name to "home" if it's not that already. (Frontier conveniently remotely made it "ftrdhcpuser.net" and now some domain names try to resolve on the internet.)
 - Log into the :doc:`Windows Home Server <../../software/system/whs>` remotely and verify access. If you can't get to it, log into the WHS console, Settings -> Remote Access, and click "Repair" to update the router via UPnP.
 

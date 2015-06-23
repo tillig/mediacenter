@@ -6,5 +6,7 @@ As my system grows and changes, I switch up the hardware driving the system. Onc
 
 .. toctree::
 
+    netgearwndr3700v2.rst
+    dap1522.rst
     onkyotxsr875.rst
     dellstudiohybrid.rst

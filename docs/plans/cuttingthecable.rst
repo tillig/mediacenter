@@ -48,9 +48,13 @@ There's a junction box on the side of the house where the Comcast cable feed con
 
 The initial plan doesn't include an amplifier at the antenna but may need to be put in later.
 
-Recommendation: ChannelMaster CM 3000 SMARTenna
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Result: ChannelMaster CM 3000 SMARTenna
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The flat antennas look nice, like a small satellite. :doc:`The ChannelMaster CM 3000 SMARTenna seems as good as any for the requirements we have. <../hardware/network/cm3000>` A good balance of cost and power.
+
+Antenna Follow-Up
+~~~~~~~~~~~~~~~~~
+After installing a ChannelMaster CM 3000 SMARTenna, I found that the signal in our area is pretty good on clear days but inteference appears in any poor weather conditions. Other folks in my general area have had lots of luck with this and smaller antennas, but I think living somewhat close to an airport adds to my interference levels. I may try a larger antenna in the attic to see if I can remedy the situation.
 
 Home Network
 ------------
@@ -62,7 +66,9 @@ Improving Wireless
 ~~~~~~~~~~~~~~~~~~
 To improve the wireless signal we need to add a wireless access point upstairs. From most research this appears to be a simple thing to do.
 
-I've added a second wireless access point (using a :doc:`DAP-1522 <../hardware/network/dap1522>`) to the house upstairs so we should have better wifi all around. I'm using the same SSID and password/encryption so wireless roaming is in effect.
+I tried a second wireless access point (using a :doc:`DAP-1522 <../hardware/deprecated/dap1522>`) to the house upstairs so we should have better wifi all around. I'm using the same SSID and password/encryption so wireless roaming is in effect.
+
+That worked well for some time, but I found the wireless roaming caused weird issues sometimes on mobile devices when you were standing in certain areas of the house where the device had a hard time picking an access point. I ended up upgrading to a :doc:`a Netgear Nighthawk X6 AC3200 tri-band router (model R8000) <../hardware/network/netgearr8000>` to solve my range issues.
 
 At some later time I may consider putting in a more powerful access point to just serve the whole house from one location. The `Ubiquiti Networks UniFi AP Enterprise WiFi System ($67) <http://www.amazon.com/dp/B004XXMUCQ?tag=mhsvortex>`_ is a highly rated, very powerful access point that could solve the signal/range issues. It's also an extensible system so if we want, we can link more than one to the network later and really crank it up.
 
@@ -72,7 +78,7 @@ The ideal solution to getting wires to each room is to actually run wires throug
 
 Barring that, to get wires into rooms we'd use :doc:`powerline adapters <../hardware/network/powerline>`. These plug into electrical outlets and broadcast signals through the power system. It's slightly slower than running real wires, but it's fairly easy.
 
-I started off with a set of NetGear Powerline (XAVB1201) 200Mbps adapters ($45/pair) but upgraded the upstairs/downstairs primary set to the XAVB5101 ($80/pair) version which runs at 500Mbps and better handles HD video. These are what serve the :doc:`DAP-1522 <../hardware/network/dap1522>` access point upstairs.
+I started off with a set of NetGear Powerline (XAVB1201) 200Mbps adapters ($45/pair) but upgraded the upstairs/downstairs primary set to the XAVB5101 ($80/pair) version which runs at 500Mbps and better handles HD video. These are what served the :doc:`DAP-1522 <../hardware/deprecated/dap1522>` access point upstairs when I had that running.
 
 I did find that the XAVB5101 and XAVB1201 adapters, while they're supposed to work together, don't really work together well at all. After adding the 500Mbps versions, the 200Mbps adapters basically just stopped connecting to the network.
 
@@ -370,7 +376,7 @@ Notes:
 - **If we run physical cable instead of using powerline, it would be cheaper.** Of course, it's a ton more work.
 - **Hard drive prices change often** so we may come in cheaper on that.
 - **We could get the 2-tuner Tablo and save $80**, but we could only record one thing and watch one other thing through it; or record two total things. Kind of like the old cable DVR that we didn't like much.
-- **If we want a better wireless access point, this doesn't account for that.** With wired network in the main rooms, though, it might not be a "must have." And if the :doc:`DAP-1522 <../hardware/network/dap1522>` works upstairs, we don't really need anything new.
+- **If we want a better wireless access point, this doesn't account for that.** I did end up upgrading our router to improve wireless, but that's not in this budget.
 - If we like the Tablo service, **the lifetime $150 cost may be a better long-term investment** with a break-even after three years.
 
 Cost For First Year
