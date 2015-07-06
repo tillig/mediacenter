@@ -5,5 +5,5 @@ Network Infrastructure
 .. toctree::
     netgearr8000.rst
     powerline.rst
-    dgs2208.rst
+    switches.rst
     cm3000.rst

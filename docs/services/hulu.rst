@@ -2,6 +2,6 @@
 Hulu Plus
 =========
 
-We are subscribing to `Hulu Plus <http://www.hulu.com/plus>`_ as part of the :doc:`plan to cut cable in 2015 <../plans/cuttingthecable>`. Combined with the other :doc:`services we subscribe to <index>` this should help fill the gap in TV content.
+We subscribed to `Hulu Plus <http://www.hulu.com/plus>`_ as part of the :doc:`plan to cut cable in 2015 <../plans/cuttingthecable>`. Combined with the other :doc:`services we subscribe to <index>` this fills the gap in TV content.
 
 The challenge with Hulu is that there are some providers (e.g., `CBS <http://www.cbs.com>`_) that don't put their content on Hulu. Even providers like HBO have deals with *someone* (`Amazon got much of HBO in 2014 <http://www.ew.com/article/2014/04/23/hbo-amazon>`_). I have had to bridge some of that by using over-the-air TV with a :doc:`Tablo DVR <../hardware/server/tablo>`.

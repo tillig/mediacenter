@@ -6,4 +6,4 @@ We've had Comcast before, but we switched to :doc:`Verizon <verizon>` due to pri
 
 We switched back to Comcast in June 2011.
 
-In 2015 we started a plan to :doc:`cut the cable <../../plans/cuttingthecable>`. The idea would be to reduce our service from phone + TV + internet down to just internet.
+In 2015 we executed a plan to :doc:`cut the cable <../../plans/cuttingthecable>`. We reduced our service from phone + TV + internet down to just internet in an effort to save money. We make up for the loss of TV content by using various :doc:`content service providers <../../services/index>` and we just use mobile phones for our primary contact.

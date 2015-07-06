@@ -2,7 +2,7 @@
 Cutting the Cable
 =================
 
-Starting around January 2015 I started looking at ways to save some money by cutting cable from the :doc:`Comcast <../network/providers/comcast>` "triple-play" internet/phone/cable down to just internet service. I didn't want to lose features or content (if possible) so this is the plan I went through to try and replace those items.
+Starting around January 2015 I started looking at ways to save some money by cutting cable from the :doc:`Comcast <../network/providers/comcast>` "triple-play" internet/phone/cable down to just internet service. I didn't want to lose features or content (if possible) so this is the plan I went through to try and replace those items. **We executed this plan in July 2015.**
 
 .. contents::
   :local:

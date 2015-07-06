@@ -19,7 +19,7 @@ From top to bottom, left to right, you see...
 - :doc:`HP EX475 Home Server <server/hpex475>`, which handles music storage/serving and photo storage.
 - A USB hard drive that holds on-site backups via :doc:`CrashPlan <../software/system/crashplan>`.
 - :doc:`CyberPower CP1500AVRLCD <power/index>`, the UPS that most (but not all) of this is plugged into.
-- :doc:`D-Link DGS-2208 <network/dgs2208>` switch, connecting these together and linking back to the main network.
+- :doc:`D-Link DGS-2208 switch <network/switches>`, connecting these together and linking back to the main network.
 - :doc:`Megaplex <server/megaplex>`, my custom dedicated Plex server.
 
 For more detail on any of these things or items in the system that aren't pictured, dig in here.

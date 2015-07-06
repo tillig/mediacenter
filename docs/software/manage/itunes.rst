@@ -47,7 +47,7 @@ You need to know about the iTunes COM SDK to know what fields are available to s
         return false;
       }
 
-      // TODO: Do the search here.
+      // Do the search here and return true if the track matches the criteria.
       return true;
     }
 
