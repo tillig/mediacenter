@@ -69,3 +69,11 @@ There's a weird bug where if a folder has square brackets ``[]`` in the name the
         $folders = Get-ChildItem $location -Recurse -Directory | Select-Object -ExpandProperty FullName | Sort-Object -Descending -Property Length
         $folders | ForEach-Object { Get-FoldersToDelete $_ }
 
+Edit Chapters in MKV
+====================
+
+On one TV series I have, the TV episodes were all combined into one title on the disc. When you wanted to watch a single episode, the player would play for a certain time rather than playing a single title.
+
+Unfortunately, :doc:`Handbrake <convert/handbrake>` doesn't let you convert based on time - it wants chapters in the title. To accommodate for that, I had to manually create chapters of the correct length in the MKV file ripped by :doc:`MakeMKV <rip/makemkv>`.
+
+`MKVToolNix <https://www.bunkus.org/videotools/mkvtoolnix/>`_ is a set of tools that can modify MKV files. You can use that to edit the MKV file to have the correct chapters so Handbrake sees them and can properly convert.
