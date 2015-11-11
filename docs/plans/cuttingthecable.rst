@@ -48,13 +48,15 @@ There's a junction box on the side of the house where the Comcast cable feed con
 
 The initial plan doesn't include an amplifier at the antenna but may need to be put in later.
 
-Result: ChannelMaster CM 3000 SMARTenna
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The flat antennas look nice, like a small satellite. :doc:`The ChannelMaster CM 3000 SMARTenna seems as good as any for the requirements we have. <../hardware/network/cm3000>` A good balance of cost and power.
+Initial Result: ChannelMaster CM 3000 SMARTenna
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The flat antennas look nice, like a small satellite. :doc:`The ChannelMaster CM 3000 SMARTenna seems as good as any for the requirements we have. <../hardware/deprecated/cm3000>` A good balance of cost and power.
 
 Antenna Follow-Up
 ~~~~~~~~~~~~~~~~~
-After installing a ChannelMaster CM 3000 SMARTenna, I found that the signal in our area is pretty good on clear days but inteference appears in any poor weather conditions. Other folks in my general area have had lots of luck with this and smaller antennas, but I think living somewhat close to an airport adds to my interference levels. I may try a larger antenna in the attic to see if I can remedy the situation.
+After installing a ChannelMaster CM 3000 SMARTenna, I found that the signal in our area is pretty good on clear days but inteference appears in any poor weather conditions. Other folks in my general area have had lots of luck with this and smaller antennas, but I think living somewhat close to an airport adds to my interference levels.
+
+I ended up switching to a :doc:`ClearStream 2V HDTV antenna <../hardware/network/clearstream2v>` mounted in my attic and it produces a much better signal.
 
 Home Network
 ------------

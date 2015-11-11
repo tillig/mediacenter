@@ -8,4 +8,4 @@ It was very easy to mount and it's paintable, so it blends right in. Here's a ph
 
 .. image:: cm3000.jpg
 
-So far it has worked fairly well, though when the weather gets bad the reception gets a little flakey. I may consider upgrading to a larger antenna in the future.
+While it worked well in the summary, when the weather got bad the reception got a little flakey. At a certain point I started missing programs due to bad reception so I upgraded to the :doc:`ClearStream 2V HDTV Antenna <../network/clearstream2v>`.

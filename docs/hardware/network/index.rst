@@ -6,4 +6,4 @@ Network Infrastructure
     netgearr8000.rst
     powerline.rst
     switches.rst
-    cm3000.rst
+    clearstream2v.rst
