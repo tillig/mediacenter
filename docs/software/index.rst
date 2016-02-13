@@ -10,7 +10,7 @@ I use :doc:`Picasa <manage/picasa>` for organizing my photos and :doc:`DVD Profi
 
 My digital music is in :doc:`iTunes <manage/itunes>` but I keep track of the combined digital and disc music collection using :doc:`Music Collector <manage/musiccollector>`.
 
-My backup solution is :doc:`CrashPlan <system/crashplan>`, which handles both internal and off-site backup. That, combined with the workstation image-based backup of :doc:`Windows Home Server <system/whs>`, has me covered.
+My backup solution is :doc:`CrashPlan <system/crashplan>`, which handles both internal and off-site backup. That, combined with the workstation image-based backup of :doc:`Windows Server Essentials <system/wse>`, has me covered.
 
 .. toctree::
     :maxdepth: 2

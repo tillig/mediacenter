@@ -8,4 +8,4 @@ System software supports :doc:`server software <../serve/index>` and provides ad
 
     crashplan.rst
     dsm.rst
-    whs.rst
+    wse.rst

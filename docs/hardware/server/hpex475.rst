@@ -2,10 +2,10 @@
 HP EX475 MediaSmart
 ===================
 
-I bought an HP EX475 MediaSmart server with :doc:`Windows Home Server v1 <../../software/system/whs>` on it as my first foray into serving media and general media storage.
+I bought an HP EX475 MediaSmart server with :doc:`Windows Home Server v1 <../../software/deprecated/whs>` on it as my first foray into serving media and general media storage. In February 2016 I switched the OS to be :doc:`Windows Server 2012 with Windows Server Essentials <../../software/system/wse>`.
 
 - 2GB RAM (upgraded)
-- AMD Sempron Processor 3400+
+- AMD Sempron Processor 3400+ (upgraded)
 
 Storage
 =======
@@ -21,6 +21,10 @@ There is a defect in WHS where the serial number of the drives inside the EX475 
 
 - Real serial number: 12345678
 - Reported serial number: 21436587
+
+RAID Controller
+---------------
+I discovered while setting up :doc:`Windows Server 2012 with Windows Server Essentials <../../software/system/wse>` that the OS actually sees the drives as a RAID-controlled array to be provisioned, not as separate SATA disks. **This makes it incompatible with Storage Spaces.** You can't allocate RAID disks into a Storage Space - you have to use RAID instead. I ended up putting the three 1TB drives into a RAID 5 configuration to balance storage and resilience.
 
 WD Green Drives
 ---------------
@@ -65,9 +69,13 @@ WNAS Driver
 -----------
 There appears to be a defect with the WNAS driver where it reports high heat on the VRM (voltage regulator module). It's been ongoing since I got the machine. All drives in the system seem to work fine and the system generally reports healthy. I verified it had nothing to do with eSATA or the port multiplier. I've read on forums where a couple of people have seen this and it always comes out that there is some sort of misreporting problem going on.
 
+The WNAS driver also appears to be what controls the lights on the HP EX475. After updating to :doc:`Windows Server 2012 with Windows Server Essentials <../../software/system/wse>` the lights on the drives and the system health light no longer functioned as they did in the Windows Home Server world.
+
+I found `a forum where someone reverse-engineered the driver for WHS 2011 <http://forum.wegotserved.com/index.php?/topic/18458-hp-ex48x-lights-management-driver-for-whs-2011/>`_ but it doesn't support the HP EX475. They claim they did it by reverse-engineering the WNAS driver. At some point I may look into this.
+
 HP Software Updates
 ===================
-The machine came with a 2.x version of the HP home server software (some custom stuff on top of :doc:`Windows Home Server v1 <../../software/system/whs>`). A 3.0 update came out but I never installed it.
+The machine came with a 2.x version of the HP home server software (some custom stuff on top of :doc:`Windows Home Server v1 <../../software/deprecated/whs>`). A 3.0 update came out but I never installed it.
 
 To install the update, it's sort of a "server recovery model" - basically it keeps storage but wipes the system drive. If you have folder duplication running, any data that was stored on the system drive will be duplicated to another drive in the pool.
 
@@ -86,8 +94,12 @@ The 3.0 update does not contain any updated drivers.
 
 Upgrade to Windows Server 2012 Essentials
 =========================================
-January 8, 2013 was the last day of support for :doc:`Windows Home Server v1 <../../software/system/whs>` so I will need to upgrade if I'm going to go too much further with this box. I'd like a newer Windows Server install with Storage Spaces enabled to deal with drive mirroring (replacement for Drive Extender). `Something like Windows Server 2012 Essentials, which folks have successfully installed <http://www.mediasmartserver.net/forums/viewtopic.php?p=92246>`_.
+January 8, 2013 was the last day of support for :doc:`Windows Home Server v1 <../../software/deprecated/whs>`. In February 2016 I upgraded to :doc:`Windows Server 2012 with Windows Server Essentials <../../software/system/wse>`.
 
-- I would need to verify I have a 64-bit processor. (Some quick Googling makes it appear that it should be OK.) `The processor upgrade sounds painful <http://www.mediasmartserver.net/forums/viewtopic.php?f=2&t=1102>`_ because you need to modify the BIOS to support it.
-- `This article shows how to do Windows Server 2012 Essentials on an EX470 and is good. <http://www.wegotserved.com/2012/10/12/install-windows-server-2012-essentials-hp-mediasmart-server/>`_
-- For any operation, `I'm going to need to order a debug cable <http://www.mediasmartserver.net/forums/viewtopic.php?f=6&t=8066>`_. Otherwise I won't be able to see what's going on during installation.
+I basically followed `this article another person wrote on upgrading <http://www.wegotserved.com/2012/10/12/install-windows-server-2012-essentials-hp-mediasmart-server/>`_. I even made my own debug cable `rather than buying one <http://www.mediasmartserver.net/forums/viewtopic.php?f=6&t=8066>`_.
+
+I thought I might have to upgrade the processor `which sounds painful <http://www.mediasmartserver.net/forums/viewtopic.php?f=2&t=1102>`_ because you need to modify the BIOS to support it... but it turned out the processor upgrade I already did supports WSE just fine.
+
+I did find that Windows Storage Spaces, which I wanted to use, isn't compatible with RAID drive arrays. The HP EX475 registers drives as controlled by a hardware RAID array, so I was stuck on Storage Spaces and instead had to use RAID 5.
+
+This upgrade really showed me how close to end-of-life this hardware is. Fighting with the debug cable just added a whole level of pain to everything. I realize I could probably put some form of Linux on there, but then we get out of "appliance I don't have to pay attention to" and into "something I have to fiddle with." I don't want to fiddle with it, I just want it to work.

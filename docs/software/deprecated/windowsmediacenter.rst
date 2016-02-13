@@ -2,7 +2,7 @@
 Windows Media Center
 ====================
 
-Microsoft Windows has a built-in media center function you can use to watch digital media and DVDs. I started using Windows Media Center with my DVDs stored on my :doc:`Windows Home Server <../system/whs>`.
+Microsoft Windows has a built-in media center function you can use to watch digital media and DVDs. I started using Windows Media Center with my DVDs stored on my :doc:`Windows Home Server <whs>`.
 
 I switched away from Windows Media Center to :doc:`XBMC <xbmc>` in December 2011.
 
