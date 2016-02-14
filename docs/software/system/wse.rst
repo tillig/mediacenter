@@ -22,3 +22,8 @@ Backups
 I have an external 1TB hard drive set as a local backup destination for the shared data content using :doc:`Crashplan <crashplan>`.
 
 I found that you can't use the same hard drive for the built-in server backup as well as other backup types or other storage, so I need a second external drive for server OS backups.
+
+Networking
+==========
+
+If you install the Windows Server Essentials Connector (by visiting ``http://servername/connect`` on your server), it adds a few services that not only help backup your computer and monitor settings... but it also enforces that the DNS server is always set to the WSE machine. Normally this works fine and correctly forwards to your router or whatever, except in the case of things like ``routerlogin.net`` used by Netgear routers. I had to add a DNS forwarding zone for ``routerlogin.net`` with a single A record pointing to ``192.168.1.1`` to get my router UI back up and running.
