@@ -26,4 +26,11 @@ I found that you can't use the same hard drive for the built-in server backup as
 Networking
 ==========
 
-If you install the Windows Server Essentials Connector (by visiting ``http://servername/connect`` on your server), it adds a few services that not only help backup your computer and monitor settings... but it also enforces that the DNS server is always set to the WSE machine. Normally this works fine and correctly forwards to your router or whatever, except in the case of things like ``routerlogin.net`` used by Netgear routers. I had to add a DNS forwarding zone for ``routerlogin.net`` with a single A record pointing to ``192.168.1.1`` to get my router UI back up and running.
+If you install the Windows Server Essentials Connector (by visiting ``http://servername/connect`` on your server), it adds a few services that not only help backup your computer and monitor settings... but it also enforces that the DNS server is always set to the WSE machine. Normally this works fine and correctly forwards to your router or whatever, except in the case of things like ``routerlogin.net`` used by Netgear routers.
+
+I tried adding a DNS forwarding zone for ``routerlogin.net`` with a single A record pointing to ``192.168.1.1`` to get my router UI back up and running. That worked, but didn't really work well for non-joined computers like my :doc:`Synology Diskstation <../../hardware/server/synologyds1010>` which still just used my router as the DHCP server and DNS.
+
+I ended up following `this article about how to disable the automatic DNS provisioning part of WSE <https://tinkertry.com/windows-server-2012-essentials-update-rollup-3-has-arrived-with-dns-fixes>`_. Basically:
+
+* On the server add a DWORD registry key at ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\Networking\ClientDns\SkipAutoDnsConfig`` and set that to 1. That stops future clients from being auto-configured for DNS.
+* On clients that have already been configured, add a String registry key at ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\Networking\ServerDiscovery\SkipAutoDNSServerDetection`` and set it to ``True``. Restart the ``Windows Server Essentials Client Computer Monitoring Service`` so it doesn't keep reconfiguring the DNS settings on the client. Finally, change the DNS on the client's network connection back to auto-configured. The service should stop changing it back to the WSE box now.
