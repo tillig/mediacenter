@@ -14,3 +14,5 @@ You can :download:`view a larger diagram <diagram.png>` or :download:`get the di
 
     configuration.rst
     providers/index.rst
+
+Note the hardware used in the network is in the :doc:`hardware section <../hardware/network/index>`.
