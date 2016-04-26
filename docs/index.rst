@@ -10,7 +10,7 @@ I've amassed quite a collection, and I want to be able to enjoy it without a lot
 
 - I have :doc:`a central server machine <hardware/server/megaplex>` that runs :doc:`Plex <software/serve/plex>` and serves content that is stored on :doc:`a network-attached-storage device <hardware/server/synologyds1010>`. That's how I get the media off disks and onto :doc:`front-end devices <hardware/frontend/index>`.
 - I have a :doc:`Tablo <hardware/server/tablo>` DVR for handling recording over-the-air TV programs and serving them.
-- I subscribe to :doc:`Netflix <services/netflix>`, :doc:`Amazon Prime <services/amazon>`, and :doc:`Pandora <services/pandora>` for content.
+- I subscribe to :doc:`Netflix <services/netflix>`, :doc:`Amazon Prime <services/amazon>`, :doc:`Hulu Plus <services/hulu>`, and :doc:`Pandora <services/pandora>` for content.
 - At each TV in my house, I have an :doc:`Xbox 360 <hardware/frontend/xbox360>` or a :doc:`Roku <hardware/frontend/roku>` to access the content served by Plex and the various services.
 
 It looks like this:
