@@ -113,7 +113,10 @@ html_theme = 'alabaster'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'github_button': 'false'
+    'github_button': 'true',
+    'github_user': 'tillig',
+    'github_repo': 'illigmediacenter',
+    'analytics_id': 'UA-1285161-9'
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
