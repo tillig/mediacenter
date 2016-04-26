@@ -28,4 +28,4 @@ I did some research back in 2009 to figure out which receiver I'd like to upgrad
 
 The receiver also takes an inordinate amount of time to switch video sources. Sometimes it takes up to 5 - 8 seconds to do the HDMI handshake with the TV and provide a picture.
 
-In February 2015 the audio circuits on the receiver entirely died. I could get video, but no audio from any source. Rather than fight to get this thing repaired (it was out of warranty, too), I moved to a :doc:`Yamaha RX-V777BT receiver <../receiver/yamaharxv777bt>`.
+In February 2015 the audio circuits on the receiver entirely died. I could get video, but no audio from any source. Rather than fight to get this thing repaired (it was out of warranty, too), I moved to a :doc:`Yamaha RX-V777BT receiver <yamaharxv777bt>`.

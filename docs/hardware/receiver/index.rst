@@ -3,5 +3,5 @@ Receivers / Audio
 =================
 
 .. toctree::
-    yamaharxv777bt.rst
+    marantzsr5010.rst
     yamaharxv795a.rst

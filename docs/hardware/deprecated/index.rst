@@ -11,3 +11,4 @@ As my system grows and changes, I switch up the hardware driving the system. Onc
     onkyotxsr875.rst
     dellstudiohybrid.rst
     cm3000.rst
+    yamaharxv777bt.rst

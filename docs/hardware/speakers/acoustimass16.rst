@@ -6,7 +6,7 @@ The `Bose Acoustimass 16 <http://worldwide.bose.com/productsupport/en_us/web/am1
 
 .. image:: acoustimass16.jpg
 
-These speakers are in my living room and run off the :doc:`Yamaha RX-V777BT <../receiver/yamaharxv777bt>` receiver.
+These speakers are in my living room and run off the :doc:`Marantz SR5010 <../receiver/marantzsr5010>` receiver.
 
 While I recognize there is some controversy out there about whether the price-for-sound is reasonable with Bose, I have to say I enjoy these speakers. They sound really good to me, though I'm sure some audiophiles will call my taste into question. The lows are rich, the mids are reasonable, and the highs are crisp.
 

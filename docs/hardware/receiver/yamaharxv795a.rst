@@ -2,7 +2,7 @@
 Yamaha RX-V795a
 ===============
 
-Despite the higher version number, this is an older model than the :doc:`RX-V777BT <yamaharxv777bt>` that serves as my primary receiver. I picked this up back around 2000 when it was a fairly new model.
+Despite the higher version number, this is an older model than the :doc:`RX-V777BT <../deprecated/yamaharxv777bt>` that serves as my primary receiver. I picked this up back around 2000 when it was a fairly new model.
 
 .. image:: yamaharxv795a.jpg
 
