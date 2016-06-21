@@ -103,3 +103,11 @@ I thought I might have to upgrade the processor `which sounds painful <http://ww
 I did find that Windows Storage Spaces, which I wanted to use, isn't compatible with RAID drive arrays. The HP EX475 registers drives as controlled by a hardware RAID array, so I was stuck on Storage Spaces and instead had to use RAID 5.
 
 This upgrade really showed me how close to end-of-life this hardware is. Fighting with the debug cable just added a whole level of pain to everything. I realize I could probably put some form of Linux on there, but then we get out of "appliance I don't have to pay attention to" and into "something I have to fiddle with." I don't want to fiddle with it, I just want it to work.
+
+Deprecation
+===========
+In June 2016, I noticed things were starting to run really slow. CrashPlan backups were taking days to finish (even when there was nothing new to back up). I couldn't do anything but file sharing on the server because everything else took too much toll on the CPU and RAM. I tried running an error scan on the system OS drive and it took two days to finish. A long-time issue with one of the cooling fans rattling came back.
+
+All of that along with the fact that this thing is headless... I lost confidence in the machine. It stopped behaving like an appliance.
+
+I started the process of moving all the data off the WHS machine and onto the :doc:`Synology DS1010+ <synologyds1010>`. I will probably keep it around for workstation backups but will move CrashPlan to a different machine.
