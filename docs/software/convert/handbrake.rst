@@ -79,10 +79,6 @@ My entire ``user_presets.xml`` file is pasted in below, but for readability, I h
 
 The settings stem from my SD settings, above, so I'll just put the differences here:
 
-- Filters
-
-  - Decomb: Off
-
 - Video
 
   - Variable Framerate
@@ -711,7 +707,7 @@ The following is my set of presets. If you put these in ``%AppData%\Handbrake\us
           <PixelAspectY>0</PixelAspectY>
           <Modulus>2</Modulus>
           <Deinterlace>Off</Deinterlace>
-          <Decomb>Off</Decomb>
+          <Decomb>Default</Decomb>
           <Detelecine>Off</Detelecine>
           <Denoise>Off</Denoise>
           <DenoisePreset>Weak</DenoisePreset>
@@ -836,7 +832,7 @@ The following is my set of presets. If you put these in ``%AppData%\Handbrake\us
           <PixelAspectY>0</PixelAspectY>
           <Modulus>2</Modulus>
           <Deinterlace>Off</Deinterlace>
-          <Decomb>Off</Decomb>
+          <Decomb>Default</Decomb>
           <Detelecine>Off</Detelecine>
           <Denoise>Off</Denoise>
           <DenoisePreset>Weak</DenoisePreset>
@@ -961,7 +957,7 @@ The following is my set of presets. If you put these in ``%AppData%\Handbrake\us
           <PixelAspectY>0</PixelAspectY>
           <Modulus>2</Modulus>
           <Deinterlace>Off</Deinterlace>
-          <Decomb>Off</Decomb>
+          <Decomb>Default</Decomb>
           <Detelecine>Off</Detelecine>
           <Denoise>Off</Denoise>
           <DenoisePreset>Weak</DenoisePreset>
