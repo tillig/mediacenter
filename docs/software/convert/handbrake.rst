@@ -291,6 +291,8 @@ User Presets
 
 The following is my set of presets. If you put these in ``%AppData%\Handbrake\user_presets.xml`` then you'll see the same settings as me.
 
+(`You can also download/view this as a gist. <https://gist.github.com/tillig/35949ae52492f2be85f74dea057814bb>`_)
+
 .. sourcecode:: xml
 
     <?xml version="1.0"?>
