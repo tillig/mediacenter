@@ -4,9 +4,16 @@ Handbrake
 
 I use Handbrake to convert my videos into :doc:`MP4 (M4V) format <../../formats/video>`.
 
+.. contents::
+    :local:
+
+Conversion Settings
+===================
+**My entire set of user presets in JSON format compatible with Handbrake 1.x is pasted below**, but for ease of use I've also outlined what it looks like in the UI so you can replicate it that way.
+
 SD Settings
-===========
-My entire ``user_presets.xml`` file is pasted in below, but for readability, I have three SD presets that only differ by the "x264 Tune" setting for Film (most everything), 2D Animation, or Grain.
+-----------
+I have three SD presets that only differ by the "x264 Tune" setting for Film (most everything), 2D Animation, or Grain.
 
 - Picture
 
@@ -18,76 +25,77 @@ My entire ``user_presets.xml`` file is pasted in below, but for readability, I h
 - Filters
 
   - Detelecine: Off
-  - Decomb: Default
-  - Deinterlace: Off
-  - Denoise: Off
+  - Deinterlace: Decomb
+  - Preset: Default
+  - Interlace Detection: Default
   - Deblock: Off
   - Grayscale: Unchecked
+  - Rotate: 0
+  - Flip: Unchecked
 
 - Video
 
   - Video Codec: H.264 (x.264)
   - Framerate FPS: Same as source
-  - **Constant Framerate**
-  - x264 Preset: Slower
-  - x264 Tune: **Film, Animation, or Grain** (depends on the source – I change this per item ripped)
-  - H.264 Profile: High
-  - H.264 Level: 4.1
-  - Fast Decode: Unchecked
-  - Extra Options: Empty
-  - Quality: **Constant Quality RF 18**
+  - Variable Framerate
+  - Optimize Video:
+
+    - Encoder Preset: Slower
+    - Encoder Tune: Film, Animation, or Grain (depends on the source – I change this per item ripped)
+    - Fast Decode: Unchecked
+    - Encoder Profile: High
+    - Encoder Level: 4.1
+    - Extra Options: Empty
+
+  - Quality: Constant Quality RF 18
 
 - Audio
 
   - Track 1:
 
-    - Source: The best AC3 sound track on there with the most channels. (It usually does a good job of auto-detecting.)
-    - Codec: **AAC (FDK)**
-    - Bitrate: **256**
-    - Samplerate: Auto
+    - Source: The best sound track on there with the most channels. (It usually does a good job of auto-detecting.)
+    - Codec: AAC (avcodec)
+    - Bitrate: 256
     - Mixdown: Dolby Pro Logic II
-    - DRC: 0.0
+    - Samplerate: Auto
+    - DRC: 0
     - Gain: 0
+    - Track Name: [Leave this empty]
 
   - Track 2:
 
     - Source: Same as Track 1.
-    - Codec: AC3 Passthru
+    - Codec: Auto Passthru
+    - Track Name: [Leave this empty]
 
-  - Track 3 (depending on source)
+- Subtitles:
 
-    - Source: The DTS track, if there is one.
-    - Codec: DTS Passthru
-
-- Subtitles: Generally none, but there are some movies that need them, in which case I'll add one track. High Profile (and my settings) generally don't include this.
-
-  - Source: English (VobSub)
-  - Forced Only: Unchecked
+  - Source: Foreign Audio Scan
+  - Forced Only: Checked
   - Burn In: Checked
   - Default: Unchecked
-  - Everything else default.
 
 - Chapters: I do select "Create chapter markers" but I let the automatic detection do the naming and timing.
-
-The truly important bits there are **bold** - these are the settings that differ from the "High Profile" preset.
 
 **Using these settings, I calculated SD content for me uses an average of 18.73MB/minute.**
 
 HD Settings
-===========
-My entire ``user_presets.xml`` file is pasted in below, but for readability, I have three HD presets - one each for Film (most everything), 2D Animation, or Grain.
-
-The settings stem from my SD settings, above, so I'll just put the differences here:
+-----------
+My HD settings are almost the same as my SD settings with the following differences:
 
 - Video
 
-  - Variable Framerate
-  - x264 Tune: Film, Animation, or Grain (depends on the source – I change this per item ripped)
   - Quality:
 
-    - For Film:
+    - For Film: Constant Quality RF 21
     - For Grain: Constant Quality RF 21
-    - For Animation:
+    - For Animation: Constant Quality RF 20
+
+Research
+========
+
+Figuring HD Settings
+--------------------
 
 I started my testing by checking out links like `the Rokoding guide to 1080p encoding <http://www.rokoding.com/settings/0_10_0/0100_1080p_blu-ray_film.html>`_. These give some great guidance and help you know where to begin.
 
@@ -126,10 +134,10 @@ Of course, these end up being "guidelines" rather than "rules." I start here, an
 **Using these settings, I calculated HD content for me uses an average of 80.72MB/minute.**
 
 Subtitles
-=========
+---------
 I learned *a lot* about subtitles in doing video conversion. If you're like me, you never thought much about how they work - the text just comes up on the screen as needed.
 
-`Handbrake has a really good page explaining things from a technical perspective <https://trac.handbrake.fr/wiki/Subtitles>`_ but it breaks down in my world like this:
+`Handbrake has a really good page explaining things from a technical perspective <https://handbrake.fr/docs/en/1.0.0/advanced/subtitles.html>`_ but it breaks down in my world like this:
 
 - Handbrake can read all of the standard subtitle types you'll find on discs.
 - If you're using :doc:`the MP4 format <../../formats/video>` like me, you can either permanently "burn in" the subtitles to the video image or you don't get subtitles at all. This is because MP4 doesn't let you keep a separate subtitle track the way MKV does.
@@ -149,9 +157,9 @@ Here's how to get subtitles in your movie:
     #. For general subtitles, select the language of the subtitles you want and click the "Burn In" checkbox.
     #. For forced subtitles, select "Foreign Audio Scan" as the language and click both the "Forced Only" and "Burn In" checkboxes.
 
-Even though I've added forced subtitles to my ``user_presets.xml`` (below), the default doesn't seem to keep - you need to re-add the forced subtitle track each time.
+Even though I've added forced subtitles to my user presets JSON (below), the default doesn't seem to keep - you need to re-check the "forced only" box each time.
 
-**It's important to look at the output when you expect subtitles.** I found that sometimes there are multiple English tracks and sometimes you get the wrong one. There are tips for troubleshooting on the `Handbrake subtitle page <https://trac.handbrake.fr/wiki/Subtitles>`_.
+**It's important to look at the output when you expect subtitles.** I found that sometimes there are multiple English tracks and sometimes you get the wrong one. There are tips for troubleshooting on the `Handbrake subtitle page <https://handbrake.fr/docs/en/1.0.0/advanced/subtitles.html>`_.
 
 Additional tips for subtitles:
 
@@ -159,7 +167,7 @@ Additional tips for subtitles:
 - `SubtitleEdit <http://www.nikse.dk/SubtitleEdit/>`_ is a tool for inspecting and editing subtitles. I use it to figure out where the subtitles start and end (looking at the source ripped content) so I can narrow down what I should look at in the end conversion.
 
 Lip Sync Issues
-===============
+---------------
 
 I discovered after the first round of scanning movies that there were issues with graininess, cropping, and lip sync on some movies. I rescanned them. After rescan, these still had some issues:
 
@@ -177,7 +185,7 @@ I discovered after the first round of scanning movies that there were issues wit
 
 I stopped tracking the complete list. It kind of sucks, but it is what it is.
 
-Part of the way I fixed this was to start using **constant frame rate** in all my conversions rather than variable frame rate. I noticed that, as a general rule, this reduced or removed many of the lip sync problems I saw.
+Part of the way I fixed this was to start using **constant frame rate** in some my conversions rather than variable frame rate. I noticed that, as a general rule, this reduced or removed many of the lip sync problems I saw.
 
 Remote Queue Monitoring
 =======================
@@ -289,765 +297,742 @@ Additional References
 User Presets
 ============
 
-The following is my set of presets. If you put these in ``%AppData%\Handbrake\user_presets.xml`` then you'll see the same settings as me.
+The following is my set of presets. As of Handbrake 1.x the user presets appear in a "folder" in the ``%AppData%\Handbrake\presets.json`` file. You should be able to save this JSON, right-click in the presets in Handbrake, and import these. Then you'll see the same settings as me.
 
-(`You can also download/view this as a gist. <https://gist.github.com/tillig/35949ae52492f2be85f74dea057814bb>`_)
+(`You can also download/view this as a gist. <https://gist.github.com/tillig/25fa6ee314efca3c5a0fa114f7ce9e09>`_)
 
-.. sourcecode:: xml
+.. sourcecode:: json
 
-    <?xml version="1.0"?>
-    <ArrayOfPreset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <Preset>
-        <Category>User Presets</Category>
-        <Description />
-        <IsBuildIn>false</IsBuildIn>
-        <IsDefault>false</IsDefault>
-        <Name>Illig High Profile - SD Film</Name>
-        <PictureSettingsMode>Custom</PictureSettingsMode>
-        <UseDeinterlace>false</UseDeinterlace>
-        <Task>
-          <Title>0</Title>
-          <Angle>0</Angle>
-          <PointToPointMode>Chapters</PointToPointMode>
-          <StartPoint>0</StartPoint>
-          <EndPoint>0</EndPoint>
-          <OutputFormat>Mp4</OutputFormat>
-          <OptimizeMP4>false</OptimizeMP4>
-          <IPod5GSupport>false</IPod5GSupport>
-          <Width xsi:nil="true" />
-          <Height xsi:nil="true" />
-          <MaxWidth xsi:nil="true" />
-          <MaxHeight xsi:nil="true" />
-          <Cropping>
-            <Top>0</Top>
-            <Bottom>0</Bottom>
-            <Left>0</Left>
-            <Right>0</Right>
-          </Cropping>
-          <HasCropping>false</HasCropping>
-          <Anamorphic>Loose</Anamorphic>
-          <DisplayWidth xsi:nil="true" />
-          <KeepDisplayAspect>false</KeepDisplayAspect>
-          <PixelAspectX>0</PixelAspectX>
-          <PixelAspectY>0</PixelAspectY>
-          <Modulus>2</Modulus>
-          <Deinterlace>Off</Deinterlace>
-          <Decomb>Default</Decomb>
-          <Detelecine>Off</Detelecine>
-          <Denoise>Off</Denoise>
-          <DenoisePreset>Weak</DenoisePreset>
-          <DenoiseTune>None</DenoiseTune>
-          <Deblock>0</Deblock>
-          <Grayscale>false</Grayscale>
-          <VideoEncodeRateType>ConstantQuality</VideoEncodeRateType>
-          <VideoEncoder>X264</VideoEncoder>
-          <FramerateMode>CFR</FramerateMode>
-          <Quality>18</Quality>
-          <VideoBitrate xsi:nil="true" />
-          <TwoPass>false</TwoPass>
-          <TurboFirstPass>false</TurboFirstPass>
-          <Framerate xsi:nil="true" />
-          <AudioTracks>
-            <AudioTrack>
-              <Bitrate>256</Bitrate>
-              <DRC>0</DRC>
-              <IsDefault>false</IsDefault>
-              <Encoder>fdkaac</Encoder>
-              <Gain>0</Gain>
-              <MixDown>DolbyProLogicII</MixDown>
-              <SampleRate>0</SampleRate>
-              <SampleRateDisplayValue>Auto</SampleRateDisplayValue>
-              <ScannedTrack>
-                <TrackNumber>0</TrackNumber>
-                <SampleRate>0</SampleRate>
-                <Bitrate>0</Bitrate>
-              </ScannedTrack>
-              <TrackName />
-            </AudioTrack>
-            <AudioTrack>
-              <Bitrate>256</Bitrate>
-              <DRC>0</DRC>
-              <IsDefault>false</IsDefault>
-              <Encoder>Ac3Passthrough</Encoder>
-              <Gain>0</Gain>
-              <MixDown>Auto</MixDown>
-              <SampleRate>0</SampleRate>
-              <SampleRateDisplayValue>Auto</SampleRateDisplayValue>
-              <ScannedTrack>
-                <TrackNumber>0</TrackNumber>
-                <SampleRate>0</SampleRate>
-                <Bitrate>0</Bitrate>
-              </ScannedTrack>
-              <TrackName />
-            </AudioTrack>
-          </AudioTracks>
-          <AllowedPassthruOptions>
-            <AudioAllowAACPass>true</AudioAllowAACPass>
-            <AudioAllowAC3Pass>true</AudioAllowAC3Pass>
-            <AudioAllowDTSHDPass>true</AudioAllowDTSHDPass>
-            <AudioAllowDTSPass>true</AudioAllowDTSPass>
-            <AudioAllowMP3Pass>true</AudioAllowMP3Pass>
-            <AudioEncoderFallback>Ac3</AudioEncoderFallback>
-          </AllowedPassthruOptions>
-          <SubtitleTracks>
-            <SubtitleTrack>
-              <Burned>true</Burned>
-              <Default>false</Default>
-              <Forced>true</Forced>
-              <SourceTrack>
-                <SourceId>0</SourceId>
-                <TrackNumber>0</TrackNumber>
-                <Language>Foreign Audio Search (Bitmap)</Language>
-                <SubtitleType>ForeignAudioSearch</SubtitleType>
-              </SourceTrack>
-              <SrtOffset>0</SrtOffset>
-              <SubtitleType>VobSub</SubtitleType>
-            </SubtitleTrack>
-          </SubtitleTracks>
-          <IncludeChapterMarkers>true</IncludeChapterMarkers>
-          <ChapterNames />
-          <X264Preset>Slower</X264Preset>
-          <QsvPreset>Quality</QsvPreset>
-          <H264Profile>High</H264Profile>
-          <H264Level>4.1</H264Level>
-          <X264Tune>Film</X264Tune>
-          <FastDecode>false</FastDecode>
-          <X265Preset>VeryFast</X265Preset>
-          <H265Profile>Main</H265Profile>
-          <X265Tune>None</X265Tune>
-          <PreviewStartAt xsi:nil="true" />
-          <PreviewDuration xsi:nil="true" />
-          <IsPreviewEncode>false</IsPreviewEncode>
-          <PreviewEncodeDuration>0</PreviewEncodeDuration>
-          <ShowAdvancedTab>false</ShowAdvancedTab>
-        </Task>
-        <UsePictureFilters>true</UsePictureFilters>
-      </Preset>
-      <Preset>
-        <Category>User Presets</Category>
-        <Description />
-        <IsBuildIn>false</IsBuildIn>
-        <IsDefault>false</IsDefault>
-        <Name>Illig High Profile - SD 2D Anim</Name>
-        <PictureSettingsMode>Custom</PictureSettingsMode>
-        <UseDeinterlace>false</UseDeinterlace>
-        <Task>
-          <Title>0</Title>
-          <Angle>0</Angle>
-          <PointToPointMode>Chapters</PointToPointMode>
-          <StartPoint>0</StartPoint>
-          <EndPoint>0</EndPoint>
-          <OutputFormat>Mp4</OutputFormat>
-          <OptimizeMP4>false</OptimizeMP4>
-          <IPod5GSupport>false</IPod5GSupport>
-          <Width xsi:nil="true" />
-          <Height xsi:nil="true" />
-          <MaxWidth xsi:nil="true" />
-          <MaxHeight xsi:nil="true" />
-          <Cropping>
-            <Top>0</Top>
-            <Bottom>0</Bottom>
-            <Left>0</Left>
-            <Right>0</Right>
-          </Cropping>
-          <HasCropping>false</HasCropping>
-          <Anamorphic>Loose</Anamorphic>
-          <DisplayWidth xsi:nil="true" />
-          <KeepDisplayAspect>false</KeepDisplayAspect>
-          <PixelAspectX>0</PixelAspectX>
-          <PixelAspectY>0</PixelAspectY>
-          <Modulus>2</Modulus>
-          <Deinterlace>Off</Deinterlace>
-          <Decomb>Default</Decomb>
-          <Detelecine>Off</Detelecine>
-          <Denoise>Off</Denoise>
-          <DenoisePreset>Weak</DenoisePreset>
-          <DenoiseTune>None</DenoiseTune>
-          <Deblock>0</Deblock>
-          <Grayscale>false</Grayscale>
-          <VideoEncodeRateType>ConstantQuality</VideoEncodeRateType>
-          <VideoEncoder>X264</VideoEncoder>
-          <FramerateMode>CFR</FramerateMode>
-          <Quality>18</Quality>
-          <VideoBitrate xsi:nil="true" />
-          <TwoPass>false</TwoPass>
-          <TurboFirstPass>false</TurboFirstPass>
-          <Framerate xsi:nil="true" />
-          <AudioTracks>
-            <AudioTrack>
-              <Bitrate>256</Bitrate>
-              <DRC>0</DRC>
-              <IsDefault>false</IsDefault>
-              <Encoder>fdkaac</Encoder>
-              <Gain>0</Gain>
-              <MixDown>DolbyProLogicII</MixDown>
-              <SampleRate>0</SampleRate>
-              <SampleRateDisplayValue>Auto</SampleRateDisplayValue>
-              <ScannedTrack>
-                <TrackNumber>0</TrackNumber>
-                <SampleRate>0</SampleRate>
-                <Bitrate>0</Bitrate>
-              </ScannedTrack>
-              <TrackName />
-            </AudioTrack>
-            <AudioTrack>
-              <Bitrate>256</Bitrate>
-              <DRC>0</DRC>
-              <IsDefault>false</IsDefault>
-              <Encoder>Ac3Passthrough</Encoder>
-              <Gain>0</Gain>
-              <MixDown>Auto</MixDown>
-              <SampleRate>0</SampleRate>
-              <SampleRateDisplayValue>Auto</SampleRateDisplayValue>
-              <ScannedTrack>
-                <TrackNumber>0</TrackNumber>
-                <SampleRate>0</SampleRate>
-                <Bitrate>0</Bitrate>
-              </ScannedTrack>
-              <TrackName />
-            </AudioTrack>
-          </AudioTracks>
-          <AllowedPassthruOptions>
-            <AudioAllowAACPass>true</AudioAllowAACPass>
-            <AudioAllowAC3Pass>true</AudioAllowAC3Pass>
-            <AudioAllowDTSHDPass>true</AudioAllowDTSHDPass>
-            <AudioAllowDTSPass>true</AudioAllowDTSPass>
-            <AudioAllowMP3Pass>true</AudioAllowMP3Pass>
-            <AudioEncoderFallback>Ac3</AudioEncoderFallback>
-          </AllowedPassthruOptions>
-          <SubtitleTracks>
-            <SubtitleTrack>
-              <Burned>true</Burned>
-              <Default>false</Default>
-              <Forced>true</Forced>
-              <SourceTrack>
-                <SourceId>0</SourceId>
-                <TrackNumber>0</TrackNumber>
-                <Language>Foreign Audio Search (Bitmap)</Language>
-                <SubtitleType>ForeignAudioSearch</SubtitleType>
-              </SourceTrack>
-              <SrtOffset>0</SrtOffset>
-              <SubtitleType>VobSub</SubtitleType>
-            </SubtitleTrack>
-          </SubtitleTracks>
-          <IncludeChapterMarkers>true</IncludeChapterMarkers>
-          <ChapterNames />
-          <X264Preset>Slower</X264Preset>
-          <QsvPreset>Quality</QsvPreset>
-          <H264Profile>High</H264Profile>
-          <H264Level>4.1</H264Level>
-          <X264Tune>Animation</X264Tune>
-          <FastDecode>false</FastDecode>
-          <X265Preset>VeryFast</X265Preset>
-          <H265Profile>Main</H265Profile>
-          <X265Tune>None</X265Tune>
-          <PreviewStartAt xsi:nil="true" />
-          <PreviewDuration xsi:nil="true" />
-          <IsPreviewEncode>false</IsPreviewEncode>
-          <PreviewEncodeDuration>0</PreviewEncodeDuration>
-          <ShowAdvancedTab>false</ShowAdvancedTab>
-        </Task>
-        <UsePictureFilters>true</UsePictureFilters>
-      </Preset>
-      <Preset>
-        <Category>User Presets</Category>
-        <Description />
-        <IsBuildIn>false</IsBuildIn>
-        <IsDefault>false</IsDefault>
-        <Name>Illig High Profile - SD Grain</Name>
-        <PictureSettingsMode>Custom</PictureSettingsMode>
-        <UseDeinterlace>false</UseDeinterlace>
-        <Task>
-          <Title>0</Title>
-          <Angle>0</Angle>
-          <PointToPointMode>Chapters</PointToPointMode>
-          <StartPoint>0</StartPoint>
-          <EndPoint>0</EndPoint>
-          <OutputFormat>Mp4</OutputFormat>
-          <OptimizeMP4>false</OptimizeMP4>
-          <IPod5GSupport>false</IPod5GSupport>
-          <Width xsi:nil="true" />
-          <Height xsi:nil="true" />
-          <MaxWidth xsi:nil="true" />
-          <MaxHeight xsi:nil="true" />
-          <Cropping>
-            <Top>0</Top>
-            <Bottom>0</Bottom>
-            <Left>0</Left>
-            <Right>0</Right>
-          </Cropping>
-          <HasCropping>false</HasCropping>
-          <Anamorphic>Loose</Anamorphic>
-          <DisplayWidth xsi:nil="true" />
-          <KeepDisplayAspect>false</KeepDisplayAspect>
-          <PixelAspectX>0</PixelAspectX>
-          <PixelAspectY>0</PixelAspectY>
-          <Modulus>2</Modulus>
-          <Deinterlace>Off</Deinterlace>
-          <Decomb>Default</Decomb>
-          <Detelecine>Off</Detelecine>
-          <Denoise>Off</Denoise>
-          <DenoisePreset>Weak</DenoisePreset>
-          <DenoiseTune>None</DenoiseTune>
-          <Deblock>0</Deblock>
-          <Grayscale>false</Grayscale>
-          <VideoEncodeRateType>ConstantQuality</VideoEncodeRateType>
-          <VideoEncoder>X264</VideoEncoder>
-          <FramerateMode>CFR</FramerateMode>
-          <Quality>18</Quality>
-          <VideoBitrate xsi:nil="true" />
-          <TwoPass>false</TwoPass>
-          <TurboFirstPass>false</TurboFirstPass>
-          <Framerate xsi:nil="true" />
-          <AudioTracks>
-            <AudioTrack>
-              <Bitrate>256</Bitrate>
-              <DRC>0</DRC>
-              <IsDefault>false</IsDefault>
-              <Encoder>fdkaac</Encoder>
-              <Gain>0</Gain>
-              <MixDown>DolbyProLogicII</MixDown>
-              <SampleRate>0</SampleRate>
-              <SampleRateDisplayValue>Auto</SampleRateDisplayValue>
-              <ScannedTrack>
-                <TrackNumber>0</TrackNumber>
-                <SampleRate>0</SampleRate>
-                <Bitrate>0</Bitrate>
-              </ScannedTrack>
-              <TrackName />
-            </AudioTrack>
-            <AudioTrack>
-              <Bitrate>256</Bitrate>
-              <DRC>0</DRC>
-              <IsDefault>false</IsDefault>
-              <Encoder>Ac3Passthrough</Encoder>
-              <Gain>0</Gain>
-              <MixDown>Auto</MixDown>
-              <SampleRate>0</SampleRate>
-              <SampleRateDisplayValue>Auto</SampleRateDisplayValue>
-              <ScannedTrack>
-                <TrackNumber>0</TrackNumber>
-                <SampleRate>0</SampleRate>
-                <Bitrate>0</Bitrate>
-              </ScannedTrack>
-              <TrackName />
-            </AudioTrack>
-          </AudioTracks>
-          <AllowedPassthruOptions>
-            <AudioAllowAACPass>true</AudioAllowAACPass>
-            <AudioAllowAC3Pass>true</AudioAllowAC3Pass>
-            <AudioAllowDTSHDPass>true</AudioAllowDTSHDPass>
-            <AudioAllowDTSPass>true</AudioAllowDTSPass>
-            <AudioAllowMP3Pass>true</AudioAllowMP3Pass>
-            <AudioEncoderFallback>Ac3</AudioEncoderFallback>
-          </AllowedPassthruOptions>
-          <SubtitleTracks>
-            <SubtitleTrack>
-              <Burned>true</Burned>
-              <Default>false</Default>
-              <Forced>true</Forced>
-              <SourceTrack>
-                <SourceId>0</SourceId>
-                <TrackNumber>0</TrackNumber>
-                <Language>Foreign Audio Search (Bitmap)</Language>
-                <SubtitleType>ForeignAudioSearch</SubtitleType>
-              </SourceTrack>
-              <SrtOffset>0</SrtOffset>
-              <SubtitleType>VobSub</SubtitleType>
-            </SubtitleTrack>
-          </SubtitleTracks>
-          <IncludeChapterMarkers>true</IncludeChapterMarkers>
-          <ChapterNames />
-          <X264Preset>Slower</X264Preset>
-          <QsvPreset>Quality</QsvPreset>
-          <H264Profile>High</H264Profile>
-          <H264Level>4.1</H264Level>
-          <X264Tune>Grain</X264Tune>
-          <FastDecode>false</FastDecode>
-          <X265Preset>VeryFast</X265Preset>
-          <H265Profile>Main</H265Profile>
-          <X265Tune>None</X265Tune>
-          <PreviewStartAt xsi:nil="true" />
-          <PreviewDuration xsi:nil="true" />
-          <IsPreviewEncode>false</IsPreviewEncode>
-          <PreviewEncodeDuration>0</PreviewEncodeDuration>
-          <ShowAdvancedTab>false</ShowAdvancedTab>
-        </Task>
-        <UsePictureFilters>true</UsePictureFilters>
-      </Preset>
-      <Preset>
-        <Category>User Presets</Category>
-        <IsBuildIn>false</IsBuildIn>
-        <IsDefault>false</IsDefault>
-        <Name>Illig High Profile - HD Film</Name>
-        <PictureSettingsMode>Custom</PictureSettingsMode>
-        <UseDeinterlace>false</UseDeinterlace>
-        <Task>
-          <Title>0</Title>
-          <Angle>0</Angle>
-          <PointToPointMode>Chapters</PointToPointMode>
-          <StartPoint>0</StartPoint>
-          <EndPoint>0</EndPoint>
-          <OutputFormat>Mp4</OutputFormat>
-          <OptimizeMP4>false</OptimizeMP4>
-          <IPod5GSupport>false</IPod5GSupport>
-          <Width xsi:nil="true" />
-          <Height xsi:nil="true" />
-          <MaxWidth xsi:nil="true" />
-          <MaxHeight xsi:nil="true" />
-          <Cropping>
-            <Top>0</Top>
-            <Bottom>0</Bottom>
-            <Left>0</Left>
-            <Right>0</Right>
-          </Cropping>
-          <HasCropping>false</HasCropping>
-          <Anamorphic>Loose</Anamorphic>
-          <DisplayWidth xsi:nil="true" />
-          <KeepDisplayAspect>false</KeepDisplayAspect>
-          <PixelAspectX>0</PixelAspectX>
-          <PixelAspectY>0</PixelAspectY>
-          <Modulus>2</Modulus>
-          <Deinterlace>Off</Deinterlace>
-          <Decomb>Default</Decomb>
-          <Detelecine>Off</Detelecine>
-          <Denoise>Off</Denoise>
-          <DenoisePreset>Weak</DenoisePreset>
-          <DenoiseTune>None</DenoiseTune>
-          <Deblock>4</Deblock>
-          <Grayscale>false</Grayscale>
-          <VideoEncodeRateType>ConstantQuality</VideoEncodeRateType>
-          <VideoEncoder>X264</VideoEncoder>
-          <FramerateMode>VFR</FramerateMode>
-          <Quality>21</Quality>
-          <VideoBitrate xsi:nil="true" />
-          <TwoPass>false</TwoPass>
-          <TurboFirstPass>false</TurboFirstPass>
-          <Framerate xsi:nil="true" />
-          <AudioTracks>
-            <AudioTrack>
-              <Bitrate>256</Bitrate>
-              <DRC>0</DRC>
-              <IsDefault>false</IsDefault>
-              <Encoder>fdkaac</Encoder>
-              <Gain>0</Gain>
-              <MixDown>DolbyProLogicII</MixDown>
-              <SampleRate>0</SampleRate>
-              <SampleRateDisplayValue>Auto</SampleRateDisplayValue>
-              <ScannedTrack>
-                <TrackNumber>0</TrackNumber>
-                <SampleRate>0</SampleRate>
-                <Bitrate>0</Bitrate>
-              </ScannedTrack>
-              <TrackName />
-            </AudioTrack>
-            <AudioTrack>
-              <Bitrate>256</Bitrate>
-              <DRC>0</DRC>
-              <IsDefault>false</IsDefault>
-              <Encoder>Ac3Passthrough</Encoder>
-              <Gain>0</Gain>
-              <MixDown>Auto</MixDown>
-              <SampleRate>0</SampleRate>
-              <SampleRateDisplayValue>Auto</SampleRateDisplayValue>
-              <ScannedTrack>
-                <TrackNumber>0</TrackNumber>
-                <SampleRate>0</SampleRate>
-                <Bitrate>0</Bitrate>
-              </ScannedTrack>
-              <TrackName />
-            </AudioTrack>
-          </AudioTracks>
-          <AllowedPassthruOptions>
-            <AudioAllowAACPass>true</AudioAllowAACPass>
-            <AudioAllowAC3Pass>true</AudioAllowAC3Pass>
-            <AudioAllowDTSHDPass>true</AudioAllowDTSHDPass>
-            <AudioAllowDTSPass>true</AudioAllowDTSPass>
-            <AudioAllowMP3Pass>true</AudioAllowMP3Pass>
-            <AudioEncoderFallback>Ac3</AudioEncoderFallback>
-          </AllowedPassthruOptions>
-          <SubtitleTracks>
-            <SubtitleTrack>
-              <Burned>true</Burned>
-              <Default>false</Default>
-              <Forced>true</Forced>
-              <SourceTrack>
-                <SourceId>0</SourceId>
-                <TrackNumber>0</TrackNumber>
-                <Language>Foreign Audio Search (Bitmap)</Language>
-                <SubtitleType>ForeignAudioSearch</SubtitleType>
-              </SourceTrack>
-              <SrtOffset>0</SrtOffset>
-              <SubtitleType>VobSub</SubtitleType>
-            </SubtitleTrack>
-          </SubtitleTracks>
-          <IncludeChapterMarkers>true</IncludeChapterMarkers>
-          <ChapterNames />
-          <X264Preset>Slower</X264Preset>
-          <QsvPreset>Quality</QsvPreset>
-          <H264Profile>High</H264Profile>
-          <H264Level>4.1</H264Level>
-          <X264Tune>Film</X264Tune>
-          <FastDecode>false</FastDecode>
-          <X265Preset>VeryFast</X265Preset>
-          <H265Profile>Main</H265Profile>
-          <X265Tune>None</X265Tune>
-          <PreviewStartAt xsi:nil="true" />
-          <PreviewDuration xsi:nil="true" />
-          <IsPreviewEncode>false</IsPreviewEncode>
-          <PreviewEncodeDuration>0</PreviewEncodeDuration>
-          <ShowAdvancedTab>false</ShowAdvancedTab>
-        </Task>
-        <UsePictureFilters>true</UsePictureFilters>
-      </Preset>
-      <Preset>
-        <Category>User Presets</Category>
-        <IsBuildIn>false</IsBuildIn>
-        <IsDefault>false</IsDefault>
-        <Name>Illig High Profile - HD 2D Anim</Name>
-        <PictureSettingsMode>Custom</PictureSettingsMode>
-        <UseDeinterlace>false</UseDeinterlace>
-        <Task>
-          <Title>0</Title>
-          <Angle>0</Angle>
-          <PointToPointMode>Chapters</PointToPointMode>
-          <StartPoint>0</StartPoint>
-          <EndPoint>0</EndPoint>
-          <OutputFormat>Mp4</OutputFormat>
-          <OptimizeMP4>false</OptimizeMP4>
-          <IPod5GSupport>false</IPod5GSupport>
-          <Width xsi:nil="true" />
-          <Height xsi:nil="true" />
-          <MaxWidth xsi:nil="true" />
-          <MaxHeight xsi:nil="true" />
-          <Cropping>
-            <Top>0</Top>
-            <Bottom>0</Bottom>
-            <Left>0</Left>
-            <Right>0</Right>
-          </Cropping>
-          <HasCropping>false</HasCropping>
-          <Anamorphic>Loose</Anamorphic>
-          <DisplayWidth xsi:nil="true" />
-          <KeepDisplayAspect>false</KeepDisplayAspect>
-          <PixelAspectX>0</PixelAspectX>
-          <PixelAspectY>0</PixelAspectY>
-          <Modulus>2</Modulus>
-          <Deinterlace>Off</Deinterlace>
-          <Decomb>Default</Decomb>
-          <Detelecine>Off</Detelecine>
-          <Denoise>Off</Denoise>
-          <DenoisePreset>Weak</DenoisePreset>
-          <DenoiseTune>None</DenoiseTune>
-          <Deblock>4</Deblock>
-          <Grayscale>false</Grayscale>
-          <VideoEncodeRateType>ConstantQuality</VideoEncodeRateType>
-          <VideoEncoder>X264</VideoEncoder>
-          <FramerateMode>VFR</FramerateMode>
-          <Quality>20</Quality>
-          <VideoBitrate xsi:nil="true" />
-          <TwoPass>false</TwoPass>
-          <TurboFirstPass>false</TurboFirstPass>
-          <Framerate xsi:nil="true" />
-          <AudioTracks>
-            <AudioTrack>
-              <Bitrate>256</Bitrate>
-              <DRC>0</DRC>
-              <IsDefault>false</IsDefault>
-              <Encoder>fdkaac</Encoder>
-              <Gain>0</Gain>
-              <MixDown>DolbyProLogicII</MixDown>
-              <SampleRate>0</SampleRate>
-              <SampleRateDisplayValue>Auto</SampleRateDisplayValue>
-              <ScannedTrack>
-                <TrackNumber>0</TrackNumber>
-                <SampleRate>0</SampleRate>
-                <Bitrate>0</Bitrate>
-              </ScannedTrack>
-              <TrackName />
-            </AudioTrack>
-            <AudioTrack>
-              <Bitrate>256</Bitrate>
-              <DRC>0</DRC>
-              <IsDefault>false</IsDefault>
-              <Encoder>Ac3Passthrough</Encoder>
-              <Gain>0</Gain>
-              <MixDown>Auto</MixDown>
-              <SampleRate>0</SampleRate>
-              <SampleRateDisplayValue>Auto</SampleRateDisplayValue>
-              <ScannedTrack>
-                <TrackNumber>0</TrackNumber>
-                <SampleRate>0</SampleRate>
-                <Bitrate>0</Bitrate>
-              </ScannedTrack>
-              <TrackName />
-            </AudioTrack>
-          </AudioTracks>
-          <AllowedPassthruOptions>
-            <AudioAllowAACPass>true</AudioAllowAACPass>
-            <AudioAllowAC3Pass>true</AudioAllowAC3Pass>
-            <AudioAllowDTSHDPass>true</AudioAllowDTSHDPass>
-            <AudioAllowDTSPass>true</AudioAllowDTSPass>
-            <AudioAllowMP3Pass>true</AudioAllowMP3Pass>
-            <AudioEncoderFallback>Ac3</AudioEncoderFallback>
-          </AllowedPassthruOptions>
-          <SubtitleTracks>
-            <SubtitleTrack>
-              <Burned>true</Burned>
-              <Default>false</Default>
-              <Forced>true</Forced>
-              <SourceTrack>
-                <SourceId>0</SourceId>
-                <TrackNumber>0</TrackNumber>
-                <Language>Foreign Audio Search (Bitmap)</Language>
-                <SubtitleType>ForeignAudioSearch</SubtitleType>
-              </SourceTrack>
-              <SrtOffset>0</SrtOffset>
-              <SubtitleType>VobSub</SubtitleType>
-            </SubtitleTrack>
-          </SubtitleTracks>
-          <IncludeChapterMarkers>true</IncludeChapterMarkers>
-          <ChapterNames />
-          <X264Preset>Slower</X264Preset>
-          <QsvPreset>Quality</QsvPreset>
-          <H264Profile>High</H264Profile>
-          <H264Level>4.1</H264Level>
-          <X264Tune>Animation</X264Tune>
-          <FastDecode>false</FastDecode>
-          <X265Preset>VeryFast</X265Preset>
-          <H265Profile>Main</H265Profile>
-          <X265Tune>None</X265Tune>
-          <PreviewStartAt xsi:nil="true" />
-          <PreviewDuration xsi:nil="true" />
-          <IsPreviewEncode>false</IsPreviewEncode>
-          <PreviewEncodeDuration>0</PreviewEncodeDuration>
-          <ShowAdvancedTab>false</ShowAdvancedTab>
-        </Task>
-        <UsePictureFilters>true</UsePictureFilters>
-      </Preset>
-      <Preset>
-        <Category>User Presets</Category>
-        <IsBuildIn>false</IsBuildIn>
-        <IsDefault>false</IsDefault>
-        <Name>Illig High Profile - HD Grain</Name>
-        <PictureSettingsMode>Custom</PictureSettingsMode>
-        <UseDeinterlace>false</UseDeinterlace>
-        <Task>
-          <Title>0</Title>
-          <Angle>0</Angle>
-          <PointToPointMode>Chapters</PointToPointMode>
-          <StartPoint>0</StartPoint>
-          <EndPoint>0</EndPoint>
-          <OutputFormat>Mp4</OutputFormat>
-          <OptimizeMP4>false</OptimizeMP4>
-          <IPod5GSupport>false</IPod5GSupport>
-          <Width xsi:nil="true" />
-          <Height xsi:nil="true" />
-          <MaxWidth xsi:nil="true" />
-          <MaxHeight xsi:nil="true" />
-          <Cropping>
-            <Top>0</Top>
-            <Bottom>0</Bottom>
-            <Left>0</Left>
-            <Right>0</Right>
-          </Cropping>
-          <HasCropping>false</HasCropping>
-          <Anamorphic>Loose</Anamorphic>
-          <DisplayWidth xsi:nil="true" />
-          <KeepDisplayAspect>false</KeepDisplayAspect>
-          <PixelAspectX>0</PixelAspectX>
-          <PixelAspectY>0</PixelAspectY>
-          <Modulus>2</Modulus>
-          <Deinterlace>Off</Deinterlace>
-          <Decomb>Default</Decomb>
-          <Detelecine>Off</Detelecine>
-          <Denoise>Off</Denoise>
-          <DenoisePreset>Weak</DenoisePreset>
-          <DenoiseTune>None</DenoiseTune>
-          <Deblock>4</Deblock>
-          <Grayscale>false</Grayscale>
-          <VideoEncodeRateType>ConstantQuality</VideoEncodeRateType>
-          <VideoEncoder>X264</VideoEncoder>
-          <FramerateMode>VFR</FramerateMode>
-          <Quality>21</Quality>
-          <VideoBitrate xsi:nil="true" />
-          <TwoPass>false</TwoPass>
-          <TurboFirstPass>false</TurboFirstPass>
-          <Framerate xsi:nil="true" />
-          <AudioTracks>
-            <AudioTrack>
-              <Bitrate>256</Bitrate>
-              <DRC>0</DRC>
-              <IsDefault>false</IsDefault>
-              <Encoder>fdkaac</Encoder>
-              <Gain>0</Gain>
-              <MixDown>DolbyProLogicII</MixDown>
-              <SampleRate>0</SampleRate>
-              <SampleRateDisplayValue>Auto</SampleRateDisplayValue>
-              <ScannedTrack>
-                <TrackNumber>0</TrackNumber>
-                <SampleRate>0</SampleRate>
-                <Bitrate>0</Bitrate>
-              </ScannedTrack>
-              <TrackName />
-            </AudioTrack>
-            <AudioTrack>
-              <Bitrate>256</Bitrate>
-              <DRC>0</DRC>
-              <IsDefault>false</IsDefault>
-              <Encoder>Ac3Passthrough</Encoder>
-              <Gain>0</Gain>
-              <MixDown>Auto</MixDown>
-              <SampleRate>0</SampleRate>
-              <SampleRateDisplayValue>Auto</SampleRateDisplayValue>
-              <ScannedTrack>
-                <TrackNumber>0</TrackNumber>
-                <SampleRate>0</SampleRate>
-                <Bitrate>0</Bitrate>
-              </ScannedTrack>
-              <TrackName />
-            </AudioTrack>
-          </AudioTracks>
-          <AllowedPassthruOptions>
-            <AudioAllowAACPass>true</AudioAllowAACPass>
-            <AudioAllowAC3Pass>true</AudioAllowAC3Pass>
-            <AudioAllowDTSHDPass>true</AudioAllowDTSHDPass>
-            <AudioAllowDTSPass>true</AudioAllowDTSPass>
-            <AudioAllowMP3Pass>true</AudioAllowMP3Pass>
-            <AudioEncoderFallback>Ac3</AudioEncoderFallback>
-          </AllowedPassthruOptions>
-          <SubtitleTracks>
-            <SubtitleTrack>
-              <Burned>true</Burned>
-              <Default>false</Default>
-              <Forced>true</Forced>
-              <SourceTrack>
-                <SourceId>0</SourceId>
-                <TrackNumber>0</TrackNumber>
-                <Language>Foreign Audio Search (Bitmap)</Language>
-                <SubtitleType>ForeignAudioSearch</SubtitleType>
-              </SourceTrack>
-              <SrtOffset>0</SrtOffset>
-              <SubtitleType>VobSub</SubtitleType>
-            </SubtitleTrack>
-          </SubtitleTracks>
-          <IncludeChapterMarkers>true</IncludeChapterMarkers>
-          <ChapterNames />
-          <X264Preset>Slower</X264Preset>
-          <QsvPreset>Quality</QsvPreset>
-          <H264Profile>High</H264Profile>
-          <H264Level>4.1</H264Level>
-          <X264Tune>Grain</X264Tune>
-          <FastDecode>false</FastDecode>
-          <X265Preset>VeryFast</X265Preset>
-          <H265Profile>Main</H265Profile>
-          <X265Tune>None</X265Tune>
-          <PreviewStartAt xsi:nil="true" />
-          <PreviewDuration xsi:nil="true" />
-          <IsPreviewEncode>false</IsPreviewEncode>
-          <PreviewEncodeDuration>0</PreviewEncodeDuration>
-          <ShowAdvancedTab>false</ShowAdvancedTab>
-        </Task>
-        <UsePictureFilters>true</UsePictureFilters>
-      </Preset>
-    </ArrayOfPreset>
+{
+  "PresetList": [
+    {
+      "AudioCopyMask": [
+        "copy:aac",
+        "copy:ac3",
+        "copy:dtshd",
+        "copy:dts",
+        "copy:mp3",
+        "copy:truehd",
+        "copy:flac",
+        "copy:eac3"
+      ],
+      "AudioEncoderFallback": "av_aac",
+      "AudioLanguageList": [
+        "eng",
+        "und"
+      ],
+      "AudioList": [
+        {
+          "AudioBitrate": 256,
+          "AudioCompressionLevel": 0.0,
+          "AudioDitherMethod": null,
+          "AudioEncoder": "av_aac",
+          "AudioMixdown": "dpl2",
+          "AudioNormalizeMixLevel": false,
+          "AudioSamplerate": "auto",
+          "AudioTrackQualityEnable": false,
+          "AudioTrackQuality": -1.0,
+          "AudioTrackGainSlider": 0.0,
+          "AudioTrackDRCSlider": 0.0
+        },
+        {
+          "AudioBitrate": 224,
+          "AudioCompressionLevel": 0.0,
+          "AudioDitherMethod": null,
+          "AudioEncoder": "copy",
+          "AudioMixdown": "dpl2",
+          "AudioNormalizeMixLevel": false,
+          "AudioSamplerate": "auto",
+          "AudioTrackQualityEnable": false,
+          "AudioTrackQuality": -1.0,
+          "AudioTrackGainSlider": 0.0,
+          "AudioTrackDRCSlider": 0.0
+        }
+      ],
+      "AudioSecondaryEncoderMode": true,
+      "AudioTrackSelectionBehavior": "first",
+      "ChapterMarkers": true,
+      "ChildrenArray": [],
+      "Default": false,
+      "FileFormat": "av_mp4",
+      "Folder": false,
+      "FolderOpen": false,
+      "Mp4HttpOptimize": false,
+      "Mp4iPodCompatible": false,
+      "PictureAutoCrop": true,
+      "PictureBottomCrop": 0,
+      "PictureLeftCrop": 0,
+      "PictureRightCrop": 0,
+      "PictureTopCrop": 0,
+      "PictureDARWidth": 0,
+      "PictureDeblock": 0,
+      "PictureDeinterlaceFilter": "decomb",
+      "PictureCombDetectPreset": "default",
+      "PictureCombDetectCustom": "",
+      "PictureDeinterlacePreset": "default",
+      "PictureDeinterlaceCustom": "",
+      "PictureDenoiseCustom": "",
+      "PictureDenoiseFilter": "off",
+      "PictureDenoisePreset": "light",
+      "PictureDenoiseTune": "none",
+      "PictureDetelecine": "off",
+      "PictureDetelecineCustom": "",
+      "PictureItuPAR": false,
+      "PictureKeepRatio": true,
+      "PictureLooseCrop": false,
+      "PictureModulus": 2,
+      "PicturePAR": "loose",
+      "PicturePARWidth": 0,
+      "PicturePARHeight": 0,
+      "PictureRotate": "0:0",
+      "PictureWidth": null,
+      "PictureHeight": null,
+      "PictureForceHeight": 0,
+      "PictureForceWidth": 0,
+      "PresetDescription": "Preset for HD film conversion.",
+      "PresetName": "Illig HD Film",
+      "Type": 1,
+      "UsesPictureFilters": false,
+      "UsesPictureSettings": 2,
+      "SubtitleAddCC": false,
+      "SubtitleAddForeignAudioSearch": true,
+      "SubtitleAddForeignAudioSubtitle": false,
+      "SubtitleBurnBehavior": "foreign",
+      "SubtitleBurnBDSub": false,
+      "SubtitleBurnDVDSub": false,
+      "SubtitleLanguageList": [
+        "eng"
+      ],
+      "SubtitleTrackSelectionBehavior": "none",
+      "VideoAvgBitrate": 0,
+      "VideoColorMatrixCode": 0,
+      "VideoEncoder": "x264",
+      "VideoFramerate": "",
+      "VideoFramerateMode": "vfr",
+      "VideoGrayScale": false,
+      "VideoHWDecode": false,
+      "VideoScaler": "swscale",
+      "VideoPreset": "slower",
+      "VideoTune": "film",
+      "VideoProfile": "high",
+      "VideoLevel": "4.1",
+      "VideoOptionExtra": "",
+      "VideoQualityType": 2,
+      "VideoQualitySlider": 21.0,
+      "VideoQSVDecode": true,
+      "VideoQSVAsyncDepth": 4,
+      "VideoTwoPass": false,
+      "VideoTurboTwoPass": false,
+      "x264Option": "",
+      "x264UseAdvancedOptions": false
+    },
+    {
+      "AudioCopyMask": [
+        "copy:aac",
+        "copy:ac3",
+        "copy:dtshd",
+        "copy:dts",
+        "copy:mp3",
+        "copy:truehd",
+        "copy:flac",
+        "copy:eac3"
+      ],
+      "AudioEncoderFallback": "av_aac",
+      "AudioLanguageList": [
+        "eng",
+        "und"
+      ],
+      "AudioList": [
+        {
+          "AudioBitrate": 256,
+          "AudioCompressionLevel": 0.0,
+          "AudioDitherMethod": null,
+          "AudioEncoder": "av_aac",
+          "AudioMixdown": "dpl2",
+          "AudioNormalizeMixLevel": false,
+          "AudioSamplerate": "auto",
+          "AudioTrackQualityEnable": false,
+          "AudioTrackQuality": -1.0,
+          "AudioTrackGainSlider": 0.0,
+          "AudioTrackDRCSlider": 0.0
+        },
+        {
+          "AudioBitrate": 224,
+          "AudioCompressionLevel": 0.0,
+          "AudioDitherMethod": null,
+          "AudioEncoder": "copy",
+          "AudioMixdown": "dpl2",
+          "AudioNormalizeMixLevel": false,
+          "AudioSamplerate": "auto",
+          "AudioTrackQualityEnable": false,
+          "AudioTrackQuality": -1.0,
+          "AudioTrackGainSlider": 0.0,
+          "AudioTrackDRCSlider": 0.0
+        }
+      ],
+      "AudioSecondaryEncoderMode": true,
+      "AudioTrackSelectionBehavior": "first",
+      "ChapterMarkers": true,
+      "ChildrenArray": [],
+      "Default": false,
+      "FileFormat": "av_mp4",
+      "Folder": false,
+      "FolderOpen": false,
+      "Mp4HttpOptimize": false,
+      "Mp4iPodCompatible": false,
+      "PictureAutoCrop": true,
+      "PictureBottomCrop": 0,
+      "PictureLeftCrop": 0,
+      "PictureRightCrop": 0,
+      "PictureTopCrop": 0,
+      "PictureDARWidth": 0,
+      "PictureDeblock": 0,
+      "PictureDeinterlaceFilter": "decomb",
+      "PictureCombDetectPreset": "default",
+      "PictureCombDetectCustom": "",
+      "PictureDeinterlacePreset": "default",
+      "PictureDeinterlaceCustom": "",
+      "PictureDenoiseCustom": "",
+      "PictureDenoiseFilter": "off",
+      "PictureDenoisePreset": "light",
+      "PictureDenoiseTune": "none",
+      "PictureDetelecine": "off",
+      "PictureDetelecineCustom": "",
+      "PictureItuPAR": false,
+      "PictureKeepRatio": true,
+      "PictureLooseCrop": false,
+      "PictureModulus": 2,
+      "PicturePAR": "loose",
+      "PicturePARWidth": 0,
+      "PicturePARHeight": 0,
+      "PictureRotate": "0:0",
+      "PictureWidth": null,
+      "PictureHeight": null,
+      "PictureForceHeight": 0,
+      "PictureForceWidth": 0,
+      "PresetDescription": "Preset for HD 2D animation conversion.",
+      "PresetName": "Illig HD 2D Animation",
+      "Type": 1,
+      "UsesPictureFilters": false,
+      "UsesPictureSettings": 2,
+      "SubtitleAddCC": false,
+      "SubtitleAddForeignAudioSearch": true,
+      "SubtitleAddForeignAudioSubtitle": false,
+      "SubtitleBurnBehavior": "foreign",
+      "SubtitleBurnBDSub": false,
+      "SubtitleBurnDVDSub": false,
+      "SubtitleLanguageList": [
+        "eng"
+      ],
+      "SubtitleTrackSelectionBehavior": "none",
+      "VideoAvgBitrate": 0,
+      "VideoColorMatrixCode": 0,
+      "VideoEncoder": "x264",
+      "VideoFramerate": "",
+      "VideoFramerateMode": "vfr",
+      "VideoGrayScale": false,
+      "VideoHWDecode": false,
+      "VideoScaler": "swscale",
+      "VideoPreset": "slower",
+      "VideoTune": "animation",
+      "VideoProfile": "high",
+      "VideoLevel": "4.1",
+      "VideoOptionExtra": "",
+      "VideoQualityType": 2,
+      "VideoQualitySlider": 20.0,
+      "VideoQSVDecode": true,
+      "VideoQSVAsyncDepth": 4,
+      "VideoTwoPass": false,
+      "VideoTurboTwoPass": false,
+      "x264Option": "",
+      "x264UseAdvancedOptions": false
+    },
+    {
+      "AudioCopyMask": [
+        "copy:aac",
+        "copy:ac3",
+        "copy:dtshd",
+        "copy:dts",
+        "copy:mp3",
+        "copy:truehd",
+        "copy:flac",
+        "copy:eac3"
+      ],
+      "AudioEncoderFallback": "av_aac",
+      "AudioLanguageList": [
+        "eng",
+        "und"
+      ],
+      "AudioList": [
+        {
+          "AudioBitrate": 256,
+          "AudioCompressionLevel": 0.0,
+          "AudioDitherMethod": null,
+          "AudioEncoder": "av_aac",
+          "AudioMixdown": "dpl2",
+          "AudioNormalizeMixLevel": false,
+          "AudioSamplerate": "auto",
+          "AudioTrackQualityEnable": false,
+          "AudioTrackQuality": -1.0,
+          "AudioTrackGainSlider": 0.0,
+          "AudioTrackDRCSlider": 0.0
+        },
+        {
+          "AudioBitrate": 224,
+          "AudioCompressionLevel": 0.0,
+          "AudioDitherMethod": null,
+          "AudioEncoder": "copy",
+          "AudioMixdown": "dpl2",
+          "AudioNormalizeMixLevel": false,
+          "AudioSamplerate": "auto",
+          "AudioTrackQualityEnable": false,
+          "AudioTrackQuality": -1.0,
+          "AudioTrackGainSlider": 0.0,
+          "AudioTrackDRCSlider": 0.0
+        }
+      ],
+      "AudioSecondaryEncoderMode": true,
+      "AudioTrackSelectionBehavior": "first",
+      "ChapterMarkers": true,
+      "ChildrenArray": [],
+      "Default": false,
+      "FileFormat": "av_mp4",
+      "Folder": false,
+      "FolderOpen": false,
+      "Mp4HttpOptimize": false,
+      "Mp4iPodCompatible": false,
+      "PictureAutoCrop": true,
+      "PictureBottomCrop": 0,
+      "PictureLeftCrop": 0,
+      "PictureRightCrop": 0,
+      "PictureTopCrop": 0,
+      "PictureDARWidth": 0,
+      "PictureDeblock": 0,
+      "PictureDeinterlaceFilter": "decomb",
+      "PictureCombDetectPreset": "default",
+      "PictureCombDetectCustom": "",
+      "PictureDeinterlacePreset": "default",
+      "PictureDeinterlaceCustom": "",
+      "PictureDenoiseCustom": "",
+      "PictureDenoiseFilter": "off",
+      "PictureDenoisePreset": "light",
+      "PictureDenoiseTune": "none",
+      "PictureDetelecine": "off",
+      "PictureDetelecineCustom": "",
+      "PictureItuPAR": false,
+      "PictureKeepRatio": true,
+      "PictureLooseCrop": false,
+      "PictureModulus": 2,
+      "PicturePAR": "loose",
+      "PicturePARWidth": 0,
+      "PicturePARHeight": 0,
+      "PictureRotate": "0:0",
+      "PictureWidth": null,
+      "PictureHeight": null,
+      "PictureForceHeight": 0,
+      "PictureForceWidth": 0,
+      "PresetDescription": "Preset for HD grainy film conversion.",
+      "PresetName": "Illig HD Grain",
+      "Type": 1,
+      "UsesPictureFilters": false,
+      "UsesPictureSettings": 2,
+      "SubtitleAddCC": false,
+      "SubtitleAddForeignAudioSearch": true,
+      "SubtitleAddForeignAudioSubtitle": false,
+      "SubtitleBurnBehavior": "foreign",
+      "SubtitleBurnBDSub": false,
+      "SubtitleBurnDVDSub": false,
+      "SubtitleLanguageList": [
+        "eng"
+      ],
+      "SubtitleTrackSelectionBehavior": "none",
+      "VideoAvgBitrate": 0,
+      "VideoColorMatrixCode": 0,
+      "VideoEncoder": "x264",
+      "VideoFramerate": "",
+      "VideoFramerateMode": "vfr",
+      "VideoGrayScale": false,
+      "VideoHWDecode": false,
+      "VideoScaler": "swscale",
+      "VideoPreset": "slower",
+      "VideoTune": "grain",
+      "VideoProfile": "high",
+      "VideoLevel": "4.1",
+      "VideoOptionExtra": "",
+      "VideoQualityType": 2,
+      "VideoQualitySlider": 21.0,
+      "VideoQSVDecode": true,
+      "VideoQSVAsyncDepth": 4,
+      "VideoTwoPass": false,
+      "VideoTurboTwoPass": false,
+      "x264Option": "",
+      "x264UseAdvancedOptions": false
+    },
+    {
+      "AudioCopyMask": [
+        "copy:aac",
+        "copy:ac3",
+        "copy:dtshd",
+        "copy:dts",
+        "copy:mp3",
+        "copy:truehd",
+        "copy:flac",
+        "copy:eac3"
+      ],
+      "AudioEncoderFallback": "av_aac",
+      "AudioLanguageList": [
+        "eng",
+        "und"
+      ],
+      "AudioList": [
+        {
+          "AudioBitrate": 256,
+          "AudioCompressionLevel": 0.0,
+          "AudioDitherMethod": null,
+          "AudioEncoder": "av_aac",
+          "AudioMixdown": "dpl2",
+          "AudioNormalizeMixLevel": false,
+          "AudioSamplerate": "auto",
+          "AudioTrackQualityEnable": false,
+          "AudioTrackQuality": -1.0,
+          "AudioTrackGainSlider": 0.0,
+          "AudioTrackDRCSlider": 0.0
+        },
+        {
+          "AudioBitrate": 224,
+          "AudioCompressionLevel": 0.0,
+          "AudioDitherMethod": null,
+          "AudioEncoder": "copy",
+          "AudioMixdown": "dpl2",
+          "AudioNormalizeMixLevel": false,
+          "AudioSamplerate": "auto",
+          "AudioTrackQualityEnable": false,
+          "AudioTrackQuality": -1.0,
+          "AudioTrackGainSlider": 0.0,
+          "AudioTrackDRCSlider": 0.0
+        }
+      ],
+      "AudioSecondaryEncoderMode": true,
+      "AudioTrackSelectionBehavior": "first",
+      "ChapterMarkers": true,
+      "ChildrenArray": [],
+      "Default": false,
+      "FileFormat": "av_mp4",
+      "Folder": false,
+      "FolderOpen": false,
+      "Mp4HttpOptimize": false,
+      "Mp4iPodCompatible": false,
+      "PictureAutoCrop": true,
+      "PictureBottomCrop": 0,
+      "PictureLeftCrop": 0,
+      "PictureRightCrop": 0,
+      "PictureTopCrop": 0,
+      "PictureDARWidth": 0,
+      "PictureDeblock": 0,
+      "PictureDeinterlaceFilter": "decomb",
+      "PictureCombDetectPreset": "default",
+      "PictureCombDetectCustom": "",
+      "PictureDeinterlacePreset": "default",
+      "PictureDeinterlaceCustom": "",
+      "PictureDenoiseCustom": "",
+      "PictureDenoiseFilter": "off",
+      "PictureDenoisePreset": "light",
+      "PictureDenoiseTune": "none",
+      "PictureDetelecine": "off",
+      "PictureDetelecineCustom": "",
+      "PictureItuPAR": false,
+      "PictureKeepRatio": true,
+      "PictureLooseCrop": false,
+      "PictureModulus": 2,
+      "PicturePAR": "loose",
+      "PicturePARWidth": 0,
+      "PicturePARHeight": 0,
+      "PictureRotate": "0:0",
+      "PictureWidth": null,
+      "PictureHeight": null,
+      "PictureForceHeight": 0,
+      "PictureForceWidth": 0,
+      "PresetDescription": "Preset for SD film conversion.",
+      "PresetName": "Illig SD Film",
+      "Type": 1,
+      "UsesPictureFilters": false,
+      "UsesPictureSettings": 2,
+      "SubtitleAddCC": false,
+      "SubtitleAddForeignAudioSearch": true,
+      "SubtitleAddForeignAudioSubtitle": false,
+      "SubtitleBurnBehavior": "foreign",
+      "SubtitleBurnBDSub": false,
+      "SubtitleBurnDVDSub": false,
+      "SubtitleLanguageList": [
+        "eng"
+      ],
+      "SubtitleTrackSelectionBehavior": "none",
+      "VideoAvgBitrate": 0,
+      "VideoColorMatrixCode": 0,
+      "VideoEncoder": "x264",
+      "VideoFramerate": "",
+      "VideoFramerateMode": "vfr",
+      "VideoGrayScale": false,
+      "VideoHWDecode": false,
+      "VideoScaler": "swscale",
+      "VideoPreset": "slower",
+      "VideoTune": "film",
+      "VideoProfile": "high",
+      "VideoLevel": "4.1",
+      "VideoOptionExtra": "",
+      "VideoQualityType": 2,
+      "VideoQualitySlider": 18.0,
+      "VideoQSVDecode": true,
+      "VideoQSVAsyncDepth": 4,
+      "VideoTwoPass": false,
+      "VideoTurboTwoPass": false,
+      "x264Option": "",
+      "x264UseAdvancedOptions": false
+    },
+    {
+      "AudioCopyMask": [
+        "copy:aac",
+        "copy:ac3",
+        "copy:dtshd",
+        "copy:dts",
+        "copy:mp3",
+        "copy:truehd",
+        "copy:flac",
+        "copy:eac3"
+      ],
+      "AudioEncoderFallback": "av_aac",
+      "AudioLanguageList": [
+        "eng",
+        "und"
+      ],
+      "AudioList": [
+        {
+          "AudioBitrate": 256,
+          "AudioCompressionLevel": 0.0,
+          "AudioDitherMethod": null,
+          "AudioEncoder": "av_aac",
+          "AudioMixdown": "dpl2",
+          "AudioNormalizeMixLevel": false,
+          "AudioSamplerate": "auto",
+          "AudioTrackQualityEnable": false,
+          "AudioTrackQuality": -1.0,
+          "AudioTrackGainSlider": 0.0,
+          "AudioTrackDRCSlider": 0.0
+        },
+        {
+          "AudioBitrate": 224,
+          "AudioCompressionLevel": 0.0,
+          "AudioDitherMethod": null,
+          "AudioEncoder": "copy",
+          "AudioMixdown": "dpl2",
+          "AudioNormalizeMixLevel": false,
+          "AudioSamplerate": "auto",
+          "AudioTrackQualityEnable": false,
+          "AudioTrackQuality": -1.0,
+          "AudioTrackGainSlider": 0.0,
+          "AudioTrackDRCSlider": 0.0
+        }
+      ],
+      "AudioSecondaryEncoderMode": true,
+      "AudioTrackSelectionBehavior": "first",
+      "ChapterMarkers": true,
+      "ChildrenArray": [],
+      "Default": false,
+      "FileFormat": "av_mp4",
+      "Folder": false,
+      "FolderOpen": false,
+      "Mp4HttpOptimize": false,
+      "Mp4iPodCompatible": false,
+      "PictureAutoCrop": true,
+      "PictureBottomCrop": 0,
+      "PictureLeftCrop": 0,
+      "PictureRightCrop": 0,
+      "PictureTopCrop": 0,
+      "PictureDARWidth": 0,
+      "PictureDeblock": 0,
+      "PictureDeinterlaceFilter": "decomb",
+      "PictureCombDetectPreset": "default",
+      "PictureCombDetectCustom": "",
+      "PictureDeinterlacePreset": "default",
+      "PictureDeinterlaceCustom": "",
+      "PictureDenoiseCustom": "",
+      "PictureDenoiseFilter": "off",
+      "PictureDenoisePreset": "light",
+      "PictureDenoiseTune": "none",
+      "PictureDetelecine": "off",
+      "PictureDetelecineCustom": "",
+      "PictureItuPAR": false,
+      "PictureKeepRatio": true,
+      "PictureLooseCrop": false,
+      "PictureModulus": 2,
+      "PicturePAR": "loose",
+      "PicturePARWidth": 0,
+      "PicturePARHeight": 0,
+      "PictureRotate": "0:0",
+      "PictureWidth": null,
+      "PictureHeight": null,
+      "PictureForceHeight": 0,
+      "PictureForceWidth": 0,
+      "PresetDescription": "Preset for SD 2D animation conversion.",
+      "PresetName": "Illig SD 2D Animation",
+      "Type": 1,
+      "UsesPictureFilters": false,
+      "UsesPictureSettings": 2,
+      "SubtitleAddCC": false,
+      "SubtitleAddForeignAudioSearch": true,
+      "SubtitleAddForeignAudioSubtitle": false,
+      "SubtitleBurnBehavior": "foreign",
+      "SubtitleBurnBDSub": false,
+      "SubtitleBurnDVDSub": false,
+      "SubtitleLanguageList": [
+        "eng"
+      ],
+      "SubtitleTrackSelectionBehavior": "none",
+      "VideoAvgBitrate": 0,
+      "VideoColorMatrixCode": 0,
+      "VideoEncoder": "x264",
+      "VideoFramerate": "",
+      "VideoFramerateMode": "vfr",
+      "VideoGrayScale": false,
+      "VideoHWDecode": false,
+      "VideoScaler": "swscale",
+      "VideoPreset": "slower",
+      "VideoTune": "animation",
+      "VideoProfile": "high",
+      "VideoLevel": "4.1",
+      "VideoOptionExtra": "",
+      "VideoQualityType": 2,
+      "VideoQualitySlider": 18.0,
+      "VideoQSVDecode": true,
+      "VideoQSVAsyncDepth": 4,
+      "VideoTwoPass": false,
+      "VideoTurboTwoPass": false,
+      "x264Option": "",
+      "x264UseAdvancedOptions": false
+    },
+    {
+      "AudioCopyMask": [
+        "copy:aac",
+        "copy:ac3",
+        "copy:dtshd",
+        "copy:dts",
+        "copy:mp3",
+        "copy:truehd",
+        "copy:flac",
+        "copy:eac3"
+      ],
+      "AudioEncoderFallback": "av_aac",
+      "AudioLanguageList": [
+        "eng",
+        "und"
+      ],
+      "AudioList": [
+        {
+          "AudioBitrate": 256,
+          "AudioCompressionLevel": 0.0,
+          "AudioDitherMethod": null,
+          "AudioEncoder": "av_aac",
+          "AudioMixdown": "dpl2",
+          "AudioNormalizeMixLevel": false,
+          "AudioSamplerate": "auto",
+          "AudioTrackQualityEnable": false,
+          "AudioTrackQuality": -1.0,
+          "AudioTrackGainSlider": 0.0,
+          "AudioTrackDRCSlider": 0.0
+        },
+        {
+          "AudioBitrate": 224,
+          "AudioCompressionLevel": 0.0,
+          "AudioDitherMethod": null,
+          "AudioEncoder": "copy",
+          "AudioMixdown": "dpl2",
+          "AudioNormalizeMixLevel": false,
+          "AudioSamplerate": "auto",
+          "AudioTrackQualityEnable": false,
+          "AudioTrackQuality": -1.0,
+          "AudioTrackGainSlider": 0.0,
+          "AudioTrackDRCSlider": 0.0
+        }
+      ],
+      "AudioSecondaryEncoderMode": true,
+      "AudioTrackSelectionBehavior": "first",
+      "ChapterMarkers": true,
+      "ChildrenArray": [],
+      "Default": false,
+      "FileFormat": "av_mp4",
+      "Folder": false,
+      "FolderOpen": false,
+      "Mp4HttpOptimize": false,
+      "Mp4iPodCompatible": false,
+      "PictureAutoCrop": true,
+      "PictureBottomCrop": 0,
+      "PictureLeftCrop": 0,
+      "PictureRightCrop": 0,
+      "PictureTopCrop": 0,
+      "PictureDARWidth": 0,
+      "PictureDeblock": 0,
+      "PictureDeinterlaceFilter": "decomb",
+      "PictureCombDetectPreset": "default",
+      "PictureCombDetectCustom": "",
+      "PictureDeinterlacePreset": "default",
+      "PictureDeinterlaceCustom": "",
+      "PictureDenoiseCustom": "",
+      "PictureDenoiseFilter": "off",
+      "PictureDenoisePreset": "light",
+      "PictureDenoiseTune": "none",
+      "PictureDetelecine": "off",
+      "PictureDetelecineCustom": "",
+      "PictureItuPAR": false,
+      "PictureKeepRatio": true,
+      "PictureLooseCrop": false,
+      "PictureModulus": 2,
+      "PicturePAR": "loose",
+      "PicturePARWidth": 0,
+      "PicturePARHeight": 0,
+      "PictureRotate": "0:0",
+      "PictureWidth": null,
+      "PictureHeight": null,
+      "PictureForceHeight": 0,
+      "PictureForceWidth": 0,
+      "PresetDescription": "Preset for SD grainy film conversion.",
+      "PresetName": "Illig SD Grain",
+      "Type": 1,
+      "UsesPictureFilters": false,
+      "UsesPictureSettings": 2,
+      "SubtitleAddCC": false,
+      "SubtitleAddForeignAudioSearch": true,
+      "SubtitleAddForeignAudioSubtitle": false,
+      "SubtitleBurnBehavior": "foreign",
+      "SubtitleBurnBDSub": false,
+      "SubtitleBurnDVDSub": false,
+      "SubtitleLanguageList": [
+        "eng"
+      ],
+      "SubtitleTrackSelectionBehavior": "none",
+      "VideoAvgBitrate": 0,
+      "VideoColorMatrixCode": 0,
+      "VideoEncoder": "x264",
+      "VideoFramerate": "",
+      "VideoFramerateMode": "vfr",
+      "VideoGrayScale": false,
+      "VideoHWDecode": false,
+      "VideoScaler": "swscale",
+      "VideoPreset": "slower",
+      "VideoTune": "grain",
+      "VideoProfile": "high",
+      "VideoLevel": "4.1",
+      "VideoOptionExtra": "",
+      "VideoQualityType": 2,
+      "VideoQualitySlider": 18.0,
+      "VideoQSVDecode": true,
+      "VideoQSVAsyncDepth": 4,
+      "VideoTwoPass": false,
+      "VideoTurboTwoPass": false,
+      "x264Option": "",
+      "x264UseAdvancedOptions": false
+    }
+  ],
+  "VersionMajor": "11",
+  "VersionMicro": "0",
+  "VersionMinor": "0"
+}
