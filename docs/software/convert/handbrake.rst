@@ -91,6 +91,10 @@ My HD settings are almost the same as my SD settings with the following differen
     - For Grain: Constant Quality RF 21
     - For Animation: Constant Quality RF 20
 
+  - Optimize Video:
+
+    - Extra Options: ref=5:bframes=5
+
 Research
 ========
 
@@ -416,7 +420,7 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
           "VideoTune": "film",
           "VideoProfile": "high",
           "VideoLevel": "4.1",
-          "VideoOptionExtra": "",
+          "VideoOptionExtra": "ref=5:bframes=5",
           "VideoQualityType": 2,
           "VideoQualitySlider": 21.0,
           "VideoQSVDecode": true,
@@ -537,7 +541,7 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
           "VideoTune": "animation",
           "VideoProfile": "high",
           "VideoLevel": "4.1",
-          "VideoOptionExtra": "",
+          "VideoOptionExtra": "ref=5:bframes=5",
           "VideoQualityType": 2,
           "VideoQualitySlider": 20.0,
           "VideoQSVDecode": true,
@@ -658,7 +662,7 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
           "VideoTune": "grain",
           "VideoProfile": "high",
           "VideoLevel": "4.1",
-          "VideoOptionExtra": "",
+          "VideoOptionExtra": "ref=5:bframes=5",
           "VideoQualityType": 2,
           "VideoQualitySlider": 21.0,
           "VideoQSVDecode": true,
