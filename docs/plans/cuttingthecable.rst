@@ -60,7 +60,7 @@ I ended up switching to a :doc:`ClearStream 2V HDTV antenna <../hardware/network
 
 Home Network
 ------------
-Other than live TV, all content will get to TVs via a networked device (e.g., :doc:`Chromecast <../hardware/frontend/chromecast>` or :doc:`Xbox <../hardware/frontend/xbox360>`). We'll want a good home network connection in all the rooms to ensure good signal.
+Other than live TV, all content will get to TVs via a networked device (e.g., :doc:`Chromecast <../hardware/frontend/chromecast>` or :doc:`Xbox <../hardware/frontend/xbox>`). We'll want a good home network connection in all the rooms to ensure good signal.
 
 **Wired network is always better than wireless** because you don't fight interference, but not all devices are wired. Phones, tablets, and Google Chromecast do not have wires, so improving the wireless network may be beneficial even if all the TV devices (Xbox, PS3) do have wires.
 

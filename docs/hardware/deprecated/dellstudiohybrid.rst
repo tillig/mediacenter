@@ -4,14 +4,14 @@ Dell Studio Hybrid
 
 The Dell Studio Hybrid is a small form factor PC that I use as a media center front end. It's pretty under-powered and is one of those models that came and went quickly. It's hard to find updated drivers for it and has odd HDMI issues occasionally.
 
-Now that there's a :doc:`Plex <../../software/serve/plex>` app for :doc:`Xbox 360 <../frontend/xbox360>` and :doc:`Playstation 3 <../frontend/ps3>` I don't really use this anymore. I will probably repurpose it.
+Now that there's a :doc:`Plex <../../software/serve/plex>` app for :doc:`Xbox 360/One <../frontend/xbox>` and :doc:`Playstation 3 <../frontend/ps3>` I don't really use this anymore. I will probably repurpose it.
 
 Display Resolution
 ==================
 
 I used to have a display resolution issue when the Dell Studio Hybrid was hooked up to the :doc:`Sharp Aquos TV <../tv/sharpaquoslc37d7u>`. It ran at 1280 x 768, which left a letterbox on each side since the Sharp Aquos TV we have runs at 1366 x 768 natively. This problem went away when I connected it via HDMI to the :doc:`Samsung LN52A750 TV <../tv/samsungln52a750>` we got - now it runs at full 1080p.
 
-* Most TVs don't accept more than 720p through VGA/DVI, which we found while figuring out how to hook up the :doc:`Xbox 360 <../frontend/xbox360>` (though that may have changed with newer TVs).
+* Most TVs don't accept more than 720p through VGA/DVI, which we found while figuring out how to hook up the :doc:`Xbox 360 <../frontend/xbox>` (though that may have changed with newer TVs).
 * Different resolutions become available when you hook the computer up to the TV using the HDMI connection. I tried this with the Sharp Aquos and found that 1080i became available (though it didn't display nicely - that could have been due to the TV not understanding the input right). That wasn't available through the DVI hookup.
 * The Dell Studio Hybrid uses an `Intel X3100 graphics processor on GM965 chipset <http://www.intel.com/products/notebook/chipsets/GM965/GM965-overview.htm>`_. `I tried asking a question on The Green Button <http://thegreenbutton.com/forums/3/297610/ShowThread.aspx>`_ about whether the HD resolution was unavailable because I was using DVI but didn't get any response.
 * A tool called :doc:`DTD Calculator <../../software/deprecated/dtdcalculator>` enables easier manipulation of DTD values and doesn't require all the work that is mentioned in the article.

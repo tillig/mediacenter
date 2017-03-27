@@ -6,7 +6,7 @@ Microsoft Windows has a built-in media center function you can use to watch digi
 
 I switched away from Windows Media Center to :doc:`XBMC <xbmc>` in December 2011.
 
-While WMC allows "media center extenders" for front ends (e.g., you can use your :doc:`Xbox 360 <../../hardware/frontend/xbox360>` to access Windows Media Center content), extenders can't access all content types. I ended up getting a :doc:`Dell Studio Hybrid <../../hardware/deprecated/dellstudiohybrid>` as a dedicated Windows Media Center at my TV.
+While WMC allows "media center extenders" for front ends (e.g., you can use your :doc:`Xbox 360 <../../hardware/frontend/xbox>` to access Windows Media Center content), extenders can't access all content types. I ended up getting a :doc:`Dell Studio Hybrid <../../hardware/deprecated/dellstudiohybrid>` as a dedicated Windows Media Center at my TV.
 
 Plugins
 =======

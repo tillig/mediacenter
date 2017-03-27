@@ -18,8 +18,8 @@ FiOS Router - Normal                                                  0.2       
 :doc:`Windows Home Server <../server/hpex475>` - Normal               0.65      63         68
 :doc:`Windows Home Server <../server/hpex475>` - Peak                 1         92         98
 :doc:`Synology DS 1010+ <../server/synologyds1010>` - Normal          0.5       55         60
-:doc:`Xbox 360 <../frontend/xbox360>` - Off/Sleep                     0.05      2          7
-:doc:`Xbox 360 <../frontend/xbox360>` - Normal                        0.9       75.6       103
+:doc:`Xbox 360 <../frontend/xbox>` - Off/Sleep                        0.05      2          7
+:doc:`Xbox 360 <../frontend/xbox>` - Normal                           0.9       75.6       103
 :doc:`Dell Studio Hybrid <../deprecated/dellstudiohybrid>` - Off      0.03      1.3        3.6
 :doc:`Dell Studio Hybrid <../deprecated/dellstudiohybrid>` - Sleep    0.04      2.3        5.3
 :doc:`Dell Studio Hybrid <../deprecated/dellstudiohybrid>` - Normal   0.55      40         65

@@ -11,7 +11,7 @@ When looking for a front-end device, I generally want:
 
 .. toctree::
     remotecontrol.rst
-    xbox360.rst
+    xbox.rst
     ps3.rst
     roku.rst
     chromecast.rst

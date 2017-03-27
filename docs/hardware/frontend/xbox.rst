@@ -1,4 +1,20 @@
+====
+Xbox
+====
+
+Xbox One
 ========
+
+I have an Xbox One and an Xbox One S.
+
+I was late to the Xbox One game, waiting until a year or so after it was released before jumping in.
+
+When we upgraded to the :doc:`Samsung UN65KS8000 <../tv/samsungun65ks8000>` I got the `Xbox One Gears of War 4 Limited 2TB bundle <http://amzn.to/2oaHE0z>`_ to go along with the 4K support on the TV.
+
+.. image:: xboxone.jpg
+   :target: http://amzn.to/2oaHE0z
+
+
 Xbox 360
 ========
 
