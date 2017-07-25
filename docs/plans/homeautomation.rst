@@ -62,3 +62,75 @@ My Choice: Google Home
 ----------------------
 
 Despite the reduced set of integrations, we went with the Google Home. The tight integration with Google apps plus the easy multi-user support made it a pretty convincing package.
+
+Automating HVAC
+===============
+
+I have a Trane zoned system with a `ComfortLink II XL950 thermostat <https://www.trane.com/residential/en/products/thermostats-and-controls/connected-controls/comfortlink_ii.html>`_. I considered an ecobee or similar replacement for the more robust automation ability but it's not compatible. My HVAC system not only has the zoning, but it also has communication between the heat pump, the furnace, and the air filter. All the components work together to be more efficient. If I wanted the ecobee I'd need to bypass all of the communication... which isn't something I want.
+
+The ComfortLink II XL950 *is* somewhat automated, in that it can connec to `Nexia <http://www.nexiahome.com/>`_. When I first bought the thermostat Nexia wanted $10/month for automation services but has since made it so if you *only* connect the thermostat it's free.
+
+Nexia itself doesn't directly integrate with Google Home, but it does integrate well with `IFTTT <https://ifttt.com>`_. I was able to set up some settings in Nexia that can be triggered by IFTTT.
+
+For example, I have a setting where my downstairs zone gets set so it heats to 68 and cools to 72. In Nexia I named this setting "downstairs home." I then set up IFTTT so if I say, "Set downstairs temperature to home" it triggers the Nexia "downstairs home" configuration and the thermostat settings get updated. The thermostat will have the zone set accordingly and behaves like you put a temporary temperature hold in place - on the next setting change via schedule it'll resume normal settings.
+
+Nexia doesn't really have much richer integration beyond "execute this setting" and that's fine. I don't know how you'd do something as complex as zoned temperature control in an intuitive voice system. It does what I need, and that's good enough.
+
+Automating Media
+================
+
+This is where things get a little messy.
+
+At a minimum I need:
+
+ - Receiver power, volume, and inputs
+ - TV power and volume
+
+It'd be *nice* to have more, like the Roku or Xbox One, but I'm not going to go overboard.
+
+**The problem with most media automation solutions is the use of infrared.** Using standard IR remotes means the automation system needs to be the *only* thing that turns on and off components in the system. If you use your regular remote to turn something on, the automation system still thinks it's off since there's no feedback to let the system know you turned the thing on manually.
+
+That goes against one of my requirements - I really can't *only* control this with automation and mobile apps.
+
+What that means, indirectly, is the things I need to control have to be controlled through a programmatic network-based interface. Luckily that will work for at least my TV and receiver:
+
+- The :doc:`Samsung UN65KS8000 TV <../hardware/tv/samsungun65ks8000>` has `an API with decent documentation <http://developer.samsung.com/tv/develop/api-references/>`_.
+- The :doc:`Marantz SR5010 Receiver <../hardware/receiver/marantzsr5010>` has `an API with not much doc <https://github.com/tillig/MarantzVolumeMonitor/wiki/Marantz-API>`_ but I have some experience with it, having created `a volume monitor with an Arduino <http://www.paraesthesia.com/archive/2017/03/27/arduino-volume-monitor-for-marantz-receiver/>`_.
+
+The question then becomes how to best communicate with the components through the network.
+
+Logitech Harmony Hub
+--------------------
+
+This seems to be a pretty common way to integrate media components with home automation. However, I'm not sure if the Harmony Hub will use the APIs to control the components or if it's only going to use an IR blaster. `I've asked a question about this on the support forums. <https://community.logitech.com/s/question/0D55A0000704D1ESAU/does-the-harmony-hub-control-marantz-receivers-andor-samsung-tvs-via-network>`_
+
+Samsung SmartThings
+-------------------
+
+The Samsung SmartThings hub is a more general purpose home automation hub than Harmony Hub and definitely has first-class support for my Samsung TV. However, there isn't direct support for the Marantz receiver.
+
+One thing you can do with SmartThings is write a "SmartApp" that is a plugin for automating other things. `There is already a community SmartApp for controlling Denon network receivers <https://community.smartthings.com/t/re-release-denon-network-av-receivers/80834>`_ and Marantz uses the same API. The source for it `is on GitHub <https://github.com/sbdobrescu/DenonAVR>`_. I may need to `follow this tutorial to create my own version of the app <https://www.youtube.com/watch?v=D6rG4mk164M&feature=youtu.be>`_ but I'm not sure.
+
+Automating Blinds
+=================
+
+We have a Sunsetter motorized awning that uses a Somfy controller. Somfy seems to be a pretty popular way to automate blinds; at least, it's the most popular way I've seen outside of after-market automation. The problem with after-market automation is that it generally assumes the blinds are driven by a chain pull; that's not always the case for us.
+
+Somfy seems to work on the 433.42 MHz frequency, which is weird as many RF emitters are 433.93 MHz. The non-standard (proprietary?) frequency along with the communication protocol makes it sort of painful to automate.
+
+Somfy ZRTSI Z-Wave Interface
+----------------------------
+
+There's a `16-channel Z-Wave interface for Somfy blinds <http://amzn.to/2eLtx1A>`_ that, at the time of this writing, is about $300. That's a little spendy for what you get if you only have one or two motors to drive.
+
+DIY Somfy Controller
+--------------------
+
+You can `hook a Raspberry Pi or an Arduino to a Somfy remote <http://www.instructables.com/id/RaspberryPi-Web-Curtain-Controller/>`_ with a little work. Hypothetically I could do something like this and create a SmartThings app or an IFTTT integration to call the controller when needed. A single-channel Somfy remote costs around $40 and an Arduino is like $15. For $55 and some leg work that might be a more affordable way to make things happen as long as I only need a single channel to run.
+
+If I actually get full house blinds on a Somfy system I'd need to reconsider the ZRTSI controller.
+
+Serena Shades
+-------------
+
+Given I haven't automated my existing blinds yet, a `Serena Shades solution <https://www.serenashades.com/>`_ may be interesting. They're a Lutron company and should work with Google Home via the Caseta hub.
