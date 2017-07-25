@@ -6,3 +6,4 @@ Plans/Roadmap
 
    nas.rst
    cuttingthecable.rst
+   homeautomation.rst
