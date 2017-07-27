@@ -102,7 +102,9 @@ The question then becomes how to best communicate with the components through th
 Logitech Harmony Hub
 --------------------
 
-This seems to be a pretty common way to integrate media components with home automation. However, I'm not sure if the Harmony Hub will use the APIs to control the components or if it's only going to use an IR blaster. `I've asked a question about this on the support forums. <https://community.logitech.com/s/question/0D55A0000704D1ESAU/does-the-harmony-hub-control-marantz-receivers-andor-samsung-tvs-via-network>`_
+This seems to be a pretty common way to integrate media components with home automation. However, I'm not sure if the Harmony Hub will use the APIs to control the components or if it's only going to use an IR blaster. `I've asked a question about this on the support forums. <https://community.logitech.com/s/question/0D55A0000704D1ESAU/does-the-harmony-hub-control-marantz-receivers-andor-samsung-tvs-via-network>`_ The official answer was, "We are sorry to inform you that, currently, we can’t control Marantz receivers and/or Samsung TVs through the IP."
+
+This basically means Harmony Hub is off the table for me at the time being.
 
 Samsung SmartThings
 -------------------
@@ -110,6 +112,8 @@ Samsung SmartThings
 The Samsung SmartThings hub is a more general purpose home automation hub than Harmony Hub and definitely has first-class support for my Samsung TV. However, there isn't direct support for the Marantz receiver.
 
 One thing you can do with SmartThings is write a "SmartApp" that is a plugin for automating other things. `There is already a community SmartApp for controlling Denon network receivers <https://community.smartthings.com/t/re-release-denon-network-av-receivers/80834>`_ and Marantz uses the same API. The source for it `is on GitHub <https://github.com/sbdobrescu/DenonAVR>`_. I may need to `follow this tutorial to create my own version of the app <https://www.youtube.com/watch?v=D6rG4mk164M&feature=youtu.be>`_ but I'm not sure.
+
+There is `a Google Home Helper app <http://thingsthataresmart.wiki/index.php?title=Google_Home_Helper>`_ (`source on GitHub <https://github.com/MichaelStruck/SmartThingsPublic/tree/master/smartapps/michaelstruck/google-home-helper.src>`_) that helps to bridge things Google Home doesn't naturally support (e.g., thermostats) using a SmartApp. The interesting thing about this is that it means you can use SmartApps in a similar manner to devices registered with SmartThings. Unfortunately, there's no way to test it out without actually having a SmartThings hub.
 
 Automating Blinds
 =================
