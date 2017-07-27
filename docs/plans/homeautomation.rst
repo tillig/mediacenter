@@ -83,8 +83,8 @@ This is where things get a little messy.
 
 At a minimum I need:
 
- - Receiver power, volume, and inputs
- - TV power and volume
+- Receiver power, volume, and inputs
+- TV power and volume
 
 It'd be *nice* to have more, like the Roku or Xbox One, but I'm not going to go overboard.
 
@@ -138,3 +138,37 @@ Serena Shades
 -------------
 
 Given I haven't automated my existing blinds yet, a `Serena Shades solution <https://www.serenashades.com/>`_ may be interesting. They're a Lutron company and should work with Google Home via the Caseta hub.
+
+Automating Lights
+=================
+
+There are basically two types of lights to automate - lights that can be handled at the *plug* (like a table lamp); and lights that must be handled at the *switch* (like overhead light fixtures).
+
+Plug-In Lights
+--------------
+
+There are a lot of "smart plugs" out there. Plug the smart plug in the wall, connect the lamp to the smart plug.
+
+I like the `TP-Link Smart Plug Mini <http://amzn.to/2uGKb6d>`_. I picked it for a few reasons:
+
+- Reasonable price: Between $25 and $30 for a single unit.
+- Brand affinity: TP-Link hasn't let me down in the past.
+- Takes one outlet: Some adapters cover a little bit of the second plug in the outlet so you can't plug anything else in.
+- Works with Google Home: The TP-Link "Kasa" app connects with Google Home through directly supported integration.
+
+Overhead Lights
+---------------
+
+I have standard two-way and three-way switches to accommodate. I'd like all the switches to be the same brand so it's not mix-and-match all over the place and integration is consistent.
+
+Three-way switches are a tricky thing. In a standard switch environment it's easy enough to wire up, but in home control pushing one of the switches needs to let the other switch know the state of the lights (so if you push one switch to turn the lights on you can push the other to turn them off).
+
+GE Z-Wave
+~~~~~~~~~
+
+The `GE Z-Wave switches <http://amzn.to/2uGR0oh>`_ support three-way switching directly and, while there's a notion of a "primary" and "auxiliary" switch, both switches get powered through the home electricity so there aren't any batteries to change. These are also reasonably affordable at about $60 for a pair of three-way switches or about $35 for a standard two-way switch.
+
+For the most part these are pretty basic switches. Dimmers and standard switches look identical. Everything's flat, white, simple. That's not a bad thing.
+
+There are pretty constant undercurrents in the community that Z-Wave may be on the way out. That's been a discussion for a few years now, but it doesn't seem to be proving out that way. On the other hand, if there's something better, I'm for it.
+
