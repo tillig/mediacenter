@@ -132,6 +132,11 @@ DIY Somfy Controller
 
 You can `hook a Raspberry Pi or an Arduino to a Somfy remote <http://www.instructables.com/id/RaspberryPi-Web-Curtain-Controller/>`_ with a little work. Hypothetically I could do something like this and create a SmartThings app or an IFTTT integration to call the controller when needed. A single-channel Somfy remote costs around $40 and an Arduino is like $15. For $55 and some leg work that might be a more affordable way to make things happen as long as I only need a single channel to run.
 
+Other projects to look at for DIY on this:
+
+- `blind-control <http://romor.github.io/blind-control/>`_: Raspberry Pi with a five-channel Somfy remote.
+- `Somfy_Remote <https://github.com/Nickduino/Somfy_Remote>`_: Emulate a Somfy remote with an Arduino and a 433.42MHz transmitter.
+
 If I actually get full house blinds on a Somfy system I'd need to reconsider the ZRTSI controller.
 
 Serena Shades
@@ -163,12 +168,6 @@ I have standard two-way and three-way switches to accommodate. I'd like all the 
 
 Three-way switches are a tricky thing. In a standard switch environment it's easy enough to wire up, but in home control pushing one of the switches needs to let the other switch know the state of the lights (so if you push one switch to turn the lights on you can push the other to turn them off).
 
-GE Z-Wave
-~~~~~~~~~
+I originally considered the `GE Z-Wave switches <http://amzn.to/2uGR0oh>`_. They're affordable and I like that the three-way switches don't require remotes or "auxiliary" switches that use batteries - they're powered right off the wired electrical supply.
 
-The `GE Z-Wave switches <http://amzn.to/2uGR0oh>`_ support three-way switching directly and, while there's a notion of a "primary" and "auxiliary" switch, both switches get powered through the home electricity so there aren't any batteries to change. These are also reasonably affordable at about $60 for a pair of three-way switches or about $35 for a standard two-way switch.
-
-For the most part these are pretty basic switches. Dimmers and standard switches look identical. Everything's flat, white, simple. That's not a bad thing.
-
-There are pretty constant undercurrents in the community that Z-Wave may be on the way out. That's been a discussion for a few years now, but it doesn't seem to be proving out that way. On the other hand, if there's something better, I'm for it.
-
+However, I'm now thinking the `Lutron Caseta <http://www.casetawireless.com>`_ series of switches and dimmers would be better. Based on reading a lot of reviews like `this one on The Wirecutter <http://thewirecutter.com/reviews/best-in-wall-wireless-light-switch-and-dimmer/>`_ it seems a lot of folks are ending at the same conclusion. It does require a hub to work, but Google Home has first-class integration with it, so I'm not too concerned.
