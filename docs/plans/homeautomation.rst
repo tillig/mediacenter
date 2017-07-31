@@ -118,17 +118,19 @@ There is `a Google Home Helper app <http://thingsthataresmart.wiki/index.php?tit
 Automating Blinds
 =================
 
-We have a Sunsetter motorized awning that uses a Somfy controller. Somfy seems to be a pretty popular way to automate blinds; at least, it's the most popular way I've seen outside of after-market automation. The problem with after-market automation is that it generally assumes the blinds are driven by a chain pull; that's not always the case for us.
+Somfy
+-----
+Somfy seems to work on the 433.42 MHz frequency, which is weird as many RF emitters are 433.93 MHz. The non-standard (proprietary?) frequency along with the communication protocol makes it sort of painful to automate. You can get a `MyLink Hub that CNET didn't review highly, saying it's a bit spendy for what you get <https://www.cnet.com/products/somfy-mylink/review/>`_.
 
-Somfy seems to work on the 433.42 MHz frequency, which is weird as many RF emitters are 433.93 MHz. The non-standard (proprietary?) frequency along with the communication protocol makes it sort of painful to automate.
+We have a Sunsetter motorized awning that uses a Somfy controller. This is something to consider when looking at a solution for blinds but isn't make-it-or-break-it.
 
-Somfy ZRTSI Z-Wave Interface
-----------------------------
+ZRTSI Z-Wave Interface
+~~~~~~~~~~~~~~~~~~~~~~
 
 There's a `16-channel Z-Wave interface for Somfy blinds <http://amzn.to/2eLtx1A>`_ that, at the time of this writing, is about $300. That's a little spendy for what you get if you only have one or two motors to drive.
 
-DIY Somfy Controller
---------------------
+DIY Controller
+~~~~~~~~~~~~~~
 
 You can `hook a Raspberry Pi or an Arduino to a Somfy remote <http://www.instructables.com/id/RaspberryPi-Web-Curtain-Controller/>`_ with a little work. Hypothetically I could do something like this and create a SmartThings app or an IFTTT integration to call the controller when needed. A single-channel Somfy remote costs around $40 and an Arduino is like $15. For $55 and some leg work that might be a more affordable way to make things happen as long as I only need a single channel to run.
 
@@ -142,7 +144,12 @@ If I actually get full house blinds on a Somfy system I'd need to reconsider the
 Serena Shades
 -------------
 
-Given I haven't automated my existing blinds yet, a `Serena Shades solution <https://www.serenashades.com/>`_ may be interesting. They're a Lutron company and should work with Google Home via the Caseta hub.
+Given I haven't automated my existing blinds yet, a `Serena Shades solution <https://www.serenashades.com/>`_ may be interesting. They're a Lutron company and should work with Google Home via the Caseta hub. `CNET reviews this well <https://www.cnet.com/products/lutron-serena-remote-controlled-shades/review/>`_ but says the price may be high once you consider the hub you need to get. We'll already be getting that for the lights and using the same hub/protocol is a big win.
+
+After-Market Blind Automation
+-----------------------------
+
+The problem with after-market automation is that it generally assumes the blinds are driven by a chain pull; that's not always the case for us.
 
 Automating Lights
 =================
