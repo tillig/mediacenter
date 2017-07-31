@@ -146,10 +146,16 @@ Serena Shades
 
 Given I haven't automated my existing blinds yet, a `Serena Shades solution <https://www.serenashades.com/>`_ may be interesting. They're a Lutron company and should work with Google Home via the Caseta hub. `CNET reviews this well <https://www.cnet.com/products/lutron-serena-remote-controlled-shades/review/>`_ but says the price may be high once you consider the hub you need to get. We'll already be getting that for the lights and using the same hub/protocol is a big win.
 
+`CNET went with Serena over Somfy`<https://www.cnet.com/news/the-cnet-smart-home-antes-up-for-smart-blinds/>`_ because Somfy doesn't integrate with as many things. Serena wasn't perfect, but Somfy integrated with less and cost the same or more. They also had a `smart blind showdown <https://www.cnet.com/news/smart-home-showdown-somfy-shades-vs-lutron-serena/>` where the Serena shades came out on top.
+
 After-Market Blind Automation
 -----------------------------
 
 The problem with after-market automation is that it generally assumes the blinds are driven by a chain pull; that's not always the case for us.
+
+Options here include things like `Axis <http://www.helloaxis.com/>`_ and `MySmartBlinds <https://www.mysmartblinds.com/>`_.
+
+MySmartBlinds looks like it might work with standard Venetian blinds like we have now but it doesn't really integrate with anything quite yet.
 
 Automating Lights
 =================
