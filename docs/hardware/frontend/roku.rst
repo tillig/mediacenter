@@ -16,7 +16,7 @@ Second, with the 7.5.1 release of the Roku Ultra firmware things started going d
 - `There's a random pop/chirp noise in all channels. <https://forums.roku.com/viewtopic.php?f=28&t=98931&p=555044#p555044>`_ This appears to have been fixed with the 7.7 firmware.
 - There are inconsistent HDMI handshake problems. This manifests after having the TV turned off for a period of several hours. When the TV gets turned back on, sometimes the Roku displays just fine; sometimes the picture flickers; sometimes it doesn't come back at all. In the latter two cases the only way to fix it is to reboot the Roku. The 7.7 firmware fixed most of the flickering but there's still the problem of the picture just not coming back.
 
-At this point I'm somewhat regretting the Roku Ultra. My Roku 3 units were so stable and easy to use. I wanted 4K support so I went with the Roku Ultra thinking it'd be equally stable and easy to use. Oh, how wrong I was.
+At this point I'm somewhat regretting the Roku Ultra. My Roku 3 units were so stable and easy to use. I wanted 4K support so I went with the Roku Ultra thinking it'd be equally stable and easy to use. Oh, how wrong I was. I'm considering an NVidia Shield TV as a replacement if things don't stablize soon.
 
 Roku 3
 ======
