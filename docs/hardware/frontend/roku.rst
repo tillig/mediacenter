@@ -2,22 +2,6 @@
 Roku
 ====
 
-Roku Ultra
-==========
-
-When we upgraded to our 4K :doc:`Samsung UN65KS8000 <../tv/samsungun65ks8000>` we upgraded the Roku 3 to a Roku Ultra.
-
-For the most part it's been nice, but in around February 2017 we encountered two issues.
-
-First, the Netflix app doesn't seem to stream as fast as it should. Our Internet connection speed tests out at 150Mbps but the Netflix app internal speed test generally tops out at 30Mbps. When it dips lower than that, we get artifacts when streaming 4K content. I don't know if there's some sort of traffic shaping going on at Comcast or what, but it's frustrating.
-
-Second, with the 7.5.1 release of the Roku Ultra firmware things started going downhill.
-
-- `There's a random pop/chirp noise in all channels. <https://forums.roku.com/viewtopic.php?f=28&t=98931&p=555044#p555044>`_ This appears to have been fixed with the 7.7 firmware.
-- There are inconsistent HDMI handshake problems. This manifests after having the TV turned off for a period of several hours. When the TV gets turned back on, sometimes the Roku displays just fine; sometimes the picture flickers; sometimes it doesn't come back at all. In the latter two cases the only way to fix it is to reboot the Roku. The 7.7 firmware fixed most of the flickering but there's still the problem of the picture just not coming back.
-
-At this point I'm somewhat regretting the Roku Ultra. My Roku 3 units were so stable and easy to use. I wanted 4K support so I went with the Roku Ultra thinking it'd be equally stable and easy to use. Oh, how wrong I was. I'm considering an NVidia Shield TV as a replacement if things don't stablize soon.
-
 Roku 3
 ======
 
@@ -29,10 +13,15 @@ While the Amazon site has `a comparison of Fire TV to Roku <http://www.amazon.co
 
 `Roku has a Tablo channel <https://www.tablotv.com/blog/tablo-rockin-roku/>`_ so viewing :doc:`Tablo DVR <../server/tablo>` content is directly supported. It's very smooth and easily supports the highest quality Tablo recordings.
 
+Roku Ultra
+==========
+
+I ended up :doc:`deprecating the Roku Ultra <../deprecated/roku>` after I suffered through six months of total unreliability and lack of tech support response. I switched to :doc:`NVIDIA Shield TV <nvidiashield>` for the 4K support and Google Home integration.
+
 Plex Channel
 ============
 
-With some of my HD movies that the Plex channel will occasionally hang unexpectedly and just stop playing. I found that going into the Plex channel/app settings, under Transcoder, unchecking "Direct Stream" seems to fix it.
+With some of my HD movies the Plex channel will occasionally hang unexpectedly and just stop playing. I found that going into the Plex channel/app settings, under Transcoder, unchecking "Direct Stream" seems to fix it.
 
 Secret Menus
 ============

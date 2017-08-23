@@ -2,6 +2,15 @@
 Switches
 ========
 
+D-Link DGS-1016A
+================
+
+I have one `these D-Link DGS-1016A 16-port gigabit unmanaged switches <https://www.amazon.com/dp/B0092KZBCQ/?tag=mhsvortex>`_ in my network.
+
+.. image:: dgs1016a.jpg
+
+As I got into home automation and adding things like smart hubs in the office I needed more ports. I love my 8-port D-Link switches and this is the 16-port version.
+
 D-Link DGS-2208
 ===============
 
