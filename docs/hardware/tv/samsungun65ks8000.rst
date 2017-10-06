@@ -9,3 +9,5 @@ This is our current primary TV. It's a 65" 4K LCD set with a super thin bezel. W
 We picked this one because we really liked the 52" set we were upgrading and compared to other sets we looked at this was far and away the best picture. We didn't want the curved screen because we wanted to wall mount the set which doesn't work so well with curved screens. The "triple black" technology built in (selectively brightens or dims areas on the screen to enhance dark areas) is definitely worth it.
 
 The glossy display adds to the clarity of the picture, but I do need to basically keep the blinds in the room with the TV shut because any significant amount of light causes so much glare you can't see anything.
+
+Note: With a firmware update around September 2017, `it seems SmartThings integration was broken <https://community.smartthings.com/t/unable-to-connect-to-ks8000/99417/23>`_. I use SmartThings as part of my :doc:`home automation plan <../../plans/homeautomation>`. Hoping that gets resolved soon.
