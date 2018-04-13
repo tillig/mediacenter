@@ -4,7 +4,7 @@ Power
 
 All of my devices are, at a minimum, plugged into proper surge protection devices. In some cases, like the servers, I have UPS (uninterruptable power supply - battery backup) units that can save me in the event of an outage.
 
-The UPS units in my office are connected to my servers via USB so they can monitor the UPS state. Both the :doc:`Windows Home Server <../server/hpex475>` and the :doc:`Synology DS 1010+ <../server/synologyds1010>` watch their UPS and are set to gracefully shut down if battery power gets too low.
+The UPS units in my office are connected to my servers via USB so they can monitor the UPS state. The :doc:`Synology DS 1010+ <../server/synologyds1010>` watches its UPS and are is to gracefully shut down if battery power gets too low.
 
 General Power Requirements
 ==========================
@@ -15,8 +15,8 @@ I bought a `Kill-a-Watt <http://www.amazon.com/dp/B000RGF29Q?tag=mhsvortex>`_ to
 Device                                                                Amps (A)  Watts (W)  Volt-Amps (VA)
 ====================================================================  ========  =========  ==============
 FiOS Router - Normal                                                  0.2       14         24
-:doc:`Windows Home Server <../server/hpex475>` - Normal               0.65      63         68
-:doc:`Windows Home Server <../server/hpex475>` - Peak                 1         92         98
+:doc:`Windows Home Server <../deprecated/hpex475>` - Normal           0.65      63         68
+:doc:`Windows Home Server <../deprecated/hpex475>` - Peak             1         92         98
 :doc:`Synology DS 1010+ <../server/synologyds1010>` - Normal          0.5       55         60
 :doc:`Xbox 360 <../frontend/xbox>` - Off/Sleep                        0.05      2          7
 :doc:`Xbox 360 <../frontend/xbox>` - Normal                           0.9       75.6       103

@@ -2,9 +2,11 @@
 Windows Server Essentials
 =========================
 
-In February 2016 I upgraded my :doc:`HP EX475 Windows Home Server <../../hardware/server/hpex475>` from :doc:`Windows Home Server v1 <../deprecated/whs>` to Windows Server 2012 R2 with Windows Server Essentials.
+In February 2016 I upgraded my :doc:`HP EX475 Windows Home Server <../../hardware/deprecated/hpex475>` from :doc:`Windows Home Server v1 <../deprecated/whs>` to Windows Server 2012 R2 with Windows Server Essentials.
 
 What's interesting is how Windows Server Essentials is so much "the evolution" of Windows Home Server. Except for the more "media-centric" sharing that was present in WHS, WSE has pretty much the same feature set - client backups, shared folders, user account management.
+
+In late 2017 I deprecated the :doc:`HP EX475 <../../hardware/deprecated/hpex475>` machine entirely.
 
 Active Directory
 ================

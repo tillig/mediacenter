@@ -10,3 +10,6 @@ As I transition away from using certain software packages, I don't want to lose 
     windowsmediacenter.rst
     dtdcalculator.rst
     whs.rst
+    wse.rst
+    crashplan.rst
+    picasa.rst

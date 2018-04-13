@@ -63,7 +63,7 @@ On 10/26/2013 I upgraded the computers to Windows 8.1. All the other computers w
 
 As a workaround I had to stop backing up the System Reserved Partition on Inspiron. I'll have files, but if things break I'll need to do a clean Windows install (with a 400MB or 500MB System Reserved Partition).
 
-**WHS backs up all of my client computers nightly.** This works in conjunction with :doc:`CrashPlan <../system/crashplan>` to keep my data safe.
+**WHS backs up all of my client computers nightly.** This works in conjunction with :doc:`CrashPlan <crashplan>` to keep my data safe.
 
 In January 2010 I started getting weekly "backup database corrupt" errors after the weekly automatic backup cleanup run. Looking at the backup database, it was reporting 225GB used - far more than the combined capacity of all of my client computers twice over. `After posting to the Microsoft forums <http://social.microsoft.com/Forums/en/whssoftware/thread/1e25eb79-eb04-4385-83a6-f5a20b0d09bf>`_, I decided to reset the backup database manually and start from scratch.
 

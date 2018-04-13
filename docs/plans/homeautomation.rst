@@ -115,7 +115,7 @@ One thing you can do with SmartThings is write a "SmartApp" that is a plugin for
 
 There is `a Google Home Helper app <http://thingsthataresmart.wiki/index.php?title=Google_Home_Helper>`_ (`source on GitHub <https://github.com/MichaelStruck/SmartThingsPublic/tree/master/smartapps/michaelstruck/google-home-helper.src>`_) that helps to bridge things Google Home doesn't naturally support (e.g., thermostats) using a SmartApp. The interesting thing about this is that it means you can use SmartApps in a similar manner to devices registered with SmartThings.
 
-`I picked up a SmartThings hub at Amazon <http://amzn.to/2i3iBO6>`_ for $50 when the price dropped. I haven't hooked it up yet.
+`I picked up a SmartThings hub at Amazon <http://amzn.to/2i3iBO6>`_ for $50 when the price dropped. It works pretty well with Google Home.
 
 Automating Blinds
 =================
@@ -159,6 +159,11 @@ Options here include things like `Axis <http://www.helloaxis.com/>`_ and `MySmar
 
 MySmartBlinds looks like it might work with standard Venetian blinds like we have now but it doesn't really integrate with anything quite yet.
 
+My Choice: Serena Shades
+------------------------
+
+We did a remodel in our house in late 2017 through early 2018. As part of that I got the Serena Shades. These work really well and integrate with the same hub as the Lutron Caseta switches we also got.
+
 Automating Lights
 =================
 
@@ -185,4 +190,4 @@ Three-way switches are a tricky thing. In a standard switch environment it's eas
 
 I originally considered the `GE Z-Wave switches <http://amzn.to/2uGR0oh>`_. They're affordable and I like that the three-way switches don't require remotes or "auxiliary" switches that use batteries - they're powered right off the wired electrical supply.
 
-However, I'm now thinking the `Lutron Caseta <http://www.casetawireless.com>`_ series of switches and dimmers would be better. Based on reading a lot of reviews like `this one on The Wirecutter <http://thewirecutter.com/reviews/best-in-wall-wireless-light-switch-and-dimmer/>`_ it seems a lot of folks are ending at the same conclusion. It does require a hub to work, but Google Home has first-class integration with it, so I'm not too concerned.
+As part of a home remodel I invested in the `Lutron Caseta <http://www.casetawireless.com>`_ series of switches and dimmers. Based on reading a lot of reviews like `this one on The Wirecutter <http://thewirecutter.com/reviews/best-in-wall-wireless-light-switch-and-dimmer/>`_ it seems a lot of folks are ending at the same conclusion. It does require a hub to work, but Google Home has first-class integration with itand it works well. It also is the same hub used for the Serena Shades I picked up.

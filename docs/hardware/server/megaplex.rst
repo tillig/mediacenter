@@ -35,7 +35,7 @@ The parts I used to build the server (prices listed as of March 2015):
 
 Storage
 =======
-I originally tried to use the WD Green drives I had tried in my :doc:`Windows Home Server <hpex475>`. **FAIL.** The poor performance on these drives caused any sort of heavy :doc:`Plex <../../software/serve/plex>` library indexing to fail with I/O errors. I ended up having to replace these with different, better-performing drives.
+I originally tried to use the WD Green drives I had tried in my :doc:`Windows Home Server <../deprecated/hpex475>`. **FAIL.** The poor performance on these drives caused any sort of heavy :doc:`Plex <../../software/serve/plex>` library indexing to fail with I/O errors. I ended up having to replace these with different, better-performing drives.
 
 I used a drive I already had for the system drive on the box and added two higher-perf drives I bought as storage for the Plex library and scratch/temp space.
 

@@ -6,6 +6,5 @@ System software supports :doc:`server software <../serve/index>` and provides ad
 
 .. toctree::
 
-    crashplan.rst
+    idrive.rst
     dsm.rst
-    wse.rst

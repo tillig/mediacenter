@@ -6,7 +6,7 @@ DiskStation Manager
 
 Remote Shutdown
 ===============
-I have multiple UPS units, but when I only had one, I wanted to tie my :doc:`Windows Home Server <../../hardware/server/hpex475>` to the UPS and have it trigger other servers to shut down when the UPS went into a critical battery mode. I researched how to do remote shutdown on the Synology so I could potentially implement it, but I never did because I ended up adding a second UPS and tied one server to each.
+I have multiple UPS units, but when I only had one, I wanted to tie my :doc:`Windows Home Server <../../hardware/deprecated/hpex475>` to the UPS and have it trigger other servers to shut down when the UPS went into a critical battery mode. I researched how to do remote shutdown on the Synology so I could potentially implement it, but I never did because I ended up adding a second UPS and tied one server to each. I have since deprecated my Windows Home Server.
 
 If I set up SSH on the machine along with public key authentication, `I can use SSH to remote shutdown the Diskstation <http://forum.synology.com/enu/viewtopic.php?f=19&t=32549&p=129019#p129019>`_:
 

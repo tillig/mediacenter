@@ -26,7 +26,7 @@ Aside: Synology does provide a "Video Station" package that has similar function
 Storage
 =======
 
-    - I have a bunch of WD Green drives I pulled out of my :doc:`Windows Home Server <hpex475>`. Synology forums have some posts about this. `This one says that some of the drives work fine while others don't <http://forum.synology.com/enu/viewtopic.php?f=151&t=19131>`_; `this one is about someone who is trying to avoid issues by switching away from WD Green <http://forum.synology.com/enu/viewtopic.php?f=124&t=23719>`_. I decided not to use these and instead go with some other drives.
+    - I have a bunch of WD Green drives I pulled out of my :doc:`Windows Home Server <../deprecated/hpex475>`. Synology forums have some posts about this. `This one says that some of the drives work fine while others don't <http://forum.synology.com/enu/viewtopic.php?f=151&t=19131>`_; `this one is about someone who is trying to avoid issues by switching away from WD Green <http://forum.synology.com/enu/viewtopic.php?f=124&t=23719>`_. I decided not to use these and instead go with some other drives.
     - `I should get the latest firmware off the website <http://www.synology.com/support/download.php?lang=enu>`_ for initial install. This will make sure everything is compatible with newer disks.
     - `There is a hardware compatibility list for supported drives <http://www.synology.com/support/faq_show.php?q_id=130>`_ on Synology devices.
 
@@ -36,4 +36,4 @@ Of the 2TB drives listed as directly supported, these seem reasonably viable. Ot
     - Seagate Barracuda XT ST32000641AS is 7200RPM, 6Gb/s, 64MB cache. `$250 at NewEgg <http://www.newegg.com/Product/Product.aspx?Item=N82E16822148506&Tpk=ST32000641AS>`_, `$270 at Amazon <http://www.amazon.com/dp/B002RWJHBM?tag=mhsvortex>`_.
     - Samsung Spinpoint HD203WI is 5400 RPM, 3Gb/s, 32MB cache. `$140 at NewEgg <http://www.newegg.com/Product/Product.aspx?Item=N82E16822152202&Tpk=HD203WI>`_, not at Amazon.
 
-In June 2016 I replaced the 2TB drives with 3TB drives so I could deprecate the :doc:`Windows Home Server <hpex475>` which had started getting finicky. I picked up five `WD Blue 3TB WD30EZRZ drives <http://amzn.to/28NCIKi>`_ (5400RPM, 64MB cache, $89 each) and went through the process of replacing one drive at a time. I went from an array of (7.15TB capacity / 5.8TB used / 1.35TB available) to (10.73 capacity / 5.8TB used / 4.93TB available) in a RAID 5 configuration.
+In June 2016 I replaced the 2TB drives with 3TB drives so I could deprecate the :doc:`Windows Home Server <../deprecated/hpex475>` which had started getting finicky. I picked up five `WD Blue 3TB WD30EZRZ drives <http://amzn.to/28NCIKi>`_ (5400RPM, 64MB cache, $89 each) and went through the process of replacing one drive at a time. I went from an array of (7.15TB capacity / 5.8TB used / 1.35TB available) to (10.73 capacity / 5.8TB used / 4.93TB available) in a RAID 5 configuration.

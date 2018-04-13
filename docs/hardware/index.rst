@@ -13,11 +13,11 @@ Here's a photo of my current server rack in my office. Most of these are discuss
 
 From top to bottom, left to right, you see...
 
-- :doc:`Synology DS1010+ <server/synologyds1010>`, which provides video storage.
+- :doc:`Synology DS1010+ <server/synologyds1010>`, which provides all storage.
 - Some USB hard drives used with the :doc:`Tablo <server/tablo>`.
 - :doc:`Tablo <server/tablo>`, which handles over-the-air DVR services.
-- :doc:`HP EX475 Home Server <server/hpex475>`, which handles music storage/serving and photo storage.
-- A USB hard drive that holds on-site backups via :doc:`CrashPlan <../software/system/crashplan>`.
+- :doc:`HP EX475 Home Server <deprecated/hpex475>`, deprecated in late 2017.
+- A USB hard drive that used to hold :doc:`CrashPlan <../software/deprecated/crashplan>` data, deprecated in late 2017.
 - :doc:`CyberPower CP1500AVRLCD <power/index>`, the UPS that most (but not all) of this is plugged into.
 - :doc:`D-Link DGS-2208 switch <network/switches>`, connecting these together and linking back to the main network.
 - :doc:`Megaplex <server/megaplex>`, my custom dedicated Plex server.

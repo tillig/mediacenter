@@ -2,7 +2,7 @@
 Playstation 3
 =============
 
-We have a `Playstation 3 <http://www.amazon.com/dp/B009DL2TBA?tag=mhsvortex>`_ downstairs attached to :doc:`the Samsung TV <../tv/samsungln52a750>`. It serves as both a front end for the :doc:`services we use <../../services/index>` and a Blu-ray player.
+We have a `Playstation 3 <http://www.amazon.com/dp/B009DL2TBA?tag=mhsvortex>`_ in the master bedroom downstairs attached to :doc:`the Sony TV <../tv/sonykdl40v2500>`. It serves as both a front end for the :doc:`services we use <../../services/index>` and a Blu-ray player.
 
 .. image:: ps3.jpg
    :target: http://www.amazon.com/dp/B009DL2TBA?tag=mhsvortex

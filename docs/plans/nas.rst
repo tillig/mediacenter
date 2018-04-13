@@ -2,7 +2,7 @@
 Network Attached Storage
 ========================
 
-I looked at different NAS devices around 2010 to see if they would be more appropriate than :doc:`my Windows Home Server <../hardware/server/hpex475>` for video storage. After research, I ended up with a :doc:`Synology Diskstation DS1010+ <../hardware/server/synologyds1010>`.
+I looked at different NAS devices around 2010 to see if they would be more appropriate than :doc:`my Windows Home Server <../hardware/deprecated/hpex475>` for video storage. After research, I ended up with a :doc:`Synology Diskstation DS1010+ <../hardware/server/synologyds1010>`.
 
 Requirements
 ------------

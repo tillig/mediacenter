@@ -7,6 +7,6 @@ Collection management software is used to keep track of the original media (disc
 .. toctree::
 
     itunes.rst
-    picasa.rst
+    photodirector.rst
     dvdprofiler.rst
     musiccollector.rst

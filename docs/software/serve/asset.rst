@@ -6,9 +6,9 @@ I picked up `Asset UPnP <http://www.dbpoweramp.com/asset-upnp-dlna.htm>`_ back `
 
 Asset UPnP is a DLNA-compatible music streamer that can play pretty much any music format. It does a great job transcoding and seems to work well with every :doc:`front-end device <../../hardware/frontend/index>` I throw at it.
 
-I have it running on my :doc:`Windows Home Server <../../hardware/server/hpex475>`, which is also where my music is stored.
+I have it running on my :doc:`Megaplex Server <../../hardware/server/megaplex>`.
 
-With the updates in 2015 to the music streaming experience in :doc:`Plex <plex>` I am considering switching my music streaming over there to unify the experience rather than maintaining multiple servers. That would also let me deprecate my :doc:`Windows Home Server <../../hardware/server/hpex475>` when needed, since that's the last service it provides.
+With the continued updates to the music streaming experience in :doc:`Plex <plex>` I am considering dropping Asset UPnP but I really want Plex to support UPnP first.
 
 Transcoding Settings
 ====================

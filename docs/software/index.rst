@@ -6,11 +6,11 @@ Software
 
 I use :doc:`DVDFab HD Decrypter <rip/dvdfab>` and :doc:`MakeMKV <rip/makemkv>` for ripping disc contents into digital format, then :doc:`Handbrake <convert/handbrake>` for converting the ripped contents into a compatible format.
 
-I use :doc:`Picasa <manage/picasa>` for organizing my photos and :doc:`DVD Profiler <manage/dvdprofiler>` for managing my DVD collection.
+I use :doc:`PhotoDirector <manage/photodirector>` for organizing my photos and :doc:`DVD Profiler <manage/dvdprofiler>` for managing my DVD collection.
 
 My digital music is in :doc:`iTunes <manage/itunes>` but I keep track of the combined digital and disc music collection using :doc:`Music Collector <manage/musiccollector>`.
 
-My backup solution is :doc:`CrashPlan <system/crashplan>`, which handles both internal and off-site backup. That, combined with the workstation image-based backup of :doc:`Windows Server Essentials <system/wse>`, has me covered.
+My backup solution is :doc:`iDrive <system/idrive>`, which handles off-site backup. That, combined with the File History backup in Windows 10 (which also gets backed up by :doc:`iDrive <system/idrive>`), has me covered.
 
 .. toctree::
     :maxdepth: 2

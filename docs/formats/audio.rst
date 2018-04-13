@@ -29,6 +29,6 @@ Advanced Audio Coding (AAC / M4A)
 =================================
 When I first started ripping my CDs into digital files, I went with a 256Kbps `AAC/MP4 format <http://en.wikipedia.org/wiki/Advanced_Audio_Coding>`_. AAC has a better sound for the compression than MP3 and I figured this would be a good compromise between size and fidelity.
 
-Then I got my :doc:`HP Home Server <../hardware/server/hpex475>` with a ton of space and realized *I should have gone with lossless*.
+Then I got my :doc:`HP Home Server <../hardware/deprecated/hpex475>` with a ton of space and realized *I should have gone with lossless*.
 
 AAC uses `an MP4 <http://en.wikipedia.org/wiki/MPEG-4_Part_3>`_ *container* just like ALAC format.
