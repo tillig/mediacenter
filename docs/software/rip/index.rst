@@ -21,5 +21,4 @@ Be prepared to read a lot of forum posts when you run into this. It's a solvable
 
 .. toctree::
 
-    dvdfab.rst
     makemkv.rst

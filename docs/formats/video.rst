@@ -23,7 +23,7 @@ I chose this format for three reasons:
 - **Video quality vs. file size balance**: H.264 video has good compression for the quality it retains and, based on your settings, you can get a file half the size of the MPEG-2 equivalent but with comparable quality.
 - **Audio quality**: While the MP4 container format doesn't really specify support for anything beyond AAC audio, you can embed additional tracks and many popular players (including :doc:`Plex <../software/serve/plex>`) know how to deal with it. This allows you to put in a primary AAC stereo track for compatibility with mobile devices and standard players; and a secondary "passthrough" track with the original, unchanged audio for full surround.
 
-I use :doc:`DVDFab HD Decrypter <../software/rip/dvdfab>` and :doc:`MakeMKV <../software/rip/makemkv>` for ripping content from discs.
+I use :doc:`MakeMKV <../software/rip/makemkv>` for ripping content from discs.
 
 I use :doc:`Handbrake <../software/convert/handbrake>` to convert the ripped disc content into the target format. The :doc:`Handbrake page <../software/convert/handbrake>` shows the custom settings I use for video conversion.
 
@@ -47,7 +47,7 @@ VIDEO_TS Disc Image
 ===================
 ``VIDEO_TS`` isn't really a "format" in the classic sense.
 
-When you use a tool like :doc:`DVDFab HD Decrypter <../software/rip/dvdfab>` to rip the content from a disc onto a hard drive and you want a full disc image - no compression or conversion - you have two choices. You can either get a literal byte-for-byte image in ``.iso`` format or you can get the *files* from the disc in their native directory structure.
+When you use a tool like :doc:`DVDFab HD Decrypter <../software/deprecated/dvdfab>` to rip the content from a disc onto a hard drive and you want a full disc image - no compression or conversion - you have two choices. You can either get a literal byte-for-byte image in ``.iso`` format or you can get the *files* from the disc in their native directory structure.
 
 If you choose the files in their directory structure, the directory that comes out is called ``VIDEO_TS``. Inside that are a bunch of files with the extension ``.vob`` that are, basically, MPEG-2 video files.
 

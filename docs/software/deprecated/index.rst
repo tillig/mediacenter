@@ -13,3 +13,4 @@ As I transition away from using certain software packages, I don't want to lose 
     wse.rst
     crashplan.rst
     picasa.rst
+    dvdfab.rst

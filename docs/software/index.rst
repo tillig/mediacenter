@@ -4,7 +4,7 @@ Software
 
 :doc:`Plex <serve/plex>` is the centerpiece of my media center software. It provides access to pretty much all of my media in a nice, polished interface. That said, :doc:`Asset UPnP <serve/asset>` is my primary mechanism for accessing music.
 
-I use :doc:`DVDFab HD Decrypter <rip/dvdfab>` and :doc:`MakeMKV <rip/makemkv>` for ripping disc contents into digital format, then :doc:`Handbrake <convert/handbrake>` for converting the ripped contents into a compatible format.
+I use :doc:`MakeMKV <rip/makemkv>` for ripping disc contents into digital format, then :doc:`Handbrake <convert/handbrake>` for converting the ripped contents into a compatible format.
 
 I use :doc:`PhotoDirector <manage/photodirector>` for organizing my photos and :doc:`DVD Profiler <manage/dvdprofiler>` for managing my DVD collection.
 
