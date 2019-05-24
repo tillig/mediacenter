@@ -1,0 +1,49 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "tasks": [{
+      "command": ".\\make.bat html",
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "label": "Build",
+      "options": {
+        "cwd": "docs"
+      },
+      "problemMatcher": {
+        "fileLocation": "absolute",
+        "owner": "reStructuredText",
+        "pattern": [{
+          "file": 1,
+          "location": 2,
+          "message": 4,
+          "regexp": "^\\s*(.+):(\\d+):\\s+(WARNING):\\s+(.+)$",
+          "severity": 3
+        }]
+      },
+      "type": "shell"
+    },
+    {
+      "command": ".\\make.bat clean; .\\make.bat html",
+      "group": "build",
+      "label": "Build Clean",
+      "options": {
+        "cwd": "docs"
+      },
+      "problemMatcher": {
+        "fileLocation": "absolute",
+        "owner": "reStructuredText",
+        "pattern": [{
+          "file": 1,
+          "location": 2,
+          "message": 4,
+          "regexp": "^\\s*(.+):(\\d+):\\s+(WARNING):\\s+(.+)$",
+          "severity": 3
+        }]
+      },
+      "type": "shell"
+    }
+  ],
+  "version": "2.0.0"
+}
