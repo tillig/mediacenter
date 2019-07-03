@@ -1,7 +1,6 @@
 {
-  // See https://go.microsoft.com/fwlink/?LinkId=733558
-  // for the documentation about the tasks.json format
-  "tasks": [{
+  "tasks": [
+    {
       "command": ".\\make.bat html",
       "group": {
         "isDefault": true,
@@ -14,13 +13,15 @@
       "problemMatcher": {
         "fileLocation": "absolute",
         "owner": "reStructuredText",
-        "pattern": [{
-          "file": 1,
-          "location": 2,
-          "message": 4,
-          "regexp": "^\\s*(.+):(\\d+):\\s+(WARNING):\\s+(.+)$",
-          "severity": 3
-        }]
+        "pattern": [
+          {
+            "file": 1,
+            "location": 2,
+            "message": 4,
+            "regexp": "^\\s*(.+):(\\d+):\\s+(WARNING):\\s+(.+)$",
+            "severity": 3
+          }
+        ]
       },
       "type": "shell"
     },
@@ -34,13 +35,15 @@
       "problemMatcher": {
         "fileLocation": "absolute",
         "owner": "reStructuredText",
-        "pattern": [{
-          "file": 1,
-          "location": 2,
-          "message": 4,
-          "regexp": "^\\s*(.+):(\\d+):\\s+(WARNING):\\s+(.+)$",
-          "severity": 3
-        }]
+        "pattern": [
+          {
+            "file": 1,
+            "location": 2,
+            "message": 4,
+            "regexp": "^\\s*(.+):(\\d+):\\s+(WARNING):\\s+(.+)$",
+            "severity": 3
+          }
+        ]
       },
       "type": "shell"
     }
