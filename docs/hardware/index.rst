@@ -14,12 +14,11 @@ Here's a photo of my current server rack in my office. Most of these are discuss
 From top to bottom, left to right, you see...
 
 - :doc:`Synology DS1010+ <server/synologyds1010>`, which provides all storage.
-- Some USB hard drives used with the :doc:`Tablo <server/tablo>`.
+- An `Akita <https://www.akita.cloud/>`_, a `Lutron hub <https://www.casetawireless.com/>`_, and a `SmartThings hub <https://www.smartthings.com/products/smartthings-hub>`_ for home automation/IoT work.
 - :doc:`Tablo <server/tablo>`, which handles over-the-air DVR services.
-- :doc:`HP EX475 Home Server <deprecated/hpex475>`, deprecated in late 2017.
-- A USB hard drive that used to hold :doc:`CrashPlan <../software/deprecated/crashplan>` data, deprecated in late 2017.
+- A USB hard drive where :doc:`Megaplex <server/megaplex>` gets backed up.
 - :doc:`CyberPower CP1500AVRLCD <power/index>`, the UPS that most (but not all) of this is plugged into.
-- :doc:`D-Link DGS-2208 switch <network/switches>`, connecting these together and linking back to the main network.
+- :doc:`D-Link DGS-1016A switch <network/switches>`, connecting these together and linking back to the main network.
 - :doc:`Megaplex <server/megaplex>`, my custom dedicated Plex server.
 
 For more detail on any of these things or items in the system that aren't pictured, dig in here.
