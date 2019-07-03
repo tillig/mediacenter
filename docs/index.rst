@@ -16,7 +16,8 @@ I've amassed quite a collection, and I want to be able to enjoy it without a lot
 It looks like this:
 
 .. image:: network/diagram_small.png
-   :target: _downloads/diagram.png
+
+[:download:`View a larger version of the diagram. <network/diagram.png>`]
 
 That, of course, is pretty high-level. You can dive into individual areas to read about the more detailed sections of the system. (If you want more on the diagram, :doc:`check out the network page <network/index>`.)
 
