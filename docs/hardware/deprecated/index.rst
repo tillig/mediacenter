@@ -11,5 +11,4 @@ As my system grows and changes, I switch up the hardware driving the system. Onc
     dellstudiohybrid.rst
     cm3000.rst
     yamaharxv777bt.rst
-    roku.rst
     hpex475.rst
