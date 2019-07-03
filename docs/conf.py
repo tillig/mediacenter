@@ -115,7 +115,7 @@ html_theme = 'alabaster'
 html_theme_options = {
     'github_button': 'true',
     'github_user': 'tillig',
-    'github_repo': 'illigmediacenter',
+    'github_repo': 'mediacenter',
     'analytics_id': 'UA-1285161-9'
 }
 
