@@ -4,13 +4,10 @@ This repo houses documentation, diagrams, and info on my media center setup. I h
 
 **[Read the docs!](http://illigmediacenter.readthedocs.io/)**
 
-## ReStructured Text References
+## References
 
-* http://docutils.sourceforge.net/docs/user/rst/quickstart.html
-* http://docutils.sourceforge.net/docs/user/rst/quickref.html
-* http://docutils.sourceforge.net/docs/user/rst/cheatsheet.txt
-* http://sphinx-doc.org/rest.html
-
-## Sphinx Markup Constructs
-
-* http://sphinx-doc.org/markup/index.html
+* [ReStructured Text Quickstart](http://docutils.sourceforge.net/docs/user/rst/quickstart.html)
+* [ReStructured Text Quick Reference](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
+* [ReStructured Text Cheat Sheet](http://docutils.sourceforge.net/docs/user/rst/cheatsheet.txt)
+* [Sphinx ReStructured Text](http://sphinx-doc.org/rest.html)
+* [Sphinx Markup](http://sphinx-doc.org/markup/index.html)
