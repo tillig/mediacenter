@@ -45,6 +45,7 @@ On August 23, 2019 I upgraded the OS drive on the server to a Samsung 860 EVO 50
 
 As part of the SSD update I cloned the HDD. There were three partitions - a system partition, an OS partition, and a recovery partition. Items of note:
 
+- I had to use a "server" version of Macrium Reflect since the OS on the machine is Windows Server. That required a 30 day trial rather than just being able to use the free version of the product.
 - The clone created an MBR disk rather than a GPT disk, which I think is fine. GPT seems to only be usable by UEFI; MBR seems to be usable by both UEFI and BIOS (?).
 - The system and OS partitions cloned fine (I was able to resize the OS partition as needed), but I had to `manually recreate the recovery partition <https://michaelreichenbach.de/how-to-extend-windows-partition-blocked-by-recovery-partition/>`_. For some reason, the recovery partition just would not clone.
 
