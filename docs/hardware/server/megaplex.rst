@@ -43,7 +43,10 @@ I originally wanted to configure them in Windows Storage Spaces for fault tolera
 
 On August 23, 2019 I upgraded the OS drive on the server to a Samsung 860 EVO 500GB SSD. While the Plex server performance itself was decent, any time I had to log in and perform maintenance was extremely slow. Rebooting or doing any sort of system updates was also very slow. The SSD has addressed that as well as some of the noise from the "spinning rust" disk.
 
-As part of the SSD update I cloned the HDD. There were three partitions - a system partition, an OS partition, and a recovery partition. First, the clone created an MBR disk rather than a GPT disk, which I think is fine. GPT seems to only be usable by UEFI; MBR seems to be usable by both UEFI and BIOS (?). Second, the system and OS partitions cloned fine (I was able to resize the OS partition as needed), but I had to `manually recreate the recovery partition <https://michaelreichenbach.de/how-to-extend-windows-partition-blocked-by-recovery-partition/>`_. For some reason, that just would not clone.
+As part of the SSD update I cloned the HDD. There were three partitions - a system partition, an OS partition, and a recovery partition. Items of note:
+
+- The clone created an MBR disk rather than a GPT disk, which I think is fine. GPT seems to only be usable by UEFI; MBR seems to be usable by both UEFI and BIOS (?).
+- The system and OS partitions cloned fine (I was able to resize the OS partition as needed), but I had to `manually recreate the recovery partition <https://michaelreichenbach.de/how-to-extend-windows-partition-blocked-by-recovery-partition/>`_. For some reason, the recovery partition just would not clone.
 
 Performance
 ===========
