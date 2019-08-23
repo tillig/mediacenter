@@ -20,7 +20,7 @@ I wanted to stay in a reasonable budget with it - I'm not gaming with it, so a h
 
 The parts I used to build the server (prices listed as of March 2015):
 
-- `AMD FD8350FRHKBOX FX-8350 FX-Series 8-Core Black Edition Processor - $169.99 <http://www.amazon.com/dp/B009O7YUF6?tag=mhsvortex>`_
+- `AMD FD8350FRHKBOX FX-8350 FX-Series 8-Core Black Edition Processor - $169.99 <http://www.amazon.com/dp/B009O7YUF6?tag=mhsvortex>`_ (`AMD specs here <https://www.amd.com/en/products/cpu/fx-8350>`_)
 - `Gigabyte AM3+ AMD DDR3 1333 760G HDMI USB 3.0 Micro ATX Motherboard GA-78LMT-USB3 - $58.99 <http://www.amazon.com/dp/B009FC3YJ8?tag=mhsvortex>`_
 - `Rosewill Dual Fans MicroATX Mini Tower Computer Case, Black FBM-02 - $29.99 <http://www.amazon.com/dp/B009NJAE4Q?tag=mhsvortex>`_
 - `Antec EarthWatts EA-380D Green 380 Watt 80 PLUS BRONZE Power Supply - $40.01 <http://www.amazon.com/dp/B002UOR17Y?tag=mhsvortex>`_
@@ -40,6 +40,10 @@ I originally tried to use the WD Green drives I had tried in my :doc:`Windows Ho
 I used a drive I already had for the system drive on the box and added two higher-perf drives I bought as storage for the Plex library and scratch/temp space.
 
 I originally wanted to configure them in Windows Storage Spaces for fault tolerance, but I ran into an issue where :doc:`Plex <../../software/serve/plex>` constantly `refreshed item metadata endlessly <https://forums.plex.tv/index.php/topic/102888-new-items-added-to-library-cause-refresh-loop/page-2#entry626475>`_ so I switched to standard drives and just made sure everything had a good backup running. This has better performance over mirroring anyway, and perf is key.
+
+On August 23, 2019 I upgraded the OS drive on the server to a Samsung 860 EVO 500GB SSD. While the Plex server performance itself was decent, any time I had to log in and perform maintenance was extremely slow. Rebooting or doing any sort of system updates was also very slow. The SSD has addressed that as well as some of the noise from the "spinning rust" disk.
+
+As part of the SSD update I cloned the HDD. There were three partitions - a system partition, an OS partition, and a recovery partition. First, the clone created an MBR disk rather than a GPT disk, which I think is fine. GPT seems to only be usable by UEFI; MBR seems to be usable by both UEFI and BIOS (?). Second, the system and OS partitions cloned fine (I was able to resize the OS partition as needed), but I had to `manually recreate the recovery partition <https://michaelreichenbach.de/how-to-extend-windows-partition-blocked-by-recovery-partition/>`_. For some reason, that just would not clone.
 
 Performance
 ===========
