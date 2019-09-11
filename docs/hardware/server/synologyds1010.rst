@@ -68,6 +68,6 @@ Finally, set it to execute.
 
     chmod +x /usr/syno/etc.defaults/rc.d/S99_beep_fan_disable.sh
 
-Before you reboot, go into the DSM control panel. Under "Notifications," disable all the fan-related notifications. Now reboot.
+Before you reboot, go into the DSM control panel. Under "Notifications," disable all the "server fan" notifications. CPU and expansion unit fan notifications should still be fine. Now reboot.
 
 I found `one person who did a hardware hack to make a standard fan simulate what Synology wants <http://www.askrprojects.net/other/synofan/index.html>`_. I haven't gone to those lengths. Honestly, the person could probably make a mint selling little fan adapters that would hook inline with a standard fan.
