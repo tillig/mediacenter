@@ -52,3 +52,7 @@ As part of the SSD update I cloned the HDD. There were three partitions - a syst
 Performance
 ===========
 After getting this built, I was very pleased with the performance. Transcoding a 1080p video barely raises the CPU usage to 10%, and a typical 2-hour 1080p movie can be converted with :doc:`Handbrake <../../software/convert/handbrake>` in under three hours.
+
+Fan Upgrade
+===========
+In September 2019 I upgraded the CPU cooler to a `be quiet! Dark Rock TF <https://amzn.to/2HYXSoT>`_ because the existing CPU fan got pretty loud when people were using the Plex server or I was ripping movies. It was $90 at the time of purchase, but now when the CPU is fully loaded I don't hear a single thing. It makes working in the office next to the Plex server much easier.
