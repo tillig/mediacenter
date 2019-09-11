@@ -37,3 +37,37 @@ Of the 2TB drives listed as directly supported, these seem reasonably viable. Ot
     - Samsung Spinpoint HD203WI is 5400 RPM, 3Gb/s, 32MB cache. `$140 at NewEgg <http://www.newegg.com/Product/Product.aspx?Item=N82E16822152202&Tpk=HD203WI>`_, not at Amazon.
 
 In June 2016 I replaced the 2TB drives with 3TB drives so I could deprecate the :doc:`Windows Home Server <../deprecated/hpex475>` which had started getting finicky. I picked up five `WD Blue 3TB WD30EZRZ drives <http://amzn.to/28NCIKi>`_ (5400RPM, 64MB cache, $89 each) and went through the process of replacing one drive at a time. I went from an array of (7.15TB capacity / 5.8TB used / 1.35TB available) to (10.73 capacity / 5.8TB used / 4.93TB available) in a RAID 5 configuration.
+
+Fan Upgrade
+===========
+
+In September 2019 I was working more in my office and having to sit right next to the Synology for longer periods of time. White noise from fans was bugging me. The Synology has two 80mm cooling fans that I ended up replacing with "be quiet! Pure Wings 2" silent fans.
+
+As part of that, I did have to disable the fan beep. It seems to be a well-known thing that Synology uses fans that aren't standard. If you replace it with a nice, standard fan, the system thinks the fan has stopped and does all sorts of alerting, eventually shutting down for safety.
+
+I did that by connecting via ``ssh root@diskstation`` using the admin user's password and then:
+
+.. sourcecode:: sh
+
+    # Find the location of the fan settings
+    # For me this was /sys/module/pineview_synobios/parameters/check_fan
+    find /sys -name *fan*
+
+    # Create a startup script to turn off the beep
+    vi /usr/syno/etc.defaults/rc.d/S99_beep_fan_disable.sh
+
+In the script:
+
+.. sourcecode:: sh
+
+    echo 0 > /sys/module/pineview_synobios/parameters/check_fan
+
+Finally, set it to execute.
+
+.. sourcecode:: sh
+
+    chmod +x /usr/syno/etc.defaults/rc.d/S99_beep_fan_disable.sh
+
+Before you reboot, go into the DSM control panel. Under "Notifications," disable all the fan-related notifications. Now reboot.
+
+I found `one person who did a hardware hack to make a standard fan simulate what Synology wants <http://www.askrprojects.net/other/synofan/index.html>`_. I haven't gone to those lengths. Honestly, the person could probably make a mint selling little fan adapters that would hook inline with a standard fan.
