@@ -29,3 +29,23 @@ Start Procmon running. Now fire up the Blu-ray player software and start playing
 When the movie is done, stop Procmon from monitoring but don't shut it down yet.
 
 Now in MakeMKV, find the playlist that matches the numbers Procmon shows in that same order. That's the correct playlist.
+
+If there are a lot of playlists, you can use the MakeMKV console app to dump them to a file and search:
+
+.. sourcecode:: bat
+
+    "C:\Program Files (x86)\MakeMKV\makemkvcon.exe" --robot --messages=C:\Users\YourUserName\Desktop\MakeMKVOutput.txt info disc:0
+
+You'll get a lot of results that have messages like this::
+
+    TINFO:385,2,0,"John Wick 3: Parabellum"
+    TINFO:385,8,0,"16"
+    TINFO:385,9,0,"2:10:45"
+    TINFO:385,10,0,"32.0 GB"
+    TINFO:385,11,0,"34411984896"
+    TINFO:385,16,0,"00957.mpls"
+    TINFO:385,25,0,"19"
+    TINFO:385,26,0,"518,512,514,510,515,506,520,511,516,505,501,504,502,519,507,508,509,503,517"
+    TINFO:385,27,0,"John Wick 3- Parabellum_t385.mkv"
+
+This shows that title 385 is playlist 00957.mpls along with the associated segment list. Use a text editor to find the segment list that you determined with Procmon.
