@@ -70,7 +70,7 @@ To improve the wireless signal we need to add a wireless access point upstairs. 
 
 I tried a second wireless access point (using a :doc:`DAP-1522 <../hardware/deprecated/dap1522>`) to the house upstairs so we should have better wifi all around. I'm using the same SSID and password/encryption so wireless roaming is in effect.
 
-That worked well for some time, but I found the wireless roaming caused weird issues sometimes on mobile devices when you were standing in certain areas of the house where the device had a hard time picking an access point. I ended up upgrading to a :doc:`a Netgear Nighthawk X6 AC3200 tri-band router (model R8000) <../hardware/network/netgearr8000>` to solve my range issues.
+That worked well for some time, but I found the wireless roaming caused weird issues sometimes on mobile devices when you were standing in certain areas of the house where the device had a hard time picking an access point. I ended up upgrading to a :doc:`a Netgear Nighthawk X6 AC3200 tri-band router (model R8000) <../hardware/deprecated/netgearr8000>` to solve my range issues.
 
 At some later time I may consider putting in a more powerful access point to just serve the whole house from one location. The `Ubiquiti Networks UniFi AP Enterprise WiFi System ($67) <http://www.amazon.com/dp/B004XXMUCQ?tag=mhsvortex>`_ is a highly rated, very powerful access point that could solve the signal/range issues. It's also an extensible system so if we want, we can link more than one to the network later and really crank it up.
 
@@ -78,7 +78,7 @@ Improving Wired
 ~~~~~~~~~~~~~~~
 The ideal solution to getting wires to each room is to actually run wires through the house. That's expensive and a pain. Technically we could also run wires out the crawlspace, up the side of the outside of the house, and back in. That's what Comcast did when they installed the extra TV jack in the family room. It's a common solution.
 
-Barring that, to get wires into rooms we'd use :doc:`powerline adapters <../hardware/network/powerline>`. These plug into electrical outlets and broadcast signals through the power system. It's slightly slower than running real wires, but it's fairly easy.
+Barring that, to get wires into rooms we'd use :doc:`powerline adapters <../hardware/deprecated/powerline>`. These plug into electrical outlets and broadcast signals through the power system. It's slightly slower than running real wires, but it's fairly easy.
 
 I started off with a set of NetGear Powerline (XAVB1201) 200Mbps adapters ($45/pair) but upgraded the upstairs/downstairs primary set to the XAVB5101 ($80/pair) version which runs at 500Mbps and better handles HD video. These are what served the :doc:`DAP-1522 <../hardware/deprecated/dap1522>` access point upstairs when I had that running.
 
@@ -86,7 +86,7 @@ I did find that the XAVB5101 and XAVB1201 adapters, while they're supposed to wo
 
 Recommendations
 ~~~~~~~~~~~~~~~
-While not requiring any additional wireless hardware, the XAVB5101 :doc:`powerline adapters <../hardware/network/powerline>` are needed to get wired signal upstairs.
+While not requiring any additional wireless hardware, the XAVB5101 :doc:`powerline adapters <../hardware/deprecated/powerline>` are needed to get wired signal upstairs.
 
 DVR
 ---

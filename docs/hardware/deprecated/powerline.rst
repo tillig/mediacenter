@@ -2,9 +2,9 @@
 Powerline Network Adapters
 ==========================
 
-I use powerline adapters to get wired network from downstairs, where my cable modem and router are, to the upstairs, where we have various devices requiring connectivity. Wireless is great and all, but for a decent, reliable connection, nothing beats wired.
+I used to have powerline adapters to get wired network from downstairs, where my cable modem and router are, to the upstairs, where we have various devices requiring connectivity. I did this because the wireless signal wasn't as good upstairs, but I also found that the powerline adapters were somewhat slow and flaky. Better than wifi at the time, but not as good after updating the wireless signal.
 
-Plus, with the wire upstairs, I was able to add an :doc:`access point <../deprecated/dap1522>` up there for a while and get good wireless coverage around the house.
+When I had powerline running, part of that was an :doc:`access point <dap1522>` to improve upstairs wifi. That was removed.
 
 Netgear XAVB5101 500MBps
 ========================

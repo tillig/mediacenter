@@ -4,7 +4,6 @@ Network Infrastructure
 
 .. toctree::
     arrissb6183.rst
-    netgearr8000.rst
-    powerline.rst
+    ubiquiti.rst
     switches.rst
     clearstream2v.rst

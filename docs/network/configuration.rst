@@ -12,7 +12,4 @@ Setting the Name / Type
 =======================
 After switching routers, my Windows machines started thinking the "new network" was a public network and stopped doing network discovery on things. It was also called "Network 3" or something like that and that didn't help much.
 
-I found a couple of articles to help with that.
-
-- `How to rename the network in Windows 8 <http://www.eightforums.com/tutorials/19670-network-name-change-windows-8-a.html>`_
-- `How to change the network type (public/private) in Windows 8 <http://www.eightforums.com/tutorials/9837-network-location-set-private-public-windows-8-a.html>`_
+You can run ``secpol.msc`` and update the name/type of the network from there.
