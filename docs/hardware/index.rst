@@ -7,7 +7,6 @@ There's a lot of hardware that goes into my media center. While some of it provi
 Here's a photo of my current server rack in my office. Most of these are discussed on the :doc:`server <server/index>` page, but there's some :doc:`network <network/index>` hardware in there as well as :doc:`a UPS <power/index>`.
 
 .. image:: servers_small.jpg
-   :target: ../_downloads/servers.jpg
 
 :download:`Click for a larger view. <servers.jpg>`
 
