@@ -77,3 +77,12 @@ On one TV series I have, the TV episodes were all combined into one title on the
 Unfortunately, :doc:`Handbrake <convert/handbrake>` doesn't let you convert based on time - it wants chapters in the title. To accommodate for that, I had to manually create chapters of the correct length in the MKV file ripped by :doc:`MakeMKV <rip/makemkv>`.
 
 `MKVToolNix <https://www.bunkus.org/videotools/mkvtoolnix/>`_ is a set of tools that can modify MKV files. You can use that to edit the MKV file to have the correct chapters so Handbrake sees them and can properly convert.
+
+Convert AAC to MP3
+==================
+
+My daughter has a cheap MP3 player and likes music on it. I created a playlist in iTunes with stuff she wants, then I can drag the files from the playlist to a temporary location.
+
+From there, I have to convert the M4A (AAC/ALAC) files into MP3. I use ffmpeg and `a setting that produces a reasonable quality MP3 <https://trac.ffmpeg.org/wiki/Encode/MP3>`_. ffmpeg copies the metadata over automatically.
+
+``ffmpeg -i "file.m4a" -c:a libmp3lame -q:a 4 "file.mp3"``
