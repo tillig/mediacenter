@@ -1,2 +1,5 @@
+# Default in settings.json for auto-populated build settings
+# is Windows paths, which turns into weird directory names.
+\\docs\\_build\\html
 docs/_build
 Thumbs.db
