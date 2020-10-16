@@ -23,6 +23,21 @@ Running as a Service
 
 `There is a PmsService package <https://github.com/cjmurph/PmsService>`_ that allows you to wrap Plex with a service. `This topic in the Plex forums explains how to use PmsService <https://forums.plex.tv/index.php/topic/93994-pms-as-a-service/>`_ to host Plex.
 
+Windows Server TCP Settings
+===========================
+There's a reasonably well-known issue where some devices like Xbox One, iPhone, and others seem to buffer a lot even on the local network. `This Plex forum post <https://forums.plex.tv/t/enhanced-video-player-on-apple-tv-4k-creating-buffering-issues/536483/87>`_ has an answer - by changing some settings on the server, you can fix the constant buffering.
+
+.. sourcecode:: powershell
+
+    # Show the current TCP settings.
+    Get-NetTCPSetting | ft -AutoSize
+
+    # Update the problem settings. These are initially 20, not 300.
+    Set-NetTCPSetting -SettingName "DatacenterCustom" -MinRtoMs 300
+    Set-NetTCPSetting -SettingName "Datacenter" -MinRtoMs 300
+
+If you want to totally reset the settings, you can do ``netsh int tcp reset``
+
 Migrating Servers
 =================
 When I moved Plex from :doc:`my Synology <../../hardware/server/synologyds1010>` over to :doc:`Megaplex <../../hardware/server/megaplex>` I had to migrate the library from one machine to another.

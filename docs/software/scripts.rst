@@ -25,49 +25,49 @@ There's a weird bug where if a folder has square brackets ``[]`` in the name the
 
 .. sourcecode:: powershell
 
-        $location = "\\ILLIGHOMESERVER\Music"
+    $location = "\\ILLIGHOMESERVER\Music"
 
-        function Get-FoldersToDelete
+    function Get-FoldersToDelete
+    {
+        param([string]$folder)
+        Begin
         {
-            param([string]$folder)
-            Begin
+            $blacklist = @(".jpg", ".gif", ".ini", ".db")
+        }
+        Process
+        {
+            if($folder.StartsWith($location + "\Movies\"))
             {
-                $blacklist = @(".jpg", ".gif", ".ini", ".db")
+                return
             }
-            Process
+            $childDirs = Get-ChildItem $folder -Directory
+            if($childDirs.Count -gt 0)
             {
-                if($folder.StartsWith($location + "\Movies\"))
-                {
-                    return
-                }
-                $childDirs = Get-ChildItem $folder -Directory
-                if($childDirs.Count -gt 0)
-                {
-                    return
-                }
+                return
+            }
 
-                $files = Get-ChildItem $folder -File -Force
-                if($files.Count -eq 0)
-                {
-                    Write-Host "$folder is EMPTY."
-                    Remove-Item $folder -Confirm
-                    return
-                }
+            $files = Get-ChildItem $folder -File -Force
+            if($files.Count -eq 0)
+            {
+                Write-Host "$folder is EMPTY."
+                Remove-Item $folder -Confirm
+                return
+            }
 
-                $groups = $files | Group-Object -Property Extension
-                $delete = $true
-                $groups.Name | ForEach-Object { if($blacklist -inotcontains $_) { $delete = $false } }
-                if($delete)
-                {
-                    Write-Host "$folder only has blacklist files:"
-                    $files | Select-Object -ExpandProperty Name | Format-List
-                    Remove-Item $folder -Confirm -Force -Recurse
-                }
+            $groups = $files | Group-Object -Property Extension
+            $delete = $true
+            $groups.Name | ForEach-Object { if($blacklist -inotcontains $_) { $delete = $false } }
+            if($delete)
+            {
+                Write-Host "$folder only has blacklist files:"
+                $files | Select-Object -ExpandProperty Name | Format-List
+                Remove-Item $folder -Confirm -Force -Recurse
             }
         }
+    }
 
-        $folders = Get-ChildItem $location -Recurse -Directory | Select-Object -ExpandProperty FullName | Sort-Object -Descending -Property Length
-        $folders | ForEach-Object { Get-FoldersToDelete $_ }
+    $folders = Get-ChildItem $location -Recurse -Directory | Select-Object -ExpandProperty FullName | Sort-Object -Descending -Property Length
+    $folders | ForEach-Object { Get-FoldersToDelete $_ }
 
 Edit Chapters in MKV
 ====================
