@@ -2,7 +2,7 @@
 Samsung UN65KS8000
 ==================
 
-This is our current primary TV. It's a 65" 4K LCD set with a super thin bezel. We got this as an upgrade to the :doc:`LN52A750 <samsungln52a750>`.
+This is a 65" 4K LCD set with a super thin bezel. We got this as an upgrade to the :doc:`LN52A750 <samsungln52a750>`.
 
 .. image:: samsungun65ks8000.jpg
 
