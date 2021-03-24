@@ -1,0 +1,134 @@
+@startuml
+' Common PlantUML commands: https://plantuml.com/commons
+' Icons for PlantUML: https://plantuml.com/openiconic
+' Layout tips: https://crashedmind.github.io/PlantUMLHitchhikersGuide/layout/layout.html
+skinparam defaultTextAlignment center
+skinparam rectangle {
+    BorderColor<<TV>> White
+    BorderThickness<<TV>> 0
+    Shadowing<<TV>> false
+
+    BorderColor<<Receiver>> White
+    BorderThickness<<Receiver>> 0
+    Shadowing<<Receiver>> false
+
+    BorderColor<<Switch>> White
+    BorderThickness<<Switch>> 0
+    Shadowing<<Switch>> false
+
+    BorderColor<<Game>> White
+    BorderThickness<<Game>> 0
+    Shadowing<<Game>> false
+
+    BorderColor<<Server>> White
+    BorderThickness<<Server>> 0
+    Shadowing<<Server>> false
+
+    BorderColor<<STB>> White
+    BorderThickness<<STB>> 0
+    Shadowing<<STB>> false
+
+    BorderColor<<Provider>> White
+    BorderThickness<<Provider>> 0
+    Shadowing<<Provider>> false
+}
+title Network Diagram
+
+rectangle "House" as house {
+  rectangle "Second Floor" as second_floor {
+    rectangle "Game Room" as gameroom {
+      rectangle "<&monitor*10>\n\nSamsung LN52A750" <<TV>> as samsungln52a750 {
+      }
+      rectangle "<&fork*10>\n\nYamaha RX-V795a" <<Receiver>> as yamaharxv795a {
+      }
+      rectangle "<&puzzle-piece*10>\n\nXbox One [wifi]" <<Game>> as xboxone_gr {
+      }
+      rectangle "<&puzzle-piece*10>\n\nXbox 360 [wifi]" <<Game>> as xbox360_gr {
+      }
+      xboxone_gr --> yamaharxv795a
+      xbox360_gr --> yamaharxv795a
+      yamaharxv795a -> samsungln52a750
+    }
+    rectangle "Master Bedroom" as masterbedroom {
+      rectangle "<&monitor*10>\n\nSamsung UN65KS8000" <<TV>> as samsungun65ks8000 {
+      }
+      rectangle "<&puzzle-piece*10>\n\nPlaystation 3 [wifi]" <<Game>> as ps3_mb {
+      }
+      rectangle "<&video*10>\n\nRoku Ultra [wifi]" <<STB>> as roku_mb {
+      }
+      roku_mb --> samsungun65ks8000
+      ps3_mb --> samsungun65ks8000
+    }
+    rectangle "Kid's Bedroom" as kidbedroom {
+      rectangle "<&monitor*10>\n\nSony Bravia\nKDL-40V2500" <<TV>> as sonykdl40v2500 {
+      }
+      rectangle "<&video*10>\n\nRoku 3 [wifi]" <<STB>> as roku_kb {
+      }
+      roku_kb --> sonykdl40v2500
+    }
+  }
+  rectangle "First Floor" as first_floor {
+    rectangle "Living Room" as livingroom {
+      rectangle "<&monitor*10>\n\nSamsung QN85Q80TAFXZA" <<TV>> as samsungqn85q80tafxza {
+      }
+      rectangle "<&fork*10>\n\nMarantz SR5010" <<Receiver>> as marantzsr5010 {
+      }
+      rectangle "<&hard-drive*10>\n\nD-Link DGS-2208" <<Switch>> as dlinkdgs2208 {
+      }
+      rectangle "<&puzzle-piece*10>\n\nXbox One S" <<Game>> as xboxone_lr {
+      }
+      rectangle "<&video*10>\n\nNVIDIA Shield TV" <<STB>> as nvidiashield {
+      }
+      nvidiashield --> marantzsr5010
+      xboxone_lr --> marantzsr5010
+      marantzsr5010 -> samsungqn85q80tafxza
+      nvidiashield <-[dotted]- dlinkdgs2208
+      xboxone_lr <-[dotted]- dlinkdgs2208
+      samsungqn85q80tafxza <-[dotted] dlinkdgs2208
+      marantzsr5010 <-[dotted] dlinkdgs2208
+    }
+    rectangle "Office" as office {
+      rectangle "<&hard-drive*10>\n\nHP ProCurve 2810-24G" <<Switch>> as hpprocurve281024g {
+      }
+      rectangle "<&hard-drive*10>\n\nUniFi Security Gateway" <<Switch>> as usg {
+      }
+      rectangle "<&hard-drive*10>\n\nMegaplex" <<Server>> as megaplex {
+      }
+      rectangle "<&hard-drive*10>\n\nSynology DS1010+" <<Server>> as synologyds1010 {
+      }
+      rectangle "<&hard-drive*10>\n\nTablo" <<Server>> as tablo {
+      }
+      hpprocurve281024g <-[dotted]- usg
+      megaplex <-[dotted]- hpprocurve281024g
+      synologyds1010 <-[dotted]- hpprocurve281024g
+      hpprocurve281024g -[dotted]-> tablo
+
+      ' Link out to other rooms
+      hpprocurve281024g -[dotted]> dlinkdgs2208
+    }
+    rectangle "Garage" as garage {
+      rectangle "<&monitor*10>\n\nSharp Aquos LC-37D7U" <<TV>> as sharpaquoslc37d7u {
+      }
+      rectangle "<&video*10>\n\nChromecast" <<STB>> as chromecast_garage {
+      }
+      chromecast_garage --> sharpaquoslc37d7u
+    }
+  }
+}
+
+rectangle "<&rss*10>\n\nOTA TV" <<Provider>> as ota_tv {
+}
+rectangle "<&cloud*10>\n\nZiply Fiber" <<Provider>> as ziply {
+}
+
+ota_tv -[dotted]-> tablo
+ziply -[dashed]-> usg
+
+' Force vertical layout by using hidden lines
+' Adjust the number of dashes at the front to
+' weird offset/rank problems.
+second_floor --[hidden]d-> first_floor
+house -----[hidden]d-> ota_tv
+house -----[hidden]d-> ziply
+
+@enduml

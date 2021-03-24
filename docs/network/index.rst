@@ -4,9 +4,7 @@ Network
 
 Here's a diagram of how my network is laid out:
 
-.. image:: diagram_small.png
-
-You can :download:`view a larger diagram <diagram.png>` or :download:`get the diagram in Visio format. <diagram.vsdx>`.
+.. image:: diagram.png
 
 .. toctree::
     :maxdepth: 2

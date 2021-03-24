@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "lextudio.restructuredtext",
+    "ms-python.vscode-pylance",
+    "ms-python.python",
+    "stkb.rewrap",
+    "shd101wyy.markdown-preview-enhanced",
+    "davidanson.vscode-markdownlint"
+  ]
+}

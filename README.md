@@ -4,6 +4,22 @@ This repo houses documentation, diagrams, and info on my media center setup. I h
 
 **[Read the docs!](http://illigmediacenter.readthedocs.io/)**
 
+## Build
+
+The documentation is built using Sphinx and ReStructuredText.
+
+```powershell
+cd docs
+make html
+```
+
+Diagrams are built using [my PlantUML watcher](https://github.com/tillig/plantuml-in-azdo-wiki) via Node.js.
+
+```powershell
+npm install
+npm run watch
+```
+
 ## References
 
 * [ReStructured Text Quickstart](http://docutils.sourceforge.net/docs/user/rst/quickstart.html)

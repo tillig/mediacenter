@@ -1,7 +1,6 @@
 {
   "tasks": [
     {
-      "command": ".\\make.bat html",
       "group": {
         "isDefault": true,
         "kind": "build"
@@ -10,6 +9,9 @@
       "options": {
         "cwd": "docs"
       },
+      "osx": {
+        "command": "make html"
+      },
       "problemMatcher": {
         "fileLocation": "absolute",
         "owner": "reStructuredText",
@@ -23,15 +25,20 @@
           }
         ]
       },
-      "type": "shell"
+      "type": "shell",
+      "windows": {
+        "command": ".\\make.bat html"
+      }
     },
     {
-      "command": ".\\make.bat clean; .\\make.bat html",
       "group": "build",
       "label": "Build Clean",
       "options": {
         "cwd": "docs"
       },
+      "osx": {
+        "command": "make clean && make html"
+      },
       "problemMatcher": {
         "fileLocation": "absolute",
         "owner": "reStructuredText",
@@ -45,7 +52,19 @@
           }
         ]
       },
-      "type": "shell"
+      "type": "shell",
+      "windows": {
+        "command": ".\\make.bat clean; .\\make.bat html"
+      }
+    },
+    {
+      "detail": "Watch PlantUML",
+      "group": "build",
+      "label": "npm: watch",
+      "problemMatcher": [
+      ],
+      "script": "watch",
+      "type": "npm"
     }
   ],
   "version": "2.0.0"
