@@ -13,4 +13,5 @@ I don't generally purchase digital-only video content. I talk a bit more about t
     hulu.rst
     amazon.rst
     youtube.rst
+    disney.rst
     pandora.rst
