@@ -14,7 +14,6 @@
 
 import sys
 import os
-import alabaster
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -29,7 +28,9 @@ import alabaster
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['alabaster']
+# Furo doesn't work with non-HTML builders so don't specify it here like
+# you would with `alabaster`.
+# extensions = ['furo']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -106,8 +107,8 @@ todo_include_todos = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-# https://pypi.python.org/pypi/alabaster
-html_theme = 'alabaster'
+# https://pypi.python.org/pypi/furo
+html_theme = 'furo'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -115,13 +116,13 @@ html_theme = 'alabaster'
 # Note the Google Analytics integration is done through html_static_files and
 # html_js_files because themes don't generally have the new GA4 code.
 html_theme_options = {
-    'github_button': 'true',
-    'github_user': 'tillig',
-    'github_repo': 'mediacenter'
+    # 'github_button': 'true',
+    # 'github_user': 'tillig',
+    # 'github_repo': 'mediacenter'
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = [alabaster.get_path()]
+# html_theme_path = [furo.get_path()]
 
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
@@ -164,15 +165,15 @@ html_js_files = [
 #html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-html_sidebars = {
-    '**': [
-        'about.html',
-        'navigation.html',
-        'relations.html',
-        'searchbox.html',
-        'donate.html',
-    ]
-}
+# html_sidebars = {
+#     '**': [
+#         'about.html',
+#         'navigation.html',
+#         'relations.html',
+#         'searchbox.html',
+#         'donate.html',
+#     ]
+# }
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
