@@ -111,3 +111,5 @@ In June 2016, I noticed things were starting to run really slow. CrashPlan backu
 All of that along with the fact that this thing is headless... I lost confidence in the machine. It stopped behaving like an appliance.
 
 I started the process of moving all the data off the WHS machine and onto the :doc:`Synology DS1010+ <../server/synologyds1010>`. I completed this in late 2017 after moving all backups to IDrive and took the WHS offline.
+
+Cisco EHWIC-1GE-SFP-CU https://www.allhdd.com/cisco-ehwic-1ge-sfp-cu-high-speed/
