@@ -5,6 +5,7 @@ Cutting the Cable
 Starting around January 2015 I started looking at ways to save some money by cutting cable from the :doc:`Comcast <../network/providers/comcast>` "triple-play" internet/phone/cable down to just internet service. I didn't want to lose features or content (if possible) so this is the plan I went through to try and replace those items. **We executed this plan in July 2015.**
 
 .. contents::
+  :class: this-will-duplicate-information-and-it-is-still-useful-here
   :local:
 
 Features
@@ -33,7 +34,7 @@ Picking an Antenna
 ~~~~~~~~~~~~~~~~~~
 If you go with an outdoor antenna, you can hook it up to the same place where the cable comes into the house and it serves the whole house. Indoor antennas have to be per-TV because they are not very strong. **We should go with an outdoor antenna.**
 
-These antennas are "omni-directional" so you don't have to point it in a given direction to adjust for signal. There are some motorized directional antennas for about the same price; and there are directional antennas you can go aim on the roof that are closer to the $30 - $50 range.
+These antennas are "omnidirectional" so you don't have to point it in a given direction to adjust for signal. There are some motorized directional antennas for about the same price; and there are directional antennas you can go aim on the roof that are closer to the $30 - $50 range.
 
 - `Winegard FL6550A FlatWave Air Outdoor HDTV Antenna <http://www.amazon.com/dp/B00E5Z3R6A?tag=mhsvortex>`_ ($78)
 - `AmazonBasics 60-mile range antenna <http://www.amazon.com/dp/B00MFXNQBU?tag=mhsvortex>`_ ($120)
@@ -54,7 +55,7 @@ The flat antennas look nice, like a small satellite. :doc:`The ChannelMaster CM 
 
 Antenna Follow-Up
 ~~~~~~~~~~~~~~~~~
-After installing a ChannelMaster CM 3000 SMARTenna, I found that the signal in our area is pretty good on clear days but inteference appears in any poor weather conditions. Other folks in my general area have had lots of luck with this and smaller antennas, but I think living somewhat close to an airport adds to my interference levels.
+After installing a ChannelMaster CM 3000 SMARTenna, I found that the signal in our area is pretty good on clear days but interference appears in any poor weather conditions. Other folks in my general area have had lots of luck with this and smaller antennas, but I think living somewhat close to an airport adds to my interference levels.
 
 I ended up switching to a :doc:`ClearStream 2V HDTV antenna <../hardware/network/clearstream2v>` mounted in my attic and it produces a much better signal.
 
@@ -445,7 +446,7 @@ The Migration Plan
     b. Remove Comcast boxes and wire the TVs directly to the wall coax outlet.
     c. Swap the cables outside - Comcast goes to the single outlet in the office, antenna goes to everything else.
     d. Swap the cable to the Tablo so it gets TV signal.
-    e. Swap the cable to the Comast router so it gets Comcast signal.
+    e. Swap the cable to the Comcast router so it gets Comcast signal.
 9. Set up existing TV points.
     a. Update TV input/output to skip cable box input.
     b. Update remote controls as needed to control standard TV channels rather than cable box channels.

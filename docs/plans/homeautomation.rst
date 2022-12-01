@@ -4,8 +4,8 @@ Home Automation
 
 In July 2017 I picked up a Google Home and started looking into home automation. While turning lights on and off doesn't have much to do with my home media center, there is a lot that goes into integrating media center functionality into a home automation solution. This document has a bunch of my notes in figuring out how to connect everything.
 
-
 .. contents::
+  :class: this-will-duplicate-information-and-it-is-still-useful-here
   :local:
 
 Requirements
@@ -36,7 +36,7 @@ A good place to start is figuring out what I actually want out of home automatio
 Picking an Assistant
 ====================
 
-There are basically two home assitants out there: Amazon Alexa and Google Home. I didn't consider Cortana because at the time of my research the Harman Kardon Invoke was the only Cortana speaker on the market and it was very new.
+There are basically two home assistants out there: Amazon Alexa and Google Home. I didn't consider Cortana because at the time of my research the Harman Kardon Invoke was the only Cortana speaker on the market and it was very new.
 
 Amazon Alexa
 ------------
@@ -68,7 +68,7 @@ Automating HVAC
 
 I have a Trane zoned system with a `ComfortLink II XL950 thermostat <https://www.trane.com/residential/en/products/thermostats-and-controls/connected-controls/comfortlink_ii.html>`_. I considered an ecobee or similar replacement for the more robust automation ability but it's not compatible. My HVAC system not only has the zoning, but it also has communication between the heat pump, the furnace, and the air filter. All the components work together to be more efficient. If I wanted the ecobee I'd need to bypass all of the communication... which isn't something I want.
 
-The ComfortLink II XL950 *is* somewhat automated, in that it can connec to `Nexia <http://www.nexiahome.com/>`_. When I first bought the thermostat Nexia wanted $10/month for automation services but has since made it so if you *only* connect the thermostat it's free.
+The ComfortLink II XL950 *is* somewhat automated, in that it can connect to `Nexia <http://www.nexiahome.com/>`_. When I first bought the thermostat Nexia wanted $10/month for automation services but has since made it so if you *only* connect the thermostat it's free.
 
 Nexia itself doesn't directly integrate with Google Home, but it does integrate well with `IFTTT <https://ifttt.com>`_. I was able to set up some settings in Nexia that can be triggered by IFTTT.
 
@@ -104,7 +104,7 @@ Logitech Harmony Hub
 
 This seems to be a pretty common way to integrate media components with home automation. However, after `asking on the support forums whether the Harmony Hub uses IR or IP for my components. <https://community.logitech.com/s/question/0D55A0000704D1ESAU/does-the-harmony-hub-control-marantz-receivers-andor-samsung-tvs-via-network>`_ the official answer was, "We are sorry to inform you that, currently, we can’t control Marantz receivers and/or Samsung TVs through the IP."
 
-This basically means **Harmony Hub is off the table for me at the time being** since I'm realy not interested in IR blaster solutions.
+This basically means **Harmony Hub is off the table for me at the time being** since I'm really not interested in IR blaster solutions.
 
 Samsung SmartThings
 -------------------
@@ -190,4 +190,4 @@ Three-way switches are a tricky thing. In a standard switch environment it's eas
 
 I originally considered the `GE Z-Wave switches <http://amzn.to/2uGR0oh>`_. They're affordable and I like that the three-way switches don't require remotes or "auxiliary" switches that use batteries - they're powered right off the wired electrical supply.
 
-As part of a home remodel I invested in the `Lutron Caseta <http://www.casetawireless.com>`_ series of switches and dimmers. Based on reading a lot of reviews like `this one on The Wirecutter <http://thewirecutter.com/reviews/best-in-wall-wireless-light-switch-and-dimmer/>`_ it seems a lot of folks are ending at the same conclusion. It does require a hub to work, but Google Home has first-class integration with itand it works well. It also is the same hub used for the Serena Shades I picked up.
+As part of a home remodel I invested in the `Lutron Caseta <http://www.casetawireless.com>`_ series of switches and dimmers. Based on reading a lot of reviews like `this one on The Wirecutter <http://thewirecutter.com/reviews/best-in-wall-wireless-light-switch-and-dimmer/>`_ it seems a lot of folks are ending at the same conclusion. It does require a hub to work, but Google Home has first-class integration with it and it works well. It also is the same hub used for the Serena Shades I picked up.

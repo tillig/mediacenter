@@ -5,7 +5,8 @@ Handbrake
 I use Handbrake to convert my videos into :doc:`MP4 (M4V) format <../../formats/video>`.
 
 .. contents::
-    :local:
+  :class: this-will-duplicate-information-and-it-is-still-useful-here
+  :local:
 
 Conversion Settings
 ===================
@@ -121,7 +122,7 @@ In all cases, just as with the SD presets, I had a stereo mixdown audio track an
 
 I've seen in some forum posts and videos that folks want to change the number of reference frames to 4 (``ref=4``) in advanced settings, but the intent is always to *increase* the number of reference frames used. Using :doc:`MediaInfo <mediainfo>` I could see that the default number of reference frames used was 5 (``ref=5``) so I stopped messing with it.
 
-For *300*, the file was very hard to shrink much because of the details in the grainy appearance. Too much more and you start noticing unfortunate artifacting around edges. Only 7% of this file was audio; the rest is all video.
+For *300*, the file was very hard to shrink much because of the details in the grainy appearance. Too much more and you start noticing unfortunate artifacts around edges. Only 7% of this file was audio; the rest is all video.
 
 *The Hunger Games: Mockingjay Part I* seemed to create an unusually small file regardless of the RF number. It made me curious why the original was so big. The same thing happened with *Alice in Wonderland*, though it's not as apparent: *Wonderland* has a DTS-HD MA soundtrack that I allowed to pass through (I like having the original audio) and *that track alone took 3GB* - 38% of the file size under RF21.
 
