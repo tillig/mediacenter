@@ -14,3 +14,4 @@ As my system grows and changes, I switch up the hardware driving the system. Onc
     hpex475.rst
     powerline.rst
     netgearr8000.rst
+    sharpaquoslc37d7u.rst

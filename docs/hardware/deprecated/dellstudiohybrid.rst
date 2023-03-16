@@ -9,7 +9,7 @@ Now that there's a :doc:`Plex <../../software/serve/plex>` app for :doc:`Xbox 36
 Display Resolution
 ==================
 
-I used to have a display resolution issue when the Dell Studio Hybrid was hooked up to the :doc:`Sharp Aquos TV <../tv/sharpaquoslc37d7u>`. It ran at 1280 x 768, which left a letterbox on each side since the Sharp Aquos TV we have runs at 1366 x 768 natively. This problem went away when I connected it via HDMI to the :doc:`Samsung LN52A750 TV <../tv/samsungln52a750>` we got - now it runs at full 1080p.
+I used to have a display resolution issue when the Dell Studio Hybrid was hooked up to the :doc:`Sharp Aquos TV <sharpaquoslc37d7u>`. It ran at 1280 x 768, which left a letterbox on each side since the Sharp Aquos TV we have runs at 1366 x 768 natively. This problem went away when I connected it via HDMI to the :doc:`Samsung LN52A750 TV <../tv/samsungln52a750>` we got - now it runs at full 1080p.
 
 * Most TVs don't accept more than 720p through VGA/DVI, which we found while figuring out how to hook up the :doc:`Xbox 360 <../frontend/xbox>` (though that may have changed with newer TVs).
 * Different resolutions become available when you hook the computer up to the TV using the HDMI connection. I tried this with the Sharp Aquos and found that 1080i became available (though it didn't display nicely - that could have been due to the TV not understanding the input right). That wasn't available through the DVI hookup.

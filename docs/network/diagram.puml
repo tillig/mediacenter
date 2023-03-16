@@ -1,4 +1,4 @@
-@startuml
+@startuml Network Diagram
 ' Common PlantUML commands: https://plantuml.com/commons
 ' Icons for PlantUML: https://plantuml.com/openiconic
 ' Layout tips: https://crashedmind.github.io/PlantUMLHitchhikersGuide/layout/layout.html
@@ -54,9 +54,9 @@ rectangle "House" as house {
       }
       rectangle "<&puzzle-piece*10>\n\nPlaystation 3 [wifi]" <<Game>> as ps3_mb {
       }
-      rectangle "<&video*10>\n\nRoku Ultra [wifi]" <<STB>> as roku_mb {
+      rectangle "<&video*10>\n\nChromecast [wifi]" <<STB>> as chromecast_mb {
       }
-      roku_mb --> samsungun65ks8000
+      chromecast_mb --> samsungun65ks8000
       ps3_mb --> samsungun65ks8000
     }
     rectangle "Kid's Bedroom" as kidbedroom {
@@ -75,7 +75,7 @@ rectangle "House" as house {
       }
       rectangle "<&hard-drive*10>\n\nD-Link DGS-2208" <<Switch>> as dlinkdgs2208 {
       }
-      rectangle "<&puzzle-piece*10>\n\nXbox One S" <<Game>> as xboxone_lr {
+      rectangle "<&puzzle-piece*10>\n\nXbox One X" <<Game>> as xboxone_lr {
       }
       rectangle "<&video*10>\n\nNVIDIA Shield TV" <<STB>> as nvidiashield {
       }
@@ -88,7 +88,7 @@ rectangle "House" as house {
       marantzsr5010 <-[dotted] dlinkdgs2208
     }
     rectangle "Office" as office {
-      rectangle "<&hard-drive*10>\n\nHP ProCurve 2810-24G" <<Switch>> as hpprocurve281024g {
+      rectangle "<&hard-drive*10>\n\nCisco SG300-28PP" <<Switch>> as ciscosg30028pp {
       }
       rectangle "<&hard-drive*10>\n\nUniFi Security Gateway" <<Switch>> as usg {
       }
@@ -98,20 +98,20 @@ rectangle "House" as house {
       }
       rectangle "<&hard-drive*10>\n\nTablo" <<Server>> as tablo {
       }
-      hpprocurve281024g <-[dotted]- usg
-      megaplex <-[dotted]- hpprocurve281024g
-      synologyds1010 <-[dotted]- hpprocurve281024g
-      hpprocurve281024g -[dotted]-> tablo
+      ciscosg30028pp <-[dotted]- usg
+      megaplex <-[dotted]- ciscosg30028pp
+      synologyds1010 <-[dotted]- ciscosg30028pp
+      ciscosg30028pp -[dotted]-> tablo
 
       ' Link out to other rooms
-      hpprocurve281024g -[dotted]> dlinkdgs2208
+      ciscosg30028pp -[dotted]> dlinkdgs2208
     }
     rectangle "Garage" as garage {
-      rectangle "<&monitor*10>\n\nSharp Aquos LC-37D7U" <<TV>> as sharpaquoslc37d7u {
+      rectangle "<&monitor*10>\n\nInsignia NS-43D420NA20" <<TV>> as insignians43d420na20 {
       }
-      rectangle "<&video*10>\n\nChromecast" <<STB>> as chromecast_garage {
+      rectangle "<&video*10>\n\nChromecast [wifi]" <<STB>> as chromecast_garage {
       }
-      chromecast_garage --> sharpaquoslc37d7u
+      chromecast_garage --> insignians43d420na20
     }
   }
 }
