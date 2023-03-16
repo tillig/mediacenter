@@ -2,7 +2,7 @@
 Marantz SR5010
 ==============
 
-The Marantz SR5010 was `picked up from Amazon for about $900 <http://www.amazon.com/dp/B010FH2J9W?tag=mhsvortex>`_ in March 2016 as a replacement for the :doc:`Yamaha RX-V777BT <../deprecated/yamaharxv777bt>`.
+The Marantz SR5010 was `picked up from Amazon for about $900 <https://www.amazon.com/dp/B010FH2J9W?tag=mhsvortex>`_ in March 2016 as a replacement for the :doc:`Yamaha RX-V777BT <../deprecated/yamaharxv777bt>`.
 
 .. image:: marantzsr5010.jpg
 
@@ -22,6 +22,6 @@ Network Control
 
 With the receiver in the cabinet and the 4K on-screen display problem mentioned earlier, I needed a way to see when the receiver was on, which source it was tuned to, and the volume level.
 
-To that end, I `created an Arduino-based volume monitor <http://www.paraesthesia.com/archive/2017/03/27/arduino-volume-monitor-for-marantz-receiver/>`_ that uses the HTTP network interface for the receiver.
+To that end, I `created an Arduino-based volume monitor <https://www.paraesthesia.com/archive/2017/03/27/arduino-volume-monitor-for-marantz-receiver/>`_ that uses the HTTP network interface for the receiver.
 
 In April 2018 a firmware update came through that caused the network communication - both HTTP and Telnet based - to be unstable. Even streaming music services don't stream well. The network connection seems to reset periodically. I've opened a support ticket for the issue but it effectively renders the volume monitor useless.

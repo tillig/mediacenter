@@ -14,9 +14,9 @@ This is the process I go through when I get new music for my collection. Followi
 
     1. If the music is on a physical disc (CD), add by UPC.
     2. If the music is digital (MP3), add by music file.
-    3. In all cases, synchronize the local collection database with `my online music collection database <http://cloud.collectorz.com/tillig/music/view>`_.
+    3. In all cases, synchronize the local collection database with `my online music collection database <https://cloud.collectorz.com/tillig/music/view>`_.
 
-3. File the discs. I use `Odyssey CD Storage Cases <http://www.sleevecityusa.com/Odyssey-CD-Storage-Case-for-65-Jewel-Cases-p/3strody65.htm>`_ to store my CDs, each CD in a `Diskeeper sleeve <http://www.sleevecityusa.com/diskeeper-anti-static-cd-dvd-sleeve-p/3cdrice.htm>`_. I put the liner notes in the disc sleeve with the disc and I store any other paperwork in an expandable envelope.
+3. File the discs. I use `Odyssey CD Storage Cases <https://www.sleevecityusa.com/Odyssey-CD-Storage-Case-for-65-Jewel-Cases-p/3strody65.htm>`_ to store my CDs, each CD in a `Diskeeper sleeve <https://www.sleevecityusa.com/diskeeper-anti-static-cd-dvd-sleeve-p/3cdrice.htm>`_. I put the liner notes in the disc sleeve with the disc and I store any other paperwork in an expandable envelope.
 
 .. image:: odysseybox.jpg
-   :target: http://www.sleevecityusa.com/Odyssey-CD-Storage-Case-for-65-Jewel-Cases-p/3strody65.htm
+   :target: https://www.sleevecityusa.com/Odyssey-CD-Storage-Case-for-65-Jewel-Cases-p/3strody65.htm

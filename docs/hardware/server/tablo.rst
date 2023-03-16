@@ -2,7 +2,7 @@
 Tablo
 =====
 
-As part of my :doc:`plan to cut cable <../../plans/cuttingthecable>` I added a `four-tuner Tablo OTA DVR <http://www.amazon.com/dp/B00MWLZR0I?tag=mhsvortex>`_ to the system.
+As part of my :doc:`plan to cut cable <../../plans/cuttingthecable>` I added a `four-tuner Tablo OTA DVR <https://www.amazon.com/dp/B00MWLZR0I?tag=mhsvortex>`_ to the system.
 
 .. image:: tablo.jpg
 
@@ -10,7 +10,7 @@ The Tablo is pretty small, about the size of a paperback book.
 
 .. image:: tablo_scale.jpg
 
-With four tuners, I can record four things at the same time, or watch something and record three others, etc. I went for the four-tuner model rather than `the two-tuner model <http://www.amazon.com/dp/B00MWLZR0I?tag=mhsvortex>`_ because there are definitely a couple of shows we watch/record that run at the same time. I also wanted the ability to watch TV on a couple of different TVs while something was recording and that wouldn't have been possible without a couple of tuners.
+With four tuners, I can record four things at the same time, or watch something and record three others, etc. I went for the four-tuner model rather than `the two-tuner model <https://www.amazon.com/dp/B00MWLZR0I?tag=mhsvortex>`_ because there are definitely a couple of shows we watch/record that run at the same time. I also wanted the ability to watch TV on a couple of different TVs while something was recording and that wouldn't have been possible without a couple of tuners.
 
 Storage
 =======

@@ -7,7 +7,7 @@ This is the process I go through when I get new movies or TV shows for my collec
 Note that currently I don't buy digital-only movies - I only buy discs. While some of those discs may come with DRM-laden digital copies (which I do claim), there isn't a process for bringing in digital-only video because I don't really have any.
 
 1. Add the disc/set to :doc:`DVD Profiler <../software/manage/dvdprofiler>` by UPC.
-2. Synchronize the DVD Profiler local database with `my online video database <http://www.invelos.com/dvdcollection.aspx/tillig>`_.
+2. Synchronize the DVD Profiler local database with `my online video database <https://www.invelos.com/dvdcollection.aspx/tillig>`_.
 3. Back up the local DVD Profiler database. This is a more thorough backup than the online collection and would be used in favor of the online sync backup if available.
 4. Claim any digital copy codes. If the disc comes with a "digital copy," I'll claim it. I prefer iTunes over Vudu because the primary use case for my digital copy movies is traveling with an iPad and it makes for a simpler sync. If I have an internet connection, I'll just use Plex.
 5. Rip the video. I use :doc:`MakeMKV <../software/rip/makemkv>` to rip just the main movie or TV episode(s).
@@ -16,20 +16,20 @@ Note that currently I don't buy digital-only movies - I only buy discs. While so
 8. File the discs.
 
     1. If it's a TV series - DVD or Blu-ray - I put them upstairs on some shelves we have specifically for this purpose. It's kind of fun to see all the TV series in one place, though admittedly it's getting pretty cramped.
-    2. If it's a DVD, I use `Odyssey CD Storage Cases <http://www.sleevecityusa.com/Odyssey-CD-Storage-Case-for-65-Jewel-Cases-p/3strody65.htm>`_, each DVD in a `Diskeeper sleeve <http://www.sleevecityusa.com/diskeeper-anti-static-cd-dvd-sleeve-p/3cdrice.htm>`_. I store liner notes and any other paperwork in an expandable envelope.
-    3. If it's a Blu-ray, I use `DiscSox HiDef Pro sleeves <http://www.amazon.com/dp/B002LDBZM6?tag=mhsvortex>`_ in `a case specifically for those sleeves <http://mmdesign.com/products/decorative-case-gunny-dvd-pro.php>`_.
+    2. If it's a DVD, I use `Odyssey CD Storage Cases <https://www.sleevecityusa.com/Odyssey-CD-Storage-Case-for-65-Jewel-Cases-p/3strody65.htm>`_, each DVD in a `Diskeeper sleeve <https://www.sleevecityusa.com/diskeeper-anti-static-cd-dvd-sleeve-p/3cdrice.htm>`_. I store liner notes and any other paperwork in an expandable envelope.
+    3. If it's a Blu-ray, I use `DiscSox HiDef Pro sleeves <https://www.amazon.com/dp/B002LDBZM6?tag=mhsvortex>`_ in `a case specifically for those sleeves <https://mmdesign.com/products/decorative-case-gunny-dvd-pro.php>`_.
 
 The Odyssey box for DVDs looks like this:
 
 .. image:: odysseybox.jpg
-   :target: http://www.sleevecityusa.com/Odyssey-CD-Storage-Case-for-65-Jewel-Cases-p/3strody65.htm
+   :target: https://www.sleevecityusa.com/Odyssey-CD-Storage-Case-for-65-Jewel-Cases-p/3strody65.htm
 
 DiscSox HiDef Pro sleeves look like this:
 
 .. image:: discsox.jpg
-   :target: http://www.amazon.com/dp/B002LDBZM6?tag=mhsvortex
+   :target: https://www.amazon.com/dp/B002LDBZM6?tag=mhsvortex
 
 The case for the DiscSox sleeves looks like this and sits nicely in my living room:
 
 .. image:: discsox_case.jpg
-   :target: http://mmdesign.com/products/decorative-case-gunny-dvd-pro.php
+   :target: https://mmdesign.com/products/decorative-case-gunny-dvd-pro.php

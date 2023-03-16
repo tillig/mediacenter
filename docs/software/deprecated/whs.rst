@@ -8,7 +8,7 @@ Windows Home Server uses Windows Media Connect 2.0 to do its built-in sharing.
 
 Windows Media Connect is the way Windows did DLNA style media sharing prior to Windows Media Player 11. None of the formats from :doc:`Handbrake <../convert/handbrake>` are recognized by Windows Media Connect. Even the AVI format it supports is ripped with a codec that Windows Media Connect doesn't understand. I tried all of them, even the Xbox 360 preset.
 
-`Windows Media Connect understands <http://blogs.msdn.com/alan_ludwig/archive/2006/02/01/522092.aspx>`_:
+`Windows Media Connect understands <https://blogs.msdn.com/alan_ludwig/archive/2006/02/01/522092.aspx>`_:
 
 - ``.wmv``
 - ``.dvr-ms``
@@ -16,9 +16,9 @@ Windows Media Connect is the way Windows did DLNA style media sharing prior to W
 - ``.mpeg``, ``.mpg`` - MPEG-1
 - ``.mp2``, ``.mpeg``, ``mpg`` - MPEG-2
 
-That product has been discontinued and the replacement is the Media Sharing feature of Windows Media Player 11. `There is a good forum here explaining how to update WHS to incorporate WMP11 sharing <http://social.microsoft.com/forums/en-US/whssoftware/thread/82fd0c09-86e0-45a8-b49e-762f89ede333>`_, but **I DIDN'T DO IT**. Several accounts of people losing media sharing entirely are there as well as the fact that it takes the automatic sharing setup out of the console. Not good, and they never did come out with an official update (other than Windows Home Server v2).
+That product has been discontinued and the replacement is the Media Sharing feature of Windows Media Player 11. `There is a good forum here explaining how to update WHS to incorporate WMP11 sharing <https://social.microsoft.com/forums/en-US/whssoftware/thread/82fd0c09-86e0-45a8-b49e-762f89ede333>`_, but **I DIDN'T DO IT**. Several accounts of people losing media sharing entirely are there as well as the fact that it takes the automatic sharing setup out of the console. Not good, and they never did come out with an official update (other than Windows Home Server v2).
 
-Instead of using the *weak* media sharing capabilities on Windows Home Server, I put :doc:`Asset UPnP <../serve/asset>` on to serve my music and I've switched to :doc:`Plex <../serve/plex>` for video. For a short time while I was trying to get :doc:`Windows Media Center <../deprecated/windowsmediacenter>` to work, I considered using `My Movies <http://www.mymovies.dk/>`_ for WHS. I never went down that road.
+Instead of using the *weak* media sharing capabilities on Windows Home Server, I put :doc:`Asset UPnP <../serve/asset>` on to serve my music and I've switched to :doc:`Plex <../serve/plex>` for video. For a short time while I was trying to get :doc:`Windows Media Center <../deprecated/windowsmediacenter>` to work, I considered using `My Movies <https://www.mymovies.dk/>`_ for WHS. I never went down that road.
 
 Storage
 =======
@@ -27,8 +27,8 @@ Defragmenting
 -------------
 You can't just use any standard defrag program because it won't understand the WHS filesystem.
 
-- `PerfectDisk 10 <http://www.perfectdisk.com/products/home-perfectdisk10-windows-home-server/learn-more>`_ is what I use because it's comparable to other solutions, has a nice interface in the WHS console, and costs half of Diskeeper.
-- `Diskeeper 2009 <http://www.diskeeper.com/Diskeeper/home/homeserver.aspx>`_ is another option that is fairly popular but is expensive and doesn't have anything compelling over PerfectDisk.
+- `PerfectDisk 10 <https://www.perfectdisk.com/products/home-perfectdisk10-windows-home-server/learn-more>`_ is what I use because it's comparable to other solutions, has a nice interface in the WHS console, and costs half of Diskeeper.
+- `Diskeeper 2009 <https://www.diskeeper.com/Diskeeper/home/homeserver.aspx>`_ is another option that is fairly popular but is expensive and doesn't have anything compelling over PerfectDisk.
 
 I noticed after running PerfectDisk for a month or so that I was getting health warnings on my system drive roughly once or twice a week. I disabled defragmentation of the system drive and these warnings stopped. (The drive works really well, not sure what this was about.)
 
@@ -65,7 +65,7 @@ As a workaround I had to stop backing up the System Reserved Partition on Inspir
 
 **WHS backs up all of my client computers nightly.** This works in conjunction with :doc:`CrashPlan <crashplan>` to keep my data safe.
 
-In January 2010 I started getting weekly "backup database corrupt" errors after the weekly automatic backup cleanup run. Looking at the backup database, it was reporting 225GB used - far more than the combined capacity of all of my client computers twice over. `After posting to the Microsoft forums <http://social.microsoft.com/Forums/en/whssoftware/thread/1e25eb79-eb04-4385-83a6-f5a20b0d09bf>`_, I decided to reset the backup database manually and start from scratch.
+In January 2010 I started getting weekly "backup database corrupt" errors after the weekly automatic backup cleanup run. Looking at the backup database, it was reporting 225GB used - far more than the combined capacity of all of my client computers twice over. `After posting to the Microsoft forums <https://social.microsoft.com/Forums/en/whssoftware/thread/1e25eb79-eb04-4385-83a6-f5a20b0d09bf>`_, I decided to reset the backup database manually and start from scratch.
 
 1. Exit then uninstall the connector software on all clients.
 2. RDP to the WHS desktop and run the WHS console from there.
@@ -85,14 +85,14 @@ Server Recovery
 Reference Links
 ---------------
 
-- `How to replace the system drive <http://social.microsoft.com/Forums/en-US/whsfaq/thread/cdb387f1-9baa-4ae3-a74b-ff351dc1c0bf>`_ (Microsoft Forums)
-- `Server reinstall fails and can't attempt again <http://social.microsoft.com/Forums/en-US/whssoftware/thread/7f224a0c-f724-4b0c-b828-01104610115a>`_ (Microsoft Forums)
-- `HP MediaSmart Server - Recovering or Resetting the Server <http://h10025.www1.hp.com/ewfrf/wc/document?docname=c01213390&tmp_track_link=ot_recdoc/c01213383/en_us/c01213390/loc:1&lc=en&dlc=en&cc=us>`_ (HP Support)
-- `HP MediaSmart Server - Using Server Recovery and Factory Reset <http://h10025.www1.hp.com/ewfrf/wc/document?lc=en&cc=us&docname=c01213383&dlc=en>`_ (HP Support)
-- `HP MediaSmart Server - Replacing the System Drive <http://h10025.www1.hp.com/ewfrf/wc/document?docname=c01212953&tmp_track_link=ot_recdoc/c01213383/en_us/c01212953/loc:2&lc=en&dlc=en&cc=us>`_ (HP Support)
-- `Can you recover a system drive using a different Power Pack? <http://social.microsoft.com/Forums/en-US/whssoftware/thread/3ae8b7f8-5898-4824-b389-7ba7795786aa>`_ (Microsoft Forums) - I asked this because the HP recovery disk doesn't have PP2 or PP3 on it. You do need to restore from the original disk, then just do "Update Now..." over and over to reinstall the power packs.
-- If you can't remove a drive, `you may have to do some RoboCopy fanciness <http://bradwilson.typepad.com/blog/2009/12/rescuing-data-from-windows-home-server.html>`_ to get it to work like Brad Wilson did.
-- `You can upgrade the system drive by cloning it <http://www.mediasmartserver.net/2010/01/17/forum-spotlight-how-to-successfully-clone-and-upgrade-a-whs-system-drive/>`_.
+- `How to replace the system drive <https://social.microsoft.com/Forums/en-US/whsfaq/thread/cdb387f1-9baa-4ae3-a74b-ff351dc1c0bf>`_ (Microsoft Forums)
+- `Server reinstall fails and can't attempt again <https://social.microsoft.com/Forums/en-US/whssoftware/thread/7f224a0c-f724-4b0c-b828-01104610115a>`_ (Microsoft Forums)
+- `HP MediaSmart Server - Recovering or Resetting the Server <https://h10025.www1.hp.com/ewfrf/wc/document?docname=c01213390&tmp_track_link=ot_recdoc/c01213383/en_us/c01213390/loc:1&lc=en&dlc=en&cc=us>`_ (HP Support)
+- `HP MediaSmart Server - Using Server Recovery and Factory Reset <https://h10025.www1.hp.com/ewfrf/wc/document?lc=en&cc=us&docname=c01213383&dlc=en>`_ (HP Support)
+- `HP MediaSmart Server - Replacing the System Drive <https://h10025.www1.hp.com/ewfrf/wc/document?docname=c01212953&tmp_track_link=ot_recdoc/c01213383/en_us/c01212953/loc:2&lc=en&dlc=en&cc=us>`_ (HP Support)
+- `Can you recover a system drive using a different Power Pack? <https://social.microsoft.com/Forums/en-US/whssoftware/thread/3ae8b7f8-5898-4824-b389-7ba7795786aa>`_ (Microsoft Forums) - I asked this because the HP recovery disk doesn't have PP2 or PP3 on it. You do need to restore from the original disk, then just do "Update Now..." over and over to reinstall the power packs.
+- If you can't remove a drive, `you may have to do some RoboCopy fanciness <https://bradwilson.typepad.com/blog/2009/12/rescuing-data-from-windows-home-server.html>`_ to get it to work like Brad Wilson did.
+- `You can upgrade the system drive by cloning it <https://www.mediasmartserver.net/2010/01/17/forum-spotlight-how-to-successfully-clone-and-upgrade-a-whs-system-drive/>`_.
 
 If I have to do a recovery, I may want to upgrade to MediaSmart 3.0 at the same time. It's offered only as a "recovery option" so I'd have to "recover in place" even if I wasn't replacing the drive.
 

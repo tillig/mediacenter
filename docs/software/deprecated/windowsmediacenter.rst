@@ -12,57 +12,57 @@ Plugins
 =======
 You use plugins to extend the capabilities of Windows Media Center. I looked at a few but didn't get too far into it. :doc:`XBMC <xbmc>` supports extensions a little nicer.
 
-- `MyNetflix <http://www.anpark.com/Software.aspx>`_ - View your instant queue movies right in Windows Media Center. Looks a little more robust than `vmcNetFlix <http://myweb.cableone.net/eluttmann04/projects/vmcNetFlix/default.htm>`_. *Of course, Netflix has their own native integration now*, making this moot.
-- `SecondRun.tv <http://www.secondrun.tv/>`_ - Watch Hulu video on the Windows Media Center. Interface looks similar to the DVD Library.
-- `Yougle Vista <http://push-a-button.com/products/youglevista/>`_ - YouTube, Apple Trailers, and other community video sources in Windows Media Center. Has an extensibility API for adding your own custom sources.
-- `tubeCore <http://tubecentric.tv/>`_ - Adds UPnP/DLNA support to Windows Media Center. Primarily geared around video.
-- `RadioTime <http://radiotime.com/>`_ - A streaming audio service that lets you listen to radio from around the world. Has a plugin so you can access it through Media Center.
+- `MyNetflix <https://www.anpark.com/Software.aspx>`_ - View your instant queue movies right in Windows Media Center. Looks a little more robust than `vmcNetFlix <https://myweb.cableone.net/eluttmann04/projects/vmcNetFlix/default.htm>`_. *Of course, Netflix has their own native integration now*, making this moot.
+- `SecondRun.tv <https://www.secondrun.tv/>`_ - Watch Hulu video on the Windows Media Center. Interface looks similar to the DVD Library.
+- `Yougle Vista <https://push-a-button.com/products/youglevista/>`_ - YouTube, Apple Trailers, and other community video sources in Windows Media Center. Has an extensibility API for adding your own custom sources.
+- `tubeCore <https://tubecentric.tv/>`_ - Adds UPnP/DLNA support to Windows Media Center. Primarily geared around video.
+- `RadioTime <https://radiotime.com/>`_ - A streaming audio service that lets you listen to radio from around the world. Has a plugin so you can access it through Media Center.
 
 Configuration
 =============
 
-- You generally want to `enable auto-logon <http://support.microsoft.com/default.aspx?scid=kb;en-us;315231>`_ for a Media Center PC so you can reboot without getting prompted for a password.
-- Windows Media Center shares a library with Windows Media Player. `You can delete the Windows Media Player library and force Windows Media Center to reindex everything <http://www.krunk4ever.com/blog/2007/09/16/reindexing-media-center-library/>`_ if you find things aren't up to date.
-- There are a bunch of `undocumented registry settings <http://blogs.msdn.com/astebner/archive/2006/04/29/586961.aspx>`_ that help you tweak media center. You can use them to `adjust the overscan <http://thegreenbutton.com/forums/thread/17197.aspx>`_ of the display.
-- The Netflix plugin left two Netflix tiles on the TV + Movies screen. I asked about it `on the Microsoft Answers forum <http://social.answers.microsoft.com/Forums/en-US/vistamedia/thread/f1bb52a0-11f1-4889-9831-358092814386>`_. It was also reported, with no solution, `on The Green Button <http://thegreenbutton.com/forums/thread/362226.aspx>`_. It eventually worked itself out with an update that came in for Windows Media Center. In case I need to directly download the plugin, `here's the link <http://go.microsoft.com/fwlink/?LinkID=147175&clcid=0x409>`_.
-- I couldn't figure out how to totally stop a video and not have the little thumbnail show up in the corner. I've asked about `how to totally stop a video on the Microsoft Answers forum <http://social.answers.microsoft.com/Forums/en-US/vistamedia/thread/182adfd2-b205-46bb-b3d3-765ac3acb5f3>`_. It turns out that if you watch a web-based video, you can't totally stop it; you just have to start playing something else.
-- The movie metadata (thumbnails, etc.) are stored in a folder called "DvdInfoCache." If you want to share the data across multiple machines, you can: `here's how to share DvdInfoCache <http://themetabrowser.com/userguide/sharing-dvdinfocache/>`_.
+- You generally want to `enable auto-logon <https://support.microsoft.com/default.aspx?scid=kb;en-us;315231>`_ for a Media Center PC so you can reboot without getting prompted for a password.
+- Windows Media Center shares a library with Windows Media Player. `You can delete the Windows Media Player library and force Windows Media Center to reindex everything <https://www.krunk4ever.com/blog/2007/09/16/reindexing-media-center-library/>`_ if you find things aren't up to date.
+- There are a bunch of `undocumented registry settings <https://blogs.msdn.com/astebner/archive/2006/04/29/586961.aspx>`_ that help you tweak media center. You can use them to `adjust the overscan <https://thegreenbutton.com/forums/thread/17197.aspx>`_ of the display.
+- The Netflix plugin left two Netflix tiles on the TV + Movies screen. I asked about it `on the Microsoft Answers forum <https://social.answers.microsoft.com/Forums/en-US/vistamedia/thread/f1bb52a0-11f1-4889-9831-358092814386>`_. It was also reported, with no solution, `on The Green Button <https://thegreenbutton.com/forums/thread/362226.aspx>`_. It eventually worked itself out with an update that came in for Windows Media Center. In case I need to directly download the plugin, `here's the link <https://go.microsoft.com/fwlink/?LinkID=147175&clcid=0x409>`_.
+- I couldn't figure out how to totally stop a video and not have the little thumbnail show up in the corner. I've asked about `how to totally stop a video on the Microsoft Answers forum <https://social.answers.microsoft.com/Forums/en-US/vistamedia/thread/182adfd2-b205-46bb-b3d3-765ac3acb5f3>`_. It turns out that if you watch a web-based video, you can't totally stop it; you just have to start playing something else.
+- The movie metadata (thumbnails, etc.) are stored in a folder called "DvdInfoCache." If you want to share the data across multiple machines, you can: `here's how to share DvdInfoCache <https://themetabrowser.com/userguide/sharing-dvdinfocache/>`_.
 
 Changing the DVD Player
 =======================
 The idea here is that the built-in codec for playing DVDs (``VIDEO_TS`` included) isn't as good as some third-party ones. I originally looked into changing this when I didn't realize you could change the zoom/aspect ratio of playback by using the "info" button on the remote.
 
-Most people use `MyMovies <http://www.mymovies.dk/>`_ and TheaterTek DVD player (or some other player). `I've asked what the best DVD player package is on the MyMovies forums. <http://www.mymovies.dk/forum.aspx?g=posts&t=9238>`_
+Most people use `MyMovies <https://www.mymovies.dk/>`_ and TheaterTek DVD player (or some other player). `I've asked what the best DVD player package is on the MyMovies forums. <https://www.mymovies.dk/forum.aspx?g=posts&t=9238>`_
 
-There is a `utility that allows you to choose a different decoder for playing DVDs <http://mediacenterexpert.blogspot.com/2006/07/vista-media-center-decoder-utility.html>`_. (`Here's the walkthrough of the registry entries you need to update <http://mediacenterexpert.blogspot.com/2006/07/vista-media-center-changing-default.html>`_ - the tool automates the registry settings.)
+There is a `utility that allows you to choose a different decoder for playing DVDs <https://mediacenterexpert.blogspot.com/2006/07/vista-media-center-decoder-utility.html>`_. (`Here's the walkthrough of the registry entries you need to update <https://mediacenterexpert.blogspot.com/2006/07/vista-media-center-changing-default.html>`_ - the tool automates the registry settings.)
 
 - Updating the codec might make things play smoother.
-- I posted a question about `improving the internal player on the AVSForums <http://www.avsforum.com/avs-vb/showthread.php?t=1069362>`_.
+- I posted a question about `improving the internal player on the AVSForums <https://www.avsforum.com/avs-vb/showthread.php?t=1069362>`_.
 
 FFDShow integration (see below) updates the DVD player as well as adding the ability for new video formats to play.
 
 PowerDVD
 --------
-You can `set up PowerDVD, for example, using registry settings <http://www.mymovies.dk/forum.aspx?g=posts&t=8804>`_. Several folks recommend using the PowerDVD codec over VMC one.
+You can `set up PowerDVD, for example, using registry settings <https://www.mymovies.dk/forum.aspx?g=posts&t=8804>`_. Several folks recommend using the PowerDVD codec over VMC one.
 
-There are `different options for integrating PowerDVD <http://www.avsforum.com/avs-vb/archive/index.php/t-924118.html>`_. Primarily people use the PowerDVD codec for playback rather than the built-in one.
+There are `different options for integrating PowerDVD <https://www.avsforum.com/avs-vb/archive/index.php/t-924118.html>`_. Primarily people use the PowerDVD codec for playback rather than the built-in one.
 
-You can `integrate PowerDVD as an external application <http://thegreenbutton.com/blogs/mike/archive/2007/01/14/158640.aspx>`_ using an "mcl" file. (This is how you get HD DVD and Blu-ray playback to work.) There's an article about `extending Media Center with XML files <http://mediacenterexpert.blogspot.com/2006/07/vista-media-center-decoder-utility.html>`_.
+You can `integrate PowerDVD as an external application <https://thegreenbutton.com/blogs/mike/archive/2007/01/14/158640.aspx>`_ using an "mcl" file. (This is how you get HD DVD and Blu-ray playback to work.) There's an article about `extending Media Center with XML files <https://mediacenterexpert.blogspot.com/2006/07/vista-media-center-decoder-utility.html>`_.
 
-There is `a launching application for PowerDVD <http://thegreenbutton.com/forums/thread/279556.aspx>`_ that someone wrote. Might do what needs to be done. Looks like it can launch any app, not just PowerDVD. That said, it doesn't add a button to each movie, it just lets you launch the app.
+There is `a launching application for PowerDVD <https://thegreenbutton.com/forums/thread/279556.aspx>`_ that someone wrote. Might do what needs to be done. Looks like it can launch any app, not just PowerDVD. That said, it doesn't add a button to each movie, it just lets you launch the app.
 
 TotalMedia Theatre
 ------------------
 ArcSoft TotalMedia Theatre seems to be growing on people.
 
-- `Remove the "which player do you want to use" setting <http://www.mymovies.dk/forum.aspx?g=posts&t=8874>`_ and let MyMovies handle it.
-- `I'd just need the TotalMedia Theatre <http://www.mymovies.dk/forum.aspx?g=posts&t=8820>`_, NOT the Extreme version.
+- `Remove the "which player do you want to use" setting <https://www.mymovies.dk/forum.aspx?g=posts&t=8874>`_ and let MyMovies handle it.
+- `I'd just need the TotalMedia Theatre <https://www.mymovies.dk/forum.aspx?g=posts&t=8820>`_, NOT the Extreme version.
 
-`ArcSoft Total Media Theater <http://www.arcsoft.com/products/totalmediatheatre/>`_ integrates with Media Center via a plugin. `There is a review of it here with screen shots. <http://www.missingremote.com/index.php?option=com_content&task=view&id=2822&Itemid=1&limit=1&limitstart=2>`_
+`ArcSoft Total Media Theater <https://www.arcsoft.com/products/totalmediatheatre/>`_ integrates with Media Center via a plugin. `There is a review of it here with screen shots. <https://www.missingremote.com/index.php?option=com_content&task=view&id=2822&Itemid=1&limit=1&limitstart=2>`_
 
 FFDShow Integration
 -------------------
-FFDShow updates the DVD player as well as adding new video format support. `Media Control <http://damienbt.free.fr/index.php>`_ integrates FFDShow codecs into Media Center, however, `it doesn't look like it's really well supported <http://damienbt.free.fr/phpBB2/viewtopic.php?t=33&highlight=dvd>`_. You may be able to get results `if you switch the default MPEG2 decoder <http://damienbt.free.fr/phpBB2/viewtopic.php?t=440&start=0&postdays=0&postorder=asc&highlight=dvd>`_, but in general, it appears that `launching DVD Library titles with FFDShow may be experimental <http://damienbt.free.fr/phpBB2/viewtopic.php?t=271&highlight=dvd>`_.
+FFDShow updates the DVD player as well as adding new video format support. `Media Control <https://damienbt.free.fr/index.php>`_ integrates FFDShow codecs into Media Center, however, `it doesn't look like it's really well supported <https://damienbt.free.fr/phpBB2/viewtopic.php?t=33&highlight=dvd>`_. You may be able to get results `if you switch the default MPEG2 decoder <https://damienbt.free.fr/phpBB2/viewtopic.php?t=440&start=0&postdays=0&postorder=asc&highlight=dvd>`_, but in general, it appears that `launching DVD Library titles with FFDShow may be experimental <https://damienbt.free.fr/phpBB2/viewtopic.php?t=271&highlight=dvd>`_.
 
 Enabling iTunes
 ===============
@@ -76,7 +76,7 @@ Objectives
 ----------
 Originally, I wanted a seamless music experience where I don't have to leave Windows Media Center and run iTunes separately.
 
-- I've seen this done through `MCETunes <http://www.mcetunes.com/>`_, but there appears to be a lot of moving parts with that and, reading through the forums, it appears there's some weirdness around gaps between songs... like MCETunes is just "wrapping" iTunes through the COM interface.
+- I've seen this done through `MCETunes <https://www.mcetunes.com/>`_, but there appears to be a lot of moving parts with that and, reading through the forums, it appears there's some weirdness around gaps between songs... like MCETunes is just "wrapping" iTunes through the COM interface.
 - Instead, I wanted to get WindowsMediaCenter natively understanding AAC/M4A songs.
 
     - Apple Lossless, MP4/AAC/M4A is all included.
@@ -111,20 +111,20 @@ I had previously set up all the tests with the DSP-worx plugin on my primary lap
 Notes
 -----
 
-- `DSP-worx <http://www.dsp-worx.de/>`_ has a January 8, 2007 entry talking about playing Apple Lossless in Media Player. That might also work for Media Center. `There is a bit of discussion on getting this working <http://www.eggheadcafe.com/software/aspnet/32790282/play-apple-lossless-on-wi.aspx>`_. It seems this is a common (and the only solution). An even better discussion on getting it set up is here. `Hydrogenaudio has a forum on it as well. <http://www.hydrogenaudio.org/forums/index.php?s=aa0c34bbe6db4a90a18f904c50b0327b&showtopic=46551&st=75>`_
+- `DSP-worx <https://www.dsp-worx.de/>`_ has a January 8, 2007 entry talking about playing Apple Lossless in Media Player. That might also work for Media Center. `There is a bit of discussion on getting this working <https://www.eggheadcafe.com/software/aspnet/32790282/play-apple-lossless-on-wi.aspx>`_. It seems this is a common (and the only solution). An even better discussion on getting it set up is here. `Hydrogenaudio has a forum on it as well. <https://www.hydrogenaudio.org/forums/index.php?s=aa0c34bbe6db4a90a18f904c50b0327b&showtopic=46551&st=75>`_
 
-    - `Install the plugin. <http://files.dsp-worx.de/dsmp3source_aac_alac.zip>`_ It may not work if the directory it's registered from `has spaces in it <http://www.hydrogenaudio.org/forums/index.php?showtopic=46551&st=50>`_.
+    - `Install the plugin. <https://files.dsp-worx.de/dsmp3source_aac_alac.zip>`_ It may not work if the directory it's registered from `has spaces in it <https://www.hydrogenaudio.org/forums/index.php?showtopic=46551&st=50>`_.
     - Install the tag extender.
 
-- If the DSP-works one doesn't work, `here's a registry patch that lets Media Center play AAC <http://a8t8.spaces.live.com/blog/cns%212518DD508BB713E8%21156.entry>`_.
+- If the DSP-works one doesn't work, `here's a registry patch that lets Media Center play AAC <https://a8t8.spaces.live.com/blog/cns%212518DD508BB713E8%21156.entry>`_.
 - Album Art!
 
     - It may be that the auto-downloading behavior of Windows Media Player will overwrite Folder.jpg files. If that's how it is, set WMP to not auto-download.
-    - `Put a Folder.jpg in the folder with the songs. <http://dalepreston.com/Blog/2007/11/more-windows-media-player-album-art.html>`_ That will get album art in, at least for each album if not for each individual song.
+    - `Put a Folder.jpg in the folder with the songs. <https://dalepreston.com/Blog/2007/11/more-windows-media-player-album-art.html>`_ That will get album art in, at least for each album if not for each individual song.
     - I can use a script to extract the art from one song on each album and dump it to Folder.jpg.
-    - `Clearing out the library <http://www.krunk4ever.com/blog/2007/09/16/reindexing-media-center-library/>`_ may come in handy if things go wrong.
+    - `Clearing out the library <https://www.krunk4ever.com/blog/2007/09/16/reindexing-media-center-library/>`_ may come in handy if things go wrong.
 
-`The article here is the most concise and basically accurate description of what needs to be done. <http://www.technologyquestions.com/technology/windows-media/133228-displaying-m4a-media-player-11-library-media-center-vista.html>`_
+`The article here is the most concise and basically accurate description of what needs to be done. <https://www.technologyquestions.com/technology/windows-media/133228-displaying-m4a-media-player-11-library-media-center-vista.html>`_
 
 Getting DSP-worx to work allows you to play the songs in WMP but the metadata isn't displayed.
 

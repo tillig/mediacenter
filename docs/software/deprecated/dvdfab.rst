@@ -2,7 +2,7 @@
 DVDFab HD Decrypter
 ===================
 
-`DVDFab HD Decrypter <http://www.dvdfab.cn/hd-decrypter.htm>`_ is a great free tool for ripping DVD and Blu-ray content. It can do a lot of stuff if you opt in to the paid version, including movie conversion like :doc:`Handbrake <../convert/handbrake>`.
+`DVDFab HD Decrypter <https://www.dvdfab.cn/hd-decrypter.htm>`_ is a great free tool for ripping DVD and Blu-ray content. It can do a lot of stuff if you opt in to the paid version, including movie conversion like :doc:`Handbrake <../convert/handbrake>`.
 
 I used this for a while when I was still ripping VIDEO_TS format. This wasn't sustainable as I moved to more Blu-ray movies, so I stopped using it.
 

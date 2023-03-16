@@ -102,7 +102,7 @@ Research
 Figuring HD Settings
 --------------------
 
-I started my testing by checking out links like `the Rokoding guide to 1080p encoding <http://www.rokoding.com/settings/0_10_0/0100_1080p_blu-ray_film.html>`_. These give some great guidance and help you know where to begin.
+I started my testing by checking out links like `the Rokoding guide to 1080p encoding <https://www.rokoding.com/settings/0_10_0/0100_1080p_blu-ray_film.html>`_. These give some great guidance and help you know where to begin.
 
 In testing to find the right HD settings, I went through a few different movies. I found the output size was very different based on the movie type and the x264 Tune setting.
 
@@ -169,7 +169,7 @@ Even though I've added forced subtitles to my user presets JSON (below), the def
 Additional tips for subtitles:
 
 - `This forced subtitles Google Doc spreadsheet <https://docs.google.com/spreadsheet/ccc?key=0AkGO8UqErL6idDhYYjg1ZXlORnRaM3ZhTks4Z3FrYlE&usp=sharing#gid=20>`_ is an incomplete but ever-growing list of movies that have forced subtitles in them. It can help determine if you need to switch on forced subs.
-- `SubtitleEdit <http://www.nikse.dk/SubtitleEdit/>`_ is a tool for inspecting and editing subtitles. I use it to figure out where the subtitles start and end (looking at the source ripped content) so I can narrow down what I should look at in the end conversion.
+- `SubtitleEdit <https://www.nikse.dk/SubtitleEdit/>`_ is a tool for inspecting and editing subtitles. I use it to figure out where the subtitles start and end (looking at the source ripped content) so I can narrow down what I should look at in the end conversion.
 
 Lip Sync Issues
 ---------------
@@ -256,7 +256,7 @@ I used a script to calculate video media average sizes for my collection, the re
             $shellfolder = $shell.Namespace($folder)
             $shellfile = $shellfolder.ParseName($file)
 
-            # Good stuff! http://powershell.com/cs/blogs/tobias/archive/2011/01/07/organizing-videos-and-music.aspx
+            # Good stuff! https://powershell.com/cs/blogs/tobias/archive/2011/01/07/organizing-videos-and-music.aspx
             # 27  = Length in H:M:S format
             # 299 = Frame height
             # 301 = Frame width
@@ -296,7 +296,7 @@ I used a script to calculate video media average sizes for my collection, the re
 Additional References
 =====================
 
-- `Rokoding <http://www.rokoding.com/>`_ has great information on encoding video with particular emphasis on :doc:`Roku <../../hardware/frontend/roku>` compatibility.
+- `Rokoding <https://www.rokoding.com/>`_ has great information on encoding video with particular emphasis on :doc:`Roku <../../hardware/frontend/roku>` compatibility.
 - `The Matt Gadient best settings guide for Handbrake 0.9.9 <https://mattgadient.com/2013/06/12/a-best-settings-guide-for-handbrake-0-9-9/>`_ is indispensible. Great side-by-side comparisons for things so you can tell what settings actually do.
 
 User Presets

@@ -10,7 +10,7 @@ I've amassed quite a collection, and I want to be able to enjoy it without a lot
 
 - I have :doc:`a central server machine <hardware/server/megaplex>` that runs :doc:`Plex <software/serve/plex>` and serves content that is stored on :doc:`a network-attached-storage device <hardware/server/synologyds1010>`. That's how I get the media off disks and onto :doc:`front-end devices <hardware/frontend/index>`.
 - I have a :doc:`Tablo <hardware/server/tablo>` DVR for handling recording over-the-air TV programs and serving them.
-- I subscribe to :doc:`Netflix <services/netflix>`, :doc:`Amazon Prime <services/amazon>`, :doc:`Hulu Plus <services/hulu>`, and :doc:`Pandora <services/pandora>` for content.
+- I subscribe to :doc:`Netflix <services/netflix>`, :doc:`Amazon Prime <services/amazon>`, :doc:`Hulu Plus <services/hulu>`, and :doc:`YouTube Music <services/youtube>` for content.
 - At each TV in my house, I have an :doc:`Xbox <hardware/frontend/xbox>` or a :doc:`Roku <hardware/frontend/roku>` to access the content served by Plex and the various services.
 
 It looks like this:
@@ -19,7 +19,7 @@ It looks like this:
 
 That, of course, is pretty high-level. You can dive into individual areas to read about the more detailed sections of the system. (If you want more on the diagram, :doc:`check out the network page <network/index>`.)
 
-I started out `blogging <http://www.paraesthesia.com>`_ this information, but as time goes on, the blog entry updates upon updates get confusing... so I switched to documentation on `ReadTheDocs <https://readthedocs.org/>`_.
+I started out `blogging <https://www.paraesthesia.com>`_ this information, but as time goes on, the blog entry updates upon updates get confusing... so I switched to documentation on `ReadTheDocs <https://readthedocs.org/>`_.
 
 :doc:`Please read the disclaimer. <disclaimer>` You may find things in here that appear "wrong" or that don't work for you. I've addressed that :doc:`in my over-arching, all-encompassing disclaimer <disclaimer>`.
 

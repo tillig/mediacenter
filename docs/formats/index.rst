@@ -33,10 +33,10 @@ A **container** is a file format, a file that can hold audio and/or video data. 
 
 A **codec** is the format of the audio or video data that goes in the **container**.
 
-This is an important distinction, because when someone says, "My computer won't play this `MKV <http://en.wikipedia.org/wiki/Matroska>`_ movie," you have to realize that "MKV" is a *container* so the problem may be that the computer doesn't understand how to *look in the container* or it may not understand how to *play the stuff that's in the container*. Those are two different problems.
+This is an important distinction, because when someone says, "My computer won't play this `MKV <https://en.wikipedia.org/wiki/Matroska>`_ movie," you have to realize that "MKV" is a *container* so the problem may be that the computer doesn't understand how to *look in the container* or it may not understand how to *play the stuff that's in the container*. Those are two different problems.
 
 Some containers have limits on what sort of stuff you can put in them. That's also important to understand.
 
-`Wikipedia has a great comparison of containers and what can go in them. <http://en.wikipedia.org/wiki/Comparison_of_container_formats>`_
+`Wikipedia has a great comparison of containers and what can go in them. <https://en.wikipedia.org/wiki/Comparison_of_container_formats>`_
 
 `MediaInfo <https://mediaarea.net/en/MediaInfo>`_ is a great piece of software to help you look at media files and figure out what's actually in them.

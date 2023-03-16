@@ -2,7 +2,7 @@
 Netflix
 =======
 
-`Netflix <http://www.netflix.com>`_ is the ubiquitous content provider we all know and love. We've been Netflix subscribers for a long time.
+`Netflix <https://www.netflix.com>`_ is the ubiquitous content provider we all know and love. We've been Netflix subscribers for a long time.
 
 We used to subscribe to the streaming and disc program, but after we had our daughter we found we didn't have as much time to watch longer movies; and we usually wanted something in a specific genre that (of course) wasn't the disc we had. Discs would sit longer and longer until finally it wasn't worth paying the extra for them because I wasn't watching them. We now just subscribe to the streaming content.
 

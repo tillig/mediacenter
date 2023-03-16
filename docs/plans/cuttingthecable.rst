@@ -26,9 +26,9 @@ Antenna
 -------
 The antenna will be required to get access to the local content and some national broadcast content.
 
-There is a choice between indoor and outdoor antennas. `There is a great article on Crutchfield talking about how to choose a good antenna. <http://wwv.crutchfield.com/learn/learningcenter/home/antenna.html>`_ The short version is that outdoor antennas will perform better than the best of indoor antennas because the size and amplification power. You can mount an outdoor antenna on the side of your house (like where the satellite dish used to be) or in the attic (crawlspace above our room).
+There is a choice between indoor and outdoor antennas. `There is a great article on Crutchfield talking about how to choose a good antenna. <https://wwv.crutchfield.com/learn/learningcenter/home/antenna.html>`_ The short version is that outdoor antennas will perform better than the best of indoor antennas because the size and amplification power. You can mount an outdoor antenna on the side of your house (like where the satellite dish used to be) or in the attic (crawlspace above our room).
 
-AntennaWeb.org shows you what channels are available and recommends antenna types (by some sort of a color-code). `Here's the recommendation for us: mostly "yellow" color channels. <http://www.antennaweb.org/Stations.aspx?Address=&City=Hillsboro&State=OR&ZIP=97124&Housing=S&Accuracy=4&Height=6&Obstructed=False&StationList=&Lat=45.5442824&Lon=-122.9521023>`_ This indicates a "small, multi-directional antenna" should work for us. Everything seems to be within ~12 miles.
+AntennaWeb.org shows you what channels are available and recommends antenna types (by some sort of a color-code). `Here's the recommendation for us: mostly "yellow" color channels. <https://www.antennaweb.org/Stations.aspx?Address=&City=Hillsboro&State=OR&ZIP=97124&Housing=S&Accuracy=4&Height=6&Obstructed=False&StationList=&Lat=45.5442824&Lon=-122.9521023>`_ This indicates a "small, multi-directional antenna" should work for us. Everything seems to be within ~12 miles.
 
 Picking an Antenna
 ~~~~~~~~~~~~~~~~~~
@@ -36,10 +36,10 @@ If you go with an outdoor antenna, you can hook it up to the same place where th
 
 These antennas are "omnidirectional" so you don't have to point it in a given direction to adjust for signal. There are some motorized directional antennas for about the same price; and there are directional antennas you can go aim on the roof that are closer to the $30 - $50 range.
 
-- `Winegard FL6550A FlatWave Air Outdoor HDTV Antenna <http://www.amazon.com/dp/B00E5Z3R6A?tag=mhsvortex>`_ ($78)
-- `AmazonBasics 60-mile range antenna <http://www.amazon.com/dp/B00MFXNQBU?tag=mhsvortex>`_ ($120)
-- `Spectrum2 DTV Motorized Outdoor Indoor TV Antenna SP213 <http://www.spectrumantenna.com/ProductDetails.asp?ProductCode=SP2&Click=564>`_ ($65)
-- `ChannelMaster CM 3000 SMARTenna <http://www.amazon.com/dp/B000BSKO84?tag=mhsvortex>`_ ($52)
+- `Winegard FL6550A FlatWave Air Outdoor HDTV Antenna <https://www.amazon.com/dp/B00E5Z3R6A?tag=mhsvortex>`_ ($78)
+- `AmazonBasics 60-mile range antenna <https://www.amazon.com/dp/B00MFXNQBU?tag=mhsvortex>`_ ($120)
+- `Spectrum2 DTV Motorized Outdoor Indoor TV Antenna SP213 <https://www.spectrumantenna.com/ProductDetails.asp?ProductCode=SP2&Click=564>`_ ($65)
+- `ChannelMaster CM 3000 SMARTenna <https://www.amazon.com/dp/B000BSKO84?tag=mhsvortex>`_ ($52)
 
 Wiring the Antenna
 ~~~~~~~~~~~~~~~~~~
@@ -73,7 +73,7 @@ I tried a second wireless access point (using a :doc:`DAP-1522 <../hardware/depr
 
 That worked well for some time, but I found the wireless roaming caused weird issues sometimes on mobile devices when you were standing in certain areas of the house where the device had a hard time picking an access point. I ended up upgrading to a :doc:`a Netgear Nighthawk X6 AC3200 tri-band router (model R8000) <../hardware/deprecated/netgearr8000>` to solve my range issues.
 
-At some later time I may consider putting in a more powerful access point to just serve the whole house from one location. The `Ubiquiti Networks UniFi AP Enterprise WiFi System ($67) <http://www.amazon.com/dp/B004XXMUCQ?tag=mhsvortex>`_ is a highly rated, very powerful access point that could solve the signal/range issues. It's also an extensible system so if we want, we can link more than one to the network later and really crank it up.
+At some later time I may consider putting in a more powerful access point to just serve the whole house from one location. The `Ubiquiti Networks UniFi AP Enterprise WiFi System ($67) <https://www.amazon.com/dp/B004XXMUCQ?tag=mhsvortex>`_ is a highly rated, very powerful access point that could solve the signal/range issues. It's also an extensible system so if we want, we can link more than one to the network later and really crank it up.
 
 Improving Wired
 ~~~~~~~~~~~~~~~
@@ -95,7 +95,7 @@ To satisfy the ability to watch/record/pause live TV, we wanted a DVR solution f
 
 DVR boxes generally come in one of three flavors:
 
-- Ultra-simple: This is basically a VCR with a hard drive attached. There's no real "guide," there's no integration with your network, and it's not super friendly or flexible. Program a channel and time to record and it goes. `These run about $50 <http://www.amazon.com/dp/B00I2ZBD1U?tag=mhsvortex>`_ and do not include a hard drive to record things.
+- Ultra-simple: This is basically a VCR with a hard drive attached. There's no real "guide," there's no integration with your network, and it's not super friendly or flexible. Program a channel and time to record and it goes. `These run about $50 <https://www.amazon.com/dp/B00I2ZBD1U?tag=mhsvortex>`_ and do not include a hard drive to record things.
 - DIY: You can build your own DVR using software like MythTV and, depending on what you build, it can be very flexible and integrate into a lot of things. It can get very expensive, though, because you need a reasonably powerful computer that can process multiple video streams; one tuner for each program you want to record simultaneously (~$70 each); the drive to store things; and so on. It also can be very fiddly. This, too, doesn't necessarily include the guide, but there are ways to hack it in there.
 - DVR Appliance: This is the TiVo style thing - a product meant for recording. Every one of these has an additional monthly subscription that populates the program guide. This subscription is also what allows you to do things like "record all new episodes of this show."
 
@@ -181,21 +181,21 @@ The CPU power required is for transcoding - which is basically "taking the video
 
 There is a benchmark called "Passmark" that helps guide what sort of CPU might fit the bill. The rough guideline is that if we want HD content, we need to multiply 2000 (the benchmark required for a single stream) by the number of streams we might have (say, 2 or 4). For me, I figured four streams would be enough to future-proof things for a while, so I wanted a CPU with Passmark of ~8000.
 
-**I ended up choosing an AMD FX-8350 processor with a Passmark of 8988** and `a pretty good price-to-performance ratio <http://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-8350+Eight-Core>`_.
+**I ended up choosing an AMD FX-8350 processor with a Passmark of 8988** and `a pretty good price-to-performance ratio <https://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-8350+Eight-Core>`_.
 
 **I targeted a server cost of about $500.** Here are the parts I bought to build my :doc:`Megaplex server <../hardware/server/megaplex>`:
 
 
-- `AMD FD8350FRHKBOX FX-8350 FX-Series 8-Core Black Edition Processor - $169.99 <http://www.amazon.com/dp/B009O7YUF6?tag=mhsvortex>`_
-- `Gigabyte AM3+ AMD DDR3 1333 760G HDMI USB 3.0 Micro ATX Motherboard GA-78LMT-USB3 - $58.99 <http://www.amazon.com/dp/B009FC3YJ8?tag=mhsvortex>`_
-- `Rosewill Dual Fans MicroATX Mini Tower Computer Case, Black FBM-02 - $29.99 <http://www.amazon.com/dp/B009NJAE4Q?tag=mhsvortex>`_
-- `Antec EarthWatts EA-380D Green 380 Watt 80 PLUS BRONZE Power Supply - $40.01 <http://www.amazon.com/dp/B002UOR17Y?tag=mhsvortex>`_
-- `Crucial Ballistix Sport 8GB Kit (4GBx2) DDR3 1600 MT/s (PC3-12800) CL9 @1.5V UDIMM 240-Pin Memory BLS2KIT4G3D1609DS1S00 - $59.99 <http://www.amazon.com/dp/B006WAGGUK?tag=mhsvortex>`_
-- `LG Electronics 14x Internal BDXL Blu-Ray Burner Rewriter WH14NS40 - Bulk Drive - Black - $56.95 <http://www.amazon.com/dp/B007YWMCA8?tag=mhsvortex>`_
-- `5 Pack Monoprice 18-Inch SATA III 6.0 Gbps Cable with Locking Latch and 1 x 90-Degree Plug (108783) - $7.99 <http://www.amazon.com/dp/B00IOS6EAU?tag=mhsvortex>`_
-- `StarTech.com 12-Inch LP4 to 2x SATA Power Y Cable Adapter - $3.99 <http://www.amazon.com/dp/B0002GRUV4?tag=mhsvortex>`_
-- `JBtek Sleeved PWM Fan Splitter Cable 1 to 2 Converter - $5.99 <http://www.amazon.com/dp/B00OZ10FI2?tag=mhsvortex>`_
-- `WD Blue 1TB SATA 6Gb/s 7200rpm Internal Hard Drive - $54.99 (2 of these) <http://www.amazon.com/dp/B0088PUEPK?tag=mhsvortex>`_
+- `AMD FD8350FRHKBOX FX-8350 FX-Series 8-Core Black Edition Processor - $169.99 <https://www.amazon.com/dp/B009O7YUF6?tag=mhsvortex>`_
+- `Gigabyte AM3+ AMD DDR3 1333 760G HDMI USB 3.0 Micro ATX Motherboard GA-78LMT-USB3 - $58.99 <https://www.amazon.com/dp/B009FC3YJ8?tag=mhsvortex>`_
+- `Rosewill Dual Fans MicroATX Mini Tower Computer Case, Black FBM-02 - $29.99 <https://www.amazon.com/dp/B009NJAE4Q?tag=mhsvortex>`_
+- `Antec EarthWatts EA-380D Green 380 Watt 80 PLUS BRONZE Power Supply - $40.01 <https://www.amazon.com/dp/B002UOR17Y?tag=mhsvortex>`_
+- `Crucial Ballistix Sport 8GB Kit (4GBx2) DDR3 1600 MT/s (PC3-12800) CL9 @1.5V UDIMM 240-Pin Memory BLS2KIT4G3D1609DS1S00 - $59.99 <https://www.amazon.com/dp/B006WAGGUK?tag=mhsvortex>`_
+- `LG Electronics 14x Internal BDXL Blu-Ray Burner Rewriter WH14NS40 - Bulk Drive - Black - $56.95 <https://www.amazon.com/dp/B007YWMCA8?tag=mhsvortex>`_
+- `5 Pack Monoprice 18-Inch SATA III 6.0 Gbps Cable with Locking Latch and 1 x 90-Degree Plug (108783) - $7.99 <https://www.amazon.com/dp/B00IOS6EAU?tag=mhsvortex>`_
+- `StarTech.com 12-Inch LP4 to 2x SATA Power Y Cable Adapter - $3.99 <https://www.amazon.com/dp/B0002GRUV4?tag=mhsvortex>`_
+- `JBtek Sleeved PWM Fan Splitter Cable 1 to 2 Converter - $5.99 <https://www.amazon.com/dp/B00OZ10FI2?tag=mhsvortex>`_
+- `WD Blue 1TB SATA 6Gb/s 7200rpm Internal Hard Drive - $54.99 (2 of these) <https://www.amazon.com/dp/B0088PUEPK?tag=mhsvortex>`_
 
 **Total price: $543.87**
 
@@ -211,7 +211,7 @@ Options
 - Amazon Fire TV
 - :doc:`Roku 3 <../hardware/frontend/roku>`
 
-`CNet has a great comparison of these devices that matches up with my findings so I won't repeat the whole thing here. <http://www.cnet.com/news/chromecast-vs-apple-tv-vs-roku-3-which-media-streamer-should-you-buy/>`_
+`CNet has a great comparison of these devices that matches up with my findings so I won't repeat the whole thing here. <https://www.cnet.com/news/chromecast-vs-apple-tv-vs-roku-3-which-media-streamer-should-you-buy/>`_
 
 We have a :doc:`Chromecast <../hardware/frontend/chromecast>` and I've found two problems with it.
 

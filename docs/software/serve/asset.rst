@@ -2,7 +2,7 @@
 Asset UPnP
 ==========
 
-I picked up `Asset UPnP <http://www.dbpoweramp.com/asset-upnp-dlna.htm>`_ back `in 2009 <http://www.paraesthesia.com/archive/2009/08/11/stream-more-music-from-windows-home-server-with-asset-upnp.aspx/>`_ when I was trying desperately to figure out how to get :doc:`iTunes <../manage/itunes>` music to play natively in :doc:`Windows Media Center <../deprecated/windowsmediacenter>`.
+I picked up `Asset UPnP <https://www.dbpoweramp.com/asset-upnp-dlna.htm>`_ back `in 2009 <https://www.paraesthesia.com/archive/2009/08/11/stream-more-music-from-windows-home-server-with-asset-upnp.aspx/>`_ when I was trying desperately to figure out how to get :doc:`iTunes <../manage/itunes>` music to play natively in :doc:`Windows Media Center <../deprecated/windowsmediacenter>`.
 
 Asset UPnP is a DLNA-compatible music streamer that can play pretty much any music format. It does a great job transcoding and seems to work well with every :doc:`front-end device <../../hardware/frontend/index>` I throw at it.
 
@@ -25,9 +25,9 @@ As my :doc:`front-end device <../../hardware/frontend/index>` music format suppo
 iTunes Playlists
 ================
 
-Asset supports playlists in `.m3u <http://en.wikipedia.org/wiki/M3U>`_ format, which means you can export your iTunes playlists and have them work in Asset UPnP.
+Asset supports playlists in `.m3u <https://en.wikipedia.org/wiki/M3U>`_ format, which means you can export your iTunes playlists and have them work in Asset UPnP.
 
-1. Go get `iTunes Export <http://www.ericdaugherty.com/dev/itunesexport/>`_, a program that will export your iTunes playlists into .m3u format.
+1. Go get `iTunes Export <https://www.ericdaugherty.com/dev/itunesexport/>`_, a program that will export your iTunes playlists into .m3u format.
 2. Close iTunes if you have it open. The exporter uses the XML version of the library and you want to make sure both that iTunes isn't locking that file and that the very latest has been written to disk so the exporter gets the right data.
 3. Run the iTunes exporter.
 4. Select the iTunes library XML file location.

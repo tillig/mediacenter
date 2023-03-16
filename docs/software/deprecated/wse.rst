@@ -28,7 +28,7 @@ I found that you can't use the same hard drive for the built-in server backup as
 Networking
 ==========
 
-If you install the Windows Server Essentials Connector (by visiting ``http://servername/connect`` on your server), it adds a few services that not only help backup your computer and monitor settings... but it also enforces that the DNS server is always set to the WSE machine. Normally this works fine and correctly forwards to your router or whatever, except in the case of things like ``routerlogin.net`` used by Netgear routers.
+If you install the Windows Server Essentials Connector (by visiting ``https://servername/connect`` on your server), it adds a few services that not only help backup your computer and monitor settings... but it also enforces that the DNS server is always set to the WSE machine. Normally this works fine and correctly forwards to your router or whatever, except in the case of things like ``routerlogin.net`` used by Netgear routers.
 
 I tried adding a DNS forwarding zone for ``routerlogin.net`` with a single A record pointing to ``192.168.1.1`` to get my router UI back up and running. That worked, but didn't really work well for non-joined computers like my :doc:`Synology Diskstation <../../hardware/server/synologyds1010>` which still just used my router as the DHCP server and DNS.
 

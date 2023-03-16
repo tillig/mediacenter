@@ -11,7 +11,7 @@ The ``Thumbs.db`` file in Windows hasn't been needed since before Windows Vista 
 
 Ugh.
 
-`You can tell Windows to stop generating Thumbs.db <http://www.sitepoint.com/switch-off-thumbs-db-in-windows/>`_. Do that. It will save a lot of pain and heartache.
+`You can tell Windows to stop generating Thumbs.db <https://www.sitepoint.com/switch-off-thumbs-db-in-windows/>`_. Do that. It will save a lot of pain and heartache.
 
 
 Clean Up Empty iTunes Music Folders

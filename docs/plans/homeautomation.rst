@@ -68,7 +68,7 @@ Automating HVAC
 
 I have a Trane zoned system with a `ComfortLink II XL950 thermostat <https://www.trane.com/residential/en/products/thermostats-and-controls/connected-controls/comfortlink_ii.html>`_. I considered an ecobee or similar replacement for the more robust automation ability but it's not compatible. My HVAC system not only has the zoning, but it also has communication between the heat pump, the furnace, and the air filter. All the components work together to be more efficient. If I wanted the ecobee I'd need to bypass all of the communication... which isn't something I want.
 
-The ComfortLink II XL950 *is* somewhat automated, in that it can connect to `Nexia <http://www.nexiahome.com/>`_. When I first bought the thermostat Nexia wanted $10/month for automation services but has since made it so if you *only* connect the thermostat it's free.
+The ComfortLink II XL950 *is* somewhat automated, in that it can connect to `Nexia <https://www.nexiahome.com/>`_. When I first bought the thermostat Nexia wanted $10/month for automation services but has since made it so if you *only* connect the thermostat it's free.
 
 Nexia itself doesn't directly integrate with Google Home, but it does integrate well with `IFTTT <https://ifttt.com>`_. I was able to set up some settings in Nexia that can be triggered by IFTTT.
 
@@ -94,8 +94,8 @@ That goes against one of my requirements - I really can't *only* control this wi
 
 What that means, indirectly, is the things I need to control have to be controlled through a programmatic network-based interface. Luckily that will work for at least my TV and receiver:
 
-- The :doc:`Samsung UN65KS8000 TV <../hardware/tv/samsungun65ks8000>` has `an API with decent documentation <http://developer.samsung.com/tv/develop/api-references/>`_.
-- The :doc:`Marantz SR5010 Receiver <../hardware/receiver/marantzsr5010>` has `an API with not much doc <https://github.com/tillig/MarantzVolumeMonitor/wiki/Marantz-API>`_ but I have some experience with it, having created `a volume monitor with an Arduino <http://www.paraesthesia.com/archive/2017/03/27/arduino-volume-monitor-for-marantz-receiver/>`_.
+- The :doc:`Samsung UN65KS8000 TV <../hardware/tv/samsungun65ks8000>` has `an API with decent documentation <https://developer.samsung.com/tv/develop/api-references/>`_.
+- The :doc:`Marantz SR5010 Receiver <../hardware/receiver/marantzsr5010>` has `an API with not much doc <https://github.com/tillig/MarantzVolumeMonitor/wiki/Marantz-API>`_ but I have some experience with it, having created `a volume monitor with an Arduino <https://www.paraesthesia.com/archive/2017/03/27/arduino-volume-monitor-for-marantz-receiver/>`_.
 
 The question then becomes how to best communicate with the components through the network.
 
@@ -113,9 +113,9 @@ The Samsung SmartThings hub is a more general purpose home automation hub than H
 
 One thing you can do with SmartThings is write a "SmartApp" that is a plugin for automating other things. `There is already a community SmartApp for controlling Denon network receivers <https://community.smartthings.com/t/re-release-denon-network-av-receivers/80834>`_ and Marantz uses the same API. The source for it `is on GitHub <https://github.com/sbdobrescu/DenonAVR>`_. I may need to `follow this tutorial to create my own version of the app <https://www.youtube.com/watch?v=D6rG4mk164M&feature=youtu.be>`_ but I'm not sure.
 
-There is `a Google Home Helper app <http://thingsthataresmart.wiki/index.php?title=Google_Home_Helper>`_ (`source on GitHub <https://github.com/MichaelStruck/SmartThingsPublic/tree/master/smartapps/michaelstruck/google-home-helper.src>`_) that helps to bridge things Google Home doesn't naturally support (e.g., thermostats) using a SmartApp. The interesting thing about this is that it means you can use SmartApps in a similar manner to devices registered with SmartThings.
+There is `a Google Home Helper app <https://thingsthataresmart.wiki/index.php?title=Google_Home_Helper>`_ (`source on GitHub <https://github.com/MichaelStruck/SmartThingsPublic/tree/master/smartapps/michaelstruck/google-home-helper.src>`_) that helps to bridge things Google Home doesn't naturally support (e.g., thermostats) using a SmartApp. The interesting thing about this is that it means you can use SmartApps in a similar manner to devices registered with SmartThings.
 
-`I picked up a SmartThings hub at Amazon <http://amzn.to/2i3iBO6>`_ for $50 when the price dropped. It works pretty well with Google Home.
+`I picked up a SmartThings hub at Amazon <https://amzn.to/2i3iBO6>`_ for $50 when the price dropped. It works pretty well with Google Home.
 
 Automating Blinds
 =================
@@ -129,16 +129,16 @@ We have a Sunsetter motorized awning that uses a Somfy controller. This is somet
 ZRTSI Z-Wave Interface
 ~~~~~~~~~~~~~~~~~~~~~~
 
-There's a `16-channel Z-Wave interface for Somfy blinds <http://amzn.to/2eLtx1A>`_ that, at the time of this writing, is about $300. That's a little spendy for what you get if you only have one or two motors to drive.
+There's a `16-channel Z-Wave interface for Somfy blinds <https://amzn.to/2eLtx1A>`_ that, at the time of this writing, is about $300. That's a little spendy for what you get if you only have one or two motors to drive.
 
 DIY Controller
 ~~~~~~~~~~~~~~
 
-You can `hook a Raspberry Pi or an Arduino to a Somfy remote <http://www.instructables.com/id/RaspberryPi-Web-Curtain-Controller/>`_ with a little work. Hypothetically I could do something like this and create a SmartThings app or an IFTTT integration to call the controller when needed. A single-channel Somfy remote costs around $40 and an Arduino is like $15. For $55 and some leg work that might be a more affordable way to make things happen as long as I only need a single channel to run.
+You can `hook a Raspberry Pi or an Arduino to a Somfy remote <https://www.instructables.com/id/RaspberryPi-Web-Curtain-Controller/>`_ with a little work. Hypothetically I could do something like this and create a SmartThings app or an IFTTT integration to call the controller when needed. A single-channel Somfy remote costs around $40 and an Arduino is like $15. For $55 and some leg work that might be a more affordable way to make things happen as long as I only need a single channel to run.
 
 Other projects to look at for DIY on this:
 
-- `blind-control <http://romor.github.io/blind-control/>`_: Raspberry Pi with a five-channel Somfy remote.
+- `blind-control <https://romor.github.io/blind-control/>`_: Raspberry Pi with a five-channel Somfy remote.
 - `Somfy_Remote <https://github.com/Nickduino/Somfy_Remote>`_: Emulate a Somfy remote with an Arduino and a 433.42MHz transmitter.
 
 If I actually get full house blinds on a Somfy system I'd need to reconsider the ZRTSI controller.
@@ -155,7 +155,7 @@ After-Market Blind Automation
 
 The problem with after-market automation is that it generally assumes the blinds are driven by a chain pull; that's not always the case for us.
 
-Options here include things like `Axis <http://www.helloaxis.com/>`_ and `MySmartBlinds <https://www.mysmartblinds.com/>`_.
+Options here include things like `Axis <https://www.helloaxis.com/>`_ and `MySmartBlinds <https://www.mysmartblinds.com/>`_.
 
 MySmartBlinds looks like it might work with standard Venetian blinds like we have now but it doesn't really integrate with anything quite yet.
 
@@ -174,7 +174,7 @@ Plug-In Lights
 
 There are a lot of "smart plugs" out there. Plug the smart plug in the wall, connect the lamp to the smart plug.
 
-I like the `TP-Link Smart Plug Mini <http://amzn.to/2uGKb6d>`_. I picked it for a few reasons:
+I like the `TP-Link Smart Plug Mini <https://amzn.to/2uGKb6d>`_. I picked it for a few reasons:
 
 - Reasonable price: Between $25 and $30 for a single unit.
 - Brand affinity: TP-Link hasn't let me down in the past.
@@ -188,6 +188,6 @@ I have standard two-way and three-way switches to accommodate. I'd like all the 
 
 Three-way switches are a tricky thing. In a standard switch environment it's easy enough to wire up, but in home control pushing one of the switches needs to let the other switch know the state of the lights (so if you push one switch to turn the lights on you can push the other to turn them off).
 
-I originally considered the `GE Z-Wave switches <http://amzn.to/2uGR0oh>`_. They're affordable and I like that the three-way switches don't require remotes or "auxiliary" switches that use batteries - they're powered right off the wired electrical supply.
+I originally considered the `GE Z-Wave switches <https://amzn.to/2uGR0oh>`_. They're affordable and I like that the three-way switches don't require remotes or "auxiliary" switches that use batteries - they're powered right off the wired electrical supply.
 
-As part of a home remodel I invested in the `Lutron Caseta <http://www.casetawireless.com>`_ series of switches and dimmers. Based on reading a lot of reviews like `this one on The Wirecutter <http://thewirecutter.com/reviews/best-in-wall-wireless-light-switch-and-dimmer/>`_ it seems a lot of folks are ending at the same conclusion. It does require a hub to work, but Google Home has first-class integration with it and it works well. It also is the same hub used for the Serena Shades I picked up.
+As part of a home remodel I invested in the `Lutron Caseta <https://www.casetawireless.com>`_ series of switches and dimmers. Based on reading a lot of reviews like `this one on The Wirecutter <https://thewirecutter.com/reviews/best-in-wall-wireless-light-switch-and-dimmer/>`_ it seems a lot of folks are ending at the same conclusion. It does require a hub to work, but Google Home has first-class integration with it and it works well. It also is the same hub used for the Serena Shades I picked up.

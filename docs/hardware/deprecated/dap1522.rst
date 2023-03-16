@@ -2,7 +2,7 @@
 D-Link DAP-1522
 ===============
 
-I originally bought a `D-Link DAP-1522 <http://www.amazon.com/D-Link-Wireless-Gigabit-Extender-DAP-1522/dp/B001769K3O?tag=mhsvortex>`_ as a wireless bridge upstairs, before I got the :doc:`powerline adapters <powerline>`.
+I originally bought a `D-Link DAP-1522 <https://www.amazon.com/D-Link-Wireless-Gigabit-Extender-DAP-1522/dp/B001769K3O?tag=mhsvortex>`_ as a wireless bridge upstairs, before I got the :doc:`powerline adapters <powerline>`.
 
 .. image:: dap1522.jpg
 
@@ -20,7 +20,7 @@ In order to get the DAP-1522 to do wireless N speeds (specifically when running 
 
 Connecting Manually to the Admin Page
 
-If you have trouble connecting to the admin page at ``http://dlinkap`` then you may need to connect manually.
+If you have trouble connecting to the admin page at ``https://dlinkap`` then you may need to connect manually.
 
 - Connect your computer to the access point with an Ethernet cable.
 - Go into the adapter settings for the network adapter you've connected to the access point.
@@ -56,8 +56,8 @@ Here's how to totally reset it and get it working in bridge mode again.
     #. Subnet Mask = 255.255.255.0
     #. Gateway = 192.168.1.200 (Use the static IP address of the access point from above.)
 
-#. After switching settings, try to reconnect to http://192.168.1.200 (the static IP) and ensure you can still get to the dlinkap admin console.
+#. After switching settings, try to reconnect to https://192.168.1.200 (the static IP) and ensure you can still get to the dlinkap admin console.
 #. At this point, the DAP-1522 should be flashing the orange light on the front indicating it's in bridge mode.
 #. Run through the wireless setup wizard on the DAP-1522 to connect to the wireless network. For some reason, you can't just enter the data manually.
 #. Switch the computer network settings to DHCP and see if you can get to the internet. You should be able to.
-#. Connect to the DAP-1522 at http://192.168.1.200 (the static IP) again and log in. The admin password may have been reset to empty, so you may have to fix that again.
+#. Connect to the DAP-1522 at https://192.168.1.200 (the static IP) again and log in. The admin password may have been reset to empty, so you may have to fix that again.

@@ -2,7 +2,7 @@
 Netgear WNDR3700v2
 ==================
 
-I have `a Netgear WNDR3700v2 <http://www.amazon.com/dp/B002HWRJY4?tag=mhsvortex>`_ as my primary router/wireless access point coming right off the cable modem.
+I have `a Netgear WNDR3700v2 <https://www.amazon.com/dp/B002HWRJY4?tag=mhsvortex>`_ as my primary router/wireless access point coming right off the cable modem.
 
 .. image:: netgearwndr3700v2.jpg
 

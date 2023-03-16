@@ -2,7 +2,7 @@
 Pandora
 =======
 
-`Pandora <http://www.pandora.com>`_ provides a nice streaming music service that somewhat "learns" what you like based on you rating the music it plays.
+`Pandora <https://www.pandora.com>`_ provides a nice streaming music service that somewhat "learns" what you like based on you rating the music it plays.
 
 I was a Pandora subscriber for several years. It plays well through most of our :doc:`front-end devices <../hardware/frontend/index>` and I find most :doc:`receivers <../hardware/receiver/index>` have Pandora clients built in, too.
 

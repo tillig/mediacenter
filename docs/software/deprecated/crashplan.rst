@@ -4,11 +4,11 @@ CrashPlan
 
 Evaluation
 ==========
-Until 9/7/2009 I used `KeepVault <http://www.keepvault.com>`_ and was getting unlimited backup for $99/year, but they raised prices.
+Until 9/7/2009 I used `KeepVault <https://www.keepvault.com>`_ and was getting unlimited backup for $99/year, but they raised prices.
 
-I switched to `Mozy <http://mozy.com>`_ in September 2009 with `a roundabout backup plan that I blogged <http://www.paraesthesia.com/archive/2009/08/17/backing-up-windows-home-server-to-mozyhome.aspx/>`_.
+I switched to `Mozy <https://mozy.com>`_ in September 2009 with `a roundabout backup plan that I blogged <https://www.paraesthesia.com/archive/2009/08/17/backing-up-windows-home-server-to-mozyhome.aspx/>`_.
 
-In 2012 I switched to `CrashPlan <http://www.crashplan.com/>`_. From a cost/benefit perspective, CrashPlan is a clear winner.
+In 2012 I switched to `CrashPlan <https://www.crashplan.com/>`_. From a cost/benefit perspective, CrashPlan is a clear winner.
 
 - Unlimited backup
 - Backs up network mounted drives
@@ -16,7 +16,7 @@ In 2012 I switched to `CrashPlan <http://www.crashplan.com/>`_. From a cost/bene
 
 Mounting Drives
 ===============
-CrashPlan supports backup of mounted network drives, but getting one mounted for the ``SYSTEM`` account is easier said than done. `This StackOverflow article <http://stackoverflow.com/questions/182750/map-a-network-drive-to-be-used-by-a-service>`_ shows how to use Sysinternals ``psexec`` to mount a network drive for the ``SYSTEM`` account; but it's better to use a script to mount things using Windows Startup Scripts via group policy instead.
+CrashPlan supports backup of mounted network drives, but getting one mounted for the ``SYSTEM`` account is easier said than done. `This StackOverflow article <https://stackoverflow.com/questions/182750/map-a-network-drive-to-be-used-by-a-service>`_ shows how to use Sysinternals ``psexec`` to mount a network drive for the ``SYSTEM`` account; but it's better to use a script to mount things using Windows Startup Scripts via group policy instead.
 
 First, create a batch file like this that creates a log (for troubleshooting) and mounts the drives via the ``net use`` command.
 

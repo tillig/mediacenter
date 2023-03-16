@@ -9,7 +9,7 @@ The UPS units in my office are connected to my servers via USB so they can monit
 General Power Requirements
 ==========================
 
-I bought a `Kill-a-Watt <http://www.amazon.com/dp/B000RGF29Q?tag=mhsvortex>`_ to measure my power consumption in the computer room so I could determine the amount of UPS power I'd need. Normal values are estimated averages after observing general usage for a period of time. The Kill-a-Watt doesn't have an average function so I had to guess. In most cases there were rare spikes above this during peak usage but nothing that lasted long enough where I could get a good read.
+I bought a `Kill-a-Watt <https://www.amazon.com/dp/B000RGF29Q?tag=mhsvortex>`_ to measure my power consumption in the computer room so I could determine the amount of UPS power I'd need. Normal values are estimated averages after observing general usage for a period of time. The Kill-a-Watt doesn't have an average function so I had to guess. In most cases there were rare spikes above this during peak usage but nothing that lasted long enough where I could get a good read.
 
 ====================================================================  ========  =========  ==============
 Device                                                                Amps (A)  Watts (W)  Volt-Amps (VA)
@@ -35,7 +35,7 @@ FiOS Router - Normal                                                  0.2       
 
 CyberPower CP1500AVRLCD
 =======================
-`I picked up two of these CP1500AVRLCD units <http://www.amazon.com/dp/B000FBK3QK?tag=mhsvortex>`_ after the Tripp-Lite OMNI900LCD units died. I really like these. They have a good capacity, plus the battery inside is replaceable so I can hopefully avoid the issue I had with the other units.
+`I picked up two of these CP1500AVRLCD units <https://www.amazon.com/dp/B000FBK3QK?tag=mhsvortex>`_ after the Tripp-Lite OMNI900LCD units died. I really like these. They have a good capacity, plus the battery inside is replaceable so I can hopefully avoid the issue I had with the other units.
 
 One of these is in the living room for the TV, receiver, and other front-end devices; one of these is in the office sharing the server load with an APS Back-Ups 550.
 
@@ -43,7 +43,7 @@ One of these is in the living room for the TV, receiver, and other front-end dev
 
 APC Back-Ups 550
 ================
-`I bought one of these 550 units <http://www.amazon.com/dp/B0019804U8?tag=mhsvortex>`_ as a replacement for a busted Tripp-Lite OMNI900LCD and have been reasonably pleased with it.
+`I bought one of these 550 units <https://www.amazon.com/dp/B0019804U8?tag=mhsvortex>`_ as a replacement for a busted Tripp-Lite OMNI900LCD and have been reasonably pleased with it.
 
 .. image:: backups550.jpg
 

@@ -2,7 +2,7 @@
 Bose Acoustimass 16
 ===================
 
-The `Bose Acoustimass 16 <http://worldwide.bose.com/productsupport/en_us/web/am16_series1/page.html>`_ series is a 6.1 surround satellite speaker set that was sold between 2002 and 2006. I picked mine up closer to the 2002 time when they were pretty new, upgrading from the 5.1 system I had to the 6.1.
+The `Bose Acoustimass 16 <https://worldwide.bose.com/productsupport/en_us/web/am16_series1/page.html>`_ series is a 6.1 surround satellite speaker set that was sold between 2002 and 2006. I picked mine up closer to the 2002 time when they were pretty new, upgrading from the 5.1 system I had to the 6.1.
 
 .. image:: acoustimass16.jpg
 

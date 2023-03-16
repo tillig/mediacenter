@@ -2,10 +2,10 @@
 Synology DS1010+ NAS
 ====================
 
-The `Synology DS1010+ <http://www.amazon.com/dp/B0031ZKX5I?tag=mhsvortex>`_ is my primary storage server for video content. It has since been superseded by the `DS1515+ <http://www.amazon.com/dp/B00PTGQJL4?tag=mhsvortex>`_ but I've not seen any reason I need to upgrade. This DS1010+ serves me well and has really great performance and flexibility. I picked it up based on my :doc:`NAS research <../../plans/nas>`.
+The `Synology DS1010+ <https://www.amazon.com/dp/B0031ZKX5I?tag=mhsvortex>`_ is my primary storage server for video content. It has since been superseded by the `DS1515+ <https://www.amazon.com/dp/B00PTGQJL4?tag=mhsvortex>`_ but I've not seen any reason I need to upgrade. This DS1010+ serves me well and has really great performance and flexibility. I picked it up based on my :doc:`NAS research <../../plans/nas>`.
 
 .. image:: synologyds1010.jpg
-   :target: http://www.amazon.com/dp/B0031ZKX5I?tag=mhsvortex
+   :target: https://www.amazon.com/dp/B0031ZKX5I?tag=mhsvortex
 
 :doc:`Diskstation Manager (DSM) <../../software/system/dsm>` is the operating system that runs Synology NAS devices. It supports installation of packages that provide additional functionality (beyond just storage) from the device. Anything from Git to MySQL to :doc:`Plex <../../software/serve/plex>` can be run as a DSM package.
 
@@ -26,17 +26,17 @@ Aside: Synology does provide a "Video Station" package that has similar function
 Storage
 =======
 
-    - I have a bunch of WD Green drives I pulled out of my :doc:`Windows Home Server <../deprecated/hpex475>`. Synology forums have some posts about this. `This one says that some of the drives work fine while others don't <http://forum.synology.com/enu/viewtopic.php?f=151&t=19131>`_; `this one is about someone who is trying to avoid issues by switching away from WD Green <http://forum.synology.com/enu/viewtopic.php?f=124&t=23719>`_. I decided not to use these and instead go with some other drives.
-    - `I should get the latest firmware off the website <http://www.synology.com/support/download.php?lang=enu>`_ for initial install. This will make sure everything is compatible with newer disks.
-    - `There is a hardware compatibility list for supported drives <http://www.synology.com/support/faq_show.php?q_id=130>`_ on Synology devices.
+    - I have a bunch of WD Green drives I pulled out of my :doc:`Windows Home Server <../deprecated/hpex475>`. Synology forums have some posts about this. `This one says that some of the drives work fine while others don't <https://forum.synology.com/enu/viewtopic.php?f=151&t=19131>`_; `this one is about someone who is trying to avoid issues by switching away from WD Green <https://forum.synology.com/enu/viewtopic.php?f=124&t=23719>`_. I decided not to use these and instead go with some other drives.
+    - `I should get the latest firmware off the website <https://www.synology.com/support/download.php?lang=enu>`_ for initial install. This will make sure everything is compatible with newer disks.
+    - `There is a hardware compatibility list for supported drives <https://www.synology.com/support/faq_show.php?q_id=130>`_ on Synology devices.
 
 Of the 2TB drives listed as directly supported, these seem reasonably viable. Others are rated far too slow or are way beyond the $250/drive range (as of ~2010)...
 
-    - Seagate Barracuda ST32000542AS is 5900RPM, 3Gb/s, 32MB cache. `$130 at NewEgg <http://www.newegg.com/Product/Product.aspx?Item=N82E16822148413&Tpk=ST32000542AS>`_, `$120 at Amazon <http://www.amazon.com/dp/B0028Y4CY6?tag=mhsvortex>`_. `A very favorable review here <http://hardwarelogic.com/articles.php?id=5578>`_ shows it outperforms an older performance-oriented model on all sorts of benchmarks, so spin speed isn't everything.
-    - Seagate Barracuda XT ST32000641AS is 7200RPM, 6Gb/s, 64MB cache. `$250 at NewEgg <http://www.newegg.com/Product/Product.aspx?Item=N82E16822148506&Tpk=ST32000641AS>`_, `$270 at Amazon <http://www.amazon.com/dp/B002RWJHBM?tag=mhsvortex>`_.
-    - Samsung Spinpoint HD203WI is 5400 RPM, 3Gb/s, 32MB cache. `$140 at NewEgg <http://www.newegg.com/Product/Product.aspx?Item=N82E16822152202&Tpk=HD203WI>`_, not at Amazon.
+    - Seagate Barracuda ST32000542AS is 5900RPM, 3Gb/s, 32MB cache. `$130 at NewEgg <https://www.newegg.com/Product/Product.aspx?Item=N82E16822148413&Tpk=ST32000542AS>`_, `$120 at Amazon <https://www.amazon.com/dp/B0028Y4CY6?tag=mhsvortex>`_. `A very favorable review here <https://hardwarelogic.com/articles.php?id=5578>`_ shows it outperforms an older performance-oriented model on all sorts of benchmarks, so spin speed isn't everything.
+    - Seagate Barracuda XT ST32000641AS is 7200RPM, 6Gb/s, 64MB cache. `$250 at NewEgg <https://www.newegg.com/Product/Product.aspx?Item=N82E16822148506&Tpk=ST32000641AS>`_, `$270 at Amazon <https://www.amazon.com/dp/B002RWJHBM?tag=mhsvortex>`_.
+    - Samsung Spinpoint HD203WI is 5400 RPM, 3Gb/s, 32MB cache. `$140 at NewEgg <https://www.newegg.com/Product/Product.aspx?Item=N82E16822152202&Tpk=HD203WI>`_, not at Amazon.
 
-In June 2016 I replaced the 2TB drives with 3TB drives so I could deprecate the :doc:`Windows Home Server <../deprecated/hpex475>` which had started getting finicky. I picked up five `WD Blue 3TB WD30EZRZ drives <http://amzn.to/28NCIKi>`_ (5400RPM, 64MB cache, $89 each) and went through the process of replacing one drive at a time. I went from an array of (7.15TB capacity / 5.8TB used / 1.35TB available) to (10.73 capacity / 5.8TB used / 4.93TB available) in a RAID 5 configuration.
+In June 2016 I replaced the 2TB drives with 3TB drives so I could deprecate the :doc:`Windows Home Server <../deprecated/hpex475>` which had started getting finicky. I picked up five `WD Blue 3TB WD30EZRZ drives <https://amzn.to/28NCIKi>`_ (5400RPM, 64MB cache, $89 each) and went through the process of replacing one drive at a time. I went from an array of (7.15TB capacity / 5.8TB used / 1.35TB available) to (10.73 capacity / 5.8TB used / 4.93TB available) in a RAID 5 configuration.
 
 Fan Upgrade
 ===========
@@ -70,4 +70,4 @@ Finally, set it to execute.
 
 Before you reboot, go into the DSM control panel. Under "Notifications," disable all the "server fan" notifications. CPU and expansion unit fan notifications should still be fine. Now reboot.
 
-I found `one person who did a hardware hack to make a standard fan simulate what Synology wants <http://www.askrprojects.net/other/synofan/index.html>`_. I haven't gone to those lengths. Honestly, the person could probably make a mint selling little fan adapters that would hook inline with a standard fan.
+I found `one person who did a hardware hack to make a standard fan simulate what Synology wants <https://www.askrprojects.net/other/synofan/index.html>`_. I haven't gone to those lengths. Honestly, the person could probably make a mint selling little fan adapters that would hook inline with a standard fan.

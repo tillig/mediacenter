@@ -13,12 +13,12 @@ I used to have a display resolution issue when the Dell Studio Hybrid was hooked
 
 * Most TVs don't accept more than 720p through VGA/DVI, which we found while figuring out how to hook up the :doc:`Xbox 360 <../frontend/xbox>` (though that may have changed with newer TVs).
 * Different resolutions become available when you hook the computer up to the TV using the HDMI connection. I tried this with the Sharp Aquos and found that 1080i became available (though it didn't display nicely - that could have been due to the TV not understanding the input right). That wasn't available through the DVI hookup.
-* The Dell Studio Hybrid uses an `Intel X3100 graphics processor on GM965 chipset <http://www.intel.com/products/notebook/chipsets/GM965/GM965-overview.htm>`_. `I tried asking a question on The Green Button <http://thegreenbutton.com/forums/3/297610/ShowThread.aspx>`_ about whether the HD resolution was unavailable because I was using DVI but didn't get any response.
+* The Dell Studio Hybrid uses an `Intel X3100 graphics processor on GM965 chipset <https://www.intel.com/products/notebook/chipsets/GM965/GM965-overview.htm>`_. `I tried asking a question on The Green Button <https://thegreenbutton.com/forums/3/297610/ShowThread.aspx>`_ about whether the HD resolution was unavailable because I was using DVI but didn't get any response.
 * A tool called :doc:`DTD Calculator <../../software/deprecated/dtdcalculator>` enables easier manipulation of DTD values and doesn't require all the work that is mentioned in the article.
 
 Problem: DVD Causing AppCrash
 =============================
-I found that the DVDs "`Christmas Vacation <http://www.amazon.com/dp/B000VBIGD6?tag=mhsvortex>`_" and "`A Christmas Story <http://www.amazon.com/dp/B0000AYJUW?tag=mhsvortex>`_" both cause Windows Media Center and Windows Media Player to crash on this machine. `I posted to the Intel forums about the issue <https://communities.intel.com/message/78182#78182>`_ but never received a response.
+I found that the DVDs "`Christmas Vacation <https://www.amazon.com/dp/B000VBIGD6?tag=mhsvortex>`_" and "`A Christmas Story <https://www.amazon.com/dp/B0000AYJUW?tag=mhsvortex>`_" both cause Windows Media Center and Windows Media Player to crash on this machine. `I posted to the Intel forums about the issue <https://communities.intel.com/message/78182#78182>`_ but never received a response.
 
 Problem: Machine Sleep is Unpredictable
 =======================================
@@ -32,23 +32,23 @@ I had been using VGA video, but a new problem appeared once I started HDMI - if 
 
 I tried fixing it by not letting the machine ever sleep, but that doesn't seem to be 100%.
 
-**What fixed it**: `I purchased an HDMI switcher. <http://www.amazon.com/dp/B00B46XUQU?tag=mhsvortex>`_ `This blog entry <http://www.edbott.com/weblog/?p=2480>`_ pointed me to that. Somehow the switcher is able to keep the signal going, and if anything disconnects I can switch the HDMI signal away and back to the PC and it reconnects.
+**What fixed it**: `I purchased an HDMI switcher. <https://www.amazon.com/dp/B00B46XUQU?tag=mhsvortex>`_ `This blog entry <https://www.edbott.com/weblog/?p=2480>`_ pointed me to that. Somehow the switcher is able to keep the signal going, and if anything disconnects I can switch the HDMI signal away and back to the PC and it reconnects.
 
 **Things that don't work**:
 
 - Switching the ACPI sleep mode from S3 to S1.
-- Changing resolution via command line.  `There is a guy on this forum <http://www.xpmediacentre.com.au/community/vista-media-center-software/20373-vmc-dvi-hdmi-blank-screen-after-tv-power-off-fix.html>`_ who uses "MultiRes" and a batch script to "wake up" the signal. I tried this using the `12noon program Display Changer <http://www.12noon.com/index.htm>`_, previously Resolution Changer, with no luck.
-- `Folks in AVSForum <http://www.avsforum.com/avs-vb/showthread.php?t=1013888>`_ have used a thing called `DVI Detective <http://www.amazon.com/dp/B0002CZJ8O?tag=mhsvortex>`_ to get past this, but it seems to have problems in inexplicable ways and reading the product description, doesn't look like it's for me.
+- Changing resolution via command line.  `There is a guy on this forum <https://www.xpmediacentre.com.au/community/vista-media-center-software/20373-vmc-dvi-hdmi-blank-screen-after-tv-power-off-fix.html>`_ who uses "MultiRes" and a batch script to "wake up" the signal. I tried this using the `12noon program Display Changer <https://www.12noon.com/index.htm>`_, previously Resolution Changer, with no luck.
+- `Folks in AVSForum <https://www.avsforum.com/avs-vb/showthread.php?t=1013888>`_ have used a thing called `DVI Detective <https://www.amazon.com/dp/B0002CZJ8O?tag=mhsvortex>`_ to get past this, but it seems to have problems in inexplicable ways and reading the product description, doesn't look like it's for me.
 
-There's a guy who wrote `a program "hdmiOn" <http://thydzik.com/hdmion-a-solution-to-loss-of-dvi-video-epid-signal-on-hd-tvs/>`_ that you can assign to a hot key and it turns the monitor off/on - ostensibly that should fix it, but some commenters say it doesn't work. I didn't try that.
+There's a guy who wrote `a program "hdmiOn" <https://thydzik.com/hdmion-a-solution-to-loss-of-dvi-video-epid-signal-on-hd-tvs/>`_ that you can assign to a hot key and it turns the monitor off/on - ostensibly that should fix it, but some commenters say it doesn't work. I didn't try that.
 
-I did start a question `in the Microsoft Answer Forums <http://social.answers.microsoft.com/Forums/en-US/vistamedia/thread/2211c68c-d58b-42bd-964d-9694dc761be4>`_ on this. I've also posted the question at `The Green Button forums <http://thegreenbutton.com/forums/4/350763/ShowThread.aspx>`_. On the Microsoft Answer Forums, the tech there said it sounds like a video card driver issue. No updated drivers have fixed it thus far.
+I did start a question `in the Microsoft Answer Forums <https://social.answers.microsoft.com/Forums/en-US/vistamedia/thread/2211c68c-d58b-42bd-964d-9694dc761be4>`_ on this. I've also posted the question at `The Green Button forums <https://thegreenbutton.com/forums/4/350763/ShowThread.aspx>`_. On the Microsoft Answer Forums, the tech there said it sounds like a video card driver issue. No updated drivers have fixed it thus far.
 
 Problem: Slow Wireless Speed
 ============================
 The Intel 1505 WLAN wireless G card included in the box is really slow to connect to the network.
 
-There is `some doc on configuring it on the Dell site <http://support.dell.com/support/edocs/network/p70008/EN/props.htm>`_.
+There is `some doc on configuring it on the Dell site <https://support.dell.com/support/edocs/network/p70008/EN/props.htm>`_.
 
 I experimented with the settings on the card without luck; eventually I switched to an external wireless-N adapter (and, later, to a wired connection).
 
@@ -84,4 +84,4 @@ Original settings here - I'll make changed settings **bold**.
 
 Problem: One Pixel Overscan Line
 ================================
-In a continued weirdness with the video driver, every once in a while I see a one pixel "line" along the right side of the TV when watching video. It's not a showstopper, but it sure is distracting. I've started `a forum post on the Green Button <http://thegreenbutton.com/forums/p/81192/403439.aspx#403439>`_ for this. There is `another thread <http://thegreenbutton.com/forums/p/80771/401486.aspx#401486>`_ that talks about `a hotfix for this <http://support.microsoft.com/default.aspx/kb/974324>`_. I didn't try it because, after switching away from :doc:`Windows Media Center <../../software/deprecated/windowsmediacenter>`, the issue went away.
+In a continued weirdness with the video driver, every once in a while I see a one pixel "line" along the right side of the TV when watching video. It's not a showstopper, but it sure is distracting. I've started `a forum post on the Green Button <https://thegreenbutton.com/forums/p/81192/403439.aspx#403439>`_ for this. There is `another thread <https://thegreenbutton.com/forums/p/80771/401486.aspx#401486>`_ that talks about `a hotfix for this <https://support.microsoft.com/default.aspx/kb/974324>`_. I didn't try it because, after switching away from :doc:`Windows Media Center <../../software/deprecated/windowsmediacenter>`, the issue went away.

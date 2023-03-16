@@ -48,7 +48,7 @@ DTS-HD MA
 =========
 When converting my HD movies for Plex, I kept the lossless audio tracks - the DTS-HD MA format tracks - for the future. The format DTS-HD is backwards compatible with standard DTS, which Plex handles well.
 
-I did find that sometimes this format can trip Plex up. Watching `Oblivion <http://www.amazon.com/Oblivion-Blu-ray-Digital-Copy-UltraViolet/dp/B008JFUO4U/ref=sr_1_2?s=movies-tv&ie=UTF8&qid=1435238947&sr=1-2&keywords=oblivion&tag=mhsvortex>`_, for example, the sound would just cut out after a few minutes and never return. If I fast-forwarded the movie by a second or two, the sound would be back. It was sort of like Plex lost track of where it was so decided to just not play sound, but the fast-forward operation would get it back.
+I did find that sometimes this format can trip Plex up. Watching `Oblivion <https://www.amazon.com/Oblivion-Blu-ray-Digital-Copy-UltraViolet/dp/B008JFUO4U/ref=sr_1_2?s=movies-tv&ie=UTF8&qid=1435238947&sr=1-2&keywords=oblivion&tag=mhsvortex>`_, for example, the sound would just cut out after a few minutes and never return. If I fast-forwarded the movie by a second or two, the sound would be back. It was sort of like Plex lost track of where it was so decided to just not play sound, but the fast-forward operation would get it back.
 
 When I found this, I re-converted the movie with :doc:`Handbrake <../convert/handbrake>` to only include the DTS audio and not the DTS-HD. You get a much smaller movie file and Plex no longer has the audio tracking problem.
 

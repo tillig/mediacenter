@@ -2,7 +2,7 @@
 Netgear Nighthawk X6 AC3200 (R8000)
 ===================================
 
-I had `a Netgear Nighthawk X6 AC3200 tri-band router (model R8000) <http://www.amazon.com/dp/B00KWHMR6G?tag=mhsvortex>`_ as my primary router/wireless access point coming right off the cable modem for quite some time.
+I had `a Netgear Nighthawk X6 AC3200 tri-band router (model R8000) <https://www.amazon.com/dp/B00KWHMR6G?tag=mhsvortex>`_ as my primary router/wireless access point coming right off the cable modem for quite some time.
 
 I replaced it with :doc:`Ubiquiti equipment <../network/ubiquiti>` when we had some networking hiccups.
 

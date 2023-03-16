@@ -22,12 +22,12 @@ The way that RAID gets expanded depends on which RAID type you choose (per the S
 Notes
 -----
 
-- `PCWorld has some reviews on various NAS devices. <http://www.pcworld.com/reviews/collection/1651/top_10_network_attached_storage_devices.html>`_ Synology devices seem to be rated consistently higher than Western Digital and Seagate, and performance is always top marks.
-- `Synology has the DS1010+ <http://www.synology.com/us/products/DS1010+/index.php>`_ that has five bays and an extension that allows for five more bays. The performance numbers listed look good and it supports RAID 5 so this would be a good solution, but it's expensive (~$1000 for a diskless system). Synology offers a "Hybrid RAID" solution that allows you to combine multiple disks of different sizes - normally all the volumes in an array have to be the same size.
-    - `Here is a good overview of the functions and a review. <http://www.ntm1275.f2s.com/synology/synology1010.htm>`_ The reviewer set up jumbo frames on his network to improve speed, which isn't something I have running.
+- `PCWorld has some reviews on various NAS devices. <https://www.pcworld.com/reviews/collection/1651/top_10_network_attached_storage_devices.html>`_ Synology devices seem to be rated consistently higher than Western Digital and Seagate, and performance is always top marks.
+- `Synology has the DS1010+ <https://www.synology.com/us/products/DS1010+/index.php>`_ that has five bays and an extension that allows for five more bays. The performance numbers listed look good and it supports RAID 5 so this would be a good solution, but it's expensive (~$1000 for a diskless system). Synology offers a "Hybrid RAID" solution that allows you to combine multiple disks of different sizes - normally all the volumes in an array have to be the same size.
+    - `Here is a good overview of the functions and a review. <https://www.ntm1275.f2s.com/synology/synology1010.htm>`_ The reviewer set up jumbo frames on his network to improve speed, which isn't something I have running.
     - Read speed is 116MB/sec, write speed is 103MB/sec (under RAID 5).
-- `Drobo <http://www.drobo.com/>`_ makes a five-bay system (`the Drobo S <http://www.drobo.com/products/drobo-s.php>`_) and has eSATA. It appears you can add drives to the bays just like WHS, but various reviews show it doesn't have the speed of a regular RAID system.
-- `Netgear ReadyNAS NVX <http://www.netgear.com/Products/Storage/ReadyNASNVXPE.aspx?for=Home+Networking>`_ has four bays and a 75MB/sec read/write time.
+- `Drobo <https://www.drobo.com/>`_ makes a five-bay system (`the Drobo S <https://www.drobo.com/products/drobo-s.php>`_) and has eSATA. It appears you can add drives to the bays just like WHS, but various reviews show it doesn't have the speed of a regular RAID system.
+- `Netgear ReadyNAS NVX <https://www.netgear.com/Products/Storage/ReadyNASNVXPE.aspx?for=Home+Networking>`_ has four bays and a 75MB/sec read/write time.
     - It is not expandable via eSATA or USB so you're limited to the four bays.
     - ~$750 for the diskless system.
     - It gets decent reviews on various websites, but there is one note that a guy had problems getting it to work with his D-Link DIR-655 router. I don't know if that means I'd have similar issues with our D-Link wireless access point.

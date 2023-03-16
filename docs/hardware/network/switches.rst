@@ -14,7 +14,7 @@ As I got into home automation and adding things like smart hubs in the office I 
 D-Link DGS-2208
 ===============
 
-I have two of `these D-Link DGS-2208 8-port gigabit unmanaged switches <http://www.amazon.com/dp/B000FITKK8?tag=mhsvortex>`_ in my network.
+I have two of `these D-Link DGS-2208 8-port gigabit unmanaged switches <https://www.amazon.com/dp/B000FITKK8?tag=mhsvortex>`_ in my network.
 
 .. image:: dgs2208.jpg
 
@@ -23,7 +23,7 @@ There are cheaper items today (this is an older model), but these have been tota
 TP-LINK TL-SG1008D
 ==================
 
-I have one `TP-LINK TL-SG1008D 8-port gigabit desktop switch <http://www.amazon.com/dp/B001EVGIYG?tag=mhsvortex>`_ in the network.
+I have one `TP-LINK TL-SG1008D 8-port gigabit desktop switch <https://www.amazon.com/dp/B001EVGIYG?tag=mhsvortex>`_ in the network.
 
 .. image:: tlsg1008d.jpg
 
@@ -90,4 +90,3 @@ Save and view the configuration::
 
     2510_01(config)# write memory
     2510_01(config)# show run
-

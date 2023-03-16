@@ -63,4 +63,4 @@ I first encountered this format when I bought an HD camcorder. At that point it 
 
 As it turns out, **this is the same format in which Blu-ray discs are stored**. More things play the format natively now, but I still end up converting these files (from my Blu-ray discs and my camera) into MP4 files. :doc:`Handbrake <../software/convert/handbrake>` is the way to go for conversion here.
 
-For home movie editing in this format, I use `Sony Vegas <http://www.sonycreativesoftware.com/vegassoftware>`_. I save my edited movies as MP4.
+For home movie editing in this format, I use `Sony Vegas <https://www.sonycreativesoftware.com/vegassoftware>`_. I save my edited movies as MP4.

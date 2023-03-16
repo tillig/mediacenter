@@ -8,7 +8,7 @@ When I had powerline running, part of that was an :doc:`access point <dap1522>` 
 
 Netgear XAVB5101 500MBps
 ========================
-My primary link from downstairs to upstairs is via a `pair of Netgear Powerline 500 Nano XAVB5101 units <http://www.amazon.com/dp/B009WG6JF8?tag=mhsvortex>`_. These work at a peak speed of 500MBps, which is more than enough to satisfy some HD streaming.
+My primary link from downstairs to upstairs is via a `pair of Netgear Powerline 500 Nano XAVB5101 units <https://www.amazon.com/dp/B009WG6JF8?tag=mhsvortex>`_. These work at a peak speed of 500MBps, which is more than enough to satisfy some HD streaming.
 
 While these are supposed to work alongside the XAVB1201 adapters, after adding them into the mix the XAVB1201 adapters became unreliable, as though the signals were incompatible.
 
@@ -17,6 +17,6 @@ While these are supposed to work alongside the XAVB1201 adapters, after adding t
 Netgear XAVB1201 100MBps
 ========================
 
-I have `some Netgear XAVB1201 units <http://www.amazon.com/gp/product/B008LTPEXU?tag=mhsvortex>`_ for less-frequently used connections like the master bedroom. These work at an effective speed of 100MBps and are just fine for HD video to a single room.
+I have `some Netgear XAVB1201 units <https://www.amazon.com/gp/product/B008LTPEXU?tag=mhsvortex>`_ for less-frequently used connections like the master bedroom. These work at an effective speed of 100MBps and are just fine for HD video to a single room.
 
 .. image:: xavb1201.jpg

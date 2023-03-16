@@ -2,10 +2,10 @@
 Yamaha RX-V777BT
 ================
 
-I picked up my Yamaha RX-V777BT receiver in February 2015 after my :doc:`Onkyo TX-SR875 <onkyotxsr875>` receiver blew out its audio circuitry. `I picked it up at Amazon for around $800. <http://www.amazon.com/dp/B00ILCS164?tag=mhsvortex>`_
+I picked up my Yamaha RX-V777BT receiver in February 2015 after my :doc:`Onkyo TX-SR875 <onkyotxsr875>` receiver blew out its audio circuitry. `I picked it up at Amazon for around $800. <https://www.amazon.com/dp/B00ILCS164?tag=mhsvortex>`_
 
 .. image:: yamaharxv777bt.jpg
-   :target: http://www.amazon.com/dp/B00ILCS164?tag=mhsvortex
+   :target: https://www.amazon.com/dp/B00ILCS164?tag=mhsvortex
 
 The setup on it was easy and the feature set is just right for me. It also came with a Bluetooth adapter that lets me play music from my phone right to the receiver, like a giant portable Bluetooth speaker.
 

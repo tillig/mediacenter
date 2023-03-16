@@ -11,7 +11,7 @@ Research
 
 There is a benchmark called "Passmark" that helps guide what sort of CPU might fit the bill. The rough guideline is that if we want HD content, we need to multiply 2000 (the benchmark required for a single stream) by the number of streams we might have (say, 2 or 4). For me, I figured four streams would be enough to future-proof things for a while, so I wanted a CPU with Passmark of ~8000.
 
-**I ended up choosing an AMD FX-8350 processor with a Passmark of 8988** and `a pretty good price-to-performance ratio <http://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-8350+Eight-Core>`_.
+**I ended up choosing an AMD FX-8350 processor with a Passmark of 8988** and `a pretty good price-to-performance ratio <https://www.cpubenchmark.net/cpu.php?cpu=AMD+FX-8350+Eight-Core>`_.
 
 Parts
 =====
@@ -20,16 +20,16 @@ I wanted to stay in a reasonable budget with it - I'm not gaming with it, so a h
 
 The parts I used to build the server (prices listed as of March 2015):
 
-- `AMD FD8350FRHKBOX FX-8350 FX-Series 8-Core Black Edition Processor - $169.99 <http://www.amazon.com/dp/B009O7YUF6?tag=mhsvortex>`_ (`AMD specs here <https://www.amd.com/en/products/cpu/fx-8350>`_)
-- `Gigabyte AM3+ AMD DDR3 1333 760G HDMI USB 3.0 Micro ATX Motherboard GA-78LMT-USB3 - $58.99 <http://www.amazon.com/dp/B009FC3YJ8?tag=mhsvortex>`_
-- `Rosewill Dual Fans MicroATX Mini Tower Computer Case, Black FBM-02 - $29.99 <http://www.amazon.com/dp/B009NJAE4Q?tag=mhsvortex>`_
-- `Antec EarthWatts EA-380D Green 380 Watt 80 PLUS BRONZE Power Supply - $40.01 <http://www.amazon.com/dp/B002UOR17Y?tag=mhsvortex>`_
-- `Crucial Ballistix Sport 8GB Kit (4GBx2) DDR3 1600 MT/s (PC3-12800) CL9 @1.5V UDIMM 240-Pin Memory BLS2KIT4G3D1609DS1S00 - $59.99 <http://www.amazon.com/dp/B006WAGGUK?tag=mhsvortex>`_
-- `LG Electronics 14x Internal BDXL Blu-Ray Burner Rewriter WH14NS40 - Bulk Drive - Black - $56.95 <http://www.amazon.com/dp/B007YWMCA8?tag=mhsvortex>`_
-- `5 Pack Monoprice 18-Inch SATA III 6.0 Gbps Cable with Locking Latch and 1 x 90-Degree Plug (108783) - $7.99 <http://www.amazon.com/dp/B00IOS6EAU?tag=mhsvortex>`_
-- `StarTech.com 12-Inch LP4 to 2x SATA Power Y Cable Adapter - $3.99 <http://www.amazon.com/dp/B0002GRUV4?tag=mhsvortex>`_
-- `JBtek Sleeved PWM Fan Splitter Cable 1 to 2 Converter - $5.99 <http://www.amazon.com/dp/B00OZ10FI2?tag=mhsvortex>`_
-- `WD Blue 1TB SATA 6Gb/s 7200rpm Internal Hard Drive - $54.99 (2 of these) <http://www.amazon.com/dp/B0088PUEPK?tag=mhsvortex>`_
+- `AMD FD8350FRHKBOX FX-8350 FX-Series 8-Core Black Edition Processor - $169.99 <https://www.amazon.com/dp/B009O7YUF6?tag=mhsvortex>`_ (`AMD specs here <https://www.amd.com/en/products/cpu/fx-8350>`_)
+- `Gigabyte AM3+ AMD DDR3 1333 760G HDMI USB 3.0 Micro ATX Motherboard GA-78LMT-USB3 - $58.99 <https://www.amazon.com/dp/B009FC3YJ8?tag=mhsvortex>`_
+- `Rosewill Dual Fans MicroATX Mini Tower Computer Case, Black FBM-02 - $29.99 <https://www.amazon.com/dp/B009NJAE4Q?tag=mhsvortex>`_
+- `Antec EarthWatts EA-380D Green 380 Watt 80 PLUS BRONZE Power Supply - $40.01 <https://www.amazon.com/dp/B002UOR17Y?tag=mhsvortex>`_
+- `Crucial Ballistix Sport 8GB Kit (4GBx2) DDR3 1600 MT/s (PC3-12800) CL9 @1.5V UDIMM 240-Pin Memory BLS2KIT4G3D1609DS1S00 - $59.99 <https://www.amazon.com/dp/B006WAGGUK?tag=mhsvortex>`_
+- `LG Electronics 14x Internal BDXL Blu-Ray Burner Rewriter WH14NS40 - Bulk Drive - Black - $56.95 <https://www.amazon.com/dp/B007YWMCA8?tag=mhsvortex>`_
+- `5 Pack Monoprice 18-Inch SATA III 6.0 Gbps Cable with Locking Latch and 1 x 90-Degree Plug (108783) - $7.99 <https://www.amazon.com/dp/B00IOS6EAU?tag=mhsvortex>`_
+- `StarTech.com 12-Inch LP4 to 2x SATA Power Y Cable Adapter - $3.99 <https://www.amazon.com/dp/B0002GRUV4?tag=mhsvortex>`_
+- `JBtek Sleeved PWM Fan Splitter Cable 1 to 2 Converter - $5.99 <https://www.amazon.com/dp/B00OZ10FI2?tag=mhsvortex>`_
+- `WD Blue 1TB SATA 6Gb/s 7200rpm Internal Hard Drive - $54.99 (2 of these) <https://www.amazon.com/dp/B0088PUEPK?tag=mhsvortex>`_
 
 **Total price: $543.87**
 
