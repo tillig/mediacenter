@@ -30,7 +30,7 @@ import os
 # ones.
 # Furo doesn't work with non-HTML builders so don't specify it here like
 # you would with `alabaster`.
-# extensions = ['furo']
+extensions = []
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
