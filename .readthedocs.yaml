@@ -1,6 +1,7 @@
 # https://docs.readthedocs.io/en/latest/config-file/v2.html
 version: 2
-formats: []
+build:
+  os: ubuntu-22.04
 sphinx:
   builder: html
   configuration: docs/conf.py
