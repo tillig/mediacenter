@@ -53,6 +53,8 @@ Performance
 ===========
 After getting this built, I was very pleased with the performance. Transcoding a 1080p video barely raises the CPU usage to 10%, and a typical 2-hour 1080p movie can be converted with :doc:`Handbrake <../../software/convert/handbrake>` in under three hours.
 
+In November 2023 I upgraded the power supply to 500W and added a GeForce 1660 SUPER card to it so I could start transcoding/encoding 4K movies. The total upgrade cost was less than $250 and it makes 4K a breeze. I did have to update my Handbrake settings for using the GPU to encode, but that wasn't a big deal.
+
 Fan Upgrade
 ===========
 In September 2019 I upgraded the CPU cooler to a `be quiet! Dark Rock TF <https://amzn.to/2HYXSoT>`_ because the existing CPU fan got pretty loud when people were using the Plex server or I was ripping movies. It was $90 at the time of purchase, but now when the CPU is fully loaded I don't hear a single thing. It makes working in the office next to the Plex server much easier.

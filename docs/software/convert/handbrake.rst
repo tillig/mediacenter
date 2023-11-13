@@ -12,9 +12,11 @@ Conversion Settings
 ===================
 **My entire set of user presets in JSON format compatible with Handbrake 1.x is pasted below**, but for ease of use I've also outlined what it looks like in the UI so you can replicate it that way.
 
+**Note I added NVENC support in late 2023** so I will try to explain the differences between CPU (``x265_10bit``) and GPU (``nvenc_h265``) where I can.
+
 SD Settings
 -----------
-I have three SD presets that only differ by the "x264 Tune" setting for Film (most everything), 2D Animation, or Grain.
+I have three SD presets that only differ by the "x265 Tune" setting for Film (most everything), 2D Animation, or Grain.
 
 - Picture
 
@@ -37,17 +39,17 @@ I have three SD presets that only differ by the "x264 Tune" setting for Film (mo
 
 - Video
 
-  - Video Codec: H.265 10-bit (x265)
+  - Video Codec: H.265 10-bit (either ``x265_10bit`` or ``nvenc_h265``)
   - Framerate FPS: Same as source
   - Variable Framerate
   - Optimize Video:
 
     - Encoder Preset: Slower
-    - Encoder Tune: None, Animation, or Grain (depends on the source - I change this per item ripped)
+    - Encoder Tune: None, Animation, or Grain (depends on the source - I change this per item ripped; note ``nvenc_h265`` does not have a "tune" option)
     - Fast Decode: Unchecked
     - Encoder Profile: Auto
     - Encoder Level: Auto
-    - Advanced Options: Empty
+    - Advanced Options: Empty for ``x265_10bit``; or ``rc-lookahead=10`` for ``nvenc_h265``
 
   - Quality: Constant Quality RF 18
 
@@ -79,19 +81,35 @@ I have three SD presets that only differ by the "x264 Tune" setting for Film (mo
 
 - Chapters: I do select "Create chapter markers" but I let the automatic detection do the naming and timing.
 
-**Using these settings, I calculated SD content for me uses an average of 18.73MB/minute.**
-
 HD Settings
 -----------
 My HD settings are almost the same as my SD settings with the following differences:
 
+- Filters
+
+  - Everything off. Any filters on will stop ``nvenc_h265`` from being entirely GPU-based.
+
 - Video
 
-  - Quality:
+  - Quality (regardless of tuning):
 
-    - For Film: Constant Quality RF 21
-    - For Grain: Constant Quality RF 21
-    - For Animation: Constant Quality RF 20
+    - Using ``x265_10bit``: 21
+    - Using ``nvenc_h265``: 24
+
+4K Settings
+-----------
+My 4K settings are almost the same as my SD/HD settings with the following differences:
+
+- Filters
+
+  - Everything off. Any filters on will stop ``nvenc_h265`` from being entirely GPU-based.
+
+- Video
+
+  - Quality (regardless of tuning):
+
+    - Using ``x265_10bit``: 21
+    - Using ``nvenc_h265``: 27
 
 Research
 ========
@@ -141,6 +159,55 @@ HD video done with the Film setting at RF 21 seemed to take my :doc:`Megaplex se
 Of course, these end up being "guidelines" rather than "rules." I start here, and after the conversion I'll see if I need to reconvert with different settings. I ended up keeping the RF 18 version of *Mockingjay*.
 
 **Using these settings, I calculated HD content for me uses an average of 80.72MB/minute.**
+
+Figuring 4K Settings for NVENC
+------------------------------
+
+After switching to H.265 (``x265_10bit``) I didn't really change much for 4K support. The CPU-based encoding was great and using quality level 21 "just worked." Of course, it took almost 24 hours for my CPU to encode a single 4K movie, which just wasn't sustainable. In November 2023 I added an NVIDIA card to my system and wanted to start taking advantage of the GPU encoding, and that required some investigation.
+
+Something I noticed, which seems backed up by others' experience, is that GPU encoding is really best for streaming, but it's not the best for initial encoding. Unfortunately, my CPU for a 4K movie was taking about 24 hours for an encode, which didn't seem super reasonable, so GPU was the way to go for me.
+
+Using *Mission: Impossible - Dead Reckoning, Part One** as my test movie, I ran a few encodes using the ``nvenc_h265`` encoder.
+
+Original movie size: 71.9GB and runs 2:43. Adjusting encoder speed and quality, here's the file size output and time to encode. (I forgot to write down one of them. Oops.)
+
+=============  =======  ======  ====
+Encoder Speed  Quality  Size    Time
+=============  =======  ======  ====
+Slow           21       27.1GB  3:09
+Slow           23       24.4GB  3:16
+Slowest        23       24.4GB  3:20
+Slow           25       19.2GB  3:17
+Slow           27       14.6GB  3:19
+Slow           30        9.7GB  -:--
+=============  =======  ======  ====
+
+As we can see, encode time didn't really change regardless of the quality slider, and the encoder speed (slow vs. slowest) didn't really make any difference on file size. The real impact was that quality slider.
+
+Looking at the output side by side in various scenes, I honestly couldn't tell the difference between most of these. I did notice a couple of small things in that quality-30 version, but quality-27 yielded a reasonable file size/quality balance. If I notice something amiss, I may update to use quality-25 but I think 27 will be my starting point.
+
+As part of this, I did gather "recommendations" based on the existing presets and documentation for Handbrake. I found that all the presets for NVENC have a lower quality / higher slider value than the CPU-based equivalents. I think where I ended up reasonably jives with the recommendations and presets.
+
+- Recommendations (CPU-based encoding):
+
+  - RF 20-24 for 1080p Full High Definition
+  - RF 22-28 for 2160p 4K Ultra High Definition
+
+- Presets for 4K (usually "up to 4K") for H.265:
+
+  - HQ 2160p60 4K HEVC Surround = 22
+  - Super HQ 2160p60 4K HEVC Surround = 20
+  - H.265 MKV 2160p60 4K = 24
+  - H.265 NVENC 2160p 4K = 30, rc-lookahead=10
+  - Roku 2160p60 4K HEVC Surround = 24
+  - Chromecast 2160p60 4K HEVC Surround = 24
+
+- Presets for 1080p HEVC:
+
+  - H.265 MKV 1080p30 = 22
+  - H.265 MKV 720p30 = 21
+  - H.265 MKV 480p30 = 20
+  - H.265 NVENC 1080p = 27, rc-lookahead=10
 
 Subtitles
 ---------
@@ -363,23 +430,22 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "AudioTrackSelectionBehavior": "first",
               "ChapterMarkers": true,
               "ChildrenArray": [],
-              "Default": true,
+              "Default": false,
               "FileFormat": "av_mp4",
               "Folder": false,
               "FolderOpen": false,
               "Mp4HttpOptimize": false,
               "Mp4iPodCompatible": false,
               "PictureCropMode": 0,
-              "PictureBottomCrop": 0,
+              "PictureBottomCrop": 276,
               "PictureLeftCrop": 0,
               "PictureRightCrop": 0,
-              "PictureTopCrop": 0,
-              "PictureDARWidth": 625,
+              "PictureTopCrop": 276,
+              "PictureDARWidth": 3840,
               "PictureDeblockPreset": "off",
-              "PictureDeinterlaceFilter": "decomb",
+              "PictureDeinterlaceFilter": "off",
               "PictureCombDetectPreset": "default",
               "PictureCombDetectCustom": "",
-              "PictureDeinterlacePreset": "default",
               "PictureDeinterlaceCustom": "",
               "PictureDenoiseCustom": "",
               "PictureDenoiseFilter": "off",
@@ -394,8 +460,8 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "PictureItuPAR": false,
               "PictureKeepRatio": true,
               "PicturePAR": "auto",
-              "PicturePARWidth": 421,
-              "PicturePARHeight": 474,
+              "PicturePARWidth": 1,
+              "PicturePARHeight": 1,
               "PictureUseMaximumSize": false,
               "PictureAllowUpscaling": false,
               "PictureForceHeight": 0,
@@ -406,7 +472,7 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "PicturePadLeft": 0,
               "PicturePadRight": 0,
               "PresetDescription": "Preset for HD film conversion.",
-              "PresetName": "Illig HD Film",
+              "PresetName": "Illig HD Film (NVENC)",
               "Type": 1,
               "SubtitleAddCC": false,
               "SubtitleAddForeignAudioSearch": true,
@@ -420,7 +486,7 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "SubtitleTrackSelectionBehavior": "none",
               "VideoAvgBitrate": 0,
               "VideoColorMatrixCode": 0,
-              "VideoEncoder": "x265_10bit",
+              "VideoEncoder": "nvenc_h265_10bit",
               "VideoFramerateMode": "vfr",
               "VideoGrayScale": false,
               "VideoScaler": "swscale",
@@ -428,7 +494,7 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "VideoTune": "",
               "VideoProfile": "auto",
               "VideoLevel": "auto",
-              "VideoOptionExtra": "",
+              "VideoOptionExtra": "rc-lookahead=10",
               "VideoQualityType": 2,
               "VideoQualitySlider": 21,
               "VideoTwoPass": false,
@@ -491,11 +557,11 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "Mp4HttpOptimize": false,
               "Mp4iPodCompatible": false,
               "PictureCropMode": 0,
-              "PictureBottomCrop": 0,
+              "PictureBottomCrop": 138,
               "PictureLeftCrop": 0,
               "PictureRightCrop": 0,
-              "PictureTopCrop": 0,
-              "PictureDARWidth": 625,
+              "PictureTopCrop": 138,
+              "PictureDARWidth": 0,
               "PictureDeblockPreset": "off",
               "PictureDeinterlaceFilter": "decomb",
               "PictureCombDetectPreset": "default",
@@ -515,8 +581,8 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "PictureItuPAR": false,
               "PictureKeepRatio": true,
               "PicturePAR": "auto",
-              "PicturePARWidth": 421,
-              "PicturePARHeight": 474,
+              "PicturePARWidth": 0,
+              "PicturePARHeight": 0,
               "PictureUseMaximumSize": false,
               "PictureAllowUpscaling": false,
               "PictureForceHeight": 0,
@@ -551,7 +617,7 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "VideoLevel": "auto",
               "VideoOptionExtra": "",
               "VideoQualityType": 2,
-              "VideoQualitySlider": 20,
+              "VideoQualitySlider": 21,
               "VideoTwoPass": false,
               "VideoTurboTwoPass": false,
               "x264UseAdvancedOptions": false,
@@ -612,16 +678,15 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "Mp4HttpOptimize": false,
               "Mp4iPodCompatible": false,
               "PictureCropMode": 0,
-              "PictureBottomCrop": 0,
+              "PictureBottomCrop": 276,
               "PictureLeftCrop": 0,
               "PictureRightCrop": 0,
-              "PictureTopCrop": 0,
-              "PictureDARWidth": 625,
+              "PictureTopCrop": 276,
+              "PictureDARWidth": 3840,
               "PictureDeblockPreset": "off",
-              "PictureDeinterlaceFilter": "decomb",
+              "PictureDeinterlaceFilter": "off",
               "PictureCombDetectPreset": "default",
               "PictureCombDetectCustom": "",
-              "PictureDeinterlacePreset": "default",
               "PictureDeinterlaceCustom": "",
               "PictureDenoiseCustom": "",
               "PictureDenoiseFilter": "off",
@@ -636,8 +701,8 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "PictureItuPAR": false,
               "PictureKeepRatio": true,
               "PicturePAR": "auto",
-              "PicturePARWidth": 421,
-              "PicturePARHeight": 474,
+              "PicturePARWidth": 1,
+              "PicturePARHeight": 1,
               "PictureUseMaximumSize": false,
               "PictureAllowUpscaling": false,
               "PictureForceHeight": 0,
@@ -662,15 +727,15 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "SubtitleTrackSelectionBehavior": "none",
               "VideoAvgBitrate": 0,
               "VideoColorMatrixCode": 0,
-              "VideoEncoder": "x265_10bit",
+              "VideoEncoder": "nvenc_h265_10bit",
               "VideoFramerateMode": "vfr",
               "VideoGrayScale": false,
               "VideoScaler": "swscale",
               "VideoPreset": "medium",
-              "VideoTune": "grain",
+              "VideoTune": "",
               "VideoProfile": "auto",
               "VideoLevel": "auto",
-              "VideoOptionExtra": "",
+              "VideoOptionExtra": "rc-lookahead=10",
               "VideoQualityType": 2,
               "VideoQualitySlider": 21,
               "VideoTwoPass": false,
@@ -737,7 +802,7 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "PictureLeftCrop": 0,
               "PictureRightCrop": 0,
               "PictureTopCrop": 0,
-              "PictureDARWidth": 625,
+              "PictureDARWidth": 0,
               "PictureDeblockPreset": "off",
               "PictureDeinterlaceFilter": "decomb",
               "PictureCombDetectPreset": "default",
@@ -757,8 +822,8 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "PictureItuPAR": false,
               "PictureKeepRatio": true,
               "PicturePAR": "auto",
-              "PicturePARWidth": 421,
-              "PicturePARHeight": 474,
+              "PicturePARWidth": 0,
+              "PicturePARHeight": 0,
               "PictureUseMaximumSize": false,
               "PictureAllowUpscaling": false,
               "PictureForceHeight": 0,
@@ -787,7 +852,7 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "VideoFramerateMode": "vfr",
               "VideoGrayScale": false,
               "VideoScaler": "swscale",
-              "VideoPreset": "medium",
+              "VideoPreset": "slower",
               "VideoTune": "",
               "VideoProfile": "auto",
               "VideoLevel": "auto",
@@ -858,7 +923,7 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "PictureLeftCrop": 0,
               "PictureRightCrop": 0,
               "PictureTopCrop": 0,
-              "PictureDARWidth": 625,
+              "PictureDARWidth": 0,
               "PictureDeblockPreset": "off",
               "PictureDeinterlaceFilter": "decomb",
               "PictureCombDetectPreset": "default",
@@ -878,8 +943,8 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "PictureItuPAR": false,
               "PictureKeepRatio": true,
               "PicturePAR": "auto",
-              "PicturePARWidth": 421,
-              "PicturePARHeight": 474,
+              "PicturePARWidth": 0,
+              "PicturePARHeight": 0,
               "PictureUseMaximumSize": false,
               "PictureAllowUpscaling": false,
               "PictureForceHeight": 0,
@@ -908,7 +973,7 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "VideoFramerateMode": "vfr",
               "VideoGrayScale": false,
               "VideoScaler": "swscale",
-              "VideoPreset": "medium",
+              "VideoPreset": "slower",
               "VideoTune": "animation",
               "VideoProfile": "auto",
               "VideoLevel": "auto",
@@ -979,7 +1044,7 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "PictureLeftCrop": 0,
               "PictureRightCrop": 0,
               "PictureTopCrop": 0,
-              "PictureDARWidth": 625,
+              "PictureDARWidth": 0,
               "PictureDeblockPreset": "off",
               "PictureDeinterlaceFilter": "decomb",
               "PictureCombDetectPreset": "default",
@@ -999,8 +1064,8 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "PictureItuPAR": false,
               "PictureKeepRatio": true,
               "PicturePAR": "auto",
-              "PicturePARWidth": 421,
-              "PicturePARHeight": 474,
+              "PicturePARWidth": 0,
+              "PicturePARHeight": 0,
               "PictureUseMaximumSize": false,
               "PictureAllowUpscaling": false,
               "PictureForceHeight": 0,
@@ -1029,13 +1094,133 @@ The following is my set of presets. As of Handbrake 1.x the user presets appear 
               "VideoFramerateMode": "vfr",
               "VideoGrayScale": false,
               "VideoScaler": "swscale",
-              "VideoPreset": "medium",
+              "VideoPreset": "slower",
               "VideoTune": "grain",
               "VideoProfile": "auto",
               "VideoLevel": "auto",
               "VideoOptionExtra": "",
               "VideoQualityType": 2,
               "VideoQualitySlider": 18,
+              "VideoTwoPass": false,
+              "VideoTurboTwoPass": false,
+              "x264UseAdvancedOptions": false,
+              "PresetDisabled": false,
+              "MetadataPassthrough": false
+            },
+            {
+              "AlignAVStart": false,
+              "AudioCopyMask": [
+                "copy:aac",
+                "copy:ac3",
+                "copy:dtshd",
+                "copy:dts",
+                "copy:mp3",
+                "copy:truehd",
+                "copy:flac",
+                "copy:eac3"
+              ],
+              "AudioEncoderFallback": "av_aac",
+              "AudioLanguageList": [
+                "eng",
+                "und"
+              ],
+              "AudioList": [
+                {
+                  "AudioBitrate": 256,
+                  "AudioCompressionLevel": 0,
+                  "AudioEncoder": "av_aac",
+                  "AudioMixdown": "dpl2",
+                  "AudioNormalizeMixLevel": false,
+                  "AudioSamplerate": "auto",
+                  "AudioTrackQualityEnable": false,
+                  "AudioTrackQuality": -1,
+                  "AudioTrackGainSlider": 0,
+                  "AudioTrackDRCSlider": 0
+                },
+                {
+                  "AudioBitrate": 224,
+                  "AudioCompressionLevel": 0,
+                  "AudioEncoder": "copy",
+                  "AudioMixdown": "dpl2",
+                  "AudioNormalizeMixLevel": false,
+                  "AudioSamplerate": "auto",
+                  "AudioTrackQualityEnable": false,
+                  "AudioTrackQuality": -1,
+                  "AudioTrackGainSlider": 0,
+                  "AudioTrackDRCSlider": 0
+                }
+              ],
+              "AudioSecondaryEncoderMode": true,
+              "AudioTrackSelectionBehavior": "first",
+              "ChapterMarkers": true,
+              "ChildrenArray": [],
+              "Default": true,
+              "FileFormat": "av_mp4",
+              "Folder": false,
+              "FolderOpen": false,
+              "Mp4HttpOptimize": false,
+              "Mp4iPodCompatible": false,
+              "PictureCropMode": 0,
+              "PictureBottomCrop": 276,
+              "PictureLeftCrop": 0,
+              "PictureRightCrop": 0,
+              "PictureTopCrop": 276,
+              "PictureDARWidth": 3840,
+              "PictureDeblockPreset": "off",
+              "PictureDeinterlaceFilter": "off",
+              "PictureCombDetectPreset": "default",
+              "PictureCombDetectCustom": "",
+              "PictureDeinterlaceCustom": "",
+              "PictureDenoiseCustom": "",
+              "PictureDenoiseFilter": "off",
+              "PictureSharpenCustom": "",
+              "PictureSharpenFilter": "off",
+              "PictureSharpenPreset": "medium",
+              "PictureSharpenTune": "none",
+              "PictureDetelecine": "off",
+              "PictureDetelecineCustom": "",
+              "PictureColorspacePreset": "off",
+              "PictureChromaSmoothPreset": "off",
+              "PictureItuPAR": false,
+              "PictureKeepRatio": true,
+              "PicturePAR": "auto",
+              "PicturePARWidth": 1,
+              "PicturePARHeight": 1,
+              "PictureUseMaximumSize": false,
+              "PictureAllowUpscaling": false,
+              "PictureForceHeight": 0,
+              "PictureForceWidth": 0,
+              "PicturePadMode": "none",
+              "PicturePadTop": 0,
+              "PicturePadBottom": 0,
+              "PicturePadLeft": 0,
+              "PicturePadRight": 0,
+              "PresetDescription": "Preset for 4K film conversion.",
+              "PresetName": "Illig 4K Film (NVENC)",
+              "Type": 1,
+              "SubtitleAddCC": false,
+              "SubtitleAddForeignAudioSearch": true,
+              "SubtitleAddForeignAudioSubtitle": false,
+              "SubtitleBurnBehavior": "foreign",
+              "SubtitleBurnBDSub": false,
+              "SubtitleBurnDVDSub": false,
+              "SubtitleLanguageList": [
+                "eng"
+              ],
+              "SubtitleTrackSelectionBehavior": "none",
+              "VideoAvgBitrate": 0,
+              "VideoColorMatrixCode": 0,
+              "VideoEncoder": "nvenc_h265_10bit",
+              "VideoFramerateMode": "vfr",
+              "VideoGrayScale": false,
+              "VideoScaler": "swscale",
+              "VideoPreset": "medium",
+              "VideoTune": "",
+              "VideoProfile": "auto",
+              "VideoLevel": "auto",
+              "VideoOptionExtra": "rc-lookahead=10",
+              "VideoQualityType": 2,
+              "VideoQualitySlider": 27,
               "VideoTwoPass": false,
               "VideoTurboTwoPass": false,
               "x264UseAdvancedOptions": false,
