@@ -1,9 +1,9 @@
 {
   "recommendations": [
+    "davidanson.vscode-markdownlint",
+    "dnut.rewrap-revived",
     "lextudio.restructuredtext",
-    "ms-python.vscode-pylance",
     "ms-python.python",
-    "stkb.rewrap",
-    "davidanson.vscode-markdownlint"
+    "ms-python.vscode-pylance"
   ]
 }
