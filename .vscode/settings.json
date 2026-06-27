@@ -58,8 +58,7 @@
     "ubiquiti",
     "wirecutter"
   ],
-  "esbonio.sphinx.buildDir": "${workspaceRoot}/docs/_build/html",
-  "esbonio.sphinx.confDir": "${workspaceFolder}/docs",
+  "python-envs.defaultEnvManager": "ms-python.python:system",
   "restructuredtext.linter.doc8.extraArgs": [
     "--config",
     "${workspaceFolder}/doc8.ini"
