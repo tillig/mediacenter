@@ -8,20 +8,20 @@ In choosing a video format, I went through a :doc:`video format comparison and e
 
 Below is the current video format information; if you're interested in why I chose them, :doc:`check out the video format comparison <videocompare>`.
 
-H.264 Video / AAC + AC3 Passthrough Audio / MP4 Container
-=========================================================
+H.265 Video / AAC + Passthrough Audio / MKV Container
+======================================================
 As part of my switch to :doc:`Plex <../software/serve/plex>` for my media center server software, I also switched away from ``VIDEO_TS`` video format to individual movie files using:
 
-- H.264 video codec
+- H.265 video codec
 - AAC audio for the primary track codec
 - Native (AC3, DTS, etc.) audio for a secondary passthrough track
-- MP4 (with an ``.m4v`` extension) container
+- MKV container
 
 I chose this format for three reasons:
 
-- **High compatibility**: The MP4 container with H.264 video and AAC audio can be played by pretty much all of my devices.
-- **Video quality vs. file size balance**: H.264 video has good compression for the quality it retains and, based on your settings, you can get a file half the size of the MPEG-2 equivalent but with comparable quality.
-- **Audio quality**: While the MP4 container format doesn't really specify support for anything beyond AAC audio, you can embed additional tracks and many popular players (including :doc:`Plex <../software/serve/plex>`) know how to deal with it. This allows you to put in a primary AAC stereo track for compatibility with mobile devices and standard players; and a secondary "passthrough" track with the original, unchanged audio for full surround.
+- **Forward compatibility**: While MP4/H.264/AAC is more compatible with my devices natively, as times change and tech updates, MKV is a more flexible format.
+- **Video quality vs. file size balance**: H.265 video, while slightly less compatible, has much better compression than H.264.
+- **Audio quality**: MKV supports any audio format, but a standard AAC track along with a secondary "passthrough" track with the original, unchanged audio for full surround is a sweet spot.
 
 I use :doc:`MakeMKV <../software/rip/makemkv>` for ripping content from discs.
 
@@ -31,7 +31,7 @@ Something I did notice as I moved away from ``VIDEO_TS`` into a new, "standalone
 
 I will say that, from a container perspective, subtitles is an area where MKV definitely outshines MP4 - MKV allows multiple subtitle tracks, just like a regular disc; MP4 only gives you one, and whichever one you choose is "permanently turned on." :doc:`I talk more about how I handle subtitles on the Handbrake page. <../software/convert/handbrake>`
 
-I gathered some general statistics after I finished the mass conversion of all of my media using :doc:`Handbrake <../software/convert/handbrake>` that may help you gauge how much space you need. This is using the settings outlined on the :doc:`Handbrake <../software/convert/handbrake>` page.
+I gathered some general statistics after I finished the mass conversion of all of my media using :doc:`Handbrake <../software/convert/handbrake>` that may help you gauge how much space you need. This is using the settings outlined on the :doc:`Handbrake <../software/convert/handbrake>` page. Note this was with MP4/H.264 compression - I've since moved to MKV/M.265.
 
 - Total number of files: 4998
 - Total content runtime: 134 days, 8 hours, 56 minutes, 47 seconds

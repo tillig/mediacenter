@@ -42,27 +42,31 @@ I picked these formats as the initial set to compare given my own personal famil
 | Plex Compatible                | Yes                                                            | Yes                                           | Yes                                                                                 | Yes                                             |
 +--------------------------------+----------------------------------------------------------------+-----------------------------------------------+-------------------------------------------------------------------------------------+-------------------------------------------------+
 
-**Despite MKV being a superior container, MP4 is far more compatible with the devices I'm using** and it supports everything I need.
+**Initially I went for MP4/M4V as my target format** because it was compatible with all of my devices and supported the audio and video formats I wanted to use.
 
-You can see where I landed on the :doc:`video formats <video>` page: **MP4 container / H.264 video / AAC + AC3 Passthrough audio**.
+**Currently I am using MKV** because, since the original solution, technology has changed and my use cases have updated - I mostly stream through Plex-enabled devices and those devices work with newer formats.
+
+You can see where I landed on the :doc:`video formats <video>` page: **MKV container / H.265 video / AAC + Passthrough audio**.
 
 The :doc:`Handbrake <../software/convert/handbrake>` page goes into more detail about my specific encoding settings.
 
 Audio in the Video Files
 ========================
-While technically the `MP4 spec only allows AAC sound <https://en.wikipedia.org/wiki/MPEG-4_Part_14>`_ you can set the AAC track as the primary and embed additional tracks in the video file.
+I always have a simpler mixdown track in AAC format as the first track in every file. This allows for better general compatibility (like watching a show without the full home theater surround sound on) without requiring transcoding.
 
-AAC has a surround sound (multichannel) spec but it's not very well supported, so going with a stereo AAC track as primary is better for compatibility. `At 320kbps, AAC is considered transparent. <https://en.wikipedia.org/wiki/Advanced_Audio_Coding>`_
+Beyond that, I include the original audio (e.g., DTS-HD, Dolby TrueHD, etc.) as a passthrough track so when I do have the full setup running, I can select that track.
+
+AAC has a surround sound (multichannel) spec but it's not very well supported, so going with a Dolby ProLogic 2 mixdown in AAC as primary is better for compatibility. `At 320kbps, AAC is considered transparent <https://en.wikipedia.org/wiki/Advanced_Audio_Coding>`_; I set the mixdown to 256kbps.
 
 :doc:`Handbrake <../software/convert/handbrake>` has a `surround sound guide <https://trac.handbrake.fr/wiki/SurroundSoundGuide>`_ that explains in more detail how to properly handle multiple tracks.
 
 Subtitles
 =========
-Subtitles are an area where MKV as a container is far and away superior to MP4. In MKV, you can have multiple subtitle tracks (different languages) that can optionally be displayed by the player as needed, just like with a Blu-ray or DVD player. The challenge, of course, is finding a player on your various devices that will handle it.
+Subtitles are an area where MKV as a container is far and away superior to MP4. In MKV, you can have multiple subtitle tracks (different languages) that can optionally be displayed by the player as needed, just like with a Blu-ray or DVD player.
 
 With MP4, you get one subtitle track and it gets permanently "turned on" by being "burned" into the video image directly. No special player needed, but far less flexibility.
 
-I talk about how I handle subtitles during conversion on the :doc:`Handbrake <../software/convert/handbrake>` page.
+I include "forced subtitles" in my MKV files by default, plus the primary English track.
 
 Full Disc Images - ISO vs. VIDEO_TS
 ===================================
