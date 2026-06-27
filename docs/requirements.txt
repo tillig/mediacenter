@@ -1,4 +1,4 @@
 # pip3 install -r requirements.txt
-furo
-docutils<0.17
-Sphinx>=4.3.0
+furo>=2025.12.19
+docutils
+Sphinx>=9.1.0
